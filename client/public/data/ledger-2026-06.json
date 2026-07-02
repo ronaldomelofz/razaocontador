@@ -1,12 +1,12 @@
 {
   "month": "2026-06",
-  "generatedAt": "2026-07-02T15:54:32.489Z",
+  "generatedAt": "2026-07-02T16:03:38.852Z",
   "company": "FALCÃO & FRAZÃO LTDA (MADEPINUS)",
   "cnpj": "10.876.822/0001-94",
   "networkRoot": "\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA\\06-2026",
   "stats": {
     "imported": 586,
-    "pending": 278,
+    "pending": 277,
     "attachments": 90,
     "fiscal": 743,
     "reconciliations": 34
@@ -1251,7 +1251,7 @@
       "entradas": 0,
       "saidas": 4991.41,
       "n": 10,
-      "pendentes": 1
+      "pendentes": 0
     },
     {
       "bank_account_id": "itau-29660-2",
@@ -2744,18 +2744,18 @@
       "raw_transaction_id": 3612,
       "entry_date": "2026-06-02",
       "description": "Pix enviado: Cp :00360305-S O S EMBALAGENS",
-      "debit_account": "9.9.9.99",
+      "debit_account": "2.01.01.01.01",
       "credit_account": "1.01.01.01.02.0004",
       "amount": 532.92,
       "category": "Movimentação diversa via PIX ⚠️",
-      "status": "manual_review",
+      "status": "matched",
       "match_confidence": null,
       "created_at": "2026-07-02 11:31:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "S O S EMBALAGENS",
       "counterparty_doc": null,
-      "debit_name": "Conta a classificar (revisão manual)",
-      "credit_name": "Banco Inter - Ag 0001-9 Cc 9908006-0",
+      "debit_name": "FORNECEDORES NACIONAIS",
+      "credit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "attachments": []
     },
     {
@@ -2936,7 +2936,8 @@
       "counterparty_doc": null,
       "debit_name": "Juros e Multas Bancarias",
       "credit_name": "Banco Itaú - Ag: 4826 Cc: 29660-2",
-      "attachments": []
+      "attachments": [],
+      "updatedAt": "2026-07-02T15:54:32.501Z"
     },
     {
       "id": 3649,
