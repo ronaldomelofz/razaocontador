@@ -1,0 +1,122 @@
+data,historico,valor,categoria,conta,entrada,saida
+2026-06-01,Pix - Recebido FALCAO & FR,9335.37,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,9335.37,0.0
+2026-06-01,Pix - Recebido FALCAO E FR,2089.56,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,2089.56,0.0
+2026-06-01,Pix - Recebido WILSON MARCOS,64.9,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,64.9,0.0
+2026-06-01,Pix - Recebido JOHN ALLEFFY S,274.9,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,274.9,0.0
+2026-06-01,Pagamento de Boleto G3 TELECOM LTDA,-105.0,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,105.0
+2026-06-01,Pagamento de Boleto BANCO DO BRASIL S/A - BRASILIA,-5868.4,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,5868.4
+2026-06-02,Pix - Recebido BARROSO ART,102.0,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,102.0,0.0
+2026-06-02,Pix - Recebido EDUARDO P SAMP,267.5,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,267.5,0.0
+2026-06-02,Pagamento de Boleto ATHENA SECURITIZADORA S A,-3343.8,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,3343.8
+2026-06-03,Pix - Recebido BARROSO ART,110.0,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,110.0,0.0
+2026-06-03,Compra com Cartao TintasCadillac,-65.0,Despesa cartão débito/crédito,4.02.02.01.01 Despesas Gerais,0.0,65.0
+2026-06-03,Compra com Cartao CANTINA MONTOIA,-81.0,Despesa cartão débito/crédito,4.02.02.01.01 Despesas Gerais,0.0,81.0
+2026-06-03,Compra com Cartao SUPERMERCADO J.H.,-22.99,Despesa cartão débito/crédito,4.02.02.01.01 Despesas Gerais,0.0,22.99
+2026-06-03,Compra com Cartao A. A. GIMENES LTD,-8.2,Despesa cartão débito/crédito,4.02.02.01.01 Despesas Gerais,0.0,8.2
+2026-06-03,Compra com Cartao PARATY FOOD TRUCK,-50.0,Despesa cartão débito/crédito,4.02.02.01.01 Despesas Gerais,0.0,50.0
+2026-06-05,Pix - Recebido RONALDO MELO F,48617.19,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,48617.19,0.0
+2026-06-05,Pagamento de Boleto TABONE INDUSTRIA E COMERCIO DE,-2252.0,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,2252.0
+2026-06-05,Pagamento de Boleto STAM METALURGICA LTDA.,-994.62,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,994.62
+2026-06-05,Pagamento de Boleto HOME CONTABILIDADE LTDA,-2662.2,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,2662.2
+2026-06-05,Pagamento de Boleto HD FERRAGENS PARA MOVEIS LTDA,-2086.14,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,2086.14
+2026-06-05,Pagamento de Boleto PLACAS DO BRASIL S.A.,-27022.63,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,27022.63
+2026-06-05,Pagamento de Boleto IMOVEIS VENEZA LTDA,-6005.22,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,6005.22
+2026-06-05,Pagamento de Boleto STARRETT INDUSTRIA E COMERCIO,-372.63,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,372.63
+2026-06-05,Pix - Enviado CEF MATRIZ,-7548.13,Pagamento FGTS,2.01.01.03.02.0003 FGTS a Pagar,0.0,7548.13
+2026-06-08,Pix - Recebido RONALDO MELO F,6617.24,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,6617.24,0.0
+2026-06-08,Pix - Recebido CASAMATER C,2648.42,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,2648.42,0.0
+2026-06-08,Pix - Recebido F. R. INDUS,355.01,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,355.01,0.0
+2026-06-08,Pix - Recebido RONALDO MEL,10000.0,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,10000.0,0.0
+2026-06-08,Pix - Recebido FALCAO & FR,6854.12,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,6854.12,0.0
+2026-06-08,Pix - Recebido WILSON MARCOS,604.8,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,604.8,0.0
+2026-06-08,Pix - Enviado Mariana Rodrigues de Andrade,-8040.79,Pagamento diverso ⚠️,9.9.9.99 A Classificar,0.0,8040.79
+2026-06-08,Pix-Recebimento devolvido CASAMATER,-264.84,Estorno/devolução PIX,1.01.03.01.01 Duplicatas a Receber,0.0,264.84
+2026-06-08,Pagamento de Boleto PLACAS DO BRASIL S A,-17403.1,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,17403.1
+2026-06-09,Pix - Recebido CONDOMINIO,1045.4,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,1045.4,0.0
+2026-06-09,Pix - Recebido 58.745.885,105.0,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,105.0,0.0
+2026-06-09,Pix - Recebido FALCAO & FR,13947.37,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,13947.37,0.0
+2026-06-09,Pix - Recebido M C CONCEIC,27.0,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,27.0,0.0
+2026-06-09,Pagamento de Boleto LAGE E RENZETTI LTDA,-5144.88,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,5144.88
+2026-06-09,Pagamento de Boleto IBRAP INDUSTRIA BRASILEIRA DE,-4028.78,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,4028.78
+2026-06-10,Pix - Recebido FALCAO FR,10647.53,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,10647.53,0.0
+2026-06-10,Pix - Recebido C R MACHADO,600.0,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,600.0,0.0
+2026-06-11,Pix - Recebido FALCAO & FR,3656.52,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,3656.52,0.0
+2026-06-11,Pix - Recebido MARCIA FERNAND,2231.14,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,2231.14,0.0
+2026-06-11,Pagamento de Boleto LUIZ CARLOS FERREIRA DA CONCEI,-238.38,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,238.38
+2026-06-12,Pix - Recebido M C CONCEIC,898.0,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,898.0,0.0
+2026-06-12,Pix - Recebido WILSON MARC,13.5,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,13.5,0.0
+2026-06-12,Pix - Recebido PAULO WUERBERT,296.9,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,296.9,0.0
+2026-06-12,Pix - Enviado CIELO S.A - INSTITUICAO D,-1479.29,Pagamento antecipação cartão Cielo,1.01.03.01.02 Cartões a Receber,0.0,1479.29
+2026-06-12,Pagamento de Boleto PLACAS DO BRASIL S A,-2337.11,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,2337.11
+2026-06-12,Pagamento de Boleto KITSUL COMPONENTES PARA MOVEI,-1687.32,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,1687.32
+2026-06-12,Pagamento de Boleto ROMETAL COMP P MOVEIS LTDA,-2051.43,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,2051.43
+2026-06-12,Pagamento de Boleto METALFIXE INDUSTRIA E COMERCI,-2510.26,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,2510.26
+2026-06-12,Pagamento de Boleto LOTUS COMERCIAL DE FERRAGENS E,-580.04,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,580.04
+2026-06-12,Pagamento de Boleto HD FERRAGENS E MADEIRAS LTDA,-1661.92,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,1661.92
+2026-06-12,Pagamento de Boleto PLACAS DO BRASIL S.A.,-9445.66,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,9445.66
+2026-06-15,Pix - Recebido PROJETANDO,510.0,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,510.0,0.0
+2026-06-15,Pix - Recebido FALCAO & FR,3402.75,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,3402.75,0.0
+2026-06-15,Pix - Recebido NR MOVEIS E,274.9,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,274.9,0.0
+2026-06-15,Pagamento de Boleto INDUSTRIA QUIMICA UNA LTDA,-1019.4,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,1019.4
+2026-06-15,Pagamento de Boleto VIRTEX TELECOM,-249.8,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,249.8
+2026-06-15,Pagamento de Boleto LUIZ CARLOS FERREIRA DA CONCEI,-761.14,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,761.14
+2026-06-15,Pagamento de Boleto ALLIANZ SEGUROS S A,-185.83,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,185.83
+2026-06-15,Pagamento de Boleto PLACAS DO BRASIL S A,-5101.26,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,5101.26
+2026-06-15,Pagamento de Boleto PLACAS DO BRASIL S.A.,-6456.11,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,6456.11
+2026-06-16,Pix - Recebido M C CONCEIC,49.5,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,49.5,0.0
+2026-06-16,Pix - Recebido WILSON MARCOS,27.0,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,27.0,0.0
+2026-06-16,Pix - Recebido FALCAO & FR,6258.32,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,6258.32,0.0
+2026-06-16,Pix - Recebido CREDI SHOP,279.25,Recebimento cartão (CrediShop),1.01.03.01.02 Cartões a Receber,279.25,0.0
+2026-06-16,BB Rende Facil aplicacao,-30068.43,Aplicação/Resgate Rende Fácil,1.01.01.01.03 Aplicações Financeiras,0.0,30068.43
+2026-06-17,Pix - Recebido CHRISTIANNE MA,157.5,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,157.5,0.0
+2026-06-17,Pix - Recebido WILSON MARC,421.2,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,421.2,0.0
+2026-06-17,Pix - Recebido PIEROTE MOV,306.0,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,306.0,0.0
+2026-06-17,Pix - Recebido FALCAO & FR,5557.0,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,5557.0,0.0
+2026-06-17,BB Rende Facil aplicacao,-6441.7,Aplicação/Resgate Rende Fácil,1.01.01.01.03 Aplicações Financeiras,0.0,6441.7
+2026-06-18,Pix - Recebido FALCAO FR,22434.53,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,22434.53,0.0
+2026-06-18,Pix - Enviado CEF MATRIZ,-1434.79,Pagamento FGTS,2.01.01.03.02.0003 FGTS a Pagar,0.0,1434.79
+2026-06-18,Pix - Enviado RECEITA FEDERAL,-8131.62,Pagamento DARF (INSS/IRRF),2.01.01.03.02.0005 INSS a Pagar,0.0,8131.62
+2026-06-18,Pagamento de Boleto ALTERDATA TEC.EM INFORMATICA,-670.95,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,670.95
+2026-06-18,Pagamento de Boleto HD FERRAGENS PARA MOVEIS LTDA,-971.13,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,971.13
+2026-06-18,Pagamento de Boleto AFO MOVEIS E ARTEFATOS LTDA,-1498.33,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,1498.33
+2026-06-18,Pagamento de Boleto PLACAS DO BRASIL S A,-7369.81,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,7369.81
+2026-06-18,Pagamento de Boleto HD FERRAGENS PARA MOVEIS LTDA,-4274.82,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,4274.82
+2026-06-18,Pagamento de Boleto ROMETAL COMP P MOVEIS LTDA,-1504.31,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,1504.31
+2026-06-18,Pagamento de Boleto PLACAS DO BRASIL S A,-1138.92,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,1138.92
+2026-06-18,BB Rende Facil resgate,4560.15,Aplicação/Resgate Rende Fácil,1.01.01.01.03 Aplicações Financeiras,4560.15,0.0
+2026-06-19,Pix - Recebido EDINA GLORIA C,360.0,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,360.0,0.0
+2026-06-19,Pix - Enviado Madepinus,-32310.07,Transferência entre contas próprias,1.01.01.01.01 Caixa/Transf. Internas,0.0,32310.07
+2026-06-19,BB Rende Facil resgate,31950.07,Aplicação/Resgate Rende Fácil,1.01.01.01.03 Aplicações Financeiras,31950.07,0.0
+2026-06-22,Pix - Recebido WILSON MARCOS,38.0,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,38.0,0.0
+2026-06-22,Pix - Recebido CREDI SHOP,370.5,Recebimento cartão (CrediShop),1.01.03.01.02 Cartões a Receber,370.5,0.0
+2026-06-22,Pix - Recebido FALCAO FR,13624.54,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,13624.54,0.0
+2026-06-22,BB Rende Facil aplicacao,-14033.04,Aplicação/Resgate Rende Fácil,1.01.01.01.03 Aplicações Financeiras,0.0,14033.04
+2026-06-23,Pix - Recebido CREDI SHOP,59.51,Recebimento cartão (CrediShop),1.01.03.01.02 Cartões a Receber,59.51,0.0
+2026-06-23,Pix - Recebido FALCAO & FR,6556.6,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,6556.6,0.0
+2026-06-23,Pix - Recebido SINERGIA C,1524.5,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,1524.5,0.0
+2026-06-23,Estorno de Debito Cartao MADEPINUS,1.0,Estorno de débito cartão,4.02.02.01.01 Despesas Gerais,1.0,0.0
+2026-06-23,Compra com Cartao MADEPINUS,-1.0,Despesa cartão débito/crédito,4.02.02.01.01 Despesas Gerais,0.0,1.0
+2026-06-23,BB Rende Facil aplicacao,-8140.61,Aplicação/Resgate Rende Fácil,1.01.01.01.03 Aplicações Financeiras,0.0,8140.61
+2026-06-24,Pix - Recebido CREDI SHOP,97.07,Recebimento cartão (CrediShop),1.01.03.01.02 Cartões a Receber,97.07,0.0
+2026-06-24,Pix - Recebido FALCAO & FR,4195.23,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,4195.23,0.0
+2026-06-24,Pix - Recebido 58.745.885,92.0,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,92.0,0.0
+2026-06-24,Pix - Recebido C R MACHADO,480.0,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,480.0,0.0
+2026-06-24,Pagamento de Boleto EQUATORIAL PIAUI DISTRIBUIDORA,-2392.21,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,2392.21
+2026-06-24,Pix - Enviado POSTOS AVALLON,-236.53,Despesa combustível,4.02.01.01.06.0001 Combustíveis e Lubrificantes,0.0,236.53
+2026-06-24,BB Rende Facil aplicacao,-2235.56,Aplicação/Resgate Rende Fácil,1.01.01.01.03 Aplicações Financeiras,0.0,2235.56
+2026-06-25,Pix - Recebido ROGERIO RIBEIR,928.8,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,928.8,0.0
+2026-06-25,Pix - Recebido FALCAO & FR,7107.32,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,7107.32,0.0
+2026-06-25,Pix - Recebido JULIANA EVA,3371.06,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,3371.06,0.0
+2026-06-25,BB Rende Facil aplicacao,-11407.18,Aplicação/Resgate Rende Fácil,1.01.01.01.03 Aplicações Financeiras,0.0,11407.18
+2026-06-26,Pix - Recebido FALCAO & FR,10291.57,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,10291.57,0.0
+2026-06-26,Pagamento de Boleto PLACAS DO BRASIL S A,-31336.88,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,31336.88
+2026-06-26,BB Rende Facil resgate,21045.31,Aplicação/Resgate Rende Fácil,1.01.01.01.03 Aplicações Financeiras,21045.31,0.0
+2026-06-29,Pix - Recebido CREDI SHOP,169.67,Recebimento cartão (CrediShop),1.01.03.01.02 Cartões a Receber,169.67,0.0
+2026-06-29,Pix - Recebido FALCAO & FR,8880.23,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,8880.23,0.0
+2026-06-29,BB Rende Facil aplicacao,-9049.9,Aplicação/Resgate Rende Fácil,1.01.01.01.03 Aplicações Financeiras,0.0,9049.9
+2026-06-30,Pix - Recebido Luis Carlos Vi,634.9,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,634.9,0.0
+2026-06-30,Pix - Recebido FALCAO & FR,6195.32,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,6195.32,0.0
+2026-06-30,Pix - Recebido BARROSO ART,504.0,Recebimento cliente diverso,1.01.03.01.01 Duplicatas a Receber,504.0,0.0
+2026-06-30,Pagamento de Boleto ALELO S.A.,-3806.0,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,3806.0
+2026-06-30,Pagamento de Boleto G3 TELECOM LTDA,-105.0,Pagamento a fornecedor (boleto),2.01.01.01.01 Fornecedores Nacionais,0.0,105.0
+2026-06-30,BB Rende Facil aplicacao,-3423.22,Aplicação/Resgate Rende Fácil,1.01.01.01.03 Aplicações Financeiras,0.0,3423.22

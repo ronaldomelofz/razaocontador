@@ -1,0 +1,24 @@
+[build]
+  base = "/"
+  publish = "client/dist"
+  command = "npm install && cd client && npm install && npm run build"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  external_node_modules = ["@netlify/blobs"]
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api"
+  status = 200
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+
+[[headers]]
+  for = "/anexos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"

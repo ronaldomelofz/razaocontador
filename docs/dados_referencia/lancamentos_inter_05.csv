@@ -1,0 +1,68 @@
+data,historico,valor,categoria,conta,entrada,saida
+2026-05-04,"Pix enviado: ""POSTO MAXXI DM""",-231.24,Despesa combustível,4.1.3.02 Despesas Combustível,0.0,231.24
+2026-05-04,"Pix enviado: ""AGRO FLORESTAL CONFIANCA""",-2323.12,Pagamento fornecedor (madeira),2.1.1.01 Fornecedores Nacionais,0.0,2323.12
+2026-05-04,"Pix recebido: ""RONALDO MELO FRAZAO""",2034.5,Movimentação com sócio,2.1.2.01 Conta Corrente Sócios,2034.5,0.0
+2026-05-04,"Pix enviado: ""Lilia Maria de Melo""",-329.06,Pagamento diverso via PIX,2.1.1.02 Fornecedores/Despesas Diversas ⚠️,0.0,329.06
+2026-05-04,"Pix enviado: ""Viviane Rodrigues Leao""",-407.93,Pagamento diverso via PIX,2.1.1.02 Fornecedores/Despesas Diversas ⚠️,0.0,407.93
+2026-05-04,"Pix enviado: ""RECEITA FEDERAL""",-2957.41,Pagamento DARF (INSS/IRRF),2.1.4.01 Obrigações Fiscais Federais,0.0,2957.41
+2026-05-04,"Pix recebido: ""BARROSO ARTEFATOS P. M. LTDA""",1092.0,Recebimento cliente diverso,1.1.2.01 Clientes,1092.0,0.0
+2026-05-04,"Pix enviado: ""RECEITA FEDERAL""",-4929.02,Pagamento DARF (INSS/IRRF),2.1.4.01 Obrigações Fiscais Federais,0.0,4929.02
+2026-05-04,"Pagamento efetuado: ""ROMETAL COMP P MOVEIS LTDA""",-2308.0,Pagamento a fornecedor,2.1.1.01 Fornecedores Nacionais,0.0,2308.0
+2026-05-04,"Pix recebido: ""FALCAO & FRAZAO LTDA""",11361.08,Transferência entre contas próprias,1.1.1.09 Transferências Internas,11361.08,0.0
+2026-05-05,"Pix enviado: ""RONALDO FRAZAO""",-1000.0,Movimentação com sócio,2.1.2.01 Conta Corrente Sócios,0.0,1000.0
+2026-05-05,"Pagamento de Titulo - Inter: ""HOME CONTABILIDADE LTDA""",-2962.2,Honorários contábeis,4.1.4.01 Serviços Contábeis,0.0,2962.2
+2026-05-05,"Pagamento efetuado: ""BANCO SOFISA S.A.""",-3343.8,Pagamento financiamento/empréstimo,2.1.3.02 Empréstimos - Capital de Giro,0.0,3343.8
+2026-05-05,"Pagamento efetuado: ""IMOVEIS VENEZA LTDA""",-5579.22,Pagamento aluguel,4.1.3.01 Despesas Consumo/Aluguel,0.0,5579.22
+2026-05-05,"Pix recebido: ""RONALDO MELO FRAZAO""",11596.48,Movimentação com sócio,2.1.2.01 Conta Corrente Sócios,11596.48,0.0
+2026-05-05,"Pix recebido: ""FALCAO & FRAZAO LTDA""",2125.79,Transferência entre contas próprias,1.1.1.09 Transferências Internas,2125.79,0.0
+2026-05-06,"Pix recebido: ""BARROSO ARTEFATOS P. M. LTDA""",424.0,Recebimento cliente diverso,1.1.2.01 Clientes,424.0,0.0
+2026-05-06,"Pix recebido: ""SARA EMILIA DA CONCEICAO""",92.0,Recebimento cliente diverso,1.1.2.01 Clientes,92.0,0.0
+2026-05-07,"Pix recebido: ""BARROSO ARTEFATOS P. M. LTDA""",620.0,Recebimento cliente diverso,1.1.2.01 Clientes,620.0,0.0
+2026-05-07,"Pix enviado: ""TIM S A""",-230.81,Despesa telefonia,4.1.3.01 Despesas Consumo/Aluguel,0.0,230.81
+2026-05-07,"Pagamento efetuado: ""RNX FIDC MULTISSETORIAL LP""",-1383.51,Pagamento a fornecedor,2.1.1.01 Fornecedores Nacionais,0.0,1383.51
+2026-05-07,"Pagamento efetuado: ""PLACAS DO BRASIL S.A.""",-27022.63,Pagamento a fornecedor,2.1.1.01 Fornecedores Nacionais,0.0,27022.63
+2026-05-07,"Pix recebido: ""RONALDO MELO FRAZAO""",27617.54,Movimentação com sócio,2.1.2.01 Conta Corrente Sócios,27617.54,0.0
+2026-05-07,"Pix recebido: ""PIEROTE MOVELARIA LTDA""",17.5,Recebimento cliente diverso,1.1.2.01 Clientes,17.5,0.0
+2026-05-08,"Pagamento efetuado: ""PLACAS DO BRASIL S A""",-22109.42,Pagamento a fornecedor,2.1.1.01 Fornecedores Nacionais,0.0,22109.42
+2026-05-08,"Pix recebido: ""RONALDO MELO FRAZAO""",7272.06,Movimentação com sócio,2.1.2.01 Conta Corrente Sócios,7272.06,0.0
+2026-05-08,"Pagamento efetuado: ""TABONE INDUSTRIA E COMERCIO DE PLASTICOS""",-2252.0,Pagamento a fornecedor,2.1.1.01 Fornecedores Nacionais,0.0,2252.0
+2026-05-08,"Pix recebido: ""FALCAO & FRAZAO LTDA""",16215.46,Transferência entre contas próprias,1.1.1.09 Transferências Internas,16215.46,0.0
+2026-05-08,"Pix recebido: ""C R MACHADO ME""",300.0,Recebimento cliente diverso,1.1.2.01 Clientes,300.0,0.0
+2026-05-08,"Pix recebido: ""FRANCISCO LEONILDO ALVES DA CUNHA""",259.9,Recebimento cliente diverso,1.1.2.01 Clientes,259.9,0.0
+2026-05-08,"Pagamento Aguas de Teresina: ""AGUAS DE TERESINA""",-168.62,Despesa consumo (água),4.1.3.01 Despesas Consumo/Aluguel,0.0,168.62
+2026-05-08,"Pagamento efetuado: ""LUIZ CARLOS FERREIRA DA CONCEICAO TRANSPORTES""",-495.71,Pagamento a fornecedor,2.1.1.01 Fornecedores Nacionais,0.0,495.71
+2026-05-08,"Pagamento efetuado: ""STAM METALURGICA LTDA.""",-994.61,Pagamento a fornecedor,2.1.1.01 Fornecedores Nacionais,0.0,994.61
+2026-05-09,"Pix recebido: ""MARCELO ALBUQUERQUE DE MEDEIROS""",96.1,Recebimento cliente diverso,1.1.2.01 Clientes,96.1,0.0
+2026-05-09,"Pix recebido: ""AMBIENTARE MOVEIS PLANEJADOS LTDA""",35.01,Recebimento cliente diverso,1.1.2.01 Clientes,35.01,0.0
+2026-05-11,"Pix recebido: ""L. M. DA SILVA VIDRACARIA""",149.5,Recebimento cliente diverso,1.1.2.01 Clientes,149.5,0.0
+2026-05-11,"Pagamento efetuado: ""Pagamento fatura cartao Inter""",-948.43,Pagamento fatura cartão Inter,2.1.1.03 Fatura Cartão a Pagar,0.0,948.43
+2026-05-11,"Pix recebido: ""FALCAO & FRAZAO LTDA-ME""",706.31,Transferência entre contas próprias,1.1.1.09 Transferências Internas,706.31,0.0
+2026-05-11,"Pix recebido: ""M C CONCEICAO FILHO""",12.0,Recebimento cliente diverso,1.1.2.01 Clientes,12.0,0.0
+2026-05-11,"Pix recebido: ""M C CONCEICAO FILHO""",99.01,Recebimento cliente diverso,1.1.2.01 Clientes,99.01,0.0
+2026-05-12,"Pix recebido: ""CASAMATER CASA SAUDE MATERNIDADE TE LTDA""",5424.0,Recebimento cliente diverso,1.1.2.01 Clientes,5424.0,0.0
+2026-05-12,"Pix recebido: ""BARROSO ARTEFATOS PARA MADEIRA LTDA""",259.9,Recebimento cliente diverso,1.1.2.01 Clientes,259.9,0.0
+2026-05-12,"Pix recebido: ""SARA EMILIA DA CONCEICAO""",34.61,Recebimento cliente diverso,1.1.2.01 Clientes,34.61,0.0
+2026-05-12,"Pix recebido: ""PROJETANDO MOVEIS LTDA""",379.9,Recebimento cliente diverso,1.1.2.01 Clientes,379.9,0.0
+2026-05-13,"Pix enviado: ""Falcao E Frazao LTDA""",-6247.91,Transferência entre contas próprias,1.1.1.09 Transferências Internas,0.0,6247.91
+2026-05-15,"Pix recebido: ""M C CONCEICAO FILHO""",114.7,Recebimento cliente diverso,1.1.2.01 Clientes,114.7,0.0
+2026-05-19,"Pix recebido: ""BARROSO ARTEFATOS P. M. LTDA""",380.0,Recebimento cliente diverso,1.1.2.01 Clientes,380.0,0.0
+2026-05-19,"Pix recebido: ""BARROSO ARTEFATOS P. M. LTDA""",55.0,Recebimento cliente diverso,1.1.2.01 Clientes,55.0,0.0
+2026-05-19,"Pix recebido: ""M C CONCEICAO FILHO""",67.8,Recebimento cliente diverso,1.1.2.01 Clientes,67.8,0.0
+2026-05-20,"Pix recebido: ""CASAMATER CASA SAUDE MATERNIDADE TE LTDA""",7528.36,Recebimento cliente diverso,1.1.2.01 Clientes,7528.36,0.0
+2026-05-21,"Pix enviado: ""Falcao E Frazao LTDA""",-8145.86,Transferência entre contas próprias,1.1.1.09 Transferências Internas,0.0,8145.86
+2026-05-22,"Pix recebido: ""WILSON SILVA""",81.0,Recebimento cliente diverso,1.1.2.01 Clientes,81.0,0.0
+2026-05-22,"Pix enviado: ""LAMINATO MADEIRAS""",-1060.2,Pagamento diverso via PIX,2.1.1.02 Fornecedores/Despesas Diversas ⚠️,0.0,1060.2
+2026-05-22,"Pix recebido: ""CONSTRUTORA TRELICA LTDA""",1567.6,Recebimento cliente diverso,1.1.2.01 Clientes,1567.6,0.0
+2026-05-25,"Pix recebido: ""MANOEL COSME CONCEICAO FH""",67.54,Recebimento cliente diverso,1.1.2.01 Clientes,67.54,0.0
+2026-05-26,"Pagamento efetuado: ""ALTERDATA TEC.EM INFORMATICA""",-670.95,Despesa sistema ERP,4.1.4.02 Despesas Software/TI,0.0,670.95
+2026-05-26,"Pix recebido: ""BARROSO ARTEFATOS P. M. LTDA""",306.0,Recebimento cliente diverso,1.1.2.01 Clientes,306.0,0.0
+2026-05-27,"Pix recebido: ""BRITO & CIA LTDA""",1675.69,Recebimento cliente diverso,1.1.2.01 Clientes,1675.69,0.0
+2026-05-27,"Pix enviado: ""CLIMET""",-50.0,Pagamento diverso via PIX,2.1.1.02 Fornecedores/Despesas Diversas ⚠️,0.0,50.0
+2026-05-27,"Pix recebido: ""C R MACHADO ME""",600.0,Recebimento cliente diverso,1.1.2.01 Clientes,600.0,0.0
+2026-05-28,"Pix recebido: ""WILSON SILVA""",2589.19,Recebimento cliente diverso,1.1.2.01 Clientes,2589.19,0.0
+2026-05-28,"Pix recebido: ""JHONNAS DE SOUSA GOVEIA""",51.51,Recebimento cliente diverso,1.1.2.01 Clientes,51.51,0.0
+2026-05-28,"Pix recebido: ""JHONNAS DE SOUSA GOVEIA""",431.34,Recebimento cliente diverso,1.1.2.01 Clientes,431.34,0.0
+2026-05-28,"Pix recebido: ""M C CONCEICAO FILHO""",133.0,Recebimento cliente diverso,1.1.2.01 Clientes,133.0,0.0
+2026-05-29,"Pagamento Aguas de Teresina: ""AGUAS DE TERESINA""",-162.25,Despesa consumo (água),4.1.3.01 Despesas Consumo/Aluguel,0.0,162.25
+2026-05-29,"Pix enviado: ""POSTOS AVALLON""",-229.87,Despesa combustível,4.1.3.02 Despesas Combustível,0.0,229.87
+2026-05-31,"Pix enviado: ""POSTO HOMERO CASTELO BRANCO LTDA""",-240.04,Despesa combustível,4.1.3.02 Despesas Combustível,0.0,240.04

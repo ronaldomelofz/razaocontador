@@ -1,0 +1,80 @@
+data,historico,valor,categoria,conta,entrada,saida
+2026-05-04,Pix - Recebido CREDI SHOP,1178.28,Recebimento cartão (CrediShop),1.1.1.06 Repasse Cartões a Receber,1178.28,0.0
+2026-05-06,Tarifa Pacote de Serviços,-155.0,Tarifa bancária,4.1.2.03 Despesas Bancárias - Tarifas,0.0,155.0
+2026-05-11,Pix - Recebido CREDI SHOP,484.12,Recebimento cartão (CrediShop),1.1.1.06 Repasse Cartões a Receber,484.12,0.0
+2026-05-11,Pix - Recebido FALCAO & FR,4969.77,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,4969.77,0.0
+2026-05-11,Pix - Recebido RONALDO MEL,15890.96,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,15890.96,0.0
+2026-05-11,Pagamento de Boleto HD FERRAGENS PARA MOVEIS LTDA,-2086.14,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,2086.14
+2026-05-11,Pagamento de Boleto INDUST. PLAS. ACOS FARROUPILHA,-1730.0,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,1730.0
+2026-05-11,Pagamento de Boleto STARRETT INDUSTRIA E COMERCIO,-372.53,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,372.53
+2026-05-11,Pagamento de Boleto STARRETT INDUSTRIA E COMERCIO,-1172.0,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,1172.0
+2026-05-11,Pagamento de Boleto STARRETT INDUSTRIA E COMERCIO,-535.87,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,535.87
+2026-05-11,Pagamento de Boleto LAGE E RENZETTI LTDA,-5144.88,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,5144.88
+2026-05-11,Pix - Enviado Madepinus,-706.31,Transferência entre contas próprias,1.1.1.09 Transferências Internas,0.0,706.31
+2026-05-11,Pagamento de Boleto EQUATORIAL PIAUI DISTRIBUIDORA,-145.46,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,145.46
+2026-05-11,Pagamento de Boleto IBRAP INDUSTRIA BRASILEIRA DE,-4028.78,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,4028.78
+2026-05-11,Pagamento de Boleto KITSUL COMPONENTES PARA MOVEI,-1687.32,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,1687.32
+2026-05-11,Pix - Enviado Madepinus,-1432.4,Transferência entre contas próprias,1.1.1.09 Transferências Internas,0.0,1432.4
+2026-05-12,Pix - Recebido CREDI SHOP,96.29,Recebimento cartão (CrediShop),1.1.1.06 Repasse Cartões a Receber,96.29,0.0
+2026-05-12,Pix - Recebido FALCAO FR,25716.05,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,25716.05,0.0
+2026-05-12,Pix - Recebido RONALDO MEL,14396.15,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,14396.15,0.0
+2026-05-12,Pix - Enviado Madepinus,-200.0,Transferência entre contas próprias,1.1.1.09 Transferências Internas,0.0,200.0
+2026-05-12,Impostos GOV PI ARREC ICMS OUTROS,-32.97,Pagamento ICMS (DAR/antecipação),4.1.1.02 ICMS a Recolher,0.0,32.97
+2026-05-12,Impostos GOV PI ARREC ICMS OUTROS,-735.48,Pagamento ICMS (DAR/antecipação),4.1.1.02 ICMS a Recolher,0.0,735.48
+2026-05-12,Impostos GOV PI ARREC ICMS OUTROS,-738.61,Pagamento ICMS (DAR/antecipação),4.1.1.02 ICMS a Recolher,0.0,738.61
+2026-05-12,Impostos GOV PI ARREC ICMS OUTROS,-984.0,Pagamento ICMS (DAR/antecipação),4.1.1.02 ICMS a Recolher,0.0,984.0
+2026-05-12,Impostos GOV PI ARREC ICMS OUTROS,-765.31,Pagamento ICMS (DAR/antecipação),4.1.1.02 ICMS a Recolher,0.0,765.31
+2026-05-12,Impostos GOV PI ARREC ICMS OUTROS,-518.75,Pagamento ICMS (DAR/antecipação),4.1.1.02 ICMS a Recolher,0.0,518.75
+2026-05-12,Impostos GOV PI ARREC ICMS OUTROS,-884.56,Pagamento ICMS (DAR/antecipação),4.1.1.02 ICMS a Recolher,0.0,884.56
+2026-05-12,Impostos GOV PI ARREC ICMS OUTROS,-942.8,Pagamento ICMS (DAR/antecipação),4.1.1.02 ICMS a Recolher,0.0,942.8
+2026-05-13,Pix - Recebido CREDI SHOP,108.07,Recebimento cartão (CrediShop),1.1.1.06 Repasse Cartões a Receber,108.07,0.0
+2026-05-13,Pix - Recebido FALCAO E FR,6247.91,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,6247.91,0.0
+2026-05-13,Pix - Enviado ESTADO DO PIAUI,-18786.51,Pagamento ICMS SEFAZ-PI,4.1.1.02 ICMS a Recolher,0.0,18786.51
+2026-05-13,Pix - Enviado POSTOS AVALLON,-235.64,Despesa combustível,4.1.3.02 Despesas Combustível,0.0,235.64
+2026-05-14,Pix - Recebido CREDI SHOP,14275.1,Recebimento cartão (CrediShop),1.1.1.06 Repasse Cartões a Receber,14275.1,0.0
+2026-05-14,Pix - Recebido RONALDO MEL,23531.28,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,23531.28,0.0
+2026-05-14,Pagamento de Boleto METALFIXE INDUSTRIA E COMERCI,-2510.27,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,2510.27
+2026-05-14,Pagamento de Boleto ROMETAL COMP P MOVEIS LTDA,-2050.0,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,2050.0
+2026-05-14,Pagamento de Boleto VIRTEX TELECOM,-249.8,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,249.8
+2026-05-14,Pagamento de Boleto LOTUS COMERCIAL DE FERRAGENS E,-580.04,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,580.04
+2026-05-14,Pagamento de Boleto PLACAS DO BRASIL S.A.,-9445.67,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,9445.67
+2026-05-15,Pix - Recebido RONALDO MELO F,8436.55,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,8436.55,0.0
+2026-05-15,Pix - Recebido FALCAO FR,3139.46,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,3139.46,0.0
+2026-05-15,Pix - Enviado RONALDO MELO FRAZAO,-2760.0,Movimentação com sócio,2.1.2.01 Conta Corrente Sócios,0.0,2760.0
+2026-05-18,Pix - Recebido FALCAO FR,4794.39,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,4794.39,0.0
+2026-05-18,Pix - Recebido RONALDO MEL,10256.04,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,10256.04,0.0
+2026-05-18,Pagamento de Boleto PLACAS DO BRASIL S.A.,-6456.12,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,6456.12
+2026-05-19,Pagamento de Boleto PLACAS DO BRASIL S A,-5101.26,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,5101.26
+2026-05-19,Pagamento de Boleto PLACAS DO BRASIL S A,-2282.32,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,2282.32
+2026-05-19,Pagamento de Boleto JOMARCA INDL DE PARAFUSOS LTDA,-2684.79,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,2684.79
+2026-05-20,Pix - Recebido RONALDO MEL,10787.31,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,10787.31,0.0
+2026-05-20,Pix - Enviado RECEITA FEDERAL,-7976.25,Pagamento DARF (INSS/IRRF),2.1.4.01 Obrigações Fiscais Federais,0.0,7976.25
+2026-05-20,Pix - Enviado CEF MATRIZ,-1400.55,Pagamento FGTS,2.1.4.02 FGTS a Recolher,0.0,1400.55
+2026-05-20,Pagamento de Boleto AFO MOVEIS E ARTEFATOS LTDA,-1498.33,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,1498.33
+2026-05-20,Pix - Enviado Madepinus,-18530.2,Transferência entre contas próprias,1.1.1.09 Transferências Internas,0.0,18530.2
+2026-05-21,Pix - Recebido FALCAO & FR,11031.95,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,11031.95,0.0
+2026-05-21,Pix - Recebido FALCAO E FR,8145.86,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,8145.86,0.0
+2026-05-21,Pix - Recebido RONALDO MEL,40842.07,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,40842.07,0.0
+2026-05-21,Pix - Recebido RONALDO MEL,22978.81,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,22978.81,0.0
+2026-05-21,Impostos GOV PI ARREC ICMS OUTROS,-16433.59,Pagamento ICMS (DAR/antecipação),4.1.1.02 ICMS a Recolher,0.0,16433.59
+2026-05-21,Impostos GOV PI ARREC ICMS OUTROS,-22978.81,Pagamento ICMS (DAR/antecipação),4.1.1.02 ICMS a Recolher,0.0,22978.81
+2026-05-21,Impostos GOV PI ARREC ICMS OUTROS,-22978.81,Pagamento ICMS (DAR/antecipação),4.1.1.02 ICMS a Recolher,0.0,22978.81
+2026-05-21,Impostos GOV PI ARREC ICMS OUTROS,-20042.77,Pagamento ICMS (DAR/antecipação),4.1.1.02 ICMS a Recolher,0.0,20042.77
+2026-05-21,Impostos GOV PI ARREC ICMS OUTROS,-26983.19,Pagamento ICMS (DAR/antecipação),4.1.1.02 ICMS a Recolher,0.0,26983.19
+2026-05-22,Pix - Recebido RONALDO MEL,57359.18,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,57359.18,0.0
+2026-05-22,Pagamento de Boleto ROMETAL COMP P MOVEIS LTDA,-1757.0,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,1757.0
+2026-05-22,Pagamento de Boleto HD FERRAGENS PARA MOVEIS LTDA,-971.13,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,971.13
+2026-05-22,Pagamento de Boleto STAM METALURGICA LTDA.,-994.61,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,994.61
+2026-05-22,Pix - Enviado AGUAS DE TERESINA SANEAME,-92.92,Despesa consumo (água),4.1.3.01 Despesas Consumo/Aluguel,0.0,92.92
+2026-05-22,Pagamento de Boleto ALLIANZ SEGUROS S A,-188.33,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,188.33
+2026-05-27,Pix - Recebido FALCAO FR,13353.5,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,13353.5,0.0
+2026-05-27,Pagamento de Boleto PLACAS DO BRASIL S A,-32389.73,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,32389.73
+2026-05-27,Pagamento de Boleto PLACAS DO BRASIL S A,-1138.96,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,1138.96
+2026-05-27,Pagamento de Boleto EQUATORIAL PIAUI DISTRIBUIDORA,-2450.84,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,2450.84
+2026-05-27,Pagamento de Boleto HD FERRAGENS PARA MOVEIS LTDA,-4274.82,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,4274.82
+2026-05-28,Pix - Recebido FALCAO & FR,5420.73,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,5420.73,0.0
+2026-05-29,Pix - Recebido FALCAO FR,4822.58,Transferência entre contas próprias/sócio,1.1.1.09 Transferências Internas,4822.58,0.0
+2026-05-29,Pix - Recebido AMBIENTARE,26.0,Recebimento cliente diverso,1.1.2.01 Clientes,26.0,0.0
+2026-05-29,Pagamento de Boleto PLACAS DO BRASIL S A,-16007.3,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,16007.3
+2026-05-29,Pagamento de Boleto ALELO S.A.,-3486.0,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,3486.0
+2026-05-29,Pagamento de Boleto LOTUS COMERCIAL DE FERRAGENS E,-580.04,Pagamento a fornecedor (boleto),2.1.1.01 Fornecedores Nacionais,0.0,580.04
