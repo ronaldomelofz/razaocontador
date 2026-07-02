@@ -233,14 +233,15 @@ body {
 
 .actions-cell { width: 90px; text-align: center; }
 
-.edit-row td { background: #f0f7f2 !important; padding: 16px !important; }
+.edit-row td { background: #f0f7f2 !important; padding: 16px !important; overflow: visible; }
 
 .reclassify-panel {
   background: #fff;
   border: 1px solid #c8d3e0;
   border-radius: 8px;
   padding: 16px;
-  max-width: 720px;
+  max-width: 100%;
+  overflow: visible;
 }
 .reclassify-hint { font-size: 0.8125rem; color: #5a6a7e; margin: 8px 0 12px; }
 
@@ -256,7 +257,10 @@ body {
 }
 .preset-btn:hover { background: #d4e8da; }
 
+.table.ledger { overflow: visible; }
+
 .reclassify-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.reclassify-fields label:first-child { grid-column: 1 / -1; }
 .reclassify-fields label { display: flex; flex-direction: column; gap: 4px; font-size: 0.75rem; font-weight: 600; }
 .reclassify-fields select,
 .reclassify-fields input {
@@ -289,7 +293,7 @@ body {
   top: calc(100% + 4px);
   left: 0;
   right: 0;
-  max-height: 220px;
+  max-height: min(480px, 60vh);
   overflow-y: auto;
   background: #fff;
   border: 1px solid #c8d3e0;
@@ -298,6 +302,14 @@ body {
   list-style: none;
   margin: 0;
   padding: 4px 0;
+}
+.account-search-list--portal {
+  position: fixed;
+  z-index: 10000;
+  top: auto;
+  left: auto;
+  right: auto;
+  max-height: min(480px, 60vh);
 }
 .account-search-item {
   padding: 8px 10px;

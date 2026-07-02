@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 function normalize(s) {
   return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -17,12 +18,35 @@ export default function AccountSearchSelect({ accounts, value, onChange, placeho
   const [query, setQuery] = useState(selected ? `${selected.code} — ${selected.name}` : '');
   const [open, setOpen] = useState(false);
   const [highlight, setHighlight] = useState(0);
+  const [listRect, setListRect] = useState(null);
   const wrapRef = useRef(null);
+  const inputRef = useRef(null);
 
   const filtered = useMemo(() => {
     const list = accounts.filter((a) => matchesAccount(a, query));
-    return list.slice(0, 30);
+    return list.slice(0, 80);
   }, [accounts, query]);
+
+  const updateListRect = () => {
+    if (!inputRef.current) return;
+    const rect = inputRef.current.getBoundingClientRect();
+    setListRect({
+      top: rect.bottom + 4,
+      left: rect.left,
+      width: rect.width,
+    });
+  };
+
+  useEffect(() => {
+    if (!open) return undefined;
+    updateListRect();
+    window.addEventListener('resize', updateListRect);
+    window.addEventListener('scroll', updateListRect, true);
+    return () => {
+      window.removeEventListener('resize', updateListRect);
+      window.removeEventListener('scroll', updateListRect, true);
+    };
+  }, [open, query]);
 
   useEffect(() => {
     const selectedNow = accounts.find((a) => a.code === value);
@@ -78,18 +102,23 @@ export default function AccountSearchSelect({ accounts, value, onChange, placeho
   return (
     <div className="account-search" ref={wrapRef}>
       <input
+        ref={inputRef}
         type="text"
         className="account-search-input"
         value={query}
         onChange={onInputChange}
-        onFocus={() => setOpen(true)}
+        onFocus={() => { setOpen(true); updateListRect(); }}
         onKeyDown={onKeyDown}
         placeholder={placeholder}
         autoComplete="off"
         spellCheck={false}
       />
-      {open && (
-        <ul className="account-search-list" role="listbox">
+      {open && listRect && createPortal(
+        <ul
+          className="account-search-list account-search-list--portal"
+          role="listbox"
+          style={{ top: listRect.top, left: listRect.left, width: listRect.width }}
+        >
           {filtered.length === 0 ? (
             <li className="account-search-empty">Nenhuma conta encontrada</li>
           ) : (
@@ -107,7 +136,8 @@ export default function AccountSearchSelect({ accounts, value, onChange, placeho
               </li>
             ))
           )}
-        </ul>
+        </ul>,
+        document.body,
       )}
     </div>
   );
