@@ -137,8 +137,7 @@ export default function App() {
     <div className="app">
       <header className="header">
         <div>
-          <h1>MADEPINUS — Livro Razão</h1>
-          <p className="subtitle">Falcão &amp; Frazão Ltda · Partidas Dobradas · Conciliação Bancária</p>
+          <h1>MADEPINUS - RAZÃO - CONCILIAÇÃO</h1>
         </div>
         <div className="header-actions">
           <button type="button" onClick={() => exportExcel(filtered, month)} className="btn">⬇ Excel</button>

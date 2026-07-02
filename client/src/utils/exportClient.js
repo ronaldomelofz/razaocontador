@@ -41,7 +41,7 @@ export function exportExcel(entries, month) {
 
 export function exportPdf(entries, summary, month) {
   const lines = [
-    'MADEPINUS — Livro Razão',
+    'MADEPINUS - RAZÃO - CONCILIAÇÃO',
     `Falcão & Frazão Ltda | Competência: ${month}`,
     `Gerado em: ${new Date().toLocaleString('pt-BR')}`,
     '',
