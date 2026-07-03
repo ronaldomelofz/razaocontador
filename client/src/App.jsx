@@ -40,6 +40,7 @@ async function loadData(month) {
         summary: await summaryRes.json(),
         entries: await entriesRes.json(),
         chartOfAccounts: coaRes.ok ? await coaRes.json() : (meta?.chartOfAccounts || []),
+        fuelRecords: meta?.fuelRecords || [],
         source: 'api',
         meta,
       };
@@ -53,6 +54,7 @@ async function loadData(month) {
     summary: data.summary || [],
     entries: data.entries || [],
     chartOfAccounts: data.chartOfAccounts || [],
+    fuelRecords: data.fuelRecords || [],
     source: 'static',
     meta: data,
   };
@@ -70,6 +72,7 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [meta, setMeta] = useState(null);
+  const [fuelRecords, setFuelRecords] = useState([]);
   const [search, setSearch] = useState('');
   const [view, setView] = useState('ledger');
 
@@ -81,6 +84,7 @@ export default function App() {
       setSummary(data.summary);
       setEntries(data.entries);
       setChartOfAccounts(await loadChartOfAccounts(data.chartOfAccounts));
+      setFuelRecords(data.fuelRecords || data.meta?.fuelRecords || []);
       setMeta(data.meta || null);
       setAccountFilter('');
       setEditing(null);
@@ -105,6 +109,16 @@ export default function App() {
     return true;
   });
 
+  const fuelDocs = fuelRecords.filter((r) => {
+    if (accountFilter && r.bank_account_id && r.bank_account_id !== accountFilter) return false;
+    if (search) {
+      const hay = `${r.file_name} ${r.station} ${r.doc_date}`.toLowerCase();
+      if (!hay.includes(search.toLowerCase())) return false;
+    }
+    return true;
+  });
+  const fuelDocsTotal = fuelDocs.reduce((s, r) => s + (r.amount || 0), 0);
+  const fuelDocsLinked = fuelDocs.filter((r) => r.status === 'conciliado').length;
   const fuelEntries = entries.filter(isFuelEntry);
   const fuelTotal = fuelEntries.reduce((s, e) => s + (e.amount || 0), 0);
   const fuelByBank = fuelEntries.reduce((acc, e) => {
@@ -200,16 +214,17 @@ export default function App() {
         <div className="meta-bar">
           Atualizado em {fmtDate(meta.generatedAt?.slice(0, 10))} {meta.generatedAt?.slice(11, 16)}
           · {meta.stats?.imported} lançamentos · {meta.stats?.attachments} anexos
+          {meta.stats?.fuelDocuments != null && ` · ${meta.stats.fuelDocuments} cupons combustível`}
         </div>
       )}
 
       <div className="cards">
         {view === 'fuel' ? (
           <>
-            <div className="card"><span className="card-n">{fuelEntries.length}</span><span className="card-l">Abastecimentos</span></div>
-            <div className="card warn"><span className="card-n">{fmt(fuelTotal)}</span><span className="card-l">Total combustível</span></div>
-            <div className="card"><span className="card-n">{fuelEntries.length ? fmt(fuelTotal / fuelEntries.length) : '0,00'}</span><span className="card-l">Média por abastecimento</span></div>
-            <div className="card ok"><span className="card-n">{Object.keys(fuelByBank).length}</span><span className="card-l">Contas bancárias</span></div>
+            <div className="card"><span className="card-n">{fuelDocs.length || fuelEntries.length}</span><span className="card-l">Documentos / abastecimentos</span></div>
+            <div className="card warn"><span className="card-n">{fmt(fuelDocsTotal || fuelTotal)}</span><span className="card-l">Total combustível</span></div>
+            <div className="card ok"><span className="card-n">{fuelDocsLinked}</span><span className="card-l">Cupons conciliados</span></div>
+            <div className="card"><span className="card-n">{fuelDocs.length ? fuelDocs.length - fuelDocsLinked : 0}</span><span className="card-l">Só documento</span></div>
           </>
         ) : (
           <>
@@ -227,33 +242,66 @@ export default function App() {
       {!loading && !error && (
         <>
           {view === 'fuel' ? (
-            <section className="section">
-              <h2>Combustível por conta bancária</h2>
-              <table className="table">
-                <thead>
-                  <tr>
-                    <th>Conta</th><th>Abastecimentos</th><th>Total (R$)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {Object.values(fuelByBank).map((row) => (
-                    <tr
-                      key={row.bank}
-                      className={accountFilter === row.bank ? 'row-selected' : 'row-clickable'}
-                      onClick={() => handleAccountClick(row.bank)}
-                      title="Clique para filtrar abastecimentos desta conta"
-                    >
-                      <td className="account-link">{row.bank}</td>
-                      <td>{row.n}</td>
-                      <td className="num">{fmt(row.total)}</td>
+            <>
+              <section className="section">
+                <h2>Cupons e notas — pasta COMBUSTÍVEL ({fuelDocs.length})</h2>
+                <table className="table">
+                  <thead>
+                    <tr>
+                      <th>Data</th><th>Hora</th><th>Arquivo</th><th>Valor</th><th>Posto / histórico</th><th>Conta</th><th>Status</th><th>Cupom</th>
                     </tr>
-                  ))}
-                  {fuelEntries.length === 0 && (
-                    <tr><td colSpan={3} className="empty-msg">Nenhum gasto com combustível neste mês.</td></tr>
-                  )}
-                </tbody>
-              </table>
-            </section>
+                  </thead>
+                  <tbody>
+                    {fuelDocs.map((r) => (
+                      <tr key={r.id}>
+                        <td className="nowrap">{fmtDate(r.doc_date)}</td>
+                        <td>{r.doc_time || '—'}</td>
+                        <td className="desc">{r.file_name}</td>
+                        <td className="num">{r.amount != null ? fmt(r.amount) : '—'}</td>
+                        <td>{r.station || '—'}</td>
+                        <td>{r.bank_account_id || '—'}</td>
+                        <td>{r.status === 'conciliado' ? '✅ Conciliado' : '📄 Documento'}</td>
+                        <td>
+                          {r.url ? (
+                            <a href={r.url} target="_blank" rel="noreferrer" className="attach-link">📄 Abrir</a>
+                          ) : '—'}
+                        </td>
+                      </tr>
+                    ))}
+                    {fuelDocs.length === 0 && (
+                      <tr><td colSpan={8} className="empty-msg">Nenhum documento na pasta COMBUSTÍVEL. Execute o pipeline com acesso à rede.</td></tr>
+                    )}
+                  </tbody>
+                </table>
+              </section>
+              <section className="section">
+                <h2>Combustível por conta bancária</h2>
+                <table className="table">
+                  <thead>
+                    <tr>
+                      <th>Conta</th><th>Abastecimentos</th><th>Total (R$)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {Object.values(fuelByBank).map((row) => (
+                      <tr
+                        key={row.bank}
+                        className={accountFilter === row.bank ? 'row-selected' : 'row-clickable'}
+                        onClick={() => handleAccountClick(row.bank)}
+                        title="Clique para filtrar abastecimentos desta conta"
+                      >
+                        <td className="account-link">{row.bank}</td>
+                        <td>{row.n}</td>
+                        <td className="num">{fmt(row.total)}</td>
+                      </tr>
+                    ))}
+                    {fuelEntries.length === 0 && (
+                      <tr><td colSpan={3} className="empty-msg">Nenhum lançamento bancário de combustível neste mês.</td></tr>
+                    )}
+                  </tbody>
+                </table>
+              </section>
+            </>
           ) : (
             <section className="section">
               <h2>Resumo por conta bancária</h2>

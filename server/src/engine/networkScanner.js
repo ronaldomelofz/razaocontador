@@ -69,6 +69,7 @@ export function classifyFile(filePath) {
   }
   if (ext === '.xml') return 'xml_nfe';
   if (upper.includes('XML')) return 'xml_nfe';
+  if (upper.includes('COMBUST')) return 'combustivel';
   if (upper.includes('COMPROVANTE') || /^\d+ - \d{8}/.test(base)) return 'comprovante';
   if (upper.includes('NOTA FISCAL') || upper.includes('NOTAS FISCAL')) return 'nota_fiscal';
   if (upper.includes('FATURA CART') || upper.includes('FATURA-INTER')) return 'fatura_cartao';

@@ -8,6 +8,7 @@
     "start": "node src/index.js",
     "process": "node src/engine/runPipeline.js",
     "pipeline": "node src/engine/runFullPipeline.js",
+    "import-fuel": "node src/scripts/importFuelFolder.js",
     "migrate": "node src/db/migrate.js"
   },
   "dependencies": {

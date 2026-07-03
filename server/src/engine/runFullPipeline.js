@@ -15,6 +15,7 @@ import { parseNFeXML } from '../parsers/xmlFiscal.js';
 import { classifyTransaction } from './classify.js';
 import { matchBankToFiscal } from './reconcile.js';
 import { linkAttachments } from './linkAttachments.js';
+import { linkFuelFolder } from './linkFuelFolder.js';
 
 const monthArg = process.argv.find((a) => a.startsWith('--month='));
 const month = monthArg ? monthArg.split('=')[1] : null;
@@ -176,6 +177,10 @@ console.log('\n📎 Vinculando anexos...');
 const attachResult = linkAttachments(db, files, month);
 console.log(`✔ ${attachResult.linked} anexos vinculados (${attachResult.danfeLinked || 0} DANFE cliente · ${attachResult.supplierLinked || 0} NF entrada/comprovante fornecedor)`);
 
+console.log('\n⛽ Capturando pasta COMBUSTÍVEL...');
+const fuelResult = linkFuelFolder(db, month);
+console.log(`✔ ${fuelResult.files} documentos na pasta · ${fuelResult.linked} vinculados a lançamentos`);
+
 // Exporta JSON para Netlify
 fs.mkdirSync(netlifyDataRoot, { recursive: true });
 const chartOfAccounts = db.prepare(`SELECT code, name, type FROM chart_of_accounts ORDER BY code`).all();
@@ -226,7 +231,16 @@ const exportData = {
   company: 'FALCÃO & FRAZÃO LTDA (MADEPINUS)',
   cnpj: '10.876.822/0001-94',
   networkRoot: root,
-  stats: { imported: totalImported, pending: totalPending, attachments: attachResult.linked, fiscal: fiscalDocs.length, reconciliations: matches.length },
+  stats: {
+    imported: totalImported,
+    pending: totalPending,
+    attachments: attachResult.linked + fuelResult.linked,
+    fuelDocuments: fuelResult.files,
+    fuelLinked: fuelResult.linked,
+    fiscal: fiscalDocs.length,
+    reconciliations: matches.length,
+  },
+  fuelRecords: fuelResult.records,
   chartOfAccounts,
   summary,
   entries: entries.map((e) => ({
