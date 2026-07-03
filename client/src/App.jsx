@@ -1,9 +1,14 @@
 import { useEffect, useState, useCallback, Fragment } from 'react';
 import { exportExcel, exportPdf } from './utils/exportClient';
 import { fmtDate, fmt, isUnclassified, postingAccount } from './utils/format';
+import { isFuelEntry } from './utils/fuel';
 import ReclassifyPanel from './components/ReclassifyPanel';
 
 const MONTHS = ['2026-05', '2026-06'];
+const VIEWS = [
+  { id: 'ledger', label: 'Livro Razão' },
+  { id: 'fuel', label: 'Combustível' },
+];
 
 function statusLabel(s) {
   if (s === 'matched') return '✅ Conciliado';
@@ -66,6 +71,7 @@ export default function App() {
   const [error, setError] = useState(null);
   const [meta, setMeta] = useState(null);
   const [search, setSearch] = useState('');
+  const [view, setView] = useState('ledger');
 
   const refresh = useCallback(async () => {
     setLoading(true);
@@ -89,6 +95,7 @@ export default function App() {
   useEffect(() => { refresh(); }, [refresh]);
 
   const filtered = entries.filter((e) => {
+    if (view === 'fuel' && !isFuelEntry(e)) return false;
     if (accountFilter && e.bank_account_id !== accountFilter) return false;
     if (statusFilter && e.status !== statusFilter) return false;
     if (search) {
@@ -97,6 +104,16 @@ export default function App() {
     }
     return true;
   });
+
+  const fuelEntries = entries.filter(isFuelEntry);
+  const fuelTotal = fuelEntries.reduce((s, e) => s + (e.amount || 0), 0);
+  const fuelByBank = fuelEntries.reduce((acc, e) => {
+    const b = e.bank_account_id || '—';
+    acc[b] ??= { bank: b, total: 0, n: 0 };
+    acc[b].total += e.amount || 0;
+    acc[b].n += 1;
+    return acc;
+  }, {});
 
   const handleAccountClick = (accountId) => {
     setAccountFilter((prev) => (prev === accountId ? '' : accountId));
@@ -153,6 +170,18 @@ export default function App() {
             </button>
           ))}
         </div>
+        <div className="view-tabs">
+          {VIEWS.map((v) => (
+            <button
+              key={v.id}
+              type="button"
+              className={view === v.id ? 'tab tab-view active' : 'tab tab-view'}
+              onClick={() => { setView(v.id); setAccountFilter(''); setEditing(null); setExpanded(null); }}
+            >
+              {v.label}
+            </button>
+          ))}
+        </div>
         {accountFilter && (
           <button type="button" className="chip" onClick={() => setAccountFilter('')}>
             Conta: {accountFilter} ✕
@@ -175,10 +204,21 @@ export default function App() {
       )}
 
       <div className="cards">
-        <div className="card"><span className="card-n">{entries.length}</span><span className="card-l">Lançamentos</span></div>
-        <div className="card warn"><span className="card-n">{pending}</span><span className="card-l">Pendentes</span></div>
-        <div className="card ok"><span className="card-n">{withAttach}</span><span className="card-l">Com anexos</span></div>
-        <div className="card"><span className="card-n">{summary.length}</span><span className="card-l">Contas bancárias</span></div>
+        {view === 'fuel' ? (
+          <>
+            <div className="card"><span className="card-n">{fuelEntries.length}</span><span className="card-l">Abastecimentos</span></div>
+            <div className="card warn"><span className="card-n">{fmt(fuelTotal)}</span><span className="card-l">Total combustível</span></div>
+            <div className="card"><span className="card-n">{fuelEntries.length ? fmt(fuelTotal / fuelEntries.length) : '0,00'}</span><span className="card-l">Média por abastecimento</span></div>
+            <div className="card ok"><span className="card-n">{Object.keys(fuelByBank).length}</span><span className="card-l">Contas bancárias</span></div>
+          </>
+        ) : (
+          <>
+            <div className="card"><span className="card-n">{entries.length}</span><span className="card-l">Lançamentos</span></div>
+            <div className="card warn"><span className="card-n">{pending}</span><span className="card-l">Pendentes</span></div>
+            <div className="card ok"><span className="card-n">{withAttach}</span><span className="card-l">Com anexos</span></div>
+            <div className="card"><span className="card-n">{summary.length}</span><span className="card-l">Contas bancárias</span></div>
+          </>
+        )}
       </div>
 
       {loading && <p className="loading">Carregando dados...</p>}
@@ -186,36 +226,66 @@ export default function App() {
 
       {!loading && !error && (
         <>
-          <section className="section">
-            <h2>Resumo por conta bancária</h2>
-            <table className="table">
-              <thead>
-                <tr>
-                  <th>Conta</th><th>Entradas (R$)</th><th>Saídas (R$)</th><th>Lanç.</th><th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {summary.map((s) => (
-                  <tr
-                    key={s.bank_account_id}
-                    className={accountFilter === s.bank_account_id ? 'row-selected' : 'row-clickable'}
-                    onClick={() => handleAccountClick(s.bank_account_id)}
-                    title="Clique para ver os lançamentos desta conta"
-                  >
-                    <td className="account-link">{s.bank_account_id}</td>
-                    <td className="num">{fmt(s.entradas)}</td>
-                    <td className="num">{fmt(s.saidas)}</td>
-                    <td>{s.n}</td>
-                    <td>{s.pendentes > 0 ? `⚠️ ${s.pendentes}` : '✅'}</td>
+          {view === 'fuel' ? (
+            <section className="section">
+              <h2>Combustível por conta bancária</h2>
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th>Conta</th><th>Abastecimentos</th><th>Total (R$)</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </section>
+                </thead>
+                <tbody>
+                  {Object.values(fuelByBank).map((row) => (
+                    <tr
+                      key={row.bank}
+                      className={accountFilter === row.bank ? 'row-selected' : 'row-clickable'}
+                      onClick={() => handleAccountClick(row.bank)}
+                      title="Clique para filtrar abastecimentos desta conta"
+                    >
+                      <td className="account-link">{row.bank}</td>
+                      <td>{row.n}</td>
+                      <td className="num">{fmt(row.total)}</td>
+                    </tr>
+                  ))}
+                  {fuelEntries.length === 0 && (
+                    <tr><td colSpan={3} className="empty-msg">Nenhum gasto com combustível neste mês.</td></tr>
+                  )}
+                </tbody>
+              </table>
+            </section>
+          ) : (
+            <section className="section">
+              <h2>Resumo por conta bancária</h2>
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th>Conta</th><th>Entradas (R$)</th><th>Saídas (R$)</th><th>Lanç.</th><th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {summary.map((s) => (
+                    <tr
+                      key={s.bank_account_id}
+                      className={accountFilter === s.bank_account_id ? 'row-selected' : 'row-clickable'}
+                      onClick={() => handleAccountClick(s.bank_account_id)}
+                      title="Clique para ver os lançamentos desta conta"
+                    >
+                      <td className="account-link">{s.bank_account_id}</td>
+                      <td className="num">{fmt(s.entradas)}</td>
+                      <td className="num">{fmt(s.saidas)}</td>
+                      <td>{s.n}</td>
+                      <td>{s.pendentes > 0 ? `⚠️ ${s.pendentes}` : '✅'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </section>
+          )}
 
           <section className="section" id="livro-razao">
             <h2>
-              Livro Razão — {filtered.length} lançamento{filtered.length !== 1 ? 's' : ''}
+              {view === 'fuel' ? 'Gastos com combustível' : 'Livro Razão'} — {filtered.length} lançamento{filtered.length !== 1 ? 's' : ''}
               {accountFilter && <span className="filter-hint"> · {accountFilter}</span>}
             </h2>
             <table className="table ledger">
