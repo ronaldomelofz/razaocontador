@@ -123,22 +123,39 @@ def effective_payee(payee):
     return payee
 
 
-def classify_tipo(payee, forma):
-    if forma == "sispag":
+def classify_tipo(payee, forma, desc=""):
+    blob = f"{payee or ''} {desc or ''}"
+    if re.search(r"MADEPINUS|FALCAO\s*&?\s*FRAZAO|10\.876\.822", blob, re.I):
+        return "transferencia"
+    if re.search(r"RONALDO MELO|LILIA MARIA|VIVIANE RODRIGUES|ROGERIO SILVA", blob, re.I):
+        return "pessoal"
+    if re.search(r"ALLIANZ|SEGUROS", blob, re.I):
+        return "seguro"
+    if re.search(r"ICMS|RECEITA FEDERAL|CEF MATRIZ|FGTS|DARF|GOV PI|IMPOSTO", blob, re.I):
+        return "imposto"
+    if NON_SUPPLIER.search(blob):
+        return "consumo"
+    if forma in ("boleto", "sispag") or KNOWN_SUPPLIERS.search(blob):
         return "fornecedor"
-    if NON_SUPPLIER.search(payee or ""):
-        return "outros"
-    return "fornecedor"
+    if forma == "pix":
+        return "pix_diversos"
+    return "outros"
 
 
 def detect_forma(desc):
     d = (desc or "").lower()
+    if "sispag" in d and "fornecedor" in d:
+        return "boleto"  # SISPAG FORNECEDORES = boleto via SISPAG
     if "sispag" in d:
         return "sispag"
     if "pix" in d:
         return "pix"
     if "boleto" in d or "titulo" in d or "título" in d:
         return "boleto"
+    if "pagto conta" in d or "pagamento conta" in d:
+        return "conta_consumo"
+    if "imposto" in d or "arrec" in d:
+        return "imposto"
     if "ted" in d or "doc " in d:
         return "ted"
     return "outro"
@@ -153,7 +170,12 @@ def extract_payee(entry):
         r"Pagamento de Titulo\s*-?\s*(?:Inter:\s*)?(.+)$",
         r"Pix - Enviado\s+\d{2}/\d{2}\s+\d{2}:\d{2}\s+(.+)$",
         r"Pix - Enviado\s+(.+)$",
+        r"PIX ENVIADO\s+(.+)$",
+        r"Pix enviado\s+(.+)$",
+        r"SISPAG FORNECEDORES\s*-?\s*(.+)$",
         r"SISPAG\s+(.+)$",
+        r"Pagto conta telefone\s+(.+)$",
+        r"Impostos\s+(.+)$",
     ]:
         m = re.match(pat, desc, re.I)
         if m:
@@ -161,25 +183,21 @@ def extract_payee(entry):
     return desc.strip()
 
 
-def is_supplier_payment(entry):
-    """True if this bank outflow looks like a supplier payment."""
+def is_diverse_payment(entry):
+    """Boletos, PIX enviados, SISPAG, contas de consumo e impostos pagos."""
     desc = entry.get("description") or ""
-    cat = entry.get("category") or ""
-    da = entry.get("debit_account") or ""
-    blob = f"{desc} {cat} {entry.get('debit_name') or ''} {entry.get('counterparty') or ''}"
-
-    # explicit forms
-    if re.search(r"pagamento de boleto|pagamento de titulos?|sispag\s+fornecedor", desc, re.I):
+    dl = desc.lower()
+    if re.search(r"recebido|recebida|recebimento cielo|recebimento rede", dl):
+        return False
+    if re.search(
+        r"pagamento de boleto|pagamento de titulos?|sispag|"
+        r"pix\s*-?\s*enviado|pix enviado|"
+        r"pagto conta|impostos\s+gov|arrec\s+icms",
+        dl,
+    ):
         return True
-    if da.startswith("2.01.01") and "pagamento a fornecedor" in cat.lower():
-        return True
-    if "pagamento a fornecedor" in cat.lower():
-        return True
-    # PIX / TED to known merchandise suppliers
-    if re.search(r"pix\s*-\s*enviado|ted|doc\s", desc, re.I) and KNOWN_SUPPLIERS.search(blob):
-        # exclude receita federal etc already in NON if we classify later
-        if NON_SUPPLIER.search(desc):
-            return False
+    cat = (entry.get("category") or "").lower()
+    if "pagamento a fornecedor" in cat:
         return True
     return False
 
@@ -196,13 +214,11 @@ def collect_payments(ledger):
     for e in ledger.get("entries", []):
         if not e.get("bank_account_id"):
             continue
-        if not is_supplier_payment(e):
+        if not is_diverse_payment(e):
             continue
-        # skip pure internal / credit-side bank mirror nonsense: we want money leaving the account
-        # In ledger, payments debit expense/supplier and credit bank — amount is positive
         payee = extract_payee(e)
         forma = detect_forma(e.get("description") or "")
-        tipo = classify_tipo(payee, forma)
+        tipo = classify_tipo(payee, forma, e.get("description") or "")
         bank_id = e.get("bank_account_id")
         pays.append(
             {
@@ -493,21 +509,23 @@ def reconcile(titles, pays, month):
                 }
             )
         else:
-            if pay["tipo"] == "outros":
-                base["valor_original"] = pay["amount"]
-                base["juros_multa"] = 0.0
-                base["obs"] = "Boleto/pagamento não mercadoria (consumo/pessoal/serviço)"
-            elif pay["forma"] == "sispag":
-                base["valor_original"] = pay["amount"]
-                base["juros_multa"] = 0.0
-                base["obs"] = "SISPAG Itaú — sem discriminação de título no extrato"
-                base["fornecedor"] = "SISPAG FORNECEDORES (Itaú)"
+            base["valor_original"] = pay["amount"]
+            base["juros_multa"] = 0.0
+            if pay["tipo"] == "transferencia":
+                base["obs"] = "Transferência entre contas próprias / mesma empresa"
+                base["status"] = "transferencia"
+            elif pay["tipo"] == "pessoal":
+                base["obs"] = "PIX / pagamento a pessoa física (sócio/folha)"
+            elif pay["tipo"] == "imposto":
+                base["obs"] = "Pagamento de imposto / obrigação fiscal"
+            elif pay["tipo"] == "seguro":
+                base["obs"] = "Pagamento de seguro"
+            elif pay["tipo"] == "consumo":
+                base["obs"] = "Consumo / aluguel / serviço"
+            elif pay["forma"] == "pix":
+                base["obs"] = "PIX enviado"
             else:
                 base["obs"] = "Sem título no Contas a Pagar / não conciliado"
-                # for pix to known supplier without title still show as fornecedor pending
-                if pay["forma"] == "pix" and pay["tipo"] == "fornecedor":
-                    base["valor_original"] = pay["amount"]
-                    base["juros_multa"] = 0.0
 
         results.append(base)
 
@@ -568,17 +586,83 @@ def slug(s, n=24):
     return (s[:n] or "X")
 
 
-def link_comprovantes(month, items):
-    pdf = ROOT / "tmp_ocr_work" / "bb-comprovantes-07" / "04082026 123025-Comprovantes-BB.pdf"
-    if month != "2026-07" or not pdf.exists():
-        return items
+def parse_itau_comprovantes(pdf_path):
+    doc = fitz.open(pdf_path)
+    pages = []
+    for i in range(len(doc)):
+        t = doc[i].get_text("text")
+        is_boleto = "comprovante de pagamento de boleto" in t.lower()
+        is_pix = "comprovante de transferência" in t.lower() or "pix transferencia" in t.lower()
+        if not is_boleto and not is_pix:
+            continue
+        if is_boleto:
+            ben = re.search(r"dados do beneficiário\s*\nnome\s*\n(.+)", t, re.I)
+            if not ben:
+                ben = re.search(r"razão social\s*\n(.+)", t, re.I)
+            doc_val = re.search(r"valor do documento\s*\nR\$\s*([\d.]+,\d{2})", t, re.I)
+            cob_val = re.search(r"valor do pagamento\s*\nR\$\s*([\d.]+,\d{2})", t, re.I)
+            dt_pag = re.search(r"data do pagamento\s*\n(\d{2}/\d{2}/\d{4})", t, re.I)
+            autent = re.search(r"autenticação mecânica\s*\n([0-9A-F]+)", t, re.I)
+            mora = re.search(r"mora\s*\nR\$\s*([\d.]+,\d{2})", t, re.I)
+            multa = re.search(r"multa\s*\nR\$\s*([\d.]+,\d{2})", t, re.I)
+            original = parse_br(doc_val.group(1)) if doc_val else None
+            cobrado = parse_br(cob_val.group(1)) if cob_val else original
+            juros = 0.0
+            if mora:
+                juros += parse_br(mora.group(1))
+            if multa:
+                juros += parse_br(multa.group(1))
+            pages.append(
+                {
+                    "page": i + 1,
+                    "page_index": i,
+                    "beneficiario": (ben.group(1).strip() if ben else ""),
+                    "data_pagamento": parse_date_br(dt_pag.group(1)) if dt_pag else None,
+                    "valor_documento": original,
+                    "valor_cobrado": cobrado,
+                    "juros_multa": round(juros, 2),
+                    "autenticacao": autent.group(1) if autent else None,
+                    "agencia": "4826",
+                    "conta": "29660-2",
+                    "is_pix": False,
+                    "bank": "itau-29660-2",
+                }
+            )
+        else:
+            ben = re.search(r"nome do recebedor\s*\n(.+)", t, re.I)
+            pix_val = re.search(r"valor\s*\nR\$\s*([\d.]+,\d{2})", t, re.I)
+            dt_pag = re.search(r"data da transferência\s*\n(\d{2}/\d{2}/\d{4})", t, re.I)
+            autent = re.search(r"autenticação no comprovante\s*\n([0-9A-F]+)", t, re.I)
+            amount = parse_br(pix_val.group(1)) if pix_val else None
+            if amount is None:
+                continue
+            pages.append(
+                {
+                    "page": i + 1,
+                    "page_index": i,
+                    "beneficiario": (ben.group(1).strip() if ben else ""),
+                    "data_pagamento": parse_date_br(dt_pag.group(1)) if dt_pag else None,
+                    "valor_documento": amount,
+                    "valor_cobrado": amount,
+                    "juros_multa": 0.0,
+                    "autenticacao": autent.group(1) if autent else None,
+                    "agencia": "4826",
+                    "conta": "29660-2",
+                    "is_pix": True,
+                    "bank": "itau-29660-2",
+                }
+            )
+    return doc, pages
 
+
+def _match_and_attach(doc, pages, items, month, bank_filter=None):
     dest_dir = COMPROV_DIR / month
     dest_dir.mkdir(parents=True, exist_ok=True)
-    doc, pages = parse_bb_comprovantes(pdf)
     used = set()
     for item in items:
-        if item.get("bank_account_id") != "bb-847-8":
+        if item.get("comprovante"):
+            continue
+        if bank_filter and item.get("bank_account_id") != bank_filter:
             continue
         best = None
         best_score = 0
@@ -597,7 +681,6 @@ def link_comprovantes(month, items):
                 score += 25
             if names_match(payee, p["beneficiario"]) or names_match(item.get("fornecedor"), p["beneficiario"]):
                 score += 30
-            # PIX vs boleto preference
             if item.get("forma") == "pix" and p["is_pix"]:
                 score += 15
             if item.get("forma") == "boleto" and not p["is_pix"]:
@@ -607,13 +690,14 @@ def link_comprovantes(month, items):
                 best = p
         if best and best_score >= 50:
             used.add(best["page"])
-            h = hashlib.sha1(f"{best['page']}-{amount}".encode()).hexdigest()[:8]
+            h = hashlib.sha1(f"{best.get('bank','x')}-{best['page']}-{amount}".encode()).hexdigest()[:8]
             fname = f"{best['data_pagamento'] or 'x'}_{h}_{slug(best['beneficiario'])}.pdf"
             dest = dest_dir / fname
-            single = fitz.open()
-            single.insert_pdf(doc, from_page=best["page_index"], to_page=best["page_index"])
-            single.save(dest)
-            single.close()
+            if not dest.exists():
+                single = fitz.open()
+                single.insert_pdf(doc, from_page=best["page_index"], to_page=best["page_index"])
+                single.save(dest)
+                single.close()
             item["comprovante"] = {
                 "url": f"/data/comprovantes/{month}/{fname}",
                 "file_name": fname,
@@ -622,42 +706,76 @@ def link_comprovantes(month, items):
                 "agencia": best["agencia"],
                 "conta": best["conta"],
             }
-            if best["valor_documento"] is not None and item.get("valor_original") is None:
+            if best["valor_documento"] is not None:
                 item["valor_original"] = best["valor_documento"]
-            if best["juros_multa"] and (item.get("juros_multa") or 0) == 0:
+            if best.get("juros_multa"):
                 item["juros_multa"] = best["juros_multa"]
-                if best["valor_documento"] is not None:
-                    item["valor_original"] = best["valor_documento"]
-                    item["valor_total"] = best["valor_cobrado"]
-    doc.close()
+            if best.get("beneficiario") and (
+                item.get("status") != "conciliado" or "SISPAG" in (item.get("fornecedor") or "").upper()
+            ):
+                # enrich payee from receipt when extrato was opaque
+                if "SISPAG" in (item.get("bank_description") or "").upper() or "SISPAG" in (
+                    item.get("fornecedor") or ""
+                ).upper():
+                    item["fornecedor"] = best["beneficiario"]
+                    item["beneficiario_banco"] = best["beneficiario"]
+                    item["status"] = "conciliado"
+                    item["tipo"] = classify_tipo(best["beneficiario"], item.get("forma"), "")
+                    item["obs"] = f"Identificado no comprovante: {best['beneficiario']}"
+    return items
+
+
+def link_comprovantes(month, items):
+    if month != "2026-07":
+        return items
+
+    bb = ROOT / "tmp_ocr_work" / "bb-comprovantes-07" / "04082026 123025-Comprovantes-BB.pdf"
+    if bb.exists():
+        doc, pages = parse_bb_comprovantes(bb)
+        items = _match_and_attach(doc, pages, items, month, bank_filter="bb-847-8")
+        doc.close()
+
+    itau = ROOT / "tmp_ocr_work" / "itau-sispag-186" / "comprovante-2026-08-04T17-20-38-383768748Z.pdf"
+    if itau.exists():
+        doc, pages = parse_itau_comprovantes(itau)
+        items = _match_and_attach(doc, pages, items, month, bank_filter="itau-29660-2")
+        doc.close()
+
     return items
 
 
 def summarize(items):
-    forn = [i for i in items if i.get("tipo") == "fornecedor"]
-    outros = [i for i in items if i.get("tipo") != "fornecedor"]
-    conc = [i for i in forn if i.get("status") == "conciliado"]
+    conc = [i for i in items if i.get("status") == "conciliado"]
+    with_comp = [i for i in items if i.get("comprovante")]
     by_bank = defaultdict(lambda: {"qtd": 0, "total": 0.0})
     by_forma = defaultdict(lambda: {"qtd": 0, "total": 0.0})
-    for i in forn:
+    by_tipo = defaultdict(lambda: {"qtd": 0, "total": 0.0})
+    for i in items:
         by_bank[i.get("banco_curto") or "?"]["qtd"] += 1
         by_bank[i.get("banco_curto") or "?"]["total"] += i.get("valor_total") or 0
         by_forma[i.get("forma") or "?"]["qtd"] += 1
         by_forma[i.get("forma") or "?"]["total"] += i.get("valor_total") or 0
+        by_tipo[i.get("tipo") or "?"]["qtd"] += 1
+        by_tipo[i.get("tipo") or "?"]["total"] += i.get("valor_total") or 0
     return {
-        "qtd_fornecedor": len(forn),
+        "qtd_total": len(items),
+        "qtd_fornecedor": sum(1 for i in items if i.get("tipo") == "fornecedor"),
         "qtd_conciliados": len(conc),
-        "qtd_sem_titulo": sum(1 for i in forn if i.get("status") != "conciliado"),
-        "qtd_com_juros": sum(1 for i in forn if (i.get("juros_multa") or 0) > 0),
-        "qtd_outros": len(outros),
-        "qtd_com_comprovante": sum(1 for i in items if i.get("comprovante")),
-        "total_original": round(sum(i.get("valor_original") or 0 for i in conc), 2),
-        "total_juros_multa": round(sum(i.get("juros_multa") or 0 for i in forn if i.get("juros_multa")), 2),
-        "total_pago_fornecedor": round(sum(i.get("valor_total") or 0 for i in forn), 2),
-        "total_pago_outros": round(sum(i.get("valor_total") or 0 for i in outros), 2),
+        "qtd_sem_titulo": sum(1 for i in items if i.get("status") == "sem_titulo"),
+        "qtd_com_juros": sum(1 for i in items if (i.get("juros_multa") or 0) > 0),
+        "qtd_com_comprovante": len(with_comp),
+        "qtd_pix": sum(1 for i in items if i.get("forma") == "pix"),
+        "qtd_boleto": sum(1 for i in items if i.get("forma") == "boleto"),
+        "total_original": round(sum(i.get("valor_original") or 0 for i in items), 2),
+        "total_juros_multa": round(sum(i.get("juros_multa") or 0 for i in items), 2),
         "total_pago_geral": round(sum(i.get("valor_total") or 0 for i in items), 2),
+        # aliases for UI antiga
+        "total_pago_fornecedor": round(sum(i.get("valor_total") or 0 for i in items if i.get("tipo") == "fornecedor"), 2),
+        "qtd_outros": sum(1 for i in items if i.get("tipo") != "fornecedor"),
+        "total_pago_outros": round(sum(i.get("valor_total") or 0 for i in items if i.get("tipo") != "fornecedor"), 2),
         "por_banco": {k: {"qtd": v["qtd"], "total": round(v["total"], 2)} for k, v in by_bank.items()},
         "por_forma": {k: {"qtd": v["qtd"], "total": round(v["total"], 2)} for k, v in by_forma.items()},
+        "por_tipo": {k: {"qtd": v["qtd"], "total": round(v["total"], 2)} for k, v in by_tipo.items()},
     }
 
 
@@ -680,8 +798,8 @@ def build_month(month):
             "Comprovantes BB (quando disponível)",
         ],
         "notes": [
-            "Varredura em todas as contas: BB, Inter, Itaú e demais do razão.",
-            "Inclui boletos, PIX a fornecedores, SISPAG e pagamentos de título.",
+            "Aba: boletos, PIX enviados, SISPAG, contas de consumo e impostos — todas as contas.",
+            "Comprovantes vinculados quando disponíveis (BB e Itaú).",
             "Juros/multa = valor cobrado − valor do documento (quando houver diferença).",
         ],
         "summary": summary,

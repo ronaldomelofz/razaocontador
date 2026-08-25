@@ -7,24 +7,50 @@ async function loadBoletos(month) {
     if (res.ok) return res.json();
   } catch { /* fallback estático (Netlify) */ }
   const res = await fetch(`/data/boletos-fornecedores-${month}.json`);
-  if (!res.ok) throw new Error(`Sem dados de boletos para ${month}`);
+  if (!res.ok) throw new Error(`Sem dados de pagamentos para ${month}`);
   return res.json();
 }
 
 function formaLabel(forma) {
-  if (forma === 'boleto') return 'Boleto';
-  if (forma === 'pix') return 'PIX';
-  if (forma === 'sispag') return 'SISPAG';
-  if (forma === 'ted') return 'TED/DOC';
-  return forma || '—';
+  const map = {
+    boleto: 'Boleto',
+    pix: 'PIX',
+    sispag: 'SISPAG',
+    ted: 'TED/DOC',
+    conta_consumo: 'Conta',
+    imposto: 'Imposto',
+  };
+  return map[forma] || forma || '—';
+}
+
+function tipoLabel(tipo) {
+  const map = {
+    fornecedor: 'Fornecedor',
+    consumo: 'Consumo/serviço',
+    transferencia: 'Transferência própria',
+    pessoal: 'Pessoal/sócio',
+    imposto: 'Imposto',
+    seguro: 'Seguro',
+    pix_diversos: 'PIX diversos',
+    outros: 'Outros',
+  };
+  return map[tipo] || tipo || '—';
+}
+
+function statusLabel(r) {
+  if (r.status === 'conciliado') return '✅ Conciliado';
+  if (r.status === 'transferencia') return '↔ Transferência';
+  if (r.comprovante) return '📄 Comprovante';
+  return '⚠️ Sem título';
 }
 
 export default function SupplierBoletos({ month }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [showOutros, setShowOutros] = useState(false);
   const [bankFilter, setBankFilter] = useState('');
+  const [formaFilter, setFormaFilter] = useState('');
+  const [onlyComprovante, setOnlyComprovante] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -32,6 +58,7 @@ export default function SupplierBoletos({ month }) {
       setLoading(true);
       setError(null);
       setBankFilter('');
+      setFormaFilter('');
       try {
         const d = await loadBoletos(month);
         if (!cancelled) setData(d);
@@ -47,47 +74,47 @@ export default function SupplierBoletos({ month }) {
     return () => { cancelled = true; };
   }, [month]);
 
-  if (loading) return <p className="loading">Carregando boletos...</p>;
+  if (loading) return <p className="loading">Carregando pagamentos...</p>;
   if (error) return <p className="error">{error}</p>;
   if (!data) return null;
 
   const items = data.items || [];
-  const fornecedoresAll = items.filter((i) => i.tipo === 'fornecedor');
-  const banks = [...new Set(fornecedoresAll.map((i) => i.banco_curto).filter(Boolean))].sort();
-  const fornecedores = bankFilter
-    ? fornecedoresAll.filter((i) => i.banco_curto === bankFilter)
-    : fornecedoresAll;
-  const outros = items.filter((i) => i.tipo !== 'fornecedor');
   const s = data.summary || {};
 
-  const sumOrig = fornecedores.reduce((a, i) => a + (i.valor_original || 0), 0);
-  const sumJuros = fornecedores.reduce((a, i) => a + (i.juros_multa || 0), 0);
-  const sumTot = fornecedores.reduce((a, i) => a + (i.valor_total || 0), 0);
+  let rows = items;
+  if (bankFilter) rows = rows.filter((i) => i.banco_curto === bankFilter);
+  if (formaFilter) rows = rows.filter((i) => i.forma === formaFilter);
+  if (onlyComprovante) rows = rows.filter((i) => i.comprovante?.url);
+
+  const sumOrig = rows.reduce((a, i) => a + (i.valor_original || 0), 0);
+  const sumJuros = rows.reduce((a, i) => a + (i.juros_multa || 0), 0);
+  const sumTot = rows.reduce((a, i) => a + (i.valor_total || 0), 0);
+  const withComp = rows.filter((i) => i.comprovante?.url).length;
 
   return (
     <>
       <div className="cards">
         <div className="card">
-          <span className="card-n">{s.qtd_fornecedor ?? fornecedoresAll.length}</span>
-          <span className="card-l">Pagamentos fornecedor</span>
+          <span className="card-n">{s.qtd_total ?? items.length}</span>
+          <span className="card-l">Pagamentos / PIX</span>
         </div>
         <div className="card ok">
-          <span className="card-n">{s.qtd_conciliados ?? 0}</span>
-          <span className="card-l">Conciliados c/ título</span>
+          <span className="card-n">{s.qtd_com_comprovante ?? 0}</span>
+          <span className="card-l">Com comprovante</span>
         </div>
         <div className="card warn">
-          <span className="card-n">{fmt(s.total_juros_multa ?? sumJuros)}</span>
+          <span className="card-n">{fmt(s.total_juros_multa ?? 0)}</span>
           <span className="card-l">Juros / multa</span>
         </div>
         <div className="card">
-          <span className="card-n">{fmt(s.total_pago_fornecedor ?? sumTot)}</span>
-          <span className="card-l">Total pago</span>
+          <span className="card-n">{fmt(s.total_pago_geral ?? 0)}</span>
+          <span className="card-l">Total geral</span>
         </div>
       </div>
 
       {s.por_banco && Object.keys(s.por_banco).length > 0 && (
         <div className="meta-bar">
-          Por banco:{' '}
+          Banco:{' '}
           {Object.entries(s.por_banco).map(([b, v]) => (
             <button
               key={b}
@@ -98,8 +125,31 @@ export default function SupplierBoletos({ month }) {
               {b}: {v.qtd} · R$ {fmt(v.total)}
             </button>
           ))}
-          {bankFilter && (
-            <button type="button" className="chip" onClick={() => setBankFilter('')}>Limpar filtro ✕</button>
+          {s.por_forma && Object.entries(s.por_forma).map(([f, v]) => (
+            <button
+              key={`f-${f}`}
+              type="button"
+              className={formaFilter === f ? 'chip active' : 'chip'}
+              onClick={() => setFormaFilter((cur) => (cur === f ? '' : f))}
+            >
+              {formaLabel(f)}: {v.qtd}
+            </button>
+          ))}
+          <button
+            type="button"
+            className={onlyComprovante ? 'chip active' : 'chip'}
+            onClick={() => setOnlyComprovante((v) => !v)}
+          >
+            Só com comprovante
+          </button>
+          {(bankFilter || formaFilter || onlyComprovante) && (
+            <button
+              type="button"
+              className="chip"
+              onClick={() => { setBankFilter(''); setFormaFilter(''); setOnlyComprovante(false); }}
+            >
+              Limpar ✕
+            </button>
           )}
         </div>
       )}
@@ -113,14 +163,20 @@ export default function SupplierBoletos({ month }) {
       )}
 
       <section className="section">
-        <h2>Pagamentos a fornecedores — {month}{bankFilter ? ` · ${bankFilter}` : ''}</h2>
+        <h2>
+          Boleto e pagamento diversos — {month}
+          {bankFilter ? ` · ${bankFilter}` : ''}
+          {formaFilter ? ` · ${formaLabel(formaFilter)}` : ''}
+          {' '}({rows.length}{onlyComprovante ? ` · ${withComp} comprovantes` : ''})
+        </h2>
         <table className="table">
           <thead>
             <tr>
               <th>Pagamento</th>
               <th>Banco</th>
               <th>Forma</th>
-              <th>Fornecedor</th>
+              <th>Tipo</th>
+              <th>Beneficiário</th>
               <th>Título / NF</th>
               <th>Vencimento</th>
               <th className="num">Valor original</th>
@@ -131,7 +187,7 @@ export default function SupplierBoletos({ month }) {
             </tr>
           </thead>
           <tbody>
-            {fornecedores.map((r) => (
+            {rows.map((r) => (
               <tr key={r.bank_id || `${r.data_pagamento}-${r.titulo}-${r.valor_total}-${r.forma}`}>
                 <td className="nowrap">{fmtDate(r.data_pagamento)}</td>
                 <td className="banco-cell">
@@ -141,6 +197,7 @@ export default function SupplierBoletos({ month }) {
                   )}
                 </td>
                 <td className="nowrap">{formaLabel(r.forma)}</td>
+                <td className="nowrap">{tipoLabel(r.tipo)}</td>
                 <td>
                   {r.fornecedor}
                   {r.obs && <div className="boleto-obs">{r.obs}</div>}
@@ -161,19 +218,21 @@ export default function SupplierBoletos({ month }) {
                     '—'
                   )}
                 </td>
-                <td>
-                  {r.status === 'conciliado' ? '✅ Conciliado' : '⚠️ Sem título'}
-                </td>
+                <td>{statusLabel(r)}</td>
               </tr>
             ))}
-            {fornecedores.length === 0 && (
-              <tr><td colSpan={11} className="empty-msg">Nenhum pagamento a fornecedor neste mês{bankFilter ? ' neste banco' : ''}.</td></tr>
+            {rows.length === 0 && (
+              <tr>
+                <td colSpan={12} className="empty-msg">
+                  Nenhum pagamento neste filtro.
+                </td>
+              </tr>
             )}
           </tbody>
-          {fornecedores.length > 0 && (
+          {rows.length > 0 && (
             <tfoot>
               <tr className="boletos-total">
-                <td colSpan={6}>Totais</td>
+                <td colSpan={7}>Totais ({rows.length})</td>
                 <td className="num">{fmt(sumOrig)}</td>
                 <td className="num">{fmt(sumJuros)}</td>
                 <td className="num">{fmt(sumTot)}</td>
@@ -183,61 +242,6 @@ export default function SupplierBoletos({ month }) {
           )}
         </table>
       </section>
-
-      {outros.length > 0 && (
-        <section className="section">
-          <h2>
-            <button type="button" className="linkish" onClick={() => setShowOutros((v) => !v)}>
-              {showOutros ? '▾' : '▸'} Outros boletos (consumo / aluguel / pessoal / serviços) — {outros.length}
-            </button>
-          </h2>
-          {showOutros && (
-            <table className="table">
-              <thead>
-                <tr>
-                  <th>Pagamento</th>
-                  <th>Banco</th>
-                  <th>Forma</th>
-                  <th>Beneficiário</th>
-                  <th className="num">Valor</th>
-                  <th>Comprovante</th>
-                  <th>Obs</th>
-                </tr>
-              </thead>
-              <tbody>
-                {outros.map((r) => (
-                  <tr key={r.bank_id || `${r.data_pagamento}-${r.valor_total}`}>
-                    <td className="nowrap">{fmtDate(r.data_pagamento)}</td>
-                    <td>{r.banco_curto || r.banco || '—'}</td>
-                    <td>{formaLabel(r.forma)}</td>
-                    <td>{r.fornecedor}</td>
-                    <td className="num">{fmt(r.valor_total)}</td>
-                    <td>
-                      {r.comprovante?.url ? (
-                        <a href={r.comprovante.url} target="_blank" rel="noreferrer" className="attach-link">
-                          📄 Abrir
-                        </a>
-                      ) : (
-                        '—'
-                      )}
-                    </td>
-                    <td>{r.obs || '—'}</td>
-                  </tr>
-                ))}
-              </tbody>
-              <tfoot>
-                <tr className="boletos-total">
-                  <td colSpan={4}>Total outros</td>
-                  <td className="num">{fmt(outros.reduce((a, i) => a + (i.valor_total || 0), 0))}</td>
-                  <td colSpan={2} />
-                </tr>
-              </tfoot>
-            </table>
-          )}
-        </section>
-      )}
-
-      {banks.length === 0 && null}
     </>
   );
 }

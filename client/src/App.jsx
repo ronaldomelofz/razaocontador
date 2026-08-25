@@ -10,7 +10,7 @@ const MONTHS_FALLBACK = ['2026-05', '2026-06', '2026-07'];
 const VIEWS = [
   { id: 'ledger', label: 'Livro Razão' },
   { id: 'fuel', label: 'Combustível' },
-  { id: 'boletos', label: 'Boletos Fornecedores' },
+  { id: 'boletos', label: 'Boleto e pagamento diversos' },
   // Apuração: só em vite dev (não vai para o build Netlify).
   ...(import.meta.env.DEV ? [{ id: 'taxes', label: 'Apuração de Impostos' }] : []),
 ];
