@@ -1,4 +1,4 @@
-// Gerado por buildBoletosFornecedores.py
+// Gerado — boletos fornecedores
 export const BOLETOS_FORNECEDORES_2026_05 = {
   "month": "2026-05",
   "generatedAt": "2026-08-25T11:20:59",
@@ -1748,28 +1748,25 @@ export const BOLETOS_FORNECEDORES_2026_07 = {
   "notes": [
     "Varredura em todas as contas: BB, Inter, Itaú e demais do razão.",
     "Inclui boletos, PIX a fornecedores, SISPAG e pagamentos de título.",
-    "Juros/multa = valor cobrado − valor do documento (quando houver diferença)."
+    "Juros/multa = valor cobrado − valor do documento (quando houver diferença).",
+    "SISPAG R$ 186,05 (17/07, Itau 29660-2) = boleto ALLIANZ SEGUROS S A (comprovante Itau, pagamento de boleto Santander)."
   ],
   "summary": {
-    "qtd_fornecedor": 22,
+    "qtd_fornecedor": 21,
     "qtd_conciliados": 21,
-    "qtd_sem_titulo": 1,
+    "qtd_sem_titulo": 0,
     "qtd_com_juros": 0,
-    "qtd_outros": 14,
-    "qtd_com_comprovante": 35,
+    "qtd_outros": 15,
+    "qtd_com_comprovante": 36,
     "total_original": 111865.36,
     "total_juros_multa": 0,
-    "total_pago_fornecedor": 112051.41,
-    "total_pago_outros": 28283.32,
+    "total_pago_fornecedor": 111865.36,
+    "total_pago_outros": 28469.37,
     "total_pago_geral": 140334.73,
     "por_banco": {
       "Banco do Brasil": {
         "qtd": 21,
         "total": 111865.36
-      },
-      "Itaú 29660-2": {
-        "qtd": 1,
-        "total": 186.05
       }
     },
     "por_forma": {
@@ -1780,10 +1777,6 @@ export const BOLETOS_FORNECEDORES_2026_07 = {
       "pix": {
         "qtd": 1,
         "total": 17196.22
-      },
-      "sispag": {
-        "qtd": 1,
-        "total": 186.05
       }
     }
   },
@@ -2472,27 +2465,36 @@ export const BOLETOS_FORNECEDORES_2026_07 = {
     },
     {
       "data_pagamento": "2026-07-17",
-      "fornecedor": "SISPAG FORNECEDORES (Itaú)",
-      "beneficiario_banco": "FORNECEDORES",
-      "titulo": null,
-      "vencimento": null,
+      "fornecedor": "ALLIANZ SEGUROS S A",
+      "beneficiario_banco": "ALLIANZ SEGUROS S A",
+      "titulo": "boleto Allianz (Santander)",
+      "vencimento": "2026-07-17",
       "emissao": null,
       "valor_original": 186.05,
       "juros_multa": 0.0,
       "valor_total": 186.05,
-      "status": "sem_titulo",
-      "tipo": "fornecedor",
-      "forma": "sispag",
-      "match_score": 0,
-      "fonte_titulo": null,
+      "status": "conciliado",
+      "tipo": "outros",
+      "forma": "boleto",
+      "match_score": 100,
+      "fonte_titulo": "Comprovante Itau SISPAG (pag. boleto)",
       "bank_id": 6023,
       "bank_account_id": "itau-29660-2",
-      "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
-      "banco_curto": "Itaú 29660-2",
+      "banco": "Banco Itau - Ag: 4826 Cc: 29660-2",
+      "banco_curto": "Itau 29660-2",
       "bank_description": "SISPAG FORNECEDORES",
       "categoria": "Não classificado ⚠️",
-      "obs": "SISPAG Itaú — sem discriminação de título no extrato",
-      "comprovante": null
+      "obs": "Boleto Allianz Seguros (CNPJ 61.573.796/0001-66) pago via SISPAG Itau. Extrato mostrava apenas 'SISPAG FORNECEDORES'.",
+      "comprovante": {
+        "url": "/data/comprovantes/2026-07/2026-07-17_allianz_sispag_186.05.pdf",
+        "file_name": "2026-07-17_allianz_sispag_186.05.pdf",
+        "page": 13,
+        "autenticacao": "31779054F76B8D14F7BD822C875A4B6D3DEC72D6",
+        "agencia": "4826",
+        "conta": "29660-2",
+        "cnpj_beneficiario": "61.573.796/0001-66",
+        "banco_boleto": "033 - Santander"
+      }
     },
     {
       "data_pagamento": "2026-07-21",
