@@ -4,18 +4,32 @@ import Database from 'better-sqlite3';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { matchBankToFiscal } from '../engine/reconcile.js';
+import { runConciliar } from '../engine/processMonth.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const db = new Database(path.join(__dirname, '../../data/madepinus.db'));
 const router = Router();
 
 // POST /api/reconciliation/run  { month: '2026-06' }
+// Modo completo (padrão): scan + banco↔NF + anexos + combustível
+// Modo legado: { month, mode: 'legacy' } só cruza banco↔NF
 router.post('/run', (req, res) => {
-  const { month } = req.body;
+  const { month, mode } = req.body || {};
+  if (!month) return res.status(400).json({ error: 'Informe month (YYYY-MM)' });
+
+  if (mode !== 'legacy') {
+    try {
+      const result = runConciliar(month);
+      return res.json(result);
+    } catch (err) {
+      return res.status(500).json({ error: err.message || 'Falha ao conciliar' });
+    }
+  }
+
   const bankTxs = db.prepare(`
     SELECT rt.* FROM raw_transactions rt
     LEFT JOIN reconciliations r ON r.raw_transaction_id = rt.id
-    WHERE rt.tx_date LIKE ? AND r.id IS NULL AND rt.amount < 0
+    WHERE rt.tx_date LIKE ? AND r.id IS NULL
   `).all(`${month}%`);
   const fiscalDocs = db.prepare(`SELECT * FROM fiscal_documents WHERE issue_date LIKE ?`).all(`${month}%`);
 

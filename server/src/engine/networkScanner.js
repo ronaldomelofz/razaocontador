@@ -70,6 +70,7 @@ export function classifyFile(filePath) {
   if (ext === '.xml') return 'xml_nfe';
   if (upper.includes('XML')) return 'xml_nfe';
   if (upper.includes('COMBUST')) return 'combustivel';
+  if (upper.includes('APURA') || /DAR[\s_-]/i.test(base) || /MEMORIA\s+CALCULO/i.test(base)) return 'apuracao';
   if (upper.includes('COMPROVANTE') || /^\d+ - \d{8}/.test(base)) return 'comprovante';
   if (upper.includes('NOTA FISCAL') || upper.includes('NOTAS FISCAL')) return 'nota_fiscal';
   if (upper.includes('FATURA CART') || upper.includes('FATURA-INTER')) return 'fatura_cartao';
@@ -102,16 +103,39 @@ export function parsePixFilename(filename) {
   };
 }
 
+export function monthToFolder(month) {
+  if (month && month.includes('-') && month.length === 7) {
+    return `${month.split('-')[1]}-${month.split('-')[0]}`;
+  }
+  return month;
+}
+
+export function folderToMonth(folderName) {
+  const m = String(folderName || '').match(/^(\d{2})-(\d{4})(?:-R)?$/);
+  if (!m) return null;
+  return `${m[2]}-${m[1]}`;
+}
+
+/** Lista competências MM-YYYY na pasta da contadora (ignora pastas -R). */
+export function listNetworkMonths() {
+  if (!fs.existsSync(NETWORK_BASE)) return [];
+  return fs.readdirSync(NETWORK_BASE, { withFileTypes: true })
+    .filter((e) => e.isDirectory() && /^\d{2}-\d{4}$/.test(e.name))
+    .map((e) => folderToMonth(e.name))
+    .filter(Boolean)
+    .sort();
+}
+
 export function scanMonthFolder(month) {
-  const monthFolder = month.includes('-') && month.length === 7
-    ? `${month.split('-')[1]}-${month.split('-')[0]}`
-    : month;
+  const monthFolder = monthToFolder(month);
   const root = path.join(NETWORK_BASE, monthFolder);
   if (!fs.existsSync(root)) {
     throw new Error(`Pasta não encontrada: ${root}`);
   }
 
   const allFiles = walkDir(root);
+  const companion = `${root}-R`;
+  if (fs.existsSync(companion)) walkDir(companion, allFiles);
   const indexed = allFiles.map((filePath) => {
     const ext = path.extname(filePath).toLowerCase();
     const bank = resolveBankAccount(filePath);
@@ -144,4 +168,4 @@ function summarize(files) {
   return { total: files.length, byKind };
 }
 
-export default { scanMonthFolder, resolveBankAccount, classifyFile };
+export default { scanMonthFolder, resolveBankAccount, classifyFile, listNetworkMonths, monthToFolder };

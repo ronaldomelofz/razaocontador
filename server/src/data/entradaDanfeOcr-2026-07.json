@@ -1,0 +1,1593 @@
+{
+  "generatedAt": "2026-08-06T10:48:32",
+  "month": "2026-07",
+  "engine": "pymupdf+tesseract-por+eng+region-ocr",
+  "source_dir": "\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA\\07-2026\\NOTAS FISCAL DE ENTRADA",
+  "summary": {
+    "pdfs": 17,
+    "pages_ocr": 16,
+    "matched_siat": 15,
+    "unmatched_siat": 15,
+    "with_icms": 10,
+    "with_total": 19,
+    "with_chave": 0,
+    "total_produtos_ocr": 171258.81,
+    "total_icms_ocr": 730.34,
+    "total_nf_ocr": 183295.0,
+    "icms_antecipacao_estimada": 647.12,
+    "pages_raw": 36,
+    "deduped": true,
+    "cleaned": true
+  },
+  "notes": [
+    {
+      "source_file": "Digitalizado_20260704-0832.pdf",
+      "page_index": 0,
+      "doc_number": "612041023",
+      "serie": "1",
+      "chave_acesso": "09000059045730000126260612041023000123550010",
+      "issue_date": "2026-06-26",
+      "dates_found": [
+        "2026-06-26",
+        "2026-06-26",
+        "2026-06-26",
+        "2026-06-26",
+        "2026-06-26",
+        "2026-06-26",
+        "2026-06-26"
+      ],
+      "emit_name": "NOME f RAZÃO SOCIAL CNPIICPF DATA DA EMISSÃO",
+      "emit_cnpj": "12041023000123",
+      "dest_cnpj": "10876822000194",
+      "cfops": [
+        "6500",
+        "1200"
+      ],
+      "cfop": "6500",
+      "base_icms": 3950.0,
+      "valor_icms": 474.0,
+      "aliquota_icms": 12.0,
+      "base_icms_st": 0.0,
+      "valor_icms_st": 0.0,
+      "valor_produtos": 3950.0,
+      "valor_frete": 0.9,
+      "valor_seguro": null,
+      "valor_desconto": 0.9,
+      "outras_despesas": 0.9,
+      "valor_ipi": null,
+      "valor_pis": null,
+      "valor_cofins": null,
+      "valor_total_nf": 3950.0,
+      "tax_confidence": "high",
+      "ocr_chars": 1972,
+      "image_size": [
+        2187,
+        2800
+      ],
+      "siat_match": false,
+      "siat": null,
+      "merged": {
+        "doc_number": "26098",
+        "issue_date": "2026-06-26",
+        "emit_name": "AFO MOVEIS E ARTEFATOS LTDA",
+        "emit_cnpj": "12041023000123",
+        "emit_uf": "PE",
+        "destinacao": null,
+        "cfops_entrada": [
+          "2500",
+          "1200"
+        ],
+        "cfops_supplier": [
+          "6500",
+          "1200"
+        ],
+        "valor_produtos_siat": null,
+        "valor_produtos": 3950.0,
+        "valor_total_nf": 3950.0,
+        "base_icms": 3950.0,
+        "valor_icms": 474.0,
+        "aliquota_icms": 12.0,
+        "tax_confidence": "high",
+        "base_icms_st": 0.0,
+        "valor_icms_st": 0.0,
+        "valor_frete": 0.9,
+        "valor_ipi": null,
+        "valor_pis": null,
+        "valor_cofins": null,
+        "chave_acesso": null,
+        "serie": "1",
+        "source_file": "Digitalizado_20260704-0832.pdf",
+        "page_index": 0,
+        "icms_antecipacao_estimada": 414.75
+      }
+    },
+    {
+      "source_file": "Digitalizado_20260702-1404.pdf",
+      "page_index": 0,
+      "doc_number": "264215",
+      "serie": "1",
+      "chave_acesso": "32158026421522280707103898000172550010002642",
+      "issue_date": "2026-07-01",
+      "dates_found": [
+        "2026-07-01",
+        "2026-07-01"
+      ],
+      "emit_name": "NOME RAZÃO SOCIAL Cn. CATA OA ESO",
+      "emit_cnpj": "07103898000172",
+      "dest_cnpj": "10876822000194",
+      "cfops": [
+        "2228",
+        "5142"
+      ],
+      "cfop": "2228",
+      "base_icms": 129.17,
+      "valor_icms": 29.06,
+      "aliquota_icms": 22.5,
+      "base_icms_st": 0.0,
+      "valor_icms_st": 0.0,
+      "valor_produtos": 129.17,
+      "valor_frete": 0.0,
+      "valor_seguro": 0.0,
+      "valor_desconto": 0.0,
+      "outras_despesas": 0.0,
+      "valor_ipi": 0.0,
+      "valor_pis": null,
+      "valor_cofins": null,
+      "valor_total_nf": 129.17,
+      "tax_confidence": "high",
+      "ocr_chars": 1812,
+      "image_size": [
+        2120,
+        2800
+      ],
+      "siat_match": true,
+      "siat": {
+        "doc_number": "264215",
+        "issue_date": "2026-07-01",
+        "counterparty_name": "METALURGICA FERRONORTE LTDA F10",
+        "counterparty_doc": "07103898000172",
+        "emit_uf": "PI",
+        "cfops_entrada": [
+          "1102"
+        ],
+        "cfops_supplier": [
+          "5102"
+        ],
+        "destinacao": "USO/CONSUMO",
+        "total_value": 129.17
+      },
+      "merged": {
+        "doc_number": "264215",
+        "issue_date": "2026-07-01",
+        "emit_name": "METALURGICA FERRONORTE LTDA F10",
+        "emit_cnpj": "07103898000172",
+        "emit_uf": "PI",
+        "destinacao": "USO/CONSUMO",
+        "cfops_entrada": [
+          "1102"
+        ],
+        "cfops_supplier": [
+          "5102"
+        ],
+        "valor_produtos_siat": 129.17,
+        "valor_produtos": 129.17,
+        "valor_total_nf": 129.17,
+        "base_icms": 129.17,
+        "valor_icms": 29.06,
+        "aliquota_icms": 22.5,
+        "tax_confidence": "high",
+        "base_icms_st": 0.0,
+        "valor_icms_st": 0.0,
+        "valor_frete": 0.0,
+        "valor_ipi": 0.0,
+        "valor_pis": null,
+        "valor_cofins": null,
+        "chave_acesso": null,
+        "serie": "1",
+        "source_file": "Digitalizado_20260702-1404.pdf",
+        "page_index": 0
+      }
+    },
+    {
+      "source_file": "Digitalizado_20260725-1043.pdf",
+      "page_index": 0,
+      "doc_number": "45396",
+      "serie": "2",
+      "chave_acesso": "18000045396002200018910000483962226070984467",
+      "issue_date": "2026-07-01",
+      "dates_found": [
+        "2026-07-01",
+        "2026-07-01",
+        "2026-07-01",
+        "2026-07-01",
+        "2026-07-01",
+        "2026-07-01",
+        "2026-07-01",
+        "2026-07-01",
+        "2026-07-01",
+        "2026-07-01"
+      ],
+      "emit_name": "JG DAMASCENO E CIA LTDA Documento Aunties da",
+      "emit_cnpj": null,
+      "dest_cnpj": "10876822000194",
+      "cfops": [
+        "1100",
+        "2226",
+        "2107"
+      ],
+      "cfop": "1100",
+      "base_icms": 0.0,
+      "valor_icms": 0.0,
+      "aliquota_icms": null,
+      "base_icms_st": 183.0,
+      "valor_icms_st": 0.0,
+      "valor_produtos": 1843,
+      "valor_frete": null,
+      "valor_seguro": null,
+      "valor_desconto": null,
+      "outras_despesas": null,
+      "valor_ipi": null,
+      "valor_pis": null,
+      "valor_cofins": null,
+      "valor_total_nf": 1660.0,
+      "tax_confidence": "high",
+      "ocr_chars": 2715,
+      "image_size": [
+        2033,
+        2800
+      ],
+      "siat_match": true,
+      "siat": {
+        "doc_number": "45396",
+        "issue_date": "2026-07-01",
+        "counterparty_name": "J G DAMASCENO E CIA LTDA",
+        "counterparty_doc": "09584467000109",
+        "emit_uf": "PI",
+        "cfops_entrada": [
+          "1102"
+        ],
+        "cfops_supplier": [
+          "5102"
+        ],
+        "destinacao": "REVENDA",
+        "total_value": 1843
+      },
+      "merged": {
+        "doc_number": "45396",
+        "issue_date": "2026-07-01",
+        "emit_name": "J G DAMASCENO E CIA LTDA",
+        "emit_cnpj": "09584467000109",
+        "emit_uf": "PI",
+        "destinacao": "REVENDA",
+        "cfops_entrada": [
+          "1102"
+        ],
+        "cfops_supplier": [
+          "5102"
+        ],
+        "valor_produtos_siat": 1843,
+        "valor_produtos": 1843,
+        "valor_total_nf": 1660.0,
+        "base_icms": 0.0,
+        "valor_icms": 0.0,
+        "aliquota_icms": null,
+        "tax_confidence": "high",
+        "base_icms_st": 183.0,
+        "valor_icms_st": 0.0,
+        "valor_frete": null,
+        "valor_ipi": null,
+        "valor_pis": null,
+        "valor_cofins": null,
+        "chave_acesso": null,
+        "serie": "2",
+        "source_file": "Digitalizado_20260725-1043.pdf",
+        "page_index": 0
+      }
+    },
+    {
+      "source_file": "Digitalizado_20260717-0815.pdf",
+      "page_index": 1,
+      "doc_number": "359392",
+      "serie": "55",
+      "chave_acesso": "95430269500000359392432607901026090001648505",
+      "issue_date": "2026-07-02",
+      "dates_found": [
+        "2026-07-02",
+        "2026-07-92",
+        "2026-07-02"
+      ],
+      "emit_name": "TABONE INDÚSTRIA E COMÉRCIO DE PLÁSTICOS LTDA-MATRIZ 9 DA",
+      "emit_cnpj": "90102609000164",
+      "dest_cnpj": null,
+      "cfops": [
+        "6101"
+      ],
+      "cfop": "6101",
+      "base_icms": 456.1,
+      "valor_icms": 0.0,
+      "aliquota_icms": null,
+      "base_icms_st": 56.1,
+      "valor_icms_st": 31.93,
+      "valor_produtos": 7353.43,
+      "valor_frete": null,
+      "valor_seguro": null,
+      "valor_desconto": null,
+      "outras_despesas": null,
+      "valor_ipi": null,
+      "valor_pis": null,
+      "valor_cofins": null,
+      "valor_total_nf": 7353.43,
+      "tax_confidence": "high",
+      "ocr_chars": 3913,
+      "image_size": [
+        1952,
+        2800
+      ],
+      "siat_match": true,
+      "siat": {
+        "doc_number": "359392",
+        "issue_date": "2026-07-02",
+        "counterparty_name": "TABONE INDÚSTRIA E COMÉRCIO DE PLÁSTICOS LTDA-MATRIZ",
+        "counterparty_doc": "90102609000164",
+        "emit_uf": "RS",
+        "cfops_entrada": [
+          "2101"
+        ],
+        "cfops_supplier": [
+          "6101"
+        ],
+        "destinacao": "REVENDA",
+        "total_value": 7353.43
+      },
+      "merged": {
+        "doc_number": "359392",
+        "issue_date": "2026-07-02",
+        "emit_name": "TABONE INDÚSTRIA E COMÉRCIO DE PLÁSTICOS LTDA-MATRIZ",
+        "emit_cnpj": "90102609000164",
+        "emit_uf": "RS",
+        "destinacao": "REVENDA",
+        "cfops_entrada": [
+          "2101"
+        ],
+        "cfops_supplier": [
+          "6101"
+        ],
+        "valor_produtos_siat": 7353.43,
+        "valor_produtos": 7353.43,
+        "valor_total_nf": 7353.43,
+        "base_icms": 456.1,
+        "valor_icms": 0.0,
+        "aliquota_icms": null,
+        "tax_confidence": "high",
+        "base_icms_st": 56.1,
+        "valor_icms_st": 31.93,
+        "valor_frete": null,
+        "valor_ipi": null,
+        "valor_pis": null,
+        "valor_cofins": null,
+        "chave_acesso": null,
+        "serie": "55",
+        "source_file": "Digitalizado_20260717-0815.pdf",
+        "page_index": 1
+      }
+    },
+    {
+      "source_file": "Digitalizado_20260717-0815.pdf",
+      "page_index": 2,
+      "doc_number": "359393",
+      "serie": "55",
+      "chave_acesso": "71030003593930559951121304326079010260900016",
+      "issue_date": "2026-07-02",
+      "dates_found": [
+        "2026-07-02",
+        "2026-07-02",
+        "2026-07-02",
+        "2026-07-02",
+        "2026-07-02",
+        "2026-07-02",
+        "2026-07-02",
+        "2026-07-02",
+        "2026-07-02",
+        "2026-07-02",
+        "2026-07-02",
+        "2026-07-02"
+      ],
+      "emit_name": "TABONE INDÚSTRIA E COMÉRCIO DE PLÁSTICOS LTDA-MATRIZ 9 ENTRADA",
+      "emit_cnpj": "90102609000164",
+      "dest_cnpj": "10876822000194",
+      "cfops": [
+        "6910"
+      ],
+      "cfop": "6910",
+      "base_icms": 340.0,
+      "valor_icms": 23.8,
+      "aliquota_icms": 7.0,
+      "base_icms_st": 0.0,
+      "valor_icms_st": 0.0,
+      "valor_produtos": 340,
+      "valor_frete": 0.0,
+      "valor_seguro": 0.0,
+      "valor_desconto": 0.0,
+      "outras_despesas": 0.0,
+      "valor_ipi": 11.05,
+      "valor_pis": null,
+      "valor_cofins": null,
+      "valor_total_nf": 351.05,
+      "tax_confidence": "high",
+      "ocr_chars": 3333,
+      "image_size": [
+        1980,
+        2800
+      ],
+      "siat_match": true,
+      "siat": {
+        "doc_number": "359393",
+        "issue_date": "2026-07-02",
+        "counterparty_name": "TABONE INDÚSTRIA E COMÉRCIO DE PLÁSTICOS LTDA-MATRIZ",
+        "counterparty_doc": "90102609000164",
+        "emit_uf": "RS",
+        "cfops_entrada": [
+          "2910"
+        ],
+        "cfops_supplier": [
+          "6910"
+        ],
+        "destinacao": "REVENDA",
+        "total_value": 340
+      },
+      "merged": {
+        "doc_number": "359393",
+        "issue_date": "2026-07-02",
+        "emit_name": "TABONE INDÚSTRIA E COMÉRCIO DE PLÁSTICOS LTDA-MATRIZ",
+        "emit_cnpj": "90102609000164",
+        "emit_uf": "RS",
+        "destinacao": "REVENDA",
+        "cfops_entrada": [
+          "2910"
+        ],
+        "cfops_supplier": [
+          "6910"
+        ],
+        "valor_produtos_siat": 340,
+        "valor_produtos": 340,
+        "valor_total_nf": 351.05,
+        "base_icms": 340.0,
+        "valor_icms": 23.8,
+        "aliquota_icms": 7.0,
+        "tax_confidence": "high",
+        "base_icms_st": 0.0,
+        "valor_icms_st": 0.0,
+        "valor_frete": 0.0,
+        "valor_ipi": 11.05,
+        "valor_pis": null,
+        "valor_cofins": null,
+        "chave_acesso": null,
+        "serie": "55",
+        "source_file": "Digitalizado_20260717-0815.pdf",
+        "page_index": 2,
+        "icms_antecipacao_estimada": 52.7,
+        "aliq_origem_estimada": 7.0,
+        "aliq_final_estimada": 15.5,
+        "aliq_estadual": 22.5
+      }
+    },
+    {
+      "source_file": "Digitalizado_20260725-0817.pdf",
+      "page_index": 0,
+      "doc_number": "60957",
+      "serie": "1",
+      "chave_acesso": "79351867030104126070693270200010350010000609",
+      "issue_date": "2026-07-02",
+      "dates_found": [
+        "2026-07-02",
+        "2026-08-31",
+        "2026-07-02",
+        "2026-07-02",
+        "2026-07-06"
+      ],
+      "emit_name": "Bi CEP 86703-010 vo SAIDA 4126 0706 9327 0200 0103 500 1000 0609 710 7060 0871",
+      "emit_cnpj": "04932792000193",
+      "dest_cnpj": "10876822000194",
+      "cfops": [
+        "5457"
+      ],
+      "cfop": "5457",
+      "base_icms": 0.0,
+      "valor_icms": 11.99,
+      "aliquota_icms": null,
+      "base_icms_st": 11007.29,
+      "valor_icms_st": 11007.29,
+      "valor_produtos": 11007.23,
+      "valor_frete": null,
+      "valor_seguro": null,
+      "valor_desconto": null,
+      "outras_despesas": 0.0,
+      "valor_ipi": null,
+      "valor_pis": null,
+      "valor_cofins": null,
+      "valor_total_nf": 11007.29,
+      "tax_confidence": "high",
+      "ocr_chars": 2607,
+      "image_size": [
+        2089,
+        2800
+      ],
+      "siat_match": true,
+      "siat": {
+        "doc_number": "60957",
+        "issue_date": "2026-07-02",
+        "counterparty_name": "LAGE RENZETTI LTDA",
+        "counterparty_doc": "04932792000193",
+        "emit_uf": "PR",
+        "cfops_entrada": [
+          "2101"
+        ],
+        "cfops_supplier": [
+          "6101"
+        ],
+        "destinacao": "REVENDA",
+        "total_value": 11007.23
+      },
+      "merged": {
+        "doc_number": "60957",
+        "issue_date": "2026-07-02",
+        "emit_name": "LAGE RENZETTI LTDA",
+        "emit_cnpj": "04932792000193",
+        "emit_uf": "PR",
+        "destinacao": "REVENDA",
+        "cfops_entrada": [
+          "2101"
+        ],
+        "cfops_supplier": [
+          "6101"
+        ],
+        "valor_produtos_siat": 11007.23,
+        "valor_produtos": 11007.23,
+        "valor_total_nf": 11007.29,
+        "base_icms": null,
+        "valor_icms": null,
+        "aliquota_icms": null,
+        "tax_confidence": "low",
+        "base_icms_st": 11007.29,
+        "valor_icms_st": 11007.29,
+        "valor_frete": null,
+        "valor_ipi": null,
+        "valor_pis": null,
+        "valor_cofins": null,
+        "chave_acesso": null,
+        "serie": "1",
+        "source_file": "Digitalizado_20260725-0817.pdf",
+        "page_index": 0,
+        "icms_antecipacao_estimada": null,
+        "icms_discard_reason": "icms_too_small_vs_produtos"
+      }
+    },
+    {
+      "source_file": "Digitalizado_20260704-0744.pdf",
+      "page_index": 0,
+      "doc_number": "45412",
+      "serie": "2",
+      "chave_acesso": "10180000004541200220000004809000454122226070",
+      "issue_date": "2026-07-03",
+      "dates_found": [
+        "2026-07-03",
+        "2026-07-03",
+        "2026-07-03",
+        "2026-07-03",
+        "2026-07-03",
+        "2026-07-03",
+        "2026-07-03",
+        "2026-07-03",
+        "2026-07-03"
+      ],
+      "emit_name": "J G DAMASCENO E CIA LTDA Dara a",
+      "emit_cnpj": null,
+      "dest_cnpj": "10876822000194",
+      "cfops": [
+        "2226",
+        "1210"
+      ],
+      "cfop": "2226",
+      "base_icms": null,
+      "valor_icms": null,
+      "aliquota_icms": null,
+      "base_icms_st": 64.6,
+      "valor_icms_st": 679.6,
+      "valor_produtos": 679.6,
+      "valor_frete": null,
+      "valor_seguro": null,
+      "valor_desconto": null,
+      "outras_despesas": null,
+      "valor_ipi": null,
+      "valor_pis": null,
+      "valor_cofins": null,
+      "valor_total_nf": 679.6,
+      "tax_confidence": "low",
+      "ocr_chars": 2267,
+      "image_size": [
+        1955,
+        2800
+      ],
+      "siat_match": true,
+      "siat": {
+        "doc_number": "45412",
+        "issue_date": "2026-07-03",
+        "counterparty_name": "J G DAMASCENO E CIA LTDA",
+        "counterparty_doc": "09584467000109",
+        "emit_uf": "PI",
+        "cfops_entrada": [
+          "1102"
+        ],
+        "cfops_supplier": [
+          "5102"
+        ],
+        "destinacao": "REVENDA",
+        "total_value": 679.6
+      },
+      "merged": {
+        "doc_number": "45412",
+        "issue_date": "2026-07-03",
+        "emit_name": "J G DAMASCENO E CIA LTDA",
+        "emit_cnpj": "09584467000109",
+        "emit_uf": "PI",
+        "destinacao": "REVENDA",
+        "cfops_entrada": [
+          "1102"
+        ],
+        "cfops_supplier": [
+          "5102"
+        ],
+        "valor_produtos_siat": 679.6,
+        "valor_produtos": 679.6,
+        "valor_total_nf": 679.6,
+        "base_icms": null,
+        "valor_icms": null,
+        "aliquota_icms": null,
+        "tax_confidence": "low",
+        "base_icms_st": 64.6,
+        "valor_icms_st": 679.6,
+        "valor_frete": null,
+        "valor_ipi": null,
+        "valor_pis": null,
+        "valor_cofins": null,
+        "chave_acesso": null,
+        "serie": "2",
+        "source_file": "Digitalizado_20260704-0744.pdf",
+        "page_index": 0
+      }
+    },
+    {
+      "source_file": "Digitalizado_20260725-0753.pdf",
+      "page_index": 1,
+      "doc_number": "98848",
+      "serie": "491",
+      "chave_acesso": "54316145072026152013491149616072078690050001",
+      "issue_date": "2026-07-45",
+      "dates_found": [
+        "2026-07-45",
+        "2026-07-15",
+        "2026-07-45",
+        "2026-07-45",
+        "2026-07-45",
+        "2026-07-15"
+      ],
+      "emit_name": "CIDADE INDUSTRIAL SATELITE DE SAO PAULO. GUARULHOSSP - CEP. O SOU",
+      "emit_cnpj": "07869005000102",
+      "dest_cnpj": "10876822000194",
+      "cfops": [
+        "6154"
+      ],
+      "cfop": "6154",
+      "base_icms": 673.0,
+      "valor_icms": 7.0,
+      "aliquota_icms": 1.04,
+      "base_icms_st": 47.11,
+      "valor_icms_st": 0.0,
+      "valor_produtos": 5953.32,
+      "valor_frete": null,
+      "valor_seguro": null,
+      "valor_desconto": null,
+      "outras_despesas": null,
+      "valor_ipi": null,
+      "valor_pis": null,
+      "valor_cofins": null,
+      "valor_total_nf": 6154.24,
+      "tax_confidence": "high",
+      "ocr_chars": 2532,
+      "image_size": [
+        2039,
+        2800
+      ],
+      "siat_match": true,
+      "siat": {
+        "doc_number": "98848",
+        "issue_date": "2026-07-08",
+        "counterparty_name": "HD FERRAGENS PARA MOVEIS LTDA.",
+        "counterparty_doc": "05509961000140",
+        "emit_uf": "PR",
+        "cfops_entrada": [
+          "2102"
+        ],
+        "cfops_supplier": [
+          "6102"
+        ],
+        "destinacao": "REVENDA",
+        "total_value": 5953.32
+      },
+      "merged": {
+        "doc_number": "98848",
+        "issue_date": "2026-07-08",
+        "emit_name": "HD FERRAGENS PARA MOVEIS LTDA.",
+        "emit_cnpj": "05509961000140",
+        "emit_uf": "PR",
+        "destinacao": "REVENDA",
+        "cfops_entrada": [
+          "2102"
+        ],
+        "cfops_supplier": [
+          "6102"
+        ],
+        "valor_produtos_siat": 5953.32,
+        "valor_produtos": 5953.32,
+        "valor_total_nf": 6154.24,
+        "base_icms": null,
+        "valor_icms": null,
+        "aliquota_icms": null,
+        "tax_confidence": "low",
+        "base_icms_st": 47.11,
+        "valor_icms_st": 0.0,
+        "valor_frete": null,
+        "valor_ipi": null,
+        "valor_pis": null,
+        "valor_cofins": null,
+        "chave_acesso": null,
+        "serie": "491",
+        "source_file": "Digitalizado_20260725-0753.pdf",
+        "page_index": 1,
+        "icms_antecipacao_estimada": null,
+        "aliq_origem_estimada": 1.04,
+        "aliq_final_estimada": 21.46,
+        "aliq_estadual": 22.5,
+        "icms_discard_reason": "icms_too_small_vs_produtos"
+      }
+    },
+    {
+      "source_file": "Digitalizado_20260716-1210.pdf",
+      "page_index": 0,
+      "doc_number": "12584417",
+      "serie": "1",
+      "chave_acesso": "50100720262300001258441701222607204221080001",
+      "issue_date": "2026-07-10",
+      "dates_found": [
+        "2026-07-10",
+        "2026-07-10",
+        "2026-07-10",
+        "2026-07-10",
+        "2026-07-10",
+        "2026-07-10",
+        "2026-07-10"
+      ],
+      "emit_name": "iy SAIDA 2226 0720 4221 0800 0180 5500 1012 5844 1710 0143 2386",
+      "emit_cnpj": "20422108000180",
+      "dest_cnpj": "10876822000194",
+      "cfops": [
+        "2226"
+      ],
+      "cfop": "2226",
+      "base_icms": 230.0,
+      "valor_icms": 1.75,
+      "aliquota_icms": 0.76,
+      "base_icms_st": 0.0,
+      "valor_icms_st": 0.0,
+      "valor_produtos": 230,
+      "valor_frete": 0.0,
+      "valor_seguro": 0.0,
+      "valor_desconto": 0.0,
+      "outras_despesas": 0.0,
+      "valor_ipi": 0.0,
+      "valor_pis": null,
+      "valor_cofins": null,
+      "valor_total_nf": 230.0,
+      "tax_confidence": "high",
+      "ocr_chars": 2241,
+      "image_size": [
+        1991,
+        2800
+      ],
+      "siat_match": true,
+      "siat": {
+        "doc_number": "12584417",
+        "issue_date": "2026-07-10",
+        "counterparty_name": "DINO & FREITAS LTDA-ME",
+        "counterparty_doc": "20422108000180",
+        "emit_uf": "PI",
+        "cfops_entrada": [
+          "1102"
+        ],
+        "cfops_supplier": [
+          "5102"
+        ],
+        "destinacao": "REVENDA",
+        "total_value": 230
+      },
+      "merged": {
+        "doc_number": "12584417",
+        "issue_date": "2026-07-10",
+        "emit_name": "DINO & FREITAS LTDA-ME",
+        "emit_cnpj": "20422108000180",
+        "emit_uf": "PI",
+        "destinacao": "REVENDA",
+        "cfops_entrada": [
+          "1102"
+        ],
+        "cfops_supplier": [
+          "5102"
+        ],
+        "valor_produtos_siat": 230,
+        "valor_produtos": 230,
+        "valor_total_nf": 230.0,
+        "base_icms": null,
+        "valor_icms": null,
+        "aliquota_icms": null,
+        "tax_confidence": "low",
+        "base_icms_st": 0.0,
+        "valor_icms_st": 0.0,
+        "valor_frete": 0.0,
+        "valor_ipi": 0.0,
+        "valor_pis": null,
+        "valor_cofins": null,
+        "chave_acesso": null,
+        "serie": "1",
+        "source_file": "Digitalizado_20260716-1210.pdf",
+        "page_index": 0
+      }
+    },
+    {
+      "source_file": "Digitalizado_20260717-0816.pdf",
+      "page_index": 0,
+      "doc_number": "26252",
+      "serie": "1",
+      "chave_acesso": "09000035730000126260712041023000123500100002",
+      "issue_date": "2026-07-10",
+      "dates_found": [
+        "2026-07-10",
+        "2026-07-10",
+        "2026-07-10",
+        "2026-07-10",
+        "2026-10-10",
+        "2026-07-10",
+        "2026-08-10",
+        "2026-07-10",
+        "2026-07-10"
+      ],
+      "emit_name": "TEL 81 3629-2025 - SAÍDA de echcnicddode wo poral cational da NFS",
+      "emit_cnpj": "12041023000123",
+      "dest_cnpj": "10876822000194",
+      "cfops": [
+        "6107",
+        "2200",
+        "1200",
+        "6101",
+        "5148"
+      ],
+      "cfop": "6107",
+      "base_icms": 1703.0,
+      "valor_icms": 203.48,
+      "aliquota_icms": 11.95,
+      "base_icms_st": 0.0,
+      "valor_icms_st": 0.0,
+      "valor_produtos": 1704,
+      "valor_frete": 0.0,
+      "valor_seguro": null,
+      "valor_desconto": 0.0,
+      "outras_despesas": 0.0,
+      "valor_ipi": null,
+      "valor_pis": null,
+      "valor_cofins": null,
+      "valor_total_nf": 1704.0,
+      "tax_confidence": "high",
+      "ocr_chars": 2180,
+      "image_size": [
+        2162,
+        2800
+      ],
+      "siat_match": true,
+      "siat": {
+        "doc_number": "26252",
+        "issue_date": "2026-07-10",
+        "counterparty_name": "AFO MOVEIS E ARTEFATOS LTDA",
+        "counterparty_doc": "12041023000123",
+        "emit_uf": "PE",
+        "cfops_entrada": [
+          "2101"
+        ],
+        "cfops_supplier": [
+          "6101"
+        ],
+        "destinacao": "REVENDA",
+        "total_value": 1704
+      },
+      "merged": {
+        "doc_number": "26252",
+        "issue_date": "2026-07-10",
+        "emit_name": "AFO MOVEIS E ARTEFATOS LTDA",
+        "emit_cnpj": "12041023000123",
+        "emit_uf": "PE",
+        "destinacao": "REVENDA",
+        "cfops_entrada": [
+          "2101"
+        ],
+        "cfops_supplier": [
+          "6101"
+        ],
+        "valor_produtos_siat": 1704,
+        "valor_produtos": 1704,
+        "valor_total_nf": 1704.0,
+        "base_icms": 1703.0,
+        "valor_icms": 203.48,
+        "aliquota_icms": 11.95,
+        "tax_confidence": "high",
+        "base_icms_st": 0.0,
+        "valor_icms_st": 0.0,
+        "valor_frete": 0.0,
+        "valor_ipi": null,
+        "valor_pis": null,
+        "valor_cofins": null,
+        "chave_acesso": null,
+        "serie": "1",
+        "source_file": "Digitalizado_20260717-0816.pdf",
+        "page_index": 0,
+        "icms_antecipacao_estimada": 179.67,
+        "aliq_origem_estimada": 11.95,
+        "aliq_final_estimada": 10.55,
+        "aliq_estadual": 22.5
+      }
+    },
+    {
+      "source_file": "Digitalizado_20260725-0856.pdf",
+      "page_index": 0,
+      "doc_number": "197268",
+      "serie": "197",
+      "chave_acesso": "32280714707065001000197268100630205827301050",
+      "issue_date": null,
+      "dates_found": [],
+      "emit_name": "i Beta Placas do Brasil S/A . Documento Auster da",
+      "emit_cnpj": "04880945000104",
+      "dest_cnpj": null,
+      "cfops": [
+        "6500",
+        "1207",
+        "2159"
+      ],
+      "cfop": "6500",
+      "base_icms": 0.0,
+      "valor_icms": 0.0,
+      "aliquota_icms": null,
+      "base_icms_st": null,
+      "valor_icms_st": null,
+      "valor_produtos": 3982.26,
+      "valor_frete": null,
+      "valor_seguro": null,
+      "valor_desconto": null,
+      "outras_despesas": null,
+      "valor_ipi": null,
+      "valor_pis": null,
+      "valor_cofins": null,
+      "valor_total_nf": 4411.13,
+      "tax_confidence": "high",
+      "ocr_chars": 2662,
+      "image_size": [
+        1974,
+        2800
+      ],
+      "siat_match": true,
+      "siat": {
+        "doc_number": "197268",
+        "issue_date": "2026-07-12",
+        "counterparty_name": "Placas do Brasil S/A",
+        "counterparty_doc": "14792934000118",
+        "emit_uf": "ES",
+        "cfops_entrada": [
+          "2101"
+        ],
+        "cfops_supplier": [
+          "6101"
+        ],
+        "destinacao": "REVENDA",
+        "total_value": 3982.26
+      },
+      "merged": {
+        "doc_number": "197268",
+        "issue_date": "2026-07-12",
+        "emit_name": "Placas do Brasil S/A",
+        "emit_cnpj": "14792934000118",
+        "emit_uf": "ES",
+        "destinacao": "REVENDA",
+        "cfops_entrada": [
+          "2101"
+        ],
+        "cfops_supplier": [
+          "6101"
+        ],
+        "valor_produtos_siat": 3982.26,
+        "valor_produtos": 3982.26,
+        "valor_total_nf": 4411.13,
+        "base_icms": 0.0,
+        "valor_icms": 0.0,
+        "aliquota_icms": null,
+        "tax_confidence": "high",
+        "base_icms_st": null,
+        "valor_icms_st": null,
+        "valor_frete": null,
+        "valor_ipi": null,
+        "valor_pis": null,
+        "valor_cofins": null,
+        "chave_acesso": null,
+        "serie": "197",
+        "source_file": "Digitalizado_20260725-0856.pdf",
+        "page_index": 0
+      }
+    },
+    {
+      "source_file": "Digitalizado_20260725-0856.pdf",
+      "page_index": 2,
+      "doc_number": "197269",
+      "serie": "1",
+      "chave_acesso": "11750322607147079340001185800100010726917275",
+      "issue_date": null,
+      "dates_found": [],
+      "emit_name": null,
+      "emit_cnpj": null,
+      "dest_cnpj": null,
+      "cfops": [
+        "5102",
+        "6912",
+        "2258",
+        "1207",
+        "6101",
+        "1200"
+      ],
+      "cfop": "5102",
+      "base_icms": null,
+      "valor_icms": null,
+      "aliquota_icms": null,
+      "base_icms_st": 10801.95,
+      "valor_icms_st": 1305.7,
+      "valor_produtos": 48528.95,
+      "valor_frete": 6.0,
+      "valor_seguro": 6.0,
+      "valor_desconto": 6.0,
+      "outras_despesas": null,
+      "valor_ipi": null,
+      "valor_pis": null,
+      "valor_cofins": null,
+      "valor_total_nf": 50108.14,
+      "tax_confidence": "low",
+      "ocr_chars": 3021,
+      "image_size": [
+        2084,
+        2800
+      ],
+      "siat_match": true,
+      "siat": {
+        "doc_number": "197269",
+        "issue_date": "2026-07-12",
+        "counterparty_name": "Placas do Brasil S/A",
+        "counterparty_doc": "14792934000118",
+        "emit_uf": "ES",
+        "cfops_entrada": [
+          "2101"
+        ],
+        "cfops_supplier": [
+          "6101"
+        ],
+        "destinacao": "REVENDA",
+        "total_value": 48528.95
+      },
+      "merged": {
+        "doc_number": "197269",
+        "issue_date": "2026-07-12",
+        "emit_name": "Placas do Brasil S/A",
+        "emit_cnpj": "14792934000118",
+        "emit_uf": "ES",
+        "destinacao": "REVENDA",
+        "cfops_entrada": [
+          "2101"
+        ],
+        "cfops_supplier": [
+          "6101"
+        ],
+        "valor_produtos_siat": 48528.95,
+        "valor_produtos": 48528.95,
+        "valor_total_nf": 50108.14,
+        "base_icms": null,
+        "valor_icms": null,
+        "aliquota_icms": null,
+        "tax_confidence": "low",
+        "base_icms_st": 10801.95,
+        "valor_icms_st": 1305.7,
+        "valor_frete": 6.0,
+        "valor_ipi": null,
+        "valor_pis": null,
+        "valor_cofins": null,
+        "chave_acesso": null,
+        "serie": "1",
+        "source_file": "Digitalizado_20260725-0856.pdf",
+        "page_index": 2
+      }
+    },
+    {
+      "source_file": "Digitalizado_20260725-0856.pdf",
+      "page_index": 1,
+      "doc_number": "197270",
+      "serie": "0",
+      "chave_acesso": "10671015122614797934000118650010001972701001",
+      "issue_date": null,
+      "dates_found": [],
+      "emit_name": "erates eee tees ate ae ee eee PEPPERS Et te",
+      "emit_cnpj": null,
+      "dest_cnpj": null,
+      "cfops": [],
+      "cfop": null,
+      "base_icms": 4411.14,
+      "valor_icms": 0.0,
+      "aliquota_icms": null,
+      "base_icms_st": null,
+      "valor_icms_st": null,
+      "valor_produtos": 82272.95,
+      "valor_frete": null,
+      "valor_seguro": null,
+      "valor_desconto": 6.0,
+      "outras_despesas": null,
+      "valor_ipi": null,
+      "valor_pis": null,
+      "valor_cofins": null,
+      "valor_total_nf": 92272.05,
+      "tax_confidence": "high",
+      "ocr_chars": 2227,
+      "image_size": [
+        2140,
+        2800
+      ],
+      "siat_match": true,
+      "siat": {
+        "doc_number": "197270",
+        "issue_date": "2026-07-12",
+        "counterparty_name": "Placas do Brasil S/A",
+        "counterparty_doc": "14792934000118",
+        "emit_uf": "ES",
+        "cfops_entrada": [
+          "2101"
+        ],
+        "cfops_supplier": [
+          "6101"
+        ],
+        "destinacao": "REVENDA",
+        "total_value": 82272.95
+      },
+      "merged": {
+        "doc_number": "197270",
+        "issue_date": "2026-07-12",
+        "emit_name": "Placas do Brasil S/A",
+        "emit_cnpj": "14792934000118",
+        "emit_uf": "ES",
+        "destinacao": "REVENDA",
+        "cfops_entrada": [
+          "2101"
+        ],
+        "cfops_supplier": [
+          "6101"
+        ],
+        "valor_produtos_siat": 82272.95,
+        "valor_produtos": 82272.95,
+        "valor_total_nf": 92272.05,
+        "base_icms": 4411.14,
+        "valor_icms": 0.0,
+        "aliquota_icms": null,
+        "tax_confidence": "high",
+        "base_icms_st": null,
+        "valor_icms_st": null,
+        "valor_frete": null,
+        "valor_ipi": null,
+        "valor_pis": null,
+        "valor_cofins": null,
+        "chave_acesso": null,
+        "serie": "0",
+        "source_file": "Digitalizado_20260725-0856.pdf",
+        "page_index": 1
+      }
+    },
+    {
+      "source_file": "Digitalizado_20260725-0742.pdf",
+      "page_index": 0,
+      "doc_number": "272108",
+      "serie": "598",
+      "chave_acesso": "61004705004174755407598330000543441310015700",
+      "issue_date": "2026-07-13",
+      "dates_found": [
+        "2026-07-13",
+        "2026-09-11",
+        "2026-09-11",
+        "2026-07-13",
+        "2026-08-12",
+        "2026-09-11",
+        "2026-07-13",
+        "2026-09-11"
+      ],
+      "emit_name": "ROMETAL COMPONENTES PARA -MOVEIS LTDA. . QRENTRADA a LL Rr ba",
+      "emit_cnpj": null,
+      "dest_cnpj": null,
+      "cfops": [
+        "6101",
+        "1287"
+      ],
+      "cfop": "6101",
+      "base_icms": null,
+      "valor_icms": null,
+      "aliquota_icms": null,
+      "base_icms_st": null,
+      "valor_icms_st": null,
+      "valor_produtos": 3006.9,
+      "valor_frete": null,
+      "valor_seguro": null,
+      "valor_desconto": null,
+      "outras_despesas": null,
+      "valor_ipi": null,
+      "valor_pis": null,
+      "valor_cofins": null,
+      "valor_total_nf": 3006.9,
+      "tax_confidence": "low",
+      "ocr_chars": 2188,
+      "image_size": [
+        2019,
+        2800
+      ],
+      "siat_match": true,
+      "siat": {
+        "doc_number": "272108",
+        "issue_date": "2026-07-13",
+        "counterparty_name": "ROMETAL COMPONENTES PARA MOVEIS LTDA",
+        "counterparty_doc": "06925691000110",
+        "emit_uf": "RS",
+        "cfops_entrada": [
+          "2101"
+        ],
+        "cfops_supplier": [
+          "6101"
+        ],
+        "destinacao": "REVENDA",
+        "total_value": 3006.9
+      },
+      "merged": {
+        "doc_number": "272108",
+        "issue_date": "2026-07-13",
+        "emit_name": "ROMETAL COMPONENTES PARA MOVEIS LTDA",
+        "emit_cnpj": "06925691000110",
+        "emit_uf": "RS",
+        "destinacao": "REVENDA",
+        "cfops_entrada": [
+          "2101"
+        ],
+        "cfops_supplier": [
+          "6101"
+        ],
+        "valor_produtos_siat": 3006.9,
+        "valor_produtos": 3006.9,
+        "valor_total_nf": 3006.9,
+        "base_icms": null,
+        "valor_icms": null,
+        "aliquota_icms": null,
+        "tax_confidence": "low",
+        "base_icms_st": null,
+        "valor_icms_st": null,
+        "valor_frete": null,
+        "valor_ipi": null,
+        "valor_pis": null,
+        "valor_cofins": null,
+        "chave_acesso": null,
+        "serie": "598",
+        "source_file": "Digitalizado_20260725-0742.pdf",
+        "page_index": 0
+      }
+    },
+    {
+      "source_file": "Digitalizado_20260725-0914.pdf",
+      "page_index": 0,
+      "doc_number": "37181",
+      "serie": "1",
+      "chave_acesso": "44035260748410211000552550010000371811304042",
+      "issue_date": "2026-07-21",
+      "dates_found": [
+        "2026-07-21",
+        "2026-07-21",
+        "2026-07-21"
+      ],
+      "emit_name": "CRUZEIRO PAPEIS INDUSTRIA POUMENTO AUIIAR DA",
+      "emit_cnpj": "48410211000852",
+      "dest_cnpj": "10876822000194",
+      "cfops": [
+        "6910",
+        "1100"
+      ],
+      "cfop": "6910",
+      "base_icms": 0.0,
+      "valor_icms": 0.0,
+      "aliquota_icms": null,
+      "base_icms_st": 0.0,
+      "valor_icms_st": 0.0,
+      "valor_produtos": 28,
+      "valor_frete": null,
+      "valor_seguro": 0.0,
+      "valor_desconto": 0.0,
+      "outras_despesas": 0.0,
+      "valor_ipi": 0.0,
+      "valor_pis": null,
+      "valor_cofins": null,
+      "valor_total_nf": 28,
+      "tax_confidence": "high",
+      "ocr_chars": 2211,
+      "image_size": [
+        2249,
+        2800
+      ],
+      "siat_match": true,
+      "siat": {
+        "doc_number": "37181",
+        "issue_date": "2026-07-21",
+        "counterparty_name": "CRUZEIRO PAPEIS INDUSTRIAIS LTDA",
+        "counterparty_doc": "48410211000552",
+        "emit_uf": "SP",
+        "cfops_entrada": [
+          "2910"
+        ],
+        "cfops_supplier": [
+          "6910"
+        ],
+        "destinacao": "BRINDE",
+        "total_value": 28
+      },
+      "merged": {
+        "doc_number": "37181",
+        "issue_date": "2026-07-21",
+        "emit_name": "CRUZEIRO PAPEIS INDUSTRIAIS LTDA",
+        "emit_cnpj": "48410211000552",
+        "emit_uf": "SP",
+        "destinacao": "BRINDE",
+        "cfops_entrada": [
+          "2910"
+        ],
+        "cfops_supplier": [
+          "6910"
+        ],
+        "valor_produtos_siat": 28,
+        "valor_produtos": 28,
+        "valor_total_nf": 28,
+        "base_icms": 0.0,
+        "valor_icms": 0.0,
+        "aliquota_icms": null,
+        "tax_confidence": "high",
+        "base_icms_st": 0.0,
+        "valor_icms_st": 0.0,
+        "valor_frete": null,
+        "valor_ipi": 0.0,
+        "valor_pis": null,
+        "valor_cofins": null,
+        "chave_acesso": null,
+        "serie": "1",
+        "source_file": "Digitalizado_20260725-0914.pdf",
+        "page_index": 0
+      }
+    },
+    {
+      "source_file": "Digitalizado_20260723-1005.pdf",
+      "page_index": 0,
+      "doc_number": "13222",
+      "serie": "1",
+      "chave_acesso": "14123000013222001421995950001395500100001322",
+      "issue_date": "2026-07-23",
+      "dates_found": [
+        "2026-07-23",
+        "2026-07-23"
+      ],
+      "emit_name": "eme FPA AS 2307/2026",
+      "emit_cnpj": "03590095000139",
+      "dest_cnpj": null,
+      "cfops": [
+        "2217",
+        "1111"
+      ],
+      "cfop": "2217",
+      "base_icms": 0.0,
+      "valor_icms": 0.0,
+      "aliquota_icms": null,
+      "base_icms_st": null,
+      "valor_icms_st": null,
+      "valor_produtos": 250,
+      "valor_frete": null,
+      "valor_seguro": 0.0,
+      "valor_desconto": 0.0,
+      "outras_despesas": 0.0,
+      "valor_ipi": null,
+      "valor_pis": null,
+      "valor_cofins": null,
+      "valor_total_nf": 250.0,
+      "tax_confidence": "high",
+      "ocr_chars": 1814,
+      "image_size": [
+        1994,
+        2800
+      ],
+      "siat_match": true,
+      "siat": {
+        "doc_number": "13222",
+        "issue_date": "2026-07-23",
+        "counterparty_name": "E CRISTINA DA SILVA EIRELI",
+        "counterparty_doc": "03590095000139",
+        "emit_uf": "PI",
+        "cfops_entrada": [
+          "1656"
+        ],
+        "cfops_supplier": [
+          "5656"
+        ],
+        "destinacao": "USO/CONSUMO",
+        "total_value": 250
+      },
+      "merged": {
+        "doc_number": "13222",
+        "issue_date": "2026-07-23",
+        "emit_name": "E CRISTINA DA SILVA EIRELI",
+        "emit_cnpj": "03590095000139",
+        "emit_uf": "PI",
+        "destinacao": "USO/CONSUMO",
+        "cfops_entrada": [
+          "1656"
+        ],
+        "cfops_supplier": [
+          "5656"
+        ],
+        "valor_produtos_siat": 250,
+        "valor_produtos": 250,
+        "valor_total_nf": 250.0,
+        "base_icms": 0.0,
+        "valor_icms": 0.0,
+        "aliquota_icms": null,
+        "tax_confidence": "high",
+        "base_icms_st": null,
+        "valor_icms_st": null,
+        "valor_frete": null,
+        "valor_ipi": null,
+        "valor_pis": null,
+        "valor_cofins": null,
+        "chave_acesso": null,
+        "serie": "1",
+        "source_file": "Digitalizado_20260723-1005.pdf",
+        "page_index": 0
+      }
+    }
+  ],
+  "siat_without_pdf": [
+    {
+      "doc_number": "193530",
+      "issue_date": "2026-07-02",
+      "counterparty_name": "INDUSTRIA QUIMICA UNA LTDA",
+      "emit_uf": "SP",
+      "total_value": 6337.9,
+      "destinacao": "REVENDA"
+    },
+    {
+      "doc_number": "13206",
+      "issue_date": "2026-07-06",
+      "counterparty_name": "E CRISTINA DA SILVA EIRELI",
+      "emit_uf": "PI",
+      "total_value": 250,
+      "destinacao": "USO/CONSUMO"
+    },
+    {
+      "doc_number": "73216",
+      "issue_date": "2026-07-13",
+      "counterparty_name": "STARRETT INDUSTRIA E COMERCIO LTDA - FILIAL",
+      "emit_uf": "MG",
+      "total_value": 572.4,
+      "destinacao": "REVENDA"
+    },
+    {
+      "doc_number": "949",
+      "issue_date": "2026-07-16",
+      "counterparty_name": "PLANALTO PETROLEO BOLA LTDA",
+      "emit_uf": "PI",
+      "total_value": 300,
+      "destinacao": "COMBUSTÍVEL"
+    },
+    {
+      "doc_number": "45510",
+      "issue_date": "2026-07-17",
+      "counterparty_name": "J G DAMASCENO E CIA LTDA",
+      "emit_uf": "PI",
+      "total_value": 177.66,
+      "destinacao": "REVENDA"
+    },
+    {
+      "doc_number": "332773",
+      "issue_date": "2026-07-21",
+      "counterparty_name": "FARBEN S/A INDUSTRIA QUIMICA",
+      "emit_uf": "SP",
+      "total_value": 4592.7,
+      "destinacao": "TRÂNSITO"
+    },
+    {
+      "doc_number": "99627",
+      "issue_date": "2026-07-23",
+      "counterparty_name": "HD FERRAGENS PARA MOVEIS LTDA.",
+      "emit_uf": "PR",
+      "total_value": 6670.04,
+      "destinacao": "TRÂNSITO"
+    },
+    {
+      "doc_number": "9761",
+      "issue_date": "2026-07-24",
+      "counterparty_name": "KitSul Componentes para Moveis LTDA",
+      "emit_uf": "RS",
+      "total_value": 2182.05,
+      "destinacao": "TRÂNSITO"
+    },
+    {
+      "doc_number": "198010",
+      "issue_date": "2026-07-25",
+      "counterparty_name": "Placas do Brasil S/A",
+      "emit_uf": "ES",
+      "total_value": 48088.38,
+      "destinacao": "TRÂNSITO"
+    },
+    {
+      "doc_number": "198011",
+      "issue_date": "2026-07-25",
+      "counterparty_name": "Placas do Brasil S/A",
+      "emit_uf": "ES",
+      "total_value": 14958.72,
+      "destinacao": "TRÂNSITO"
+    },
+    {
+      "doc_number": "198281",
+      "issue_date": "2026-07-29",
+      "counterparty_name": "Placas do Brasil S/A",
+      "emit_uf": "ES",
+      "total_value": 11280.78,
+      "destinacao": "TRÂNSITO"
+    },
+    {
+      "doc_number": "198282",
+      "issue_date": "2026-07-29",
+      "counterparty_name": "Placas do Brasil S/A",
+      "emit_uf": "ES",
+      "total_value": 7479.36,
+      "destinacao": "TRÂNSITO"
+    },
+    {
+      "doc_number": "198283",
+      "issue_date": "2026-07-29",
+      "counterparty_name": "Placas do Brasil S/A",
+      "emit_uf": "ES",
+      "total_value": 77966.28,
+      "destinacao": "TRÂNSITO"
+    },
+    {
+      "doc_number": "3099",
+      "issue_date": "2026-07-30",
+      "counterparty_name": "JJI COMERCIO ATACADISTA LTDA",
+      "emit_uf": "CE",
+      "total_value": 10063.35,
+      "destinacao": "TRÂNSITO"
+    },
+    {
+      "doc_number": "969",
+      "issue_date": "2026-07-31",
+      "counterparty_name": "PLANALTO PETROLEO BOLA LTDA",
+      "emit_uf": "PI",
+      "total_value": 380,
+      "destinacao": "COMBUSTÍVEL"
+    }
+  ],
+  "pages_raw_count": 36,
+  "pages_garbage_count": 3
+}

@@ -10,6 +10,8 @@ export const RULES = [
   [/PIX.*(RECEBIDO|ENVIADO).*ARIOSTO\s*FALC/i, 'Movimentação sócio Ariosto Falcão Martins', '2.02.01.04.01.0001', 'societaria'],
   // --- Transferências entre contas próprias (CNPJ da empresa) ---
   [/10876822000194|PIX.*(RECEBIDO|ENVIADO).*FALCAO\s*&?\s*FR|PIX.*MADEPINUS/i, 'Transferência entre contas próprias', '1.01.01.01.02.0002', 'interna'],
+  // --- Aplicação automática BB (varredura diária de saldo) ---
+  [/REND\s*F[ÁA]CIL/i, 'Aplicação financeira — BB Rende Fácil (transferência automática)', '1.01.01.01.03.0002', 'interna'],
   [/TRANSFER[ÊE]NCIA AUTOM\.?\s*RECEBIDA\s*8840/i, 'Recebimento cartão (concentrador Itaú)', '1.01.03.01.02.0003', 'operacional'],
   [/TRANSFER[ÊE]NCIA AUTOM\.?\s*RECEBIDA\s*H\s*II/i, 'Recebimento cartão (concentrador)', '1.01.03.01.02.0003', 'operacional'],
   [/TEG EX GAR/i, 'Repasse garantia cartão (TEG)', '1.01.03.01.02.0003', 'operacional'],

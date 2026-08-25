@@ -85,6 +85,16 @@ router.get('/chart-of-accounts', (_req, res) => {
   res.json(rows);
 });
 
+router.get('/months', (_req, res) => {
+  const fromDb = db.prepare(`
+    SELECT DISTINCT substr(entry_date, 1, 7) AS month
+    FROM ledger_entries
+    WHERE entry_date IS NOT NULL
+    ORDER BY month
+  `).all().map((r) => r.month);
+  res.json({ months: fromDb });
+});
+
 // PATCH /api/ledger/:id — correção manual (contador ou Ronaldo)
 router.patch('/:id', (req, res) => {
   const { debit_account, credit_account, category, status } = req.body;

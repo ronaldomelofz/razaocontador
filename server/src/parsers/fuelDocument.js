@@ -24,6 +24,11 @@ export function parseFuelFilename(name, stat) {
     };
   }
 
+  // Número de NF no nome (223439, 399132) — data pelo arquivo, não pelo número
+  if (/combust/i.test(name) && /\d{5,}/.test(name) && stat?.mtime) {
+    return { doc_date: stat.mtime.toISOString().slice(0, 10), doc_time: null };
+  }
+
   // combustível 09062026.pdf — DDMMYYYY
   m = name.match(/(\d{2})(\d{2})(\d{4})/);
   if (m) {

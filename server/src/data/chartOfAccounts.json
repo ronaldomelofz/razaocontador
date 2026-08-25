@@ -75,6 +75,11 @@
     "type": "ativo"
   },
   {
+    "code": "1.01.01.01.03.0002",
+    "name": "Aplicação BB Rende Fácil",
+    "type": "ativo"
+  },
+  {
     "code": "1.01.03",
     "name": "CLIENTES",
     "type": "ativo"

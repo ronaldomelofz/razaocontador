@@ -71,7 +71,10 @@ CREATE TABLE IF NOT EXISTS fiscal_documents (
   cofins_value REAL,
   cancelled INTEGER DEFAULT 0,
   payment_method TEXT,
-  ledger_entry_id INTEGER REFERENCES ledger_entries(id)
+  ledger_entry_id INTEGER REFERENCES ledger_entries(id),
+  doc_direction TEXT,             -- 'entrada' | 'saida' (SIAT / XML)
+  emit_uf TEXT,                   -- UF do emitente (útil p/ ICMS antecipação)
+  destinacao TEXT                 -- REVENDA | USO/CONSUMO | etc. (SIAT)
 );
 
 -- Conciliação: liga lançamento bancário a documento fiscal / boleto

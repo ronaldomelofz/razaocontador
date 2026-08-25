@@ -9,6 +9,8 @@ import exportRoutes from './routes/export.js';
 import reconciliationRoutes from './routes/reconciliation.js';
 import attachmentsRoutes from './routes/attachments.js';
 import scanRoutes from './routes/scan.js';
+import taxAssessmentRoutes from './routes/taxAssessment.js';
+import boletosFornecedoresRoutes from './routes/boletosFornecedores.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -22,6 +24,10 @@ app.use('/api/export', exportRoutes);
 app.use('/api/reconciliation', reconciliationRoutes);
 app.use('/api/attachments', attachmentsRoutes);
 app.use('/api/scan', scanRoutes);
+// Local apenas: não existe equivalente em netlify/functions/api.mjs, então esta
+// rota nunca é servida no site publicado.
+app.use('/api/tax-assessment', taxAssessmentRoutes);
+app.use('/api/boletos-fornecedores', boletosFornecedoresRoutes);
 
 app.get('/api/health', (_req, res) => res.json({ ok: true }));
 

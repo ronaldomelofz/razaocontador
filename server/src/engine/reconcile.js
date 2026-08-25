@@ -4,7 +4,8 @@
 
 import dayjs from 'dayjs';
 
-const DATE_WINDOW_DAYS = 3;   // tolerância de dias entre emissão da NF e pagamento
+const DATE_WINDOW_DAYS = 3;
+const DATE_WINDOW_SUPPLIER_DAYS = 15;
 const VALUE_TOLERANCE = 0.02; // tolerância de R$0,02 (arredondamento)
 
 function sameValue(a, b) {
@@ -24,26 +25,38 @@ export function matchBankToFiscal(bankTxs, fiscalDocs) {
   const matches = [];
   const usedFiscal = new Set();
 
-  for (const tx of bankTxs) {
-    let best = null;
-    for (const doc of fiscalDocs) {
-      if (usedFiscal.has(doc.id)) continue;
-      if (!sameValue(tx.amount, doc.total_value)) continue;
-      if (!withinWindow(tx.tx_date, doc.issue_date)) continue;
+  function scorePair(tx, doc, maxDays) {
+    if (!sameValue(tx.amount, doc.total_value)) return null;
+    const issueOk = withinWindow(tx.tx_date, doc.issue_date, maxDays);
+    const entradaOk = doc.data_entrada && withinWindow(tx.tx_date, doc.data_entrada, maxDays);
+    if (!issueOk && !entradaOk) return null;
+    const docMatch =
+      tx.counterparty_doc && doc.counterparty_doc && tx.counterparty_doc === doc.counterparty_doc;
+    let score = docMatch ? 1.0 : 0.7;
+    if (entradaOk && !issueOk) score -= 0.05;
+    if (maxDays > DATE_WINDOW_DAYS) score -= 0.1;
+    return score;
+  }
 
-      const docMatch =
-        tx.counterparty_doc && doc.counterparty_doc && tx.counterparty_doc === doc.counterparty_doc;
-      const score = docMatch ? 1.0 : 0.7; // valor+data bate; CNPJ eleva confiança
-      if (!best || score > best.score) best = { doc, score };
-    }
-    if (best) {
-      matches.push({
-        raw_transaction_id: tx.id,
-        fiscal_document_id: best.doc.id,
-        match_type: best.score === 1.0 ? 'exact' : 'fuzzy',
-        match_score: best.score,
-      });
-      usedFiscal.add(best.doc.id);
+  for (const windowDays of [DATE_WINDOW_DAYS, DATE_WINDOW_SUPPLIER_DAYS]) {
+    for (const tx of bankTxs) {
+      if (matches.some((m) => m.raw_transaction_id === tx.id)) continue;
+      let best = null;
+      for (const doc of fiscalDocs) {
+        if (usedFiscal.has(doc.id)) continue;
+        const score = scorePair(tx, doc, windowDays);
+        if (score == null) continue;
+        if (!best || score > best.score) best = { doc, score };
+      }
+      if (best) {
+        matches.push({
+          raw_transaction_id: tx.id,
+          fiscal_document_id: best.doc.id,
+          match_type: best.score >= 0.95 ? 'exact' : 'fuzzy',
+          match_score: Math.round(best.score * 100) / 100,
+        });
+        usedFiscal.add(best.doc.id);
+      }
     }
   }
   return matches;

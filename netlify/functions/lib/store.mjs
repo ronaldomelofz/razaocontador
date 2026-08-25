@@ -23,9 +23,22 @@ function overridesStore(context) {
   return getStore('ledger-overrides');
 }
 
+// O site inteiro (inclusive /data/*) é protegido por Basic Auth (edge function `protect`).
+// Como esta função roda no servidor e busca o próprio JSON estático via HTTP, precisa
+// enviar as mesmas credenciais — senão o self-fetch cai em 401 e o ledger "não é encontrado".
+function selfAuthHeaders() {
+  const user = process.env.BASIC_AUTH_USER;
+  const pass = process.env.BASIC_AUTH_PASSWORD;
+  if (!user || !pass) return {};
+  return { Authorization: `Basic ${Buffer.from(`${user}:${pass}`).toString('base64')}` };
+}
+
 async function fetchStaticLedger(month, baseUrl) {
-  const res = await fetch(`${baseUrl}/data/ledger-${month}.json`, { cache: 'no-store' });
-  if (!res.ok) throw new Error(`Ledger não encontrado: ${month}`);
+  const res = await fetch(`${baseUrl}/data/ledger-${month}.json`, {
+    cache: 'no-store',
+    headers: selfAuthHeaders(),
+  });
+  if (!res.ok) throw new Error(`Ledger não encontrado: ${month} (HTTP ${res.status})`);
   return res.json();
 }
 

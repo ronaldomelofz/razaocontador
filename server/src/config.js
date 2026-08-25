@@ -29,6 +29,14 @@ export const ATTACHMENT_EXTENSIONS = new Set([
 
 export const STATEMENT_EXTENSIONS = new Set(['.csv', '.txt', '.xlsx', '.xls', '.ofx']);
 
+/**
+ * Pasta local (fora do controle de versão) com os documentos de apuração fiscal
+ * enviados mensalmente pela contabilidade (Balancete, Memórias de Cálculo, DAR).
+ * Usada apenas pelo servidor Express local — nunca é publicada no Netlify.
+ */
+export const TAX_APURACAO_DIR = process.env.TAX_APURACAO_DIR
+  || path.join(__dirname, '../../APURAÇÃO');
+
 export const dbPath = path.join(__dirname, '../data/madepinus.db');
 export const uploadsRoot = path.join(__dirname, '../data/uploads');
 export const attachmentsRoot = path.join(__dirname, '../data/attachments');

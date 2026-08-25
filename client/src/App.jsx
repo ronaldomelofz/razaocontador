@@ -3,11 +3,16 @@ import { exportExcel, exportPdf } from './utils/exportClient';
 import { fmtDate, fmt, isUnclassified, postingAccount } from './utils/format';
 import { isFuelEntry } from './utils/fuel';
 import ReclassifyPanel from './components/ReclassifyPanel';
+import TaxAssessment from './components/TaxAssessment';
+import SupplierBoletos from './components/SupplierBoletos';
 
-const MONTHS = ['2026-05', '2026-06'];
+const MONTHS_FALLBACK = ['2026-05', '2026-06', '2026-07'];
 const VIEWS = [
   { id: 'ledger', label: 'Livro Razão' },
   { id: 'fuel', label: 'Combustível' },
+  { id: 'boletos', label: 'Boletos Fornecedores' },
+  // Apuração: só em vite dev (não vai para o build Netlify).
+  ...(import.meta.env.DEV ? [{ id: 'taxes', label: 'Apuração de Impostos' }] : []),
 ];
 
 function statusLabel(s) {
@@ -61,7 +66,8 @@ async function loadData(month) {
 }
 
 export default function App() {
-  const [month, setMonth] = useState('2026-06');
+  const [month, setMonth] = useState('2026-07');
+  const [months, setMonths] = useState(MONTHS_FALLBACK);
   const [summary, setSummary] = useState([]);
   const [entries, setEntries] = useState([]);
   const [chartOfAccounts, setChartOfAccounts] = useState([]);
@@ -98,6 +104,23 @@ export default function App() {
 
   useEffect(() => { refresh(); }, [refresh]);
 
+  useEffect(() => {
+    (async () => {
+      const found = new Set(MONTHS_FALLBACK);
+      for (const url of ['/api/tax-assessment/months', '/api/ledger/months']) {
+        try {
+          const res = await fetch(url);
+          if (!res.ok) continue;
+          const data = await res.json();
+          (data.months || []).forEach((m) => found.add(m));
+        } catch { /* API local opcional */ }
+      }
+      const list = [...found].sort();
+      setMonths(list);
+      setMonth((cur) => (list.includes(cur) ? cur : list[list.length - 1]));
+    })();
+  }, []);
+
   const filtered = entries.filter((e) => {
     if (view === 'fuel' && !isFuelEntry(e)) return false;
     if (accountFilter && e.bank_account_id !== accountFilter) return false;
@@ -110,6 +133,7 @@ export default function App() {
   });
 
   const fuelDocs = fuelRecords.filter((r) => {
+    if (r.is_fuel === false) return false;
     if (accountFilter && r.bank_account_id && r.bank_account_id !== accountFilter) return false;
     if (search) {
       const hay = `${r.file_name} ${r.station} ${r.doc_date}`.toLowerCase();
@@ -177,13 +201,15 @@ export default function App() {
       </header>
 
       <div className="toolbar">
-        <div className="month-tabs">
-          {MONTHS.map((m) => (
-            <button key={m} type="button" className={m === month ? 'tab active' : 'tab'} onClick={() => setMonth(m)}>
-              {m}
-            </button>
-          ))}
-        </div>
+        {view !== 'taxes' && (
+          <div className="month-tabs">
+            {months.map((m) => (
+              <button key={m} type="button" className={m === month ? 'tab active' : 'tab'} onClick={() => setMonth(m)}>
+                {m}
+              </button>
+            ))}
+          </div>
+        )}
         <div className="view-tabs">
           {VIEWS.map((v) => (
             <button
@@ -196,20 +222,28 @@ export default function App() {
             </button>
           ))}
         </div>
-        {accountFilter && (
+        {view !== 'taxes' && view !== 'boletos' && accountFilter && (
           <button type="button" className="chip" onClick={() => setAccountFilter('')}>
             Conta: {accountFilter} ✕
           </button>
         )}
-        <input
-          type="search"
-          placeholder="Buscar histórico, conta, categoria..."
-          value={search}
-          onChange={(ev) => setSearch(ev.target.value)}
-          className="search"
-        />
+        {view !== 'taxes' && view !== 'boletos' && (
+          <input
+            type="search"
+            placeholder="Buscar histórico, conta, categoria..."
+            value={search}
+            onChange={(ev) => setSearch(ev.target.value)}
+            className="search"
+          />
+        )}
       </div>
 
+      {view === 'taxes' ? (
+        <TaxAssessment />
+      ) : view === 'boletos' ? (
+        <SupplierBoletos month={month} />
+      ) : (
+        <>
       {meta && (
         <div className="meta-bar">
           Atualizado em {fmtDate(meta.generatedAt?.slice(0, 10))} {meta.generatedAt?.slice(11, 16)}
@@ -248,19 +282,23 @@ export default function App() {
                 <table className="table">
                   <thead>
                     <tr>
-                      <th>Data</th><th>Hora</th><th>Arquivo</th><th>Valor</th><th>Posto / histórico</th><th>Conta</th><th>Status</th><th>Cupom</th>
+                      <th>Data</th><th>Hora</th><th>Posto</th><th>Produto</th><th>Litros</th><th>Valor</th><th>Pagamento</th><th>Status</th><th>Cupom</th>
                     </tr>
                   </thead>
                   <tbody>
                     {fuelDocs.map((r) => (
-                      <tr key={r.id}>
+                      <tr key={r.id} className={r.is_fuel === false ? 'row-warn' : ''}>
                         <td className="nowrap">{fmtDate(r.doc_date)}</td>
                         <td>{r.doc_time || '—'}</td>
-                        <td className="desc">{r.file_name}</td>
-                        <td className="num">{r.amount != null ? fmt(r.amount) : '—'}</td>
                         <td>{r.station || '—'}</td>
-                        <td>{r.bank_account_id || '—'}</td>
-                        <td>{r.status === 'conciliado' ? '✅ Conciliado' : '📄 Documento'}</td>
+                        <td>{r.product || r.file_name}</td>
+                        <td className="num">{r.liters != null ? r.liters.toLocaleString('pt-BR', { minimumFractionDigits: 2 }) : '—'}</td>
+                        <td className="num">{r.amount != null ? fmt(r.amount) : '—'}</td>
+                        <td>{r.payment || '—'}</td>
+                        <td>
+                          {r.status === 'conciliado' ? '✅ Conciliado' : '📄 Cupom'}
+                          {r.note && <small> · {r.note}</small>}
+                        </td>
                         <td>
                           {r.url ? (
                             <a href={r.url} target="_blank" rel="noreferrer" className="attach-link">📄 Abrir</a>
@@ -269,7 +307,7 @@ export default function App() {
                       </tr>
                     ))}
                     {fuelDocs.length === 0 && (
-                      <tr><td colSpan={8} className="empty-msg">Nenhum documento na pasta COMBUSTÍVEL. Execute o pipeline com acesso à rede.</td></tr>
+                      <tr><td colSpan={9} className="empty-msg">Nenhum documento na pasta COMBUSTÍVEL. Execute o pipeline com acesso à rede.</td></tr>
                     )}
                   </tbody>
                 </table>
@@ -460,6 +498,8 @@ export default function App() {
               </tbody>
             </table>
           </section>
+        </>
+      )}
         </>
       )}
 

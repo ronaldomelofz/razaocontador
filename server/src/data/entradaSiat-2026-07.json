@@ -1,0 +1,705 @@
+{
+  "generatedAt": "2026-08-12T13:44:53.793Z",
+  "month": "2026-07",
+  "source": "RELATÓRIO SIAT 072026 - FALCÃO.xls",
+  "filter": "data_entrada",
+  "summary": {
+    "notes": 23,
+    "totalProdutos": 194508.5,
+    "byCfopEntrada": {
+      "1102": {
+        "n": 5,
+        "total": 3059.43
+      },
+      "1656": {
+        "n": 4,
+        "total": 1180
+      },
+      "2101": {
+        "n": 10,
+        "total": 183375.35
+      },
+      "2102": {
+        "n": 3,
+        "total": 12863.619999999999
+      },
+      "2910": {
+        "n": 2,
+        "total": 368
+      }
+    },
+    "byUf": {
+      "SP": {
+        "n": 3,
+        "total": 21597.629999999997
+      },
+      "PE": {
+        "n": 2,
+        "total": 5654
+      },
+      "PI": {
+        "n": 9,
+        "total": 4239.43
+      },
+      "RS": {
+        "n": 3,
+        "total": 10700.33
+      },
+      "PR": {
+        "n": 2,
+        "total": 16960.55
+      },
+      "ES": {
+        "n": 3,
+        "total": 134784.16
+      },
+      "MG": {
+        "n": 1,
+        "total": 572.4
+      }
+    },
+    "byDestinacao": {
+      "REVENDA": {
+        "n": 17,
+        "total": 193171.33
+      },
+      "USO/CONSUMO": {
+        "n": 3,
+        "total": 629.17
+      },
+      "COMBUSTÍVEL": {
+        "n": 2,
+        "total": 680
+      },
+      "BRINDE": {
+        "n": 1,
+        "total": 28
+      }
+    }
+  },
+  "notes": [
+    {
+      "doc_number": "460076",
+      "doc_model": "55",
+      "issue_date": "2026-06-25",
+      "counterparty_name": "EUCATEX INDUSTRIA E COMERCIO LTDA",
+      "counterparty_doc": "14675270000450",
+      "emit_uf": "SP",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 15231.73,
+      "item_count": 1,
+      "data_entrada": "2026-07-07",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "26098",
+      "doc_model": "55",
+      "issue_date": "2026-06-26",
+      "counterparty_name": "AFO MOVEIS E ARTEFATOS LTDA",
+      "counterparty_doc": "12041023000123",
+      "emit_uf": "PE",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 3950,
+      "item_count": 4,
+      "data_entrada": "2026-07-04",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "264215",
+      "doc_model": "55",
+      "issue_date": "2026-07-01",
+      "counterparty_name": "METALURGICA FERRONORTE LTDA F10",
+      "counterparty_doc": "07103898000172",
+      "emit_uf": "PI",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "1102",
+      "cfops_entrada": [
+        "1102"
+      ],
+      "cfops_supplier": [
+        "5102"
+      ],
+      "destinacao": "USO/CONSUMO",
+      "destinacoes": [
+        "USO/CONSUMO"
+      ],
+      "total_value": 129.17,
+      "item_count": 1,
+      "data_entrada": "2026-07-01",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "45396",
+      "doc_model": "55",
+      "issue_date": "2026-07-01",
+      "counterparty_name": "J G DAMASCENO E CIA LTDA",
+      "counterparty_doc": "09584467000109",
+      "emit_uf": "PI",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "1102",
+      "cfops_entrada": [
+        "1102"
+      ],
+      "cfops_supplier": [
+        "5102"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 1843,
+      "item_count": 3,
+      "data_entrada": "2026-07-01",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "193530",
+      "doc_model": "55",
+      "issue_date": "2026-07-02",
+      "counterparty_name": "INDUSTRIA QUIMICA UNA LTDA",
+      "counterparty_doc": "60600152000238",
+      "emit_uf": "SP",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101",
+        "2102"
+      ],
+      "cfops_supplier": [
+        "6101",
+        "6102"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 6337.9,
+      "item_count": 3,
+      "data_entrada": "2026-07-14",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "359392",
+      "doc_model": "55",
+      "issue_date": "2026-07-02",
+      "counterparty_name": "TABONE INDÚSTRIA E COMÉRCIO DE PLÁSTICOS LTDA-MATRIZ",
+      "counterparty_doc": "90102609000164",
+      "emit_uf": "RS",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 7353.43,
+      "item_count": 11,
+      "data_entrada": "2026-07-16",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "359393",
+      "doc_model": "55",
+      "issue_date": "2026-07-02",
+      "counterparty_name": "TABONE INDÚSTRIA E COMÉRCIO DE PLÁSTICOS LTDA-MATRIZ",
+      "counterparty_doc": "90102609000164",
+      "emit_uf": "RS",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "2910",
+      "cfops_entrada": [
+        "2910"
+      ],
+      "cfops_supplier": [
+        "6910"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 340,
+      "item_count": 2,
+      "data_entrada": "2026-07-16",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "60957",
+      "doc_model": "55",
+      "issue_date": "2026-07-02",
+      "counterparty_name": "LAGE RENZETTI LTDA",
+      "counterparty_doc": "04932792000193",
+      "emit_uf": "PR",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 11007.23,
+      "item_count": 4,
+      "data_entrada": "2026-07-16",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "45412",
+      "doc_model": "55",
+      "issue_date": "2026-07-03",
+      "counterparty_name": "J G DAMASCENO E CIA LTDA",
+      "counterparty_doc": "09584467000109",
+      "emit_uf": "PI",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "1102",
+      "cfops_entrada": [
+        "1102"
+      ],
+      "cfops_supplier": [
+        "5102"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 679.6,
+      "item_count": 1,
+      "data_entrada": "2026-07-03",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "13206",
+      "doc_model": "55",
+      "issue_date": "2026-07-06",
+      "counterparty_name": "E CRISTINA DA SILVA EIRELI",
+      "counterparty_doc": "03590095000139",
+      "emit_uf": "PI",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "1656",
+      "cfops_entrada": [
+        "1656"
+      ],
+      "cfops_supplier": [
+        "5656"
+      ],
+      "destinacao": "USO/CONSUMO",
+      "destinacoes": [
+        "USO/CONSUMO"
+      ],
+      "total_value": 250,
+      "item_count": 1,
+      "data_entrada": "2026-07-06",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "98848",
+      "doc_model": "55",
+      "issue_date": "2026-07-08",
+      "counterparty_name": "HD FERRAGENS PARA MOVEIS LTDA.",
+      "counterparty_doc": "05509961000140",
+      "emit_uf": "PR",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "2102",
+      "cfops_entrada": [
+        "2102"
+      ],
+      "cfops_supplier": [
+        "6102"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 5953.32,
+      "item_count": 10,
+      "data_entrada": "2026-07-22",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "12584417",
+      "doc_model": "55",
+      "issue_date": "2026-07-10",
+      "counterparty_name": "DINO & FREITAS LTDA-ME",
+      "counterparty_doc": "20422108000180",
+      "emit_uf": "PI",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "1102",
+      "cfops_entrada": [
+        "1102"
+      ],
+      "cfops_supplier": [
+        "5102"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 230,
+      "item_count": 1,
+      "data_entrada": "2026-07-10",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "26252",
+      "doc_model": "55",
+      "issue_date": "2026-07-10",
+      "counterparty_name": "AFO MOVEIS E ARTEFATOS LTDA",
+      "counterparty_doc": "12041023000123",
+      "emit_uf": "PE",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 1704,
+      "item_count": 4,
+      "data_entrada": "2026-07-16",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "197268",
+      "doc_model": "55",
+      "issue_date": "2026-07-12",
+      "counterparty_name": "Placas do Brasil S/A",
+      "counterparty_doc": "14792934000118",
+      "emit_uf": "ES",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 3982.26,
+      "item_count": 1,
+      "data_entrada": "2026-07-17",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "197269",
+      "doc_model": "55",
+      "issue_date": "2026-07-12",
+      "counterparty_name": "Placas do Brasil S/A",
+      "counterparty_doc": "14792934000118",
+      "emit_uf": "ES",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 48528.95,
+      "item_count": 4,
+      "data_entrada": "2026-07-17",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "197270",
+      "doc_model": "55",
+      "issue_date": "2026-07-12",
+      "counterparty_name": "Placas do Brasil S/A",
+      "counterparty_doc": "14792934000118",
+      "emit_uf": "ES",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 82272.95,
+      "item_count": 1,
+      "data_entrada": "2026-07-17",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "272108",
+      "doc_model": "55",
+      "issue_date": "2026-07-13",
+      "counterparty_name": "ROMETAL COMPONENTES PARA MOVEIS LTDA",
+      "counterparty_doc": "06925691000110",
+      "emit_uf": "RS",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 3006.9,
+      "item_count": 5,
+      "data_entrada": "2026-07-24",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "73216",
+      "doc_model": "55",
+      "issue_date": "2026-07-13",
+      "counterparty_name": "STARRETT INDUSTRIA E COMERCIO LTDA - FILIAL",
+      "counterparty_doc": "56994700000365",
+      "emit_uf": "MG",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "2102",
+      "cfops_entrada": [
+        "2102"
+      ],
+      "cfops_supplier": [
+        "6102"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 572.4,
+      "item_count": 1,
+      "data_entrada": "2026-07-21",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "949",
+      "doc_model": "55",
+      "issue_date": "2026-07-16",
+      "counterparty_name": "PLANALTO PETROLEO BOLA LTDA",
+      "counterparty_doc": "04787075000549",
+      "emit_uf": "PI",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "1656",
+      "cfops_entrada": [
+        "1656"
+      ],
+      "cfops_supplier": [
+        "5656"
+      ],
+      "destinacao": "COMBUSTÍVEL",
+      "destinacoes": [
+        "COMBUSTÍVEL"
+      ],
+      "total_value": 300,
+      "item_count": 1,
+      "data_entrada": "2026-07-16",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "45510",
+      "doc_model": "55",
+      "issue_date": "2026-07-17",
+      "counterparty_name": "J G DAMASCENO E CIA LTDA",
+      "counterparty_doc": "09584467000109",
+      "emit_uf": "PI",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "1102",
+      "cfops_entrada": [
+        "1102"
+      ],
+      "cfops_supplier": [
+        "5102"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 177.66,
+      "item_count": 1,
+      "data_entrada": "2026-07-17",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "37181",
+      "doc_model": "55",
+      "issue_date": "2026-07-21",
+      "counterparty_name": "CRUZEIRO PAPEIS INDUSTRIAIS LTDA",
+      "counterparty_doc": "48410211000552",
+      "emit_uf": "SP",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "2910",
+      "cfops_entrada": [
+        "2910"
+      ],
+      "cfops_supplier": [
+        "6910"
+      ],
+      "destinacao": "BRINDE",
+      "destinacoes": [
+        "BRINDE"
+      ],
+      "total_value": 28,
+      "item_count": 1,
+      "data_entrada": "2026-07-28",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "13222",
+      "doc_model": "55",
+      "issue_date": "2026-07-23",
+      "counterparty_name": "E CRISTINA DA SILVA EIRELI",
+      "counterparty_doc": "03590095000139",
+      "emit_uf": "PI",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "1656",
+      "cfops_entrada": [
+        "1656"
+      ],
+      "cfops_supplier": [
+        "5656"
+      ],
+      "destinacao": "USO/CONSUMO",
+      "destinacoes": [
+        "USO/CONSUMO"
+      ],
+      "total_value": 250,
+      "item_count": 1,
+      "data_entrada": "2026-07-23",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "969",
+      "doc_model": "55",
+      "issue_date": "2026-07-31",
+      "counterparty_name": "PLANALTO PETROLEO BOLA LTDA",
+      "counterparty_doc": "04787075000549",
+      "emit_uf": "PI",
+      "dest_uf": "PI",
+      "doc_direction": "entrada",
+      "cfop": "1656",
+      "cfops_entrada": [
+        "1656"
+      ],
+      "cfops_supplier": [
+        "5656"
+      ],
+      "destinacao": "COMBUSTÍVEL",
+      "destinacoes": [
+        "COMBUSTÍVEL"
+      ],
+      "total_value": 380,
+      "item_count": 1,
+      "data_entrada": "2026-07-31",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    }
+  ]
+}

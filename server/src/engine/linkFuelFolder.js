@@ -6,6 +6,20 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { NETWORK_BASE, attachmentsRoot, netlifyDataRoot } from '../config.js';
 import { parseFuelFilename, FUEL_DOC_EXTENSIONS } from '../parsers/fuelDocument.js';
+import { enrichFuelRecord as enrichFuelRecord202606 } from '../data/fuelOcr2026-06.js';
+import { enrichFuelRecord as enrichFuelRecord202607 } from '../data/fuelOcr2026-07.js';
+
+// Registro de leitura documental (OCR/manual) por mês de competência.
+// Meses sem cupons transcritos caem no fallback (registro sem enriquecimento).
+const FUEL_ENRICHERS_BY_MONTH = {
+  '2026-06': enrichFuelRecord202606,
+  '2026-07': enrichFuelRecord202607,
+};
+
+function enrichFuelRecord(record, month) {
+  const enrich = FUEL_ENRICHERS_BY_MONTH[month];
+  return enrich ? enrich(record) : record;
+}
 
 const FUEL_ACCOUNT_PREFIX = '4.02.01.01.06';
 const SKIP_FILES = /^(desktop\.ini|thumbs\.db)$/i;
@@ -156,7 +170,7 @@ export function linkFuelFolder(db, month) {
       linked += 1;
     }
 
-    records.push({
+    records.push(enrichFuelRecord({
       id: file.hash,
       file_name: file.name,
       doc_date: file.doc_date,
@@ -170,7 +184,7 @@ export function linkFuelFolder(db, month) {
       status: entry ? 'conciliado' : 'documento',
       url: copied.url,
       source_path: file.path,
-    });
+    }, month));
   }
 
   return { records, linked, files: files.length, folder: dir };

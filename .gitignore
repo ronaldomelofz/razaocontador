@@ -11,3 +11,8 @@ madepinus-ledger-cursor.zip
 
 # Local Netlify folder
 .netlify
+
+# Pasta de apuração de impostos (documentos contábeis confidenciais, uso local apenas)
+APURAÇÃO/
+tmp_apuracao_img/
+tmp_ocr_work/

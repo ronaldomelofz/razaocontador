@@ -87,18 +87,33 @@ export function parseBBCSV(filePath) {
   return out;
 }
 
-/** Inter — linhas tipo: DD/MM/YYYY;Descrição: "Cp :xxx-NOME";Valor;Saldo */
+/**
+ * Inter — dois formatos observados:
+ *  - DD/MM/YYYY;Descrição: "Cp :xxx-NOME";Valor;Saldo  (4 colunas)
+ *  - DD/MM/YYYY;Histórico;Descrição;Valor;Saldo         (5 colunas, formato novo)
+ */
 export function parseInterCSV(filePath) {
   const raw = fs.readFileSync(filePath, 'utf-8');
   const lines = raw.split('\n').map((l) => l.trim()).filter(Boolean);
   const out = [];
   for (const line of lines) {
     const parts = line.split(';');
-    if (parts.length < 3) continue;
+    if (parts.length < 4) continue;
     const iso = toISODate(parts[0]);
     if (!iso) continue;
-    const description = (parts[1] || '').replace(/"/g, '').trim();
-    const amount = toNumber(parts[2]);
+
+    let description, valueRaw;
+    if (parts.length >= 5) {
+      const historico = (parts[1] || '').replace(/"/g, '').trim();
+      const detalhe = (parts[2] || '').replace(/"/g, '').trim();
+      description = `${historico} ${detalhe}`.trim();
+      valueRaw = parts[3];
+    } else {
+      description = (parts[1] || '').replace(/"/g, '').trim();
+      valueRaw = parts[2];
+    }
+
+    const amount = toNumber(valueRaw);
     if (Number.isNaN(amount)) continue;
     const nameMatch = description.match(/-([A-ZÀ-Ú][^"]+)$/i);
     out.push({

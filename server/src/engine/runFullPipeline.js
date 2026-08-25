@@ -16,6 +16,7 @@ import { classifyTransaction } from './classify.js';
 import { matchBankToFiscal } from './reconcile.js';
 import { linkAttachments } from './linkAttachments.js';
 import { linkFuelFolder } from './linkFuelFolder.js';
+import { ingestApuracaoFromNetwork } from './ingestApuracao.js';
 
 const monthArg = process.argv.find((a) => a.startsWith('--month='));
 const month = monthArg ? monthArg.split('=')[1] : null;
@@ -31,6 +32,13 @@ const monthFolder = `${month.split('-')[1]}-${month.split('-')[0]}`;
 console.log(`\n🔍 Varrendo pasta de rede para ${month} (${monthFolder})...`);
 const { root, files, stats } = scanMonthFolder(month);
 console.log(`   ${stats.total} arquivos encontrados:`, stats.byKind);
+
+try {
+  const ingested = ingestApuracaoFromNetwork(month);
+  console.log(`📑 Apuração: ${ingested.copied.length} documentos copiados para pasta local`);
+} catch (err) {
+  console.warn('⚠️  Ingestão apuração:', err.message);
+}
 
 const insertSourceFile = db.prepare(`
   INSERT OR IGNORE INTO source_files (path, kind, bank_account_id, competence_month, hash)
@@ -156,6 +164,69 @@ for (const file of xmlFiles) {
   }
 }
 console.log(`✔ ${fiscalDocs.length} documentos fiscais (XML) importados`);
+
+// Relatório SIAT (NF-e de entrada) — pasta NOTAS FISCAL DE ENTRADA
+try {
+  const { parseSiatEntrada, findSiatFile, filterNotesByDataEntrada } = await import('../parsers/siatEntrada.js');
+  const siatFile = findSiatFile(files) || (fs.existsSync(root) ? findSiatFile(root) : null);
+  const siatPath = typeof siatFile === 'string' ? siatFile : siatFile?.path;
+  if (siatPath) {
+    const { notes } = parseSiatEntrada(siatPath);
+    const ofMonth = filterNotesByDataEntrada(notes, month);
+    const hash = crypto.createHash('sha1').update(fs.readFileSync(siatPath)).digest('hex');
+    insertSourceFile.run({
+      path: siatPath, kind: 'siat_entrada', bank_account_id: null,
+      competence_month: month, hash,
+    });
+    const sourceFileId = getSourceFileId.get(hash).id;
+    // garante colunas extras
+    const cols = db.prepare(`PRAGMA table_info(fiscal_documents)`).all().map((c) => c.name);
+    if (!cols.includes('doc_direction')) db.exec(`ALTER TABLE fiscal_documents ADD COLUMN doc_direction TEXT`);
+    if (!cols.includes('emit_uf')) db.exec(`ALTER TABLE fiscal_documents ADD COLUMN emit_uf TEXT`);
+    if (!cols.includes('destinacao')) db.exec(`ALTER TABLE fiscal_documents ADD COLUMN destinacao TEXT`);
+    const insertEntrada = db.prepare(`
+      INSERT INTO fiscal_documents
+        (source_file_id, doc_number, doc_model, cfop, issue_date, counterparty_name, counterparty_doc,
+         total_value, icms_value, pis_value, cofins_value, cancelled, doc_direction, emit_uf, destinacao)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, NULL, NULL, NULL, 0, 'entrada', ?, ?)
+    `);
+    for (const n of ofMonth) {
+      insertEntrada.run(
+        sourceFileId, n.doc_number, n.doc_model, n.cfop, n.issue_date,
+        n.counterparty_name, n.counterparty_doc, n.total_value, n.emit_uf, n.destinacao,
+      );
+      fiscalDocs.push({ ...n, doc_direction: 'entrada' });
+    }
+    // JSON local para aba de apuração
+    const outJson = path.join(path.dirname(fileURLToPath(import.meta.url)), `../data/entradaSiat-${month}.json`);
+    const summary = { notes: ofMonth.length, totalProdutos: 0, byCfopEntrada: {}, byUf: {}, byDestinacao: {} };
+    for (const n of ofMonth) {
+      summary.totalProdutos += n.total_value;
+      for (const c of n.cfops_entrada) {
+        summary.byCfopEntrada[c] ??= { n: 0, total: 0 };
+        summary.byCfopEntrada[c].n += 1;
+        summary.byCfopEntrada[c].total += n.total_value;
+      }
+      summary.byUf[n.emit_uf || '?'] ??= { n: 0, total: 0 };
+      summary.byUf[n.emit_uf || '?'].n += 1;
+      summary.byUf[n.emit_uf || '?'].total += n.total_value;
+      const dest = n.destinacao || '(sem destinação)';
+      summary.byDestinacao[dest] ??= { n: 0, total: 0 };
+      summary.byDestinacao[dest].n += 1;
+      summary.byDestinacao[dest].total += n.total_value;
+    }
+    summary.totalProdutos = Math.round(summary.totalProdutos * 100) / 100;
+    fs.writeFileSync(outJson, JSON.stringify({
+      generatedAt: new Date().toISOString(), month, source: path.basename(siatPath),
+      summary, notes: ofMonth.map(({ items: _i, ...rest }) => rest),
+    }, null, 2));
+    console.log(`✔ ${ofMonth.length} NF de entrada (SIAT) importadas`);
+  } else {
+    console.log('ℹ️  Relatório SIAT não encontrado na pasta NOTAS FISCAL DE ENTRADA');
+  }
+} catch (err) {
+  console.warn('⚠️  SIAT entradas:', err.message);
+}
 
 // Conciliação banco ↔ fiscal
 const bankTxs = db.prepare(`
