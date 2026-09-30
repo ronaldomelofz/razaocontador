@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node --watch src/index.js",
+    "dev": "node --watch --watch-path=./src/index.js --watch-path=./src/routes --watch-path=./src/engine --watch-path=./src/parsers --watch-path=./src/db --watch-path=./src/config.js --watch-path=./src/data/taxAssessment2026-06.js src/index.js",
     "start": "node src/index.js",
     "process": "node src/engine/runPipeline.js",
     "pipeline": "node src/engine/runFullPipeline.js",

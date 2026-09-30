@@ -7,6 +7,8 @@ import TaxAssessment from './components/TaxAssessment';
 import SupplierBoletos from './components/SupplierBoletos';
 
 const MONTHS_FALLBACK = ['2026-05', '2026-06', '2026-07'];
+/** Processamento de novos meses: só no Vite local. Netlify permanece consulta. */
+const CAN_PROCESS_MONTHS = import.meta.env.DEV;
 const VIEWS = [
   { id: 'ledger', label: 'Livro Razão' },
   { id: 'fuel', label: 'Combustível' },
@@ -81,6 +83,39 @@ export default function App() {
   const [fuelRecords, setFuelRecords] = useState([]);
   const [search, setSearch] = useState('');
   const [view, setView] = useState('ledger');
+  const [showProcess, setShowProcess] = useState(false);
+  const [processMonth, setProcessMonth] = useState('');
+  const [networkMonths, setNetworkMonths] = useState([]);
+  const [pendingMonths, setPendingMonths] = useState([]);
+  const [processBusy, setProcessBusy] = useState(false);
+  const [processMsg, setProcessMsg] = useState(null);
+  const [processError, setProcessError] = useState(null);
+
+  const refreshMonths = useCallback(async () => {
+    const found = new Set(MONTHS_FALLBACK);
+    let network = [];
+    let pending = [];
+    const urls = CAN_PROCESS_MONTHS
+      ? ['/api/scan/months', '/api/tax-assessment/months', '/api/ledger/months']
+      : ['/api/ledger/months'];
+    for (const url of urls) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) continue;
+        const data = await res.json();
+        (data.months || []).forEach((m) => found.add(m));
+        if (url.includes('/scan/months')) {
+          network = data.network || [];
+          pending = data.pending || [];
+          setNetworkMonths(network);
+          setPendingMonths(pending);
+        }
+      } catch { /* API local opcional */ }
+    }
+    const list = [...found].sort();
+    setMonths(list);
+    return { list, network, pending };
+  }, []);
 
   const refresh = useCallback(async () => {
     setLoading(true);
@@ -105,21 +140,78 @@ export default function App() {
   useEffect(() => { refresh(); }, [refresh]);
 
   useEffect(() => {
-    (async () => {
-      const found = new Set(MONTHS_FALLBACK);
-      for (const url of ['/api/tax-assessment/months', '/api/ledger/months']) {
-        try {
-          const res = await fetch(url);
-          if (!res.ok) continue;
-          const data = await res.json();
-          (data.months || []).forEach((m) => found.add(m));
-        } catch { /* API local opcional */ }
-      }
-      const list = [...found].sort();
-      setMonths(list);
+    refreshMonths().then(({ list }) => {
       setMonth((cur) => (list.includes(cur) ? cur : list[list.length - 1]));
-    })();
-  }, []);
+    });
+  }, [refreshMonths]);
+
+  async function openProcessDialog() {
+    if (!CAN_PROCESS_MONTHS) return;
+    setProcessMsg(null);
+    setProcessError(null);
+    const { list, network, pending } = await refreshMonths();
+    const suggestion = pending[pending.length - 1]
+      || network[network.length - 1]
+      || '';
+    setProcessMonth(suggestion);
+    setShowProcess(true);
+    if (!network.length && !list.length) {
+      setProcessError('Não foi possível listar meses da rede. Verifique se o servidor local está rodando.');
+    }
+  }
+
+  async function handleProcessMonth() {
+    if (!CAN_PROCESS_MONTHS) return;
+    const m = (processMonth || '').trim();
+    const isAll = m === 'all' || m === '*';
+    if (!isAll && !/^\d{4}-\d{2}$/.test(m)) {
+      setProcessError('Informe o mês (YYYY-MM) ou selecione “Todos os meses”');
+      return;
+    }
+    if (processBusy) return;
+    setProcessBusy(true);
+    setProcessMsg(null);
+    setProcessError(null);
+    try {
+      const res = await fetch('/api/scan/process', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ month: isAll ? 'all' : m }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(
+          data.error
+          || (res.status === 500
+            ? 'Servidor interrompeu o processamento (reinício ou erro interno). Tente novamente.'
+            : `Falha ao processar (${res.status})`),
+        );
+      }
+      await refreshMonths();
+      if (isAll) {
+        const last = data.months?.[data.months.length - 1] || networkMonths[networkMonths.length - 1];
+        if (last) setMonth(last);
+        const n = data.results?.length ?? data.months?.length ?? '—';
+        setProcessMsg(`Todos os meses reprocessados (${n}). XMLs, extratos, anexos e boletos atualizados.`);
+      } else {
+        const s = data.stats || {};
+        setMonth(m);
+        setProcessMsg(
+          `${m} processado: ${s.imported ?? '—'} lançamentos, ${s.fiscal ?? s.xmlImported ?? '—'} fiscais (XML), `
+          + `${s.attachments ?? '—'} anexos, ${s.boletos ?? '—'} boletos/pagamentos.`,
+        );
+      }
+      setShowProcess(false);
+    } catch (err) {
+      setProcessError(
+        err.message?.includes('Failed to fetch')
+          ? 'API local indisponível. Inicie o servidor (porta 3001) com acesso à pasta de rede da contadora.'
+          : err.message,
+      );
+    } finally {
+      setProcessBusy(false);
+    }
+  }
 
   const filtered = entries.filter((e) => {
     if (view === 'fuel' && !isFuelEntry(e)) return false;
@@ -200,6 +292,104 @@ export default function App() {
         </div>
       </header>
 
+      {CAN_PROCESS_MONTHS && showProcess && (
+        <div className="modal-backdrop" role="presentation" onClick={() => !processBusy && setShowProcess(false)}>
+          <div
+            className="modal-panel"
+            role="dialog"
+            aria-labelledby="process-month-title"
+            onClick={(ev) => ev.stopPropagation()}
+          >
+            <h2 id="process-month-title">Processar mês</h2>
+            <p className="modal-hint">
+              Varre todas as pastas e subpastas da contadora (incluindo XML e meses vizinhos),
+              importa extratos, NF-e, anexos e combustível, classifica, concilia, gera boletos/pagamentos
+              e atualiza o Livro Razão.
+            </p>
+            <label className="modal-label" htmlFor="process-month-input">
+              Competência (YYYY-MM) ou todos
+            </label>
+            <div className="modal-row">
+              <input
+                id="process-month-input"
+                type="text"
+                className="search"
+                placeholder="2026-08"
+                value={processMonth}
+                onChange={(ev) => setProcessMonth(ev.target.value)}
+                disabled={processBusy}
+                list="network-months-list"
+              />
+              <datalist id="network-months-list">
+                <option value="all">Todos os meses na rede</option>
+                {networkMonths.map((m) => (
+                  <option key={m} value={m}>
+                    {pendingMonths.includes(m) ? `${m} (pendente)` : m}
+                  </option>
+                ))}
+              </datalist>
+            </div>
+            <div className="modal-row">
+              <button
+                type="button"
+                className="btn-action secondary"
+                disabled={processBusy}
+                onClick={() => setProcessMonth('all')}
+              >
+                Todos os meses
+              </button>
+            </div>
+            {processMonth === 'all' && (
+              <p className="modal-hint">
+                Reprocessa {networkMonths.length || 'todos os'} mês(es) da rede — pode demorar vários minutos.
+              </p>
+            )}
+            {pendingMonths.length > 0 && processMonth !== 'all' && (
+              <p className="modal-hint">
+                Pendentes na rede: {pendingMonths.join(', ')}
+              </p>
+            )}
+            {processMsg && <div className="process-msg">{processMsg}</div>}
+            {processError && <div className="process-msg error">{processError}</div>}
+            <div className="modal-actions">
+              <button
+                type="button"
+                className="btn-action secondary"
+                disabled={processBusy}
+                onClick={() => setShowProcess(false)}
+              >
+                Cancelar
+              </button>
+              <button
+                type="button"
+                className="btn-action"
+                disabled={processBusy}
+                onClick={handleProcessMonth}
+              >
+                {processBusy ? 'Processando…' : 'Processar'}
+              </button>
+            </div>
+            {processBusy && (
+              <p className="modal-hint">Isso pode levar alguns minutos. Não feche esta janela.</p>
+            )}
+          </div>
+        </div>
+      )}
+
+      {CAN_PROCESS_MONTHS && processMsg && !showProcess && (
+        <div className="process-msg" style={{ marginBottom: 12 }}>
+          {processMsg}
+          <button
+            type="button"
+            className="btn-sm"
+            style={{ marginLeft: 12 }}
+            onClick={() => setProcessMsg(null)}
+          >
+            ✕
+          </button>
+        </div>
+      )}
+
       <div className="toolbar">
         {view !== 'taxes' && (
           <div className="month-tabs">
@@ -208,6 +398,16 @@ export default function App() {
                 {m}
               </button>
             ))}
+            {CAN_PROCESS_MONTHS && (
+              <button
+                type="button"
+                className="tab tab-process"
+                onClick={openProcessDialog}
+                title="Processar novo mês a partir da pasta da contadora"
+              >
+                + Processar mês
+              </button>
+            )}
           </div>
         )}
         <div className="view-tabs">

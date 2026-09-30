@@ -4,11 +4,18 @@ import { fmtDate, fmt } from '../utils/format';
 async function loadBoletos(month) {
   try {
     const res = await fetch(`/api/boletos-fornecedores?month=${month}`);
-    if (res.ok) return res.json();
+    if (res.ok) {
+      const text = await res.text();
+      if (!text.trimStart().startsWith('<')) return JSON.parse(text);
+    }
   } catch { /* fallback estático (Netlify) */ }
   const res = await fetch(`/data/boletos-fornecedores-${month}.json`);
   if (!res.ok) throw new Error(`Sem dados de pagamentos para ${month}`);
-  return res.json();
+  const text = await res.text();
+  if (text.trimStart().startsWith('<')) {
+    throw new Error(`Sem dados de pagamentos para ${month}`);
+  }
+  return JSON.parse(text);
 }
 
 function formaLabel(forma) {

@@ -61,14 +61,13 @@ export function classifyFile(filePath) {
   const base = path.basename(filePath);
   const upper = filePath.toUpperCase();
 
+  if (ext === '.xml') return 'xml_nfe';
   if (ext === '.pdf' && /XML\s+\d{2}-\d{4}|\\NFE\\|\\NFCE\\|\d{44}\.PDF$/i.test(upper + base)) {
     return 'danfe';
   }
   if (STATEMENT_EXTENSIONS.has(ext) && /EXTRATO|extrato/i.test(base)) {
     return 'extrato';
   }
-  if (ext === '.xml') return 'xml_nfe';
-  if (upper.includes('XML')) return 'xml_nfe';
   if (upper.includes('COMBUST')) return 'combustivel';
   if (upper.includes('APURA') || /DAR[\s_-]/i.test(base) || /MEMORIA\s+CALCULO/i.test(base)) return 'apuracao';
   if (upper.includes('COMPROVANTE') || /^\d+ - \d{8}/.test(base)) return 'comprovante';
@@ -114,6 +113,58 @@ export function folderToMonth(folderName) {
   const m = String(folderName || '').match(/^(\d{2})-(\d{4})(?:-R)?$/);
   if (!m) return null;
   return `${m[2]}-${m[1]}`;
+}
+
+function shiftMonth(month, delta) {
+  const [y, m] = month.split('-').map(Number);
+  const d = new Date(y, m - 1 + delta, 1);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+}
+
+/** Pastas "XML MM-YYYY" (e similares) dentro da competência. */
+export function findXmlDirs(monthRoot) {
+  if (!fs.existsSync(monthRoot)) return [];
+  try {
+    return fs.readdirSync(monthRoot, { withFileTypes: true })
+      .filter((e) => e.isDirectory() && /^XML/i.test(e.name))
+      .map((e) => path.join(monthRoot, e.name));
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Coleta XMLs fiscais do mês e dos meses vizinhos.
+ * Dumps Alterdata costumam cobrir intervalo cruzado (ex.: 01.08–30.09 na pasta 08-2026).
+ */
+export function collectXmlFilesForMonth(month) {
+  const byPath = new Map();
+  const months = [shiftMonth(month, -1), month, shiftMonth(month, 1)];
+  for (const mo of months) {
+    const root = path.join(NETWORK_BASE, monthToFolder(mo));
+    const roots = [root, `${root}-R`];
+    for (const r of roots) {
+      if (!fs.existsSync(r)) continue;
+      for (const xmlDir of findXmlDirs(r)) {
+        for (const filePath of walkDir(xmlDir)) {
+          if (path.extname(filePath).toLowerCase() !== '.xml') continue;
+          if (byPath.has(filePath)) continue;
+          byPath.set(filePath, {
+            path: filePath,
+            name: path.basename(filePath),
+            ext: '.xml',
+            kind: 'xml_nfe',
+            bank_account_id: null,
+            bank_coa: null,
+            size: fs.statSync(filePath).size,
+            hash: crypto.createHash('sha1').update(filePath + fs.statSync(filePath).mtimeMs).digest('hex'),
+            meta: { scannedFrom: mo },
+          });
+        }
+      }
+    }
+  }
+  return [...byPath.values()];
 }
 
 /** Lista competências MM-YYYY na pasta da contadora (ignora pastas -R). */
@@ -168,4 +219,4 @@ function summarize(files) {
   return { total: files.length, byKind };
 }
 
-export default { scanMonthFolder, resolveBankAccount, classifyFile, listNetworkMonths, monthToFolder };
+export default { scanMonthFolder, resolveBankAccount, classifyFile, listNetworkMonths, monthToFolder, collectXmlFilesForMonth, findXmlDirs };

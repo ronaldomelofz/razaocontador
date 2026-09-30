@@ -8,6 +8,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import sys
 from collections import defaultdict
 from datetime import date, datetime
 from pathlib import Path
@@ -586,6 +587,65 @@ def slug(s, n=24):
     return (s[:n] or "X")
 
 
+NETWORK_BASE = Path(r"\\192.168.1.190\f\ALAINE - CONTADORA")
+
+
+def month_folder(month: str) -> str:
+    y, m = month.split("-")
+    return f"{m}-{y}"
+
+
+def discover_comprovante_pdfs(month: str) -> dict[str, list[Path]]:
+    """Localiza PDFs de comprovantes BB/Itaú na pasta UNC do mês (+ companion -R) e fallbacks locais."""
+    found: dict[str, list[Path]] = {"bb": [], "itau": [], "other": []}
+    roots = [
+        NETWORK_BASE / month_folder(month),
+        NETWORK_BASE / f"{month_folder(month)}-R",
+    ]
+    for root in roots:
+        if not root.exists():
+            continue
+        for p in root.rglob("*.pdf"):
+            up = str(p).upper()
+            name = p.name.upper()
+            # Escaneados de cartão (imagem) — não são comprovantes bancários digitais
+            if "COMPROVANTES CART" in up or "CARTÃO" in up or "CARTAO" in up:
+                if "BANCO DO BRASIL" not in up and "ITAU" not in up and "ITAÚ" not in up:
+                    continue
+            is_comp = "COMPROVANTE" in up or "COMPROVANTE" in name
+            if not is_comp:
+                continue
+            if "BANCO DO BRASIL" in up or "COMPROVANTES-BB" in name or re.search(r"COMPROVANTES[_\s-]*BB", name):
+                found["bb"].append(p)
+            elif "ITAU" in up or "ITAÚ" in up:
+                found["itau"].append(p)
+            else:
+                found["other"].append(p)
+
+    # Fallbacks históricos (tmp local) — não sobrescrevem se a rede já trouxe
+    tmp = ROOT / "tmp_ocr_work"
+    if month == "2026-07":
+        bb_legacy = tmp / "bb-comprovantes-07" / "04082026 123025-Comprovantes-BB.pdf"
+        itau_legacy = tmp / "itau-sispag-186" / "comprovante-2026-08-04T17-20-38-383768748Z.pdf"
+        if bb_legacy.exists() and not found["bb"]:
+            found["bb"].append(bb_legacy)
+        if itau_legacy.exists() and not any("sispag" in str(p).lower() or "186" in p.name for p in found["itau"]):
+            found["itau"].append(itau_legacy)
+
+    # Dedup por caminho resolvido
+    for k in found:
+        seen = set()
+        uniq = []
+        for p in found[k]:
+            key = str(p).lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            uniq.append(p)
+        found[k] = uniq
+    return found
+
+
 def parse_itau_comprovantes(pdf_path):
     doc = fitz.open(pdf_path)
     pages = []
@@ -726,21 +786,38 @@ def _match_and_attach(doc, pages, items, month, bank_filter=None):
 
 
 def link_comprovantes(month, items):
-    if month != "2026-07":
-        return items
+    """Vincula comprovantes BB/Itaú da pasta de rede (todas as competências)."""
+    sources = discover_comprovante_pdfs(month)
+    print(
+        f"comprovantes {month}: BB={len(sources['bb'])} Itaú={len(sources['itau'])} outros={len(sources['other'])}"
+    )
 
-    bb = ROOT / "tmp_ocr_work" / "bb-comprovantes-07" / "04082026 123025-Comprovantes-BB.pdf"
-    if bb.exists():
-        doc, pages = parse_bb_comprovantes(bb)
-        items = _match_and_attach(doc, pages, items, month, bank_filter="bb-847-8")
-        doc.close()
+    for pdf in sources["bb"]:
+        try:
+            doc, pages = parse_bb_comprovantes(pdf)
+            print(f"  BB {pdf.name}: {len(pages)} páginas úteis")
+            items = _match_and_attach(doc, pages, items, month, bank_filter="bb-847-8")
+            doc.close()
+        except Exception as err:
+            print(f"  ⚠️ BB {pdf}: {err}")
 
-    itau = ROOT / "tmp_ocr_work" / "itau-sispag-186" / "comprovante-2026-08-04T17-20-38-383768748Z.pdf"
-    if itau.exists():
-        doc, pages = parse_itau_comprovantes(itau)
-        items = _match_and_attach(doc, pages, items, month, bank_filter="itau-29660-2")
-        doc.close()
+    itau_banks = sorted({
+        i.get("bank_account_id")
+        for i in items
+        if str(i.get("bank_account_id") or "").startswith("itau")
+    })
+    for pdf in sources["itau"]:
+        try:
+            doc, pages = parse_itau_comprovantes(pdf)
+            print(f"  Itaú {pdf.name}: {len(pages)} páginas úteis")
+            for bank_id in itau_banks or ["itau-29660-2"]:
+                items = _match_and_attach(doc, pages, items, month, bank_filter=bank_id)
+            doc.close()
+        except Exception as err:
+            print(f"  ⚠️ Itaú {pdf}: {err}")
 
+    with_c = sum(1 for i in items if i.get("comprovante"))
+    print(f"  OK comprovantes vinculados: {with_c}/{len(items)}")
     return items
 
 
@@ -795,7 +872,7 @@ def build_month(month):
         "sources": [
             f"Extratos ledger-{month}.json (todas as contas)",
             "Contas a Pagar Alterdata (quando disponível)",
-            "Comprovantes BB (quando disponível)",
+            "Comprovantes BB/Itaú da pasta de rede (quando disponíveis)",
         ],
         "notes": [
             "Aba: boletos, PIX enviados, SISPAG, contas de consumo e impostos — todas as contas.",
@@ -812,12 +889,29 @@ def build_month(month):
 
 
 def main():
-    months = []
-    for p in sorted(DATA.glob("ledger-*.json")):
-        m = re.match(r"ledger-(\d{4}-\d{2})\.json$", p.name)
-        if m:
-            months.append(m.group(1))
+    month_arg = None
+    for a in sys.argv[1:]:
+        if a.startswith("--month="):
+            month_arg = a.split("=", 1)[1]
+    if month_arg:
+        months = [month_arg]
+    else:
+        months = []
+        for p in sorted(DATA.glob("ledger-*.json")):
+            m = re.match(r"ledger-(\d{4}-\d{2})\.json$", p.name)
+            if m:
+                months.append(m.group(1))
     all_data = {}
+    # Preserve months already in JS module when building a single month
+    existing_js = ROOT / "server" / "src" / "data" / "boletosFornecedores.js"
+    if month_arg and existing_js.exists():
+        for p in sorted(DATA.glob("boletos-fornecedores-*.json")):
+            m = re.match(r"boletos-fornecedores-(\d{4}-\d{2})\.json$", p.name)
+            if m and m.group(1) != month_arg:
+                try:
+                    all_data[m.group(1)] = json.loads(p.read_text(encoding="utf-8"))
+                except Exception:
+                    pass
     for month in months:
         payload = build_month(month)
         if payload:
@@ -825,20 +919,20 @@ def main():
 
     # JS module for Express (latest months)
     js_parts = ["// Gerado por buildBoletosFornecedores.py\n"]
-    for month, payload in all_data.items():
+    for month, payload in sorted(all_data.items()):
         const = "BOLETOS_FORNECEDORES_" + month.replace("-", "_")
         js_parts.append(f"export const {const} = {json.dumps(payload, ensure_ascii=False, indent=2)};\n")
     js_parts.append(
         "export const BOLETOS_FORNECEDORES_BY_MONTH = {\n"
         + ",\n".join(
-            f'  "{m}": BOLETOS_FORNECEDORES_{m.replace("-", "_")}' for m in all_data
+            f'  "{m}": BOLETOS_FORNECEDORES_{m.replace("-", "_")}' for m in sorted(all_data)
         )
         + "\n};\n"
     )
     (ROOT / "server" / "src" / "data" / "boletosFornecedores.js").write_text(
         "".join(js_parts), encoding="utf-8"
     )
-    print("Wrote boletosFornecedores.js months=", list(all_data))
+    print("Wrote boletosFornecedores.js months=", list(sorted(all_data)))
 
 
 if __name__ == "__main__":

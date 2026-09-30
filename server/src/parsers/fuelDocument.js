@@ -24,6 +24,22 @@ export function parseFuelFilename(name, stat) {
     };
   }
 
+  // Chave NFC-e (44 dígitos) — NÃO interpretar como DDMMYYYY
+  const digits = String(name).replace(/\D/g, '');
+  if (digits.length >= 44) {
+    // AAMM na chave após UF (posições 2-5)
+    const aamm = digits.slice(2, 6);
+    const yy = aamm.slice(0, 2);
+    const mm = aamm.slice(2, 4);
+    if (/^(0[1-9]|1[0-2])$/.test(mm)) {
+      return { doc_date: `20${yy}-${mm}-01`, doc_time: null, from_chave: true };
+    }
+    if (stat?.mtime) {
+      return { doc_date: stat.mtime.toISOString().slice(0, 10), doc_time: null };
+    }
+    return { doc_date: null, doc_time: null };
+  }
+
   // Número de NF no nome (223439, 399132) — data pelo arquivo, não pelo número
   if (/combust/i.test(name) && /\d{5,}/.test(name) && stat?.mtime) {
     return { doc_date: stat.mtime.toISOString().slice(0, 10), doc_time: null };

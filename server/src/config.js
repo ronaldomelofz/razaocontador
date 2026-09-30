@@ -5,7 +5,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /** Caminho UNC padrão da pasta contábil no servidor local */
 export const NETWORK_BASE = process.env.NETWORK_PATH
-  || '\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA';
+  || '\\\\192.168.1.190\\f\\ALAINE - CONTADORA';
 
 /** Mapeamento pasta de banco → id interno + código COA (balancete Abr/2026) */
 export const BANK_FOLDER_MAP = {

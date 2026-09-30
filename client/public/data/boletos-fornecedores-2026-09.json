@@ -1,0 +1,34 @@
+{
+  "month": "2026-09",
+  "generatedAt": "2026-09-11T11:42:54",
+  "sources": [
+    "Extratos ledger-2026-09.json (todas as contas)",
+    "Contas a Pagar Alterdata (quando disponível)",
+    "Comprovantes BB (quando disponível)"
+  ],
+  "notes": [
+    "Aba: boletos, PIX enviados, SISPAG, contas de consumo e impostos — todas as contas.",
+    "Comprovantes vinculados quando disponíveis (BB e Itaú).",
+    "Juros/multa = valor cobrado − valor do documento (quando houver diferença)."
+  ],
+  "summary": {
+    "qtd_total": 0,
+    "qtd_fornecedor": 0,
+    "qtd_conciliados": 0,
+    "qtd_sem_titulo": 0,
+    "qtd_com_juros": 0,
+    "qtd_com_comprovante": 0,
+    "qtd_pix": 0,
+    "qtd_boleto": 0,
+    "total_original": 0,
+    "total_juros_multa": 0,
+    "total_pago_geral": 0,
+    "total_pago_fornecedor": 0,
+    "qtd_outros": 0,
+    "total_pago_outros": 0,
+    "por_banco": {},
+    "por_forma": {},
+    "por_tipo": {}
+  },
+  "items": []
+}

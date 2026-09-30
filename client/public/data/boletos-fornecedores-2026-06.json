@@ -1,10 +1,10 @@
 {
   "month": "2026-06",
-  "generatedAt": "2026-08-25T12:33:07",
+  "generatedAt": "2026-09-11T12:27:50",
   "sources": [
     "Extratos ledger-2026-06.json (todas as contas)",
     "Contas a Pagar Alterdata (quando disponível)",
-    "Comprovantes BB (quando disponível)"
+    "Comprovantes BB/Itaú da pasta de rede (quando disponíveis)"
   ],
   "notes": [
     "Aba: boletos, PIX enviados, SISPAG, contas de consumo e impostos — todas as contas.",
@@ -17,10 +17,10 @@
     "qtd_conciliados": 24,
     "qtd_sem_titulo": 28,
     "qtd_com_juros": 2,
-    "qtd_com_comprovante": 0,
+    "qtd_com_comprovante": 61,
     "qtd_pix": 33,
     "qtd_boleto": 38,
-    "total_original": 1302028.63,
+    "total_original": 1302142.43,
     "total_juros_multa": 320.16,
     "total_pago_geral": 1302348.79,
     "total_pago_fornecedor": 144192.21,
@@ -97,7 +97,7 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3611,
+      "bank_id": 9416,
       "bank_account_id": "inter-9908006-0",
       "banco": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "banco_curto": "Banco Inter",
@@ -121,14 +121,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3494,
+      "bank_id": 9299,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto G3 TELECOM LTDA",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-01_76e0c3e4_G3-TELECOM-LTDA.pdf",
+        "file_name": "2026-06-01_76e0c3e4_G3-TELECOM-LTDA.pdf",
+        "page": 1,
+        "autenticacao": "7.93A.5C6.813.06B.7D9",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-01",
@@ -145,14 +152,21 @@
       "forma": "boleto",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3495,
+      "bank_id": 9300,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto BANCO DO BRASIL S/A - BRASILIA",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": "Consumo / aluguel / serviço",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-01_dd19df8b_BANCO-DO-BRASIL-S-A-BRAS.pdf",
+        "file_name": "2026-06-01_dd19df8b_BANCO-DO-BRASIL-S-A-BRAS.pdf",
+        "page": 1,
+        "autenticacao": "0.825.64D.21C.A3A.C07",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-01",
@@ -169,7 +183,7 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3781,
+      "bank_id": 9586,
       "bank_account_id": "itau-29660-2",
       "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
       "banco_curto": "Itaú 29660-2",
@@ -193,14 +207,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3621,
+      "bank_id": 9426,
       "bank_account_id": "itau-29660-2",
       "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
       "banco_curto": "Itaú 29660-2",
       "bank_description": "PIX ENVIADO MADEPINUS 10.876.822/0001-94",
       "categoria": "Transferência entre contas próprias",
       "obs": "Transferência entre contas próprias / mesma empresa",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-01_12c7a8b5_MADEPINUS.pdf",
+        "file_name": "2026-06-01_12c7a8b5_MADEPINUS.pdf",
+        "page": 31,
+        "autenticacao": "F2A514AA1BCBACF829178698430C676D7038D31B",
+        "agencia": "4826",
+        "conta": "29660-2"
+      }
     },
     {
       "data_pagamento": "2026-06-02",
@@ -217,7 +238,7 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3613,
+      "bank_id": 9418,
       "bank_account_id": "inter-9908006-0",
       "banco": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "banco_curto": "Banco Inter",
@@ -241,7 +262,7 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3612,
+      "bank_id": 9417,
       "bank_account_id": "inter-9908006-0",
       "banco": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "banco_curto": "Banco Inter",
@@ -265,14 +286,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3498,
+      "bank_id": 9303,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto ATHENA SECURITIZADORA S A",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": "Beneficiário no extrato: ATHENA SECURITIZADORA S A",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-02_7e0b8b7a_ATHENA-SECURITIZADORA-S-.pdf",
+        "file_name": "2026-06-02_7e0b8b7a_ATHENA-SECURITIZADORA-S-.pdf",
+        "page": 1,
+        "autenticacao": "0.CA4.D2F.5C3.C79.715",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-04",
@@ -289,7 +317,7 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3616,
+      "bank_id": 9421,
       "bank_account_id": "inter-9908006-0",
       "banco": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "banco_curto": "Banco Inter",
@@ -313,7 +341,7 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3615,
+      "bank_id": 9420,
       "bank_account_id": "inter-9908006-0",
       "banco": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "banco_curto": "Banco Inter",
@@ -337,7 +365,7 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3614,
+      "bank_id": 9419,
       "bank_account_id": "inter-9908006-0",
       "banco": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "banco_curto": "Banco Inter",
@@ -361,14 +389,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3513,
+      "bank_id": 9318,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pix - Enviado 05/06 12:01 CEF MATRIZ",
       "categoria": "Pagamento FGTS",
       "obs": "Pagamento de imposto / obrigação fiscal",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-05_3cd06379_CEF-MATRIZ.pdf",
+        "file_name": "2026-06-05_3cd06379_CEF-MATRIZ.pdf",
+        "page": 1,
+        "autenticacao": null,
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-05",
@@ -385,14 +420,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3509,
+      "bank_id": 9314,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto HD FERRAGENS PARA MOVEIS LTDA",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-05_c2f0268e_HD-FERRAGENS-PARA-MOVEIS.pdf",
+        "file_name": "2026-06-05_c2f0268e_HD-FERRAGENS-PARA-MOVEIS.pdf",
+        "page": 1,
+        "autenticacao": "7.A89.3EE.B98.F6D.F37",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-05",
@@ -409,14 +451,21 @@
       "forma": "boleto",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3508,
+      "bank_id": 9313,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto HOME CONTABILIDADE LTDA",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": "Consumo / aluguel / serviço",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-05_ef2be2e6_HOME-CONTABILIDADE-LTDA.pdf",
+        "file_name": "2026-06-05_ef2be2e6_HOME-CONTABILIDADE-LTDA.pdf",
+        "page": 1,
+        "autenticacao": "4.A96.5B8.3B2.3FA.465",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-05",
@@ -433,14 +482,21 @@
       "forma": "boleto",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3511,
+      "bank_id": 9316,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto IMOVEIS VENEZA LTDA",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": "Consumo / aluguel / serviço",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-05_c3b5fa97_IMOVEIS-VENEZA-LTDA.pdf",
+        "file_name": "2026-06-05_c3b5fa97_IMOVEIS-VENEZA-LTDA.pdf",
+        "page": 1,
+        "autenticacao": "8.B09.830.BC3.F89.91F",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-05",
@@ -457,14 +513,21 @@
       "forma": "boleto",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3510,
+      "bank_id": 9315,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto PLACAS DO BRASIL S.A.",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": "Sem título no Contas a Pagar / não conciliado",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-05_cb6243dd_PLACAS-DO-BRASIL-S-A.pdf",
+        "file_name": "2026-06-05_cb6243dd_PLACAS-DO-BRASIL-S-A.pdf",
+        "page": 1,
+        "autenticacao": "D.1FB.58D.A53.B9D.88E",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-05",
@@ -481,14 +544,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3507,
+      "bank_id": 9312,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto STAM METALURGICA LTDA.",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-05_5463ee0f_STAM-METALURGICA-LTDA.pdf",
+        "file_name": "2026-06-05_5463ee0f_STAM-METALURGICA-LTDA.pdf",
+        "page": 1,
+        "autenticacao": "6.A0B.46D.6F8.A9B.C78",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-05",
@@ -505,14 +575,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3512,
+      "bank_id": 9317,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto STARRETT INDUSTRIA E COMERCIO",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-05_e3bae051_STARRETT-INDUSTRIA-E-COM.pdf",
+        "file_name": "2026-06-05_e3bae051_STARRETT-INDUSTRIA-E-COM.pdf",
+        "page": 1,
+        "autenticacao": "5.C22.36E.B0E.F78.4B1",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-05",
@@ -529,14 +606,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3506,
+      "bank_id": 9311,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto TABONE INDUSTRIA E COMERCIO DE",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-05_34384b5c_TABONE-INDUSTRIA-E-COMER.pdf",
+        "file_name": "2026-06-05_34384b5c_TABONE-INDUSTRIA-E-COMER.pdf",
+        "page": 1,
+        "autenticacao": "1.D58.132.F11.7A6.527",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-08",
@@ -553,7 +637,7 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3618,
+      "bank_id": 9423,
       "bank_account_id": "inter-9908006-0",
       "banco": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "banco_curto": "Banco Inter",
@@ -577,14 +661,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3520,
+      "bank_id": 9325,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pix - Enviado 06/06 10:44 Mariana Rodrigues de Andr",
-      "categoria": "Reclassificado manualmente",
+      "categoria": "Não classificado ⚠️",
       "obs": "PIX enviado",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-06_e621816e_MARIANA-R-ANDRADE.pdf",
+        "file_name": "2026-06-06_e621816e_MARIANA-R-ANDRADE.pdf",
+        "page": 1,
+        "autenticacao": null,
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-08",
@@ -601,14 +692,21 @@
       "forma": "boleto",
       "match_score": 105,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3522,
+      "bank_id": 9327,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto PLACAS DO BRASIL S A",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-08_12ecffe8_PLACAS-DO-BRASIL-S-A.pdf",
+        "file_name": "2026-06-08_12ecffe8_PLACAS-DO-BRASIL-S-A.pdf",
+        "page": 1,
+        "autenticacao": "A.653.9B2.91E.ACA.B8A",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-08",
@@ -625,14 +723,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3669,
+      "bank_id": 9474,
       "bank_account_id": "itau-29660-2",
       "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
       "banco_curto": "Itaú 29660-2",
       "bank_description": "PIX ENVIADO MADEPINUS 10.876.822/0001-94",
       "categoria": "Transferência entre contas próprias",
       "obs": "Transferência entre contas próprias / mesma empresa",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-08_5a05c9e4_MADEPINUS.pdf",
+        "file_name": "2026-06-08_5a05c9e4_MADEPINUS.pdf",
+        "page": 23,
+        "autenticacao": "F82B55CE033EE40FC1817845879BE2104928B1F8",
+        "agencia": "4826",
+        "conta": "29660-2"
+      }
     },
     {
       "data_pagamento": "2026-06-09",
@@ -649,14 +754,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3528,
+      "bank_id": 9333,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto IBRAP INDUSTRIA BRASILEIRA DE",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-09_fd8ef510_IBRAP-INDUSTRIA-BRASILEI.pdf",
+        "file_name": "2026-06-09_fd8ef510_IBRAP-INDUSTRIA-BRASILEI.pdf",
+        "page": 1,
+        "autenticacao": "4.4D6.FF7.86E.1D5.00F",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-09",
@@ -673,14 +785,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3527,
+      "bank_id": 9332,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto LAGE E RENZETTI LTDA",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-09_5e215646_LAGE-E-RENZETTI-LTDA.pdf",
+        "file_name": "2026-06-09_5e215646_LAGE-E-RENZETTI-LTDA.pdf",
+        "page": 1,
+        "autenticacao": "C.7D1.3FB.583.E25.23C",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-09",
@@ -697,14 +816,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3688,
+      "bank_id": 9493,
       "bank_account_id": "itau-29660-2",
       "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
       "banco_curto": "Itaú 29660-2",
       "bank_description": "PIX ENVIADO MADEPINUS 10.876.822/0001-94",
       "categoria": "Transferência entre contas próprias",
       "obs": "Transferência entre contas próprias / mesma empresa",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-09_669590c9_MADEPINUS.pdf",
+        "file_name": "2026-06-09_669590c9_MADEPINUS.pdf",
+        "page": 19,
+        "autenticacao": "0369F8501E64E25BD6E637D95830B8A16259EF80",
+        "agencia": "4826",
+        "conta": "29660-2"
+      }
     },
     {
       "data_pagamento": "2026-06-10",
@@ -721,14 +847,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3691,
+      "bank_id": 9496,
       "bank_account_id": "itau-29660-2",
       "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
       "banco_curto": "Itaú 29660-2",
       "bank_description": "PIX ENVIADO MADEPINUS 10.876.822/0001-94",
       "categoria": "Transferência entre contas próprias",
       "obs": "Transferência entre contas próprias / mesma empresa",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-10_5de8e710_MADEPINUS.pdf",
+        "file_name": "2026-06-10_5de8e710_MADEPINUS.pdf",
+        "page": 18,
+        "autenticacao": "9D7D5A61B0C3C7884930808496E669031F187989",
+        "agencia": "4826",
+        "conta": "29660-2"
+      }
     },
     {
       "data_pagamento": "2026-06-11",
@@ -745,14 +878,21 @@
       "forma": "boleto",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3533,
+      "bank_id": 9338,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto LUIZ CARLOS FERREIRA DA CONCEI",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": "Consumo / aluguel / serviço",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-11_f9127210_LUIZ-CARLOS-FERREIRA-DA-.pdf",
+        "file_name": "2026-06-11_f9127210_LUIZ-CARLOS-FERREIRA-DA-.pdf",
+        "page": 1,
+        "autenticacao": "5.891.0A8.178.F07.ADE",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-11",
@@ -769,14 +909,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3698,
+      "bank_id": 9503,
       "bank_account_id": "itau-29660-2",
       "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
       "banco_curto": "Itaú 29660-2",
       "bank_description": "PIX ENVIADO MADEPINUS 10.876.822/0001-94",
       "categoria": "Transferência entre contas próprias",
       "obs": "Transferência entre contas próprias / mesma empresa",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-11_7c921272_MADEPINUS.pdf",
+        "file_name": "2026-06-11_7c921272_MADEPINUS.pdf",
+        "page": 17,
+        "autenticacao": "CAFB82EB14776139202D11D30DB948E9D9DB07FB",
+        "agencia": "4826",
+        "conta": "29660-2"
+      }
     },
     {
       "data_pagamento": "2026-06-12",
@@ -793,14 +940,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3537,
+      "bank_id": 9342,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pix - Enviado 12/06 11:50 CIELO S.A - INSTITUICAO D",
       "categoria": "Não classificado ⚠️",
       "obs": "PIX enviado",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-12_59fa96b9_CIELO-S-A-INSTITUICAO-DE.pdf",
+        "file_name": "2026-06-12_59fa96b9_CIELO-S-A-INSTITUICAO-DE.pdf",
+        "page": 1,
+        "autenticacao": null,
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-12",
@@ -817,14 +971,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3543,
+      "bank_id": 9348,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto HD FERRAGENS E MADEIRAS LTDA",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-12_e4e6989f_HD-FERRAGENS-E-MADEIRAS-.pdf",
+        "file_name": "2026-06-12_e4e6989f_HD-FERRAGENS-E-MADEIRAS-.pdf",
+        "page": 1,
+        "autenticacao": "1.CCB.F9E.786.696.A7B",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-12",
@@ -833,7 +994,7 @@
       "titulo": "97281/002",
       "vencimento": "2026-08-04",
       "emissao": "2026-06-09",
-      "valor_original": 1937.63,
+      "valor_original": 2051.43,
       "juros_multa": 113.8,
       "valor_total": 2051.43,
       "status": "conciliado",
@@ -841,14 +1002,21 @@
       "forma": "boleto",
       "match_score": 70,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3540,
+      "bank_id": 9345,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto ROMETAL COMP P MOVEIS LTDA",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-12_fd18a915_ROMETAL-COMP-P-MOVEIS-LT.pdf",
+        "file_name": "2026-06-12_fd18a915_ROMETAL-COMP-P-MOVEIS-LT.pdf",
+        "page": 1,
+        "autenticacao": "C.FF1.C18.C02.DCE.69E",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-12",
@@ -865,14 +1033,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3539,
+      "bank_id": 9344,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto KITSUL  COMPONENTES PARA MOVEI",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-12_02971b74_KITSUL-COMPONENTES-PARA-.pdf",
+        "file_name": "2026-06-12_02971b74_KITSUL-COMPONENTES-PARA-.pdf",
+        "page": 1,
+        "autenticacao": "D.FC4.F21.642.FC1.0F0",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-12",
@@ -889,14 +1064,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3542,
+      "bank_id": 9347,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto LOTUS COMERCIAL DE FERRAGENS E",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-12_a4d9fc5c_LOTUS-COMERCIAL-DE-FERRA.pdf",
+        "file_name": "2026-06-12_a4d9fc5c_LOTUS-COMERCIAL-DE-FERRA.pdf",
+        "page": 1,
+        "autenticacao": "4.6D3.F12.593.917.C0F",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-12",
@@ -913,14 +1095,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3541,
+      "bank_id": 9346,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto METALFIXE  INDUSTRIA E COMERCI",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-12_9338d17f_METALFIXE-INDUSTRIA-E-CO.pdf",
+        "file_name": "2026-06-12_9338d17f_METALFIXE-INDUSTRIA-E-CO.pdf",
+        "page": 1,
+        "autenticacao": "E.52F.455.41F.813.35A",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-12",
@@ -937,14 +1126,21 @@
       "forma": "boleto",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3544,
+      "bank_id": 9349,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto PLACAS DO BRASIL S.A.",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": "Sem título no Contas a Pagar / não conciliado",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-12_0cf68cfe_PLACAS-DO-BRASIL-S-A.pdf",
+        "file_name": "2026-06-12_0cf68cfe_PLACAS-DO-BRASIL-S-A.pdf",
+        "page": 1,
+        "autenticacao": "B.5C2.798.03E.514.DEE",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-12",
@@ -961,14 +1157,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3538,
+      "bank_id": 9343,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto PLACAS DO BRASIL S A",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-12_34196c34_PLACAS-DO-BRASIL-S-A.pdf",
+        "file_name": "2026-06-12_34196c34_PLACAS-DO-BRASIL-S-A.pdf",
+        "page": 1,
+        "autenticacao": "5.62A.6F0.B79.81B.C83",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-15",
@@ -985,7 +1188,7 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3619,
+      "bank_id": 9424,
       "bank_account_id": "inter-9908006-0",
       "banco": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "banco_curto": "Banco Inter",
@@ -1009,14 +1212,21 @@
       "forma": "boleto",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3551,
+      "bank_id": 9356,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto ALLIANZ SEGUROS S A",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": "Pagamento de seguro",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-15_2950c2db_ALLIANZ-SEGUROS-S-A.pdf",
+        "file_name": "2026-06-15_2950c2db_ALLIANZ-SEGUROS-S-A.pdf",
+        "page": 1,
+        "autenticacao": "2.870.075.50B.51C.439",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-15",
@@ -1033,14 +1243,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3548,
+      "bank_id": 9353,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto INDUSTRIA QUIMICA UNA LTDA",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-15_a3db66c6_INDUSTRIA-QUIMICA-UNA-LT.pdf",
+        "file_name": "2026-06-15_a3db66c6_INDUSTRIA-QUIMICA-UNA-LT.pdf",
+        "page": 1,
+        "autenticacao": "F.9D1.E10.AEC.EF7.BAB",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-15",
@@ -1057,14 +1274,21 @@
       "forma": "boleto",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3550,
+      "bank_id": 9355,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto LUIZ CARLOS FERREIRA DA CONCEI",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": "Consumo / aluguel / serviço",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-15_3a8aa7b8_LUIZ-CARLOS-FERREIRA-DA-.pdf",
+        "file_name": "2026-06-15_3a8aa7b8_LUIZ-CARLOS-FERREIRA-DA-.pdf",
+        "page": 1,
+        "autenticacao": "8.D88.26B.483.983.1EB",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-15",
@@ -1081,14 +1305,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3552,
+      "bank_id": 9357,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto PLACAS DO BRASIL S A",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-15_6c3476e8_PLACAS-DO-BRASIL-S-A.pdf",
+        "file_name": "2026-06-15_6c3476e8_PLACAS-DO-BRASIL-S-A.pdf",
+        "page": 1,
+        "autenticacao": "5.107.212.A0C.AE1.CB2",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-15",
@@ -1105,14 +1336,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3553,
+      "bank_id": 9358,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto PLACAS DO BRASIL S.A.",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-15_ec4ae126_PLACAS-DO-BRASIL-S-A.pdf",
+        "file_name": "2026-06-15_ec4ae126_PLACAS-DO-BRASIL-S-A.pdf",
+        "page": 1,
+        "autenticacao": "2.7CD.DDA.FBA.0FC.316",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-15",
@@ -1129,14 +1367,21 @@
       "forma": "boleto",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3549,
+      "bank_id": 9354,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto VIRTEX TELECOM",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": "Consumo / aluguel / serviço",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-15_18f1ba47_VIRTEX-TELECOM.pdf",
+        "file_name": "2026-06-15_18f1ba47_VIRTEX-TELECOM.pdf",
+        "page": 1,
+        "autenticacao": "6.A80.30C.CF9.D2A.715",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-15",
@@ -1153,14 +1398,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3704,
+      "bank_id": 9509,
       "bank_account_id": "itau-29660-2",
       "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
       "banco_curto": "Itaú 29660-2",
       "bank_description": "PIX ENVIADO MADEPINUS 10.876.822/0001-94",
       "categoria": "Transferência entre contas próprias",
       "obs": "Transferência entre contas próprias / mesma empresa",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-15_04c93c7e_MADEPINUS.pdf",
+        "file_name": "2026-06-15_04c93c7e_MADEPINUS.pdf",
+        "page": 15,
+        "autenticacao": "DF79033E2F2CF7130A21D0BE9AD4257CDFE55201",
+        "agencia": "4826",
+        "conta": "29660-2"
+      }
     },
     {
       "data_pagamento": "2026-06-16",
@@ -1177,14 +1429,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3719,
+      "bank_id": 9524,
       "bank_account_id": "itau-29660-2",
       "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
       "banco_curto": "Itaú 29660-2",
       "bank_description": "PIX ENVIADO MADEPINUS 10.876.822/0001-94",
       "categoria": "Transferência entre contas próprias",
       "obs": "Transferência entre contas próprias / mesma empresa",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-16_3b57e7b9_MADEPINUS.pdf",
+        "file_name": "2026-06-16_3b57e7b9_MADEPINUS.pdf",
+        "page": 14,
+        "autenticacao": "3ABC833B9E004A9AF78AB4D1626C853AC15188DD",
+        "agencia": "4826",
+        "conta": "29660-2"
+      }
     },
     {
       "data_pagamento": "2026-06-17",
@@ -1201,14 +1460,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3723,
+      "bank_id": 9528,
       "bank_account_id": "itau-29660-2",
       "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
       "banco_curto": "Itaú 29660-2",
       "bank_description": "PIX ENVIADO MADEPINUS 10.876.822/0001-94",
       "categoria": "Transferência entre contas próprias",
       "obs": "Transferência entre contas próprias / mesma empresa",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-17_3226ac71_MADEPINUS.pdf",
+        "file_name": "2026-06-17_3226ac71_MADEPINUS.pdf",
+        "page": 13,
+        "autenticacao": "CB7C9DD155225B303C6CC6808F3B5C6EC2B817B4",
+        "agencia": "4826",
+        "conta": "29660-2"
+      }
     },
     {
       "data_pagamento": "2026-06-18",
@@ -1225,14 +1491,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3565,
+      "bank_id": 9370,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pix - Enviado 18/06 12:01 CEF MATRIZ",
       "categoria": "Pagamento FGTS",
       "obs": "Pagamento de imposto / obrigação fiscal",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-18_e0b72324_CEF-MATRIZ.pdf",
+        "file_name": "2026-06-18_e0b72324_CEF-MATRIZ.pdf",
+        "page": 1,
+        "autenticacao": null,
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-18",
@@ -1249,14 +1522,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3566,
+      "bank_id": 9371,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pix - Enviado 18/06 12:01 RECEITA FEDERAL",
       "categoria": "Não classificado ⚠️",
       "obs": "Pagamento de imposto / obrigação fiscal",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-18_c4b066e5_RECEITA-FEDERAL.pdf",
+        "file_name": "2026-06-18_c4b066e5_RECEITA-FEDERAL.pdf",
+        "page": 1,
+        "autenticacao": null,
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-18",
@@ -1273,14 +1553,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3569,
+      "bank_id": 9374,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto AFO MOVEIS E ARTEFATOS LTDA",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-18_230fb62a_AFO-MOVEIS-E-ARTEFATOS-L.pdf",
+        "file_name": "2026-06-18_230fb62a_AFO-MOVEIS-E-ARTEFATOS-L.pdf",
+        "page": 1,
+        "autenticacao": "0.22D.33C.0FC.C96.B22",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-18",
@@ -1297,14 +1584,21 @@
       "forma": "boleto",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3567,
+      "bank_id": 9372,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto ALTERDATA TEC.EM INFORMATICA",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": "Consumo / aluguel / serviço",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-18_e7a23732_ALTERDATA-TEC-EM-INFORMA.pdf",
+        "file_name": "2026-06-18_e7a23732_ALTERDATA-TEC-EM-INFORMA.pdf",
+        "page": 1,
+        "autenticacao": "A.DD1.A89.736.4E4.885",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-18",
@@ -1321,14 +1615,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3568,
+      "bank_id": 9373,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto HD FERRAGENS PARA MOVEIS LTDA",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-18_22203a2f_HD-FERRAGENS-PARA-MOVEIS.pdf",
+        "file_name": "2026-06-18_22203a2f_HD-FERRAGENS-PARA-MOVEIS.pdf",
+        "page": 1,
+        "autenticacao": "9.F12.58D.B1B.7D0.C6B",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-18",
@@ -1345,14 +1646,21 @@
       "forma": "boleto",
       "match_score": 100,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3571,
+      "bank_id": 9376,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto HD FERRAGENS PARA MOVEIS LTDA",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-18_0916f9c7_HD-FERRAGENS-PARA-MOVEIS.pdf",
+        "file_name": "2026-06-18_0916f9c7_HD-FERRAGENS-PARA-MOVEIS.pdf",
+        "page": 1,
+        "autenticacao": "E.FB8.F13.EDF.415.8FA",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-18",
@@ -1369,14 +1677,21 @@
       "forma": "boleto",
       "match_score": 100,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3573,
+      "bank_id": 9378,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto PLACAS DO BRASIL S A",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-18_57b2945c_PLACAS-DO-BRASIL-S-A.pdf",
+        "file_name": "2026-06-18_57b2945c_PLACAS-DO-BRASIL-S-A.pdf",
+        "page": 1,
+        "autenticacao": "C.C9B.85C.F7D.CFF.BF8",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-18",
@@ -1393,14 +1708,21 @@
       "forma": "boleto",
       "match_score": 110,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3570,
+      "bank_id": 9375,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto PLACAS DO BRASIL S A",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-18_fa6987bb_PLACAS-DO-BRASIL-S-A.pdf",
+        "file_name": "2026-06-18_fa6987bb_PLACAS-DO-BRASIL-S-A.pdf",
+        "page": 1,
+        "autenticacao": "0.DA6.8BC.BBF.A17.666",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-18",
@@ -1417,14 +1739,21 @@
       "forma": "boleto",
       "match_score": 100,
       "fonte_titulo": "CP TOTAL 06",
-      "bank_id": 3572,
+      "bank_id": 9377,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto ROMETAL COMP P MOVEIS LTDA",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": null,
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-18_23fe7547_ROMETAL-COMP-P-MOVEIS-LT.pdf",
+        "file_name": "2026-06-18_23fe7547_ROMETAL-COMP-P-MOVEIS-LT.pdf",
+        "page": 1,
+        "autenticacao": "F.24D.169.7B3.BD1.C48",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-18",
@@ -1441,14 +1770,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3728,
+      "bank_id": 9533,
       "bank_account_id": "itau-29660-2",
       "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
       "banco_curto": "Itaú 29660-2",
       "bank_description": "PIX ENVIADO MADEPINUS 10.876.822/0001-94",
       "categoria": "Transferência entre contas próprias",
       "obs": "Transferência entre contas próprias / mesma empresa",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-18_b8739cea_MADEPINUS.pdf",
+        "file_name": "2026-06-18_b8739cea_MADEPINUS.pdf",
+        "page": 12,
+        "autenticacao": "BE32BE97737D4AE3089D305D725807A90A99FC10",
+        "agencia": "4826",
+        "conta": "29660-2"
+      }
     },
     {
       "data_pagamento": "2026-06-19",
@@ -1465,14 +1801,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3576,
+      "bank_id": 9381,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pix - Enviado 19/06 15:30 Madepinus",
       "categoria": "Transferência entre contas próprias",
       "obs": "Transferência entre contas próprias / mesma empresa",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-19_d3e0b38d_MADEPINUS.pdf",
+        "file_name": "2026-06-19_d3e0b38d_MADEPINUS.pdf",
+        "page": 1,
+        "autenticacao": null,
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-22",
@@ -1489,14 +1832,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3739,
+      "bank_id": 9544,
       "bank_account_id": "itau-29660-2",
       "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
       "banco_curto": "Itaú 29660-2",
       "bank_description": "PIX ENVIADO MADEPINUS 10.876.822/0001-94",
       "categoria": "Transferência entre contas próprias",
       "obs": "Transferência entre contas próprias / mesma empresa",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-22_37721de9_MADEPINUS.pdf",
+        "file_name": "2026-06-22_37721de9_MADEPINUS.pdf",
+        "page": 7,
+        "autenticacao": "90605F670B2EF95CD58F0B4B51249F9769F1DE6D",
+        "agencia": "4826",
+        "conta": "29660-2"
+      }
     },
     {
       "data_pagamento": "2026-06-23",
@@ -1513,7 +1863,7 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3620,
+      "bank_id": 9425,
       "bank_account_id": "inter-9908006-0",
       "banco": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "banco_curto": "Banco Inter",
@@ -1537,14 +1887,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3753,
+      "bank_id": 9558,
       "bank_account_id": "itau-29660-2",
       "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
       "banco_curto": "Itaú 29660-2",
       "bank_description": "PIX ENVIADO MADEPINUS 10.876.822/0001-94",
       "categoria": "Transferência entre contas próprias",
       "obs": "Transferência entre contas próprias / mesma empresa",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-23_02b9582d_MADEPINUS.pdf",
+        "file_name": "2026-06-23_02b9582d_MADEPINUS.pdf",
+        "page": 6,
+        "autenticacao": "F97956AB378D61A33BDB403C16B45E7E07582901",
+        "agencia": "4826",
+        "conta": "29660-2"
+      }
     },
     {
       "data_pagamento": "2026-06-24",
@@ -1561,14 +1918,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3593,
+      "bank_id": 9398,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pix - Enviado 24/06 14:34 POSTOS AVALLON",
       "categoria": "Despesa combustível",
       "obs": "PIX enviado",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-24_87c617e8_POSTOS-AVALLON.pdf",
+        "file_name": "2026-06-24_87c617e8_POSTOS-AVALLON.pdf",
+        "page": 1,
+        "autenticacao": null,
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-24",
@@ -1585,14 +1949,21 @@
       "forma": "boleto",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3592,
+      "bank_id": 9397,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto EQUATORIAL PIAUI DISTRIBUIDORA",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": "Consumo / aluguel / serviço",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-24_35b3dadb_EQUATORIAL-PIAUI-DISTRIB.pdf",
+        "file_name": "2026-06-24_35b3dadb_EQUATORIAL-PIAUI-DISTRIB.pdf",
+        "page": 1,
+        "autenticacao": "2.25B.62D.D85.D3A.D5A",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-24",
@@ -1609,14 +1980,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3756,
+      "bank_id": 9561,
       "bank_account_id": "itau-29660-2",
       "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
       "banco_curto": "Itaú 29660-2",
       "bank_description": "PIX ENVIADO MADEPINUS 10.876.822/0001-94",
       "categoria": "Transferência entre contas próprias",
       "obs": "Transferência entre contas próprias / mesma empresa",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-24_0acb4fc7_MADEPINUS.pdf",
+        "file_name": "2026-06-24_0acb4fc7_MADEPINUS.pdf",
+        "page": 5,
+        "autenticacao": "6CA9CD6C04D6BEF0AD76572241B59FB4A122F3B9",
+        "agencia": "4826",
+        "conta": "29660-2"
+      }
     },
     {
       "data_pagamento": "2026-06-25",
@@ -1633,14 +2011,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3758,
+      "bank_id": 9563,
       "bank_account_id": "itau-29660-2",
       "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
       "banco_curto": "Itaú 29660-2",
       "bank_description": "PIX ENVIADO MADEPINUS 10.876.822/0001-94",
       "categoria": "Transferência entre contas próprias",
       "obs": "Transferência entre contas próprias / mesma empresa",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-25_51717615_MADEPINUS.pdf",
+        "file_name": "2026-06-25_51717615_MADEPINUS.pdf",
+        "page": 4,
+        "autenticacao": "05A3BC15A0B52B2ECFF41D4DAA7622C38D356D2C",
+        "agencia": "4826",
+        "conta": "29660-2"
+      }
     },
     {
       "data_pagamento": "2026-06-26",
@@ -1657,14 +2042,21 @@
       "forma": "boleto",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3600,
+      "bank_id": 9405,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto PLACAS DO BRASIL S A",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": "Sem título no Contas a Pagar / não conciliado",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-26_feadf446_PLACAS-DO-BRASIL-S-A.pdf",
+        "file_name": "2026-06-26_feadf446_PLACAS-DO-BRASIL-S-A.pdf",
+        "page": 1,
+        "autenticacao": "1.3CF.B49.E6D.35F.3FD",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-26",
@@ -1681,14 +2073,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3762,
+      "bank_id": 9567,
       "bank_account_id": "itau-29660-2",
       "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
       "banco_curto": "Itaú 29660-2",
       "bank_description": "PIX ENVIADO MADEPINUS 10.876.822/0001-94",
       "categoria": "Transferência entre contas próprias",
       "obs": "Transferência entre contas próprias / mesma empresa",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-26_e2ce41f3_MADEPINUS.pdf",
+        "file_name": "2026-06-26_e2ce41f3_MADEPINUS.pdf",
+        "page": 3,
+        "autenticacao": "49A1624D82EB3073FD9ADFDE6E526437748DA7A8",
+        "agencia": "4826",
+        "conta": "29660-2"
+      }
     },
     {
       "data_pagamento": "2026-06-29",
@@ -1705,14 +2104,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3765,
+      "bank_id": 9570,
       "bank_account_id": "itau-29660-2",
       "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
       "banco_curto": "Itaú 29660-2",
       "bank_description": "PIX ENVIADO MADEPINUS 10.876.822/0001-94",
       "categoria": "Transferência entre contas próprias",
       "obs": "Transferência entre contas próprias / mesma empresa",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-29_44abe1db_MADEPINUS.pdf",
+        "file_name": "2026-06-29_44abe1db_MADEPINUS.pdf",
+        "page": 2,
+        "autenticacao": "D27172F4123A14E9F84B04452AFB39A15F0D1468",
+        "agencia": "4826",
+        "conta": "29660-2"
+      }
     },
     {
       "data_pagamento": "2026-06-30",
@@ -1729,14 +2135,21 @@
       "forma": "boleto",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3608,
+      "bank_id": 9413,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto ALELO S.A.",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": "Consumo / aluguel / serviço",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-30_2d7a2716_ALELO-S-A.pdf",
+        "file_name": "2026-06-30_2d7a2716_ALELO-S-A.pdf",
+        "page": 1,
+        "autenticacao": "7.86F.3CB.27D.1A8.C42",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-30",
@@ -1753,14 +2166,21 @@
       "forma": "boleto",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3609,
+      "bank_id": 9414,
       "bank_account_id": "bb-847-8",
       "banco": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "banco_curto": "Banco do Brasil",
       "bank_description": "Pagamento de Boleto G3 TELECOM LTDA",
       "categoria": "Pagamento a fornecedor (boleto)",
       "obs": "Consumo / aluguel / serviço",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-30_76e0c3e4_G3-TELECOM-LTDA.pdf",
+        "file_name": "2026-06-30_76e0c3e4_G3-TELECOM-LTDA.pdf",
+        "page": 1,
+        "autenticacao": "5.977.E82.5F0.1D4.54F",
+        "agencia": "3219-0",
+        "conta": "847-8"
+      }
     },
     {
       "data_pagamento": "2026-06-30",
@@ -1777,14 +2197,21 @@
       "forma": "pix",
       "match_score": 0,
       "fonte_titulo": null,
-      "bank_id": 3778,
+      "bank_id": 9583,
       "bank_account_id": "itau-29660-2",
       "banco": "Banco Itaú - Ag: 4826 Cc: 29660-2",
       "banco_curto": "Itaú 29660-2",
       "bank_description": "PIX ENVIADO MADEPINUS 10.876.822/0001-94",
       "categoria": "Transferência entre contas próprias",
       "obs": "Transferência entre contas próprias / mesma empresa",
-      "comprovante": null
+      "comprovante": {
+        "url": "/data/comprovantes/2026-06/2026-06-30_71bb4bfc_MADEPINUS.pdf",
+        "file_name": "2026-06-30_71bb4bfc_MADEPINUS.pdf",
+        "page": 1,
+        "autenticacao": "645AFF22B08F649482E33F46876669902358809A",
+        "agencia": "4826",
+        "conta": "29660-2"
+      }
     }
   ]
 }

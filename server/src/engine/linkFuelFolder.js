@@ -8,12 +8,13 @@ import { NETWORK_BASE, attachmentsRoot, netlifyDataRoot } from '../config.js';
 import { parseFuelFilename, FUEL_DOC_EXTENSIONS } from '../parsers/fuelDocument.js';
 import { enrichFuelRecord as enrichFuelRecord202606 } from '../data/fuelOcr2026-06.js';
 import { enrichFuelRecord as enrichFuelRecord202607 } from '../data/fuelOcr2026-07.js';
+import { enrichFuelRecord as enrichFuelRecord202608 } from '../data/fuelOcr2026-08.js';
 
 // Registro de leitura documental (OCR/manual) por mês de competência.
-// Meses sem cupons transcritos caem no fallback (registro sem enriquecimento).
 const FUEL_ENRICHERS_BY_MONTH = {
   '2026-06': enrichFuelRecord202606,
   '2026-07': enrichFuelRecord202607,
+  '2026-08': enrichFuelRecord202608,
 };
 
 function enrichFuelRecord(record, month) {
@@ -75,16 +76,21 @@ export function scanFuelFolder(month) {
 function copyFuelFile(srcPath, month, hash, ext) {
   const fileName = `${hash}${ext}`;
   const attachDir = path.join(attachmentsRoot, month, 'combustivel');
-  const publicDir = path.join(netlifyDataRoot, '..', 'anexos', month, 'combustivel');
+  // /data/combustivel vai para o Git/Netlify (anexos/ está no .gitignore)
+  const publicDir = path.join(netlifyDataRoot, 'combustivel', month);
+  const legacyPublicDir = path.join(netlifyDataRoot, '..', 'anexos', month, 'combustivel');
   fs.mkdirSync(attachDir, { recursive: true });
   fs.mkdirSync(publicDir, { recursive: true });
+  fs.mkdirSync(legacyPublicDir, { recursive: true });
 
   const attachDest = path.join(attachDir, fileName);
   const publicDest = path.join(publicDir, fileName);
+  const legacyDest = path.join(legacyPublicDir, fileName);
   if (!fs.existsSync(attachDest)) fs.copyFileSync(srcPath, attachDest);
   if (!fs.existsSync(publicDest)) fs.copyFileSync(srcPath, publicDest);
+  if (!fs.existsSync(legacyDest)) fs.copyFileSync(srcPath, legacyDest);
 
-  return { attachDest, publicDest, fileName, url: `/anexos/${month}/combustivel/${fileName}` };
+  return { attachDest, publicDest, fileName, url: `/data/combustivel/${month}/${fileName}` };
 }
 
 function findFuelEntries(db, month) {
@@ -106,8 +112,26 @@ function findFuelEntries(db, month) {
   `).all(`${month}%`, `${FUEL_ACCOUNT_PREFIX}%`);
 }
 
-function matchEntry(file, entries, usedEntryIds) {
+function matchEntry(file, entries, usedEntryIds, ocrAmount = null) {
   const sameDay = entries.filter((e) => e.entry_date === file.doc_date && !usedEntryIds.has(e.id));
+
+  // Preferência: mesmo dia + valor OCR ≈ lançamento
+  if (ocrAmount != null && sameDay.length) {
+    const byAmount = sameDay.filter((e) => Math.abs((e.amount || 0) - ocrAmount) < 0.05);
+    if (byAmount.length === 1) return { entry: byAmount[0], score: 0.99 };
+    if (byAmount.length > 1) {
+      const fileMins = file.doc_time ? timeFromText(file.doc_time) : null;
+      let best = null;
+      for (const e of byAmount) {
+        const entryMins = timeFromText(e.counterparty) ?? timeFromText(e.description);
+        const diff = timeDiffMinutes(fileMins, entryMins);
+        const score = diff <= 60 ? 0.99 : 0.92;
+        if (!best || score > best.score) best = { entry: e, score };
+      }
+      if (best) return best;
+    }
+  }
+
   if (sameDay.length === 1) return { entry: sameDay[0], score: 0.95 };
 
   const fileMins = file.doc_time ? timeFromText(file.doc_time) : null;
@@ -119,6 +143,16 @@ function matchEntry(file, entries, usedEntryIds) {
     if (!best || score > best.score) best = { entry: e, score };
   }
   if (best) return best;
+
+  // Valor OCR em janela de ±1 dia
+  if (ocrAmount != null) {
+    const nearAmt = entries.filter(
+      (e) => file.doc_date && daysDiff(e.entry_date, file.doc_date) <= 1
+        && !usedEntryIds.has(e.id)
+        && Math.abs((e.amount || 0) - ocrAmount) < 0.05,
+    );
+    if (nearAmt.length === 1) return { entry: nearAmt[0], score: 0.88 };
+  }
 
   const near = entries.filter((e) => file.doc_date && daysDiff(e.entry_date, file.doc_date) <= 1 && !usedEntryIds.has(e.id));
   if (near.length === 1) return { entry: near[0], score: 0.6 };
@@ -150,7 +184,29 @@ export function linkFuelFolder(db, month) {
 
   for (const file of files) {
     const copied = copyFuelFile(file.path, month, file.hash, file.ext);
-    const match = matchEntry(file, fuelEntries, usedEntryIds);
+    // Pré-enriquece para obter valor OCR e melhorar o match banco ↔ cupom
+    const pre = enrichFuelRecord({
+      id: file.hash,
+      file_name: file.name,
+      doc_date: file.doc_date,
+      doc_time: file.doc_time,
+      amount: null,
+      station: null,
+      bank_account_id: null,
+      ledger_entry_id: null,
+      category: 'Despesa combustível',
+      debit_account: '4.02.01.01.06.0001',
+      status: 'documento',
+      url: copied.url,
+      source_path: file.path,
+    }, month);
+
+    const matchFile = {
+      ...file,
+      doc_date: pre.doc_date || file.doc_date,
+      doc_time: pre.doc_time || file.doc_time,
+    };
+    const match = matchEntry(matchFile, fuelEntries, usedEntryIds, pre.amount);
     const entry = match?.entry ?? null;
 
     if (entry) {
@@ -173,10 +229,10 @@ export function linkFuelFolder(db, month) {
     records.push(enrichFuelRecord({
       id: file.hash,
       file_name: file.name,
-      doc_date: file.doc_date,
-      doc_time: file.doc_time,
-      amount: entry?.amount ?? null,
-      station: entry?.counterparty || entry?.description?.replace(/.*POSTO/i, 'POSTO') || null,
+      doc_date: pre.doc_date || file.doc_date,
+      doc_time: pre.doc_time || file.doc_time,
+      amount: entry?.amount ?? pre.amount ?? null,
+      station: pre.station || entry?.counterparty || entry?.description?.replace(/.*POSTO/i, 'POSTO') || null,
       bank_account_id: entry?.bank_account_id ?? null,
       ledger_entry_id: entry?.id ?? null,
       category: entry?.category ?? 'Despesa combustível',

@@ -10,7 +10,7 @@ gera o Livro Razão com anexos e publica em [razaocontador.netlify.app](https://
 - **Conciliação automática** entre extratos bancários, notas fiscais (XML), boletos e comprovantes
 - **Anexos por lançamento** — PDF, JPG, TIFF, TXT vinculados automaticamente por data/valor/nome
 - **Exportação** Excel (CSV) e PDF para a contadora
-- **Varredura do servidor** `\\192.168.1.190\f\...\ALAINE - CONTADORA\<MM-AAAA>`
+- **Varredura do servidor** `\\192.168.1.190\f\ALAINE - CONTADORA\<MM-AAAA>`
 
 ## Stack
 
