@@ -6,6 +6,6 @@
     "audit:ci": "node scripts/ci-npm-audit.mjs"
   },
   "dependencies": {
-    "@netlify/blobs": "^8.1.0"
+    "@netlify/blobs": "^11.1.9"
   }
 }
