@@ -16,6 +16,7 @@ madepinus-ledger-cursor.zip
 *.key
 credentials*.json
 *secret*
+SENHAS/
 
 # Local Netlify folder
 .netlify
