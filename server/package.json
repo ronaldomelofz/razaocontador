@@ -13,7 +13,7 @@
     "apuracao": "node src/scripts/computeIcmsApuracao.js"
   },
   "dependencies": {
-    "better-sqlite3": "^11.3.0",
+    "better-sqlite3": "^13.2.0",
     "cors": "^2.8.5",
     "dayjs": "^1.11.13",
     "exceljs": "^4.4.0",
