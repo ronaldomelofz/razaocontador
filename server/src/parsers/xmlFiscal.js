@@ -42,11 +42,14 @@ export function parseNFeXML(filePath) {
     counterparty_doc = dest?.CNPJ ?? dest?.CPF ?? null;
   }
 
+  const payments = extractPayments(infNFe?.pag);
+
   return {
     doc_number: ide?.nNF != null ? String(parseInt(ide.nNF, 10)) : null,
     doc_model: ide?.mod != null ? String(parseInt(String(ide.mod).split('.')[0], 10)) : null,
     cfop: cfop ? String(cfop) : null,
     issue_date: ide?.dhEmi ? ide.dhEmi.slice(0, 10) : null,
+    issue_time: ide?.dhEmi && ide.dhEmi.length >= 16 ? ide.dhEmi.slice(11, 16) : null,
     counterparty_name,
     counterparty_doc,
     doc_direction,
@@ -55,8 +58,54 @@ export function parseNFeXML(filePath) {
     pis_value: total?.vPIS ? Number(total.vPIS) : null,
     cofins_value: total?.vCOFINS ? Number(total.vCOFINS) : null,
     cancelled: false,
-    payment_method: null, // preencher a partir de infNFe.pag se disponível
+    payments,
+    payment_method: payments.length
+      ? payments.map((p) => `${p.label} R$ ${Number(p.value).toFixed(2)}`).join(' + ')
+      : null,
   };
+}
+
+/** Códigos tPag (NT 2016.002 / Manual NF-e) → rótulo amigável */
+export const TPAG_LABELS = {
+  '01': 'Espécie (dinheiro)',
+  '02': 'Cheque',
+  '03': 'Cartão de crédito',
+  '04': 'Cartão de débito',
+  '05': 'Crédito loja',
+  '10': 'Vale alimentação',
+  '11': 'Vale refeição',
+  '12': 'Vale presente',
+  '13': 'Vale combustível',
+  '14': 'Duplicata mercantil',
+  '15': 'Boleto bancário',
+  '16': 'Depósito bancário',
+  '17': 'PIX',
+  '18': 'Transferência bancária',
+  '19': 'Programa de fidelidade',
+  '90': 'Sem pagamento',
+  '99': 'Outros',
+};
+
+export function tPagLabel(code) {
+  const c = String(code ?? '').padStart(2, '0');
+  return TPAG_LABELS[c] || `Forma ${c}`;
+}
+
+export function extractPayments(pagNode) {
+  if (!pagNode) return [];
+  let dets = pagNode.detPag;
+  if (!dets) return [];
+  if (!Array.isArray(dets)) dets = [dets];
+  return dets.map((d) => {
+    const code = String(d?.tPag ?? '').padStart(2, '0');
+    return {
+      code,
+      label: tPagLabel(code),
+      value: d?.vPag != null ? Number(d.vPag) : null,
+      ind_pag: d?.indPag != null ? Number(d.indPag) : null,
+      card: d?.card || null,
+    };
+  }).filter((p) => p.code && p.code !== '00');
 }
 
 /** Relatório consolidado Alterdata "FATURAMENTO FISCAL MMYYYY.xlsx" — usar quando XML individual não estiver disponível */

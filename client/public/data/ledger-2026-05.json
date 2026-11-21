@@ -1,13 +1,13 @@
 {
   "month": "2026-05",
-  "generatedAt": "2026-09-11T14:40:54.946Z",
+  "generatedAt": "2026-11-05T17:25:57.768Z",
   "company": "FALCÃO & FRAZÃO LTDA (MADEPINUS)",
   "cnpj": "10.876.822/0001-94",
-  "networkRoot": "\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA\\05-2026",
+  "networkRoot": "\\\\192.168.1.190\\f\\ALAINE - CONTADORA\\05-2026",
   "stats": {
     "imported": 146,
     "pending": 16,
-    "attachments": 50,
+    "attachments": 2,
     "fuelDocuments": 14,
     "fuelLinked": 0,
     "fiscal": 637,
@@ -15,7 +15,7 @@
   },
   "fuelRecords": [
     {
-      "id": "3b9f3de60d5c55ac",
+      "id": "d8a64dbc5de93536",
       "file_name": "NFC-e 75129.pdf",
       "doc_date": "2026-05-30",
       "doc_time": null,
@@ -26,11 +26,11 @@
       "category": "Despesa combustível",
       "debit_account": "4.02.01.01.06.0001",
       "status": "documento",
-      "url": "/anexos/2026-05/combustivel/3b9f3de60d5c55ac.pdf",
-      "source_path": "\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 75129.pdf"
+      "url": "/data/combustivel/2026-05/d8a64dbc5de93536.pdf",
+      "source_path": "\\\\192.168.1.190\\f\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 75129.pdf"
     },
     {
-      "id": "7cac11ad30cbb6c4",
+      "id": "e570f148f6e95523",
       "file_name": "NFC-e 79343.pdf",
       "doc_date": "2026-05-30",
       "doc_time": null,
@@ -41,11 +41,11 @@
       "category": "Despesa combustível",
       "debit_account": "4.02.01.01.06.0001",
       "status": "documento",
-      "url": "/anexos/2026-05/combustivel/7cac11ad30cbb6c4.pdf",
-      "source_path": "\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 79343.pdf"
+      "url": "/data/combustivel/2026-05/e570f148f6e95523.pdf",
+      "source_path": "\\\\192.168.1.190\\f\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 79343.pdf"
     },
     {
-      "id": "17dc8817f7fbb7dc",
+      "id": "d46dbde865d19dc9",
       "file_name": "NFC-e 863.pdf",
       "doc_date": "2026-05-30",
       "doc_time": null,
@@ -56,11 +56,11 @@
       "category": "Despesa combustível",
       "debit_account": "4.02.01.01.06.0001",
       "status": "documento",
-      "url": "/anexos/2026-05/combustivel/17dc8817f7fbb7dc.pdf",
-      "source_path": "\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 863.pdf"
+      "url": "/data/combustivel/2026-05/d46dbde865d19dc9.pdf",
+      "source_path": "\\\\192.168.1.190\\f\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 863.pdf"
     },
     {
-      "id": "d41eaac8bbbb6ac2",
+      "id": "eab996ec3b38aac7",
       "file_name": "NFC-e 97378.pdf",
       "doc_date": "2026-05-30",
       "doc_time": null,
@@ -71,11 +71,11 @@
       "category": "Despesa combustível",
       "debit_account": "4.02.01.01.06.0001",
       "status": "documento",
-      "url": "/anexos/2026-05/combustivel/d41eaac8bbbb6ac2.pdf",
-      "source_path": "\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 97378.pdf"
+      "url": "/data/combustivel/2026-05/eab996ec3b38aac7.pdf",
+      "source_path": "\\\\192.168.1.190\\f\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 97378.pdf"
     },
     {
-      "id": "c71d082b0debbce4",
+      "id": "cd823b65ccb9fe1e",
       "file_name": "NFC-e 393447.pdf",
       "doc_date": "3447-39-30",
       "doc_time": null,
@@ -86,11 +86,11 @@
       "category": "Despesa combustível",
       "debit_account": "4.02.01.01.06.0001",
       "status": "documento",
-      "url": "/anexos/2026-05/combustivel/c71d082b0debbce4.pdf",
-      "source_path": "\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 393447.pdf"
+      "url": "/data/combustivel/2026-05/cd823b65ccb9fe1e.pdf",
+      "source_path": "\\\\192.168.1.190\\f\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 393447.pdf"
     },
     {
-      "id": "e9111cfae8070b18",
+      "id": "f9fe141b920c9d1c",
       "file_name": "NFC-e 393589.pdf",
       "doc_date": "3589-39-30",
       "doc_time": null,
@@ -101,11 +101,11 @@
       "category": "Despesa combustível",
       "debit_account": "4.02.01.01.06.0001",
       "status": "documento",
-      "url": "/anexos/2026-05/combustivel/e9111cfae8070b18.pdf",
-      "source_path": "\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 393589.pdf"
+      "url": "/data/combustivel/2026-05/f9fe141b920c9d1c.pdf",
+      "source_path": "\\\\192.168.1.190\\f\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 393589.pdf"
     },
     {
-      "id": "0c8cdc2f00fbd2db",
+      "id": "870e783147832980",
       "file_name": "NFC-e 394045.pdf",
       "doc_date": "4045-39-30",
       "doc_time": null,
@@ -116,11 +116,11 @@
       "category": "Despesa combustível",
       "debit_account": "4.02.01.01.06.0001",
       "status": "documento",
-      "url": "/anexos/2026-05/combustivel/0c8cdc2f00fbd2db.pdf",
-      "source_path": "\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 394045.pdf"
+      "url": "/data/combustivel/2026-05/870e783147832980.pdf",
+      "source_path": "\\\\192.168.1.190\\f\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 394045.pdf"
     },
     {
-      "id": "eb00ae8d3ead3c04",
+      "id": "e9e82f137ca91b0d",
       "file_name": "NFC-e 514434.pdf",
       "doc_date": "4434-51-01",
       "doc_time": null,
@@ -131,11 +131,11 @@
       "category": "Despesa combustível",
       "debit_account": "4.02.01.01.06.0001",
       "status": "documento",
-      "url": "/anexos/2026-05/combustivel/eb00ae8d3ead3c04.pdf",
-      "source_path": "\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 514434.pdf"
+      "url": "/data/combustivel/2026-05/e9e82f137ca91b0d.pdf",
+      "source_path": "\\\\192.168.1.190\\f\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 514434.pdf"
     },
     {
-      "id": "5997274cc9f80e2d",
+      "id": "8916a4008157f24e",
       "file_name": "NFC-e 394743.pdf",
       "doc_date": "4743-39-30",
       "doc_time": null,
@@ -146,11 +146,11 @@
       "category": "Despesa combustível",
       "debit_account": "4.02.01.01.06.0001",
       "status": "documento",
-      "url": "/anexos/2026-05/combustivel/5997274cc9f80e2d.pdf",
-      "source_path": "\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 394743.pdf"
+      "url": "/data/combustivel/2026-05/8916a4008157f24e.pdf",
+      "source_path": "\\\\192.168.1.190\\f\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 394743.pdf"
     },
     {
-      "id": "a5975d5fceae1df3",
+      "id": "6f5ef92eb476f6bb",
       "file_name": "NFC-e 266237.pdf",
       "doc_date": "6237-26-30",
       "doc_time": null,
@@ -161,11 +161,11 @@
       "category": "Despesa combustível",
       "debit_account": "4.02.01.01.06.0001",
       "status": "documento",
-      "url": "/anexos/2026-05/combustivel/a5975d5fceae1df3.pdf",
-      "source_path": "\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 266237.pdf"
+      "url": "/data/combustivel/2026-05/6f5ef92eb476f6bb.pdf",
+      "source_path": "\\\\192.168.1.190\\f\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 266237.pdf"
     },
     {
-      "id": "d1729128eecc5d43",
+      "id": "f1ef5ce633ee7dc9",
       "file_name": "NFC-e 117103.pdf",
       "doc_date": "7103-11-01",
       "doc_time": null,
@@ -176,11 +176,11 @@
       "category": "Despesa combustível",
       "debit_account": "4.02.01.01.06.0001",
       "status": "documento",
-      "url": "/anexos/2026-05/combustivel/d1729128eecc5d43.pdf",
-      "source_path": "\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 117103.pdf"
+      "url": "/data/combustivel/2026-05/f1ef5ce633ee7dc9.pdf",
+      "source_path": "\\\\192.168.1.190\\f\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 117103.pdf"
     },
     {
-      "id": "8d09d1e6c643b84c",
+      "id": "b9ef8de4944844af",
       "file_name": "NFC-e 117993.pdf",
       "doc_date": "7993-11-30",
       "doc_time": null,
@@ -191,11 +191,11 @@
       "category": "Despesa combustível",
       "debit_account": "4.02.01.01.06.0001",
       "status": "documento",
-      "url": "/anexos/2026-05/combustivel/8d09d1e6c643b84c.pdf",
-      "source_path": "\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 117993.pdf"
+      "url": "/data/combustivel/2026-05/b9ef8de4944844af.pdf",
+      "source_path": "\\\\192.168.1.190\\f\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 117993.pdf"
     },
     {
-      "id": "4094ccc691ebb99b",
+      "id": "063517908c5e215c",
       "file_name": "NFC-e 118185.pdf",
       "doc_date": "8185-11-30",
       "doc_time": null,
@@ -206,11 +206,11 @@
       "category": "Despesa combustível",
       "debit_account": "4.02.01.01.06.0001",
       "status": "documento",
-      "url": "/anexos/2026-05/combustivel/4094ccc691ebb99b.pdf",
-      "source_path": "\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 118185.pdf"
+      "url": "/data/combustivel/2026-05/063517908c5e215c.pdf",
+      "source_path": "\\\\192.168.1.190\\f\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 118185.pdf"
     },
     {
-      "id": "3a8a341d520cf709",
+      "id": "5ce0c34c637807cb",
       "file_name": "NFC-e 348474.pdf",
       "doc_date": "8474-34-01",
       "doc_time": null,
@@ -221,8 +221,8 @@
       "category": "Despesa combustível",
       "debit_account": "4.02.01.01.06.0001",
       "status": "documento",
-      "url": "/anexos/2026-05/combustivel/3a8a341d520cf709.pdf",
-      "source_path": "\\\\192.168.1.190\\f\\GOOGLE DRIVE\\NOVA EMPRESA-LOJA\\FALCÃO & FRAZÃO M E F\\CONTABILIDADE\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 348474.pdf"
+      "url": "/data/combustivel/2026-05/5ce0c34c637807cb.pdf",
+      "source_path": "\\\\192.168.1.190\\f\\ALAINE - CONTADORA\\05-2026\\COMBUSTÍVEL\\NFC-e 348474.pdf"
     }
   ],
   "chartOfAccounts": [
@@ -1475,8 +1475,8 @@
   ],
   "entries": [
     {
-      "id": 9149,
-      "raw_transaction_id": 9149,
+      "id": 14236,
+      "raw_transaction_id": 14236,
       "entry_date": "2026-05-04",
       "description": "Pix - Recebido 04/05 13:48 62895230000113 CREDI SHOP",
       "debit_account": "1.01.01.01.02.0001",
@@ -1485,7 +1485,7 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "04/05 13:48 62895230000113 CREDI SHOP",
       "counterparty_doc": null,
@@ -1494,8 +1494,8 @@
       "attachments": []
     },
     {
-      "id": 9228,
-      "raw_transaction_id": 9228,
+      "id": 14315,
+      "raw_transaction_id": 14315,
       "entry_date": "2026-05-04",
       "description": "Pix enviado: Cp :05477038-POSTO MAXXI DM",
       "debit_account": "4.02.01.01.06.0001",
@@ -1504,7 +1504,7 @@
       "category": "Despesa combustível",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "POSTO MAXXI DM",
       "counterparty_doc": null,
@@ -1513,8 +1513,8 @@
       "attachments": []
     },
     {
-      "id": 9229,
-      "raw_transaction_id": 9229,
+      "id": 14316,
+      "raw_transaction_id": 14316,
       "entry_date": "2026-05-04",
       "description": "Pix enviado: Cp :60746948-AGRO FLORESTAL CONFIANCA",
       "debit_account": "9.9.9.99",
@@ -1523,7 +1523,7 @@
       "category": "Movimentação diversa via PIX ⚠️",
       "status": "manual_review",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "AGRO FLORESTAL CONFIANCA",
       "counterparty_doc": null,
@@ -1532,8 +1532,8 @@
       "attachments": []
     },
     {
-      "id": 9230,
-      "raw_transaction_id": 9230,
+      "id": 14317,
+      "raw_transaction_id": 14317,
       "entry_date": "2026-05-04",
       "description": "Pix recebido: Cp :08561701-RONALDO MELO FRAZAO",
       "debit_account": "1.01.01.01.02.0004",
@@ -1542,7 +1542,7 @@
       "category": "Movimentação sócio Ronaldo Melo Frazão",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "RONALDO MELO FRAZAO",
       "counterparty_doc": null,
@@ -1551,8 +1551,8 @@
       "attachments": []
     },
     {
-      "id": 9231,
-      "raw_transaction_id": 9231,
+      "id": 14318,
+      "raw_transaction_id": 14318,
       "entry_date": "2026-05-04",
       "description": "Pix enviado: Cp :00000000-Lilia Maria de Melo",
       "debit_account": "4.02.01.01.01.0002",
@@ -1561,7 +1561,7 @@
       "category": "Pensão alimentícia — desconto folha funcionário Rogério",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "Lilia Maria de Melo",
       "counterparty_doc": null,
@@ -1569,18 +1569,18 @@
       "credit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "attachments": [
         {
-          "id": 792,
+          "id": 1002,
           "file_name": "Comprovante PIX — PIX_2026-06-20_09-02-04.972_843309_Lilia_Maria_De_Melo.pdf",
           "file_type": "pdf",
           "match_type": "exact",
           "match_score": 1,
-          "url": "/anexos/2026-05/9231pensaoPIX20260620090204972843309Lili.pdf"
+          "url": "/anexos/2026-05/14318pensaoPIX20260620090204972843309Lil.pdf"
         }
       ]
     },
     {
-      "id": 9232,
-      "raw_transaction_id": 9232,
+      "id": 14319,
+      "raw_transaction_id": 14319,
       "entry_date": "2026-05-04",
       "description": "Pix enviado: Cp :00360305-Viviane Rodrigues Leao",
       "debit_account": "4.02.01.01.01.0002",
@@ -1589,7 +1589,7 @@
       "category": "Pensão alimentícia — desconto folha funcionário Ronaldo Leão",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "Viviane Rodrigues Leao",
       "counterparty_doc": null,
@@ -1597,18 +1597,18 @@
       "credit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "attachments": [
         {
-          "id": 793,
+          "id": 1003,
           "file_name": "Comprovante PIX — PIX_2026-06-20_09-02-04.972_851540_Viviane_Rodrigues_Leao.pdf",
           "file_type": "pdf",
           "match_type": "exact",
           "match_score": 1,
-          "url": "/anexos/2026-05/9232pensaoPIX20260620090204972851540Vivi.pdf"
+          "url": "/anexos/2026-05/14319pensaoPIX20260620090204972851540Viv.pdf"
         }
       ]
     },
     {
-      "id": 9233,
-      "raw_transaction_id": 9233,
+      "id": 14320,
+      "raw_transaction_id": 14320,
       "entry_date": "2026-05-04",
       "description": "Pix enviado: Cp :60701190-RECEITA FEDERAL",
       "debit_account": "2.01.01.03.02.0005",
@@ -1617,7 +1617,7 @@
       "category": "Pagamento DARF (INSS/IRRF)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "RECEITA FEDERAL",
       "counterparty_doc": null,
@@ -1626,8 +1626,8 @@
       "attachments": []
     },
     {
-      "id": 9234,
-      "raw_transaction_id": 9234,
+      "id": 14321,
+      "raw_transaction_id": 14321,
       "entry_date": "2026-05-04",
       "description": "Pix recebido: Cp :00360305-BARROSO ARTEFATOS P. M. LTDA",
       "debit_account": "1.01.01.01.02.0004",
@@ -1636,34 +1636,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "BARROSO ARTEFATOS P. M. LTDA",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 746,
-          "file_name": "DANFE — 22260510876822000194550010000601761650118567.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9234222605108768220001945500100006017616.pdf"
-        },
-        {
-          "id": 747,
-          "file_name": "XML NF-e — 22260510876822000194550010000601761650118567-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9234222605108768220001945500100006017616.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9235,
-      "raw_transaction_id": 9235,
+      "id": 14322,
+      "raw_transaction_id": 14322,
       "entry_date": "2026-05-04",
       "description": "Pix enviado: Cp :00000000-RECEITA FEDERAL",
       "debit_account": "2.01.01.03.02.0005",
@@ -1672,7 +1655,7 @@
       "category": "Pagamento DARF (INSS/IRRF)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "RECEITA FEDERAL",
       "counterparty_doc": null,
@@ -1681,8 +1664,8 @@
       "attachments": []
     },
     {
-      "id": 9236,
-      "raw_transaction_id": 9236,
+      "id": 14323,
+      "raw_transaction_id": 14323,
       "entry_date": "2026-05-04",
       "description": "Pagamento efetuado: ROMETAL COMP P MOVEIS LTDA",
       "debit_account": "9.9.9.99",
@@ -1691,7 +1674,7 @@
       "category": "Não classificado ⚠️",
       "status": "manual_review",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
@@ -1700,8 +1683,8 @@
       "attachments": []
     },
     {
-      "id": 9237,
-      "raw_transaction_id": 9237,
+      "id": 14324,
+      "raw_transaction_id": 14324,
       "entry_date": "2026-05-04",
       "description": "Pix recebido: Cp :60701190-FALCAO & FRAZAO LTDA",
       "debit_account": "1.01.01.01.02.0004",
@@ -1710,7 +1693,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "FALCAO & FRAZAO LTDA",
       "counterparty_doc": null,
@@ -1719,8 +1702,8 @@
       "attachments": []
     },
     {
-      "id": 9238,
-      "raw_transaction_id": 9238,
+      "id": 14325,
+      "raw_transaction_id": 14325,
       "entry_date": "2026-05-05",
       "description": "Pix enviado: 00019 43640800 RONALDO FRAZAO",
       "debit_account": "9.9.9.99",
@@ -1729,7 +1712,7 @@
       "category": "Movimentação diversa via PIX ⚠️",
       "status": "manual_review",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
@@ -1738,8 +1721,8 @@
       "attachments": []
     },
     {
-      "id": 9239,
-      "raw_transaction_id": 9239,
+      "id": 14326,
+      "raw_transaction_id": 14326,
       "entry_date": "2026-05-05",
       "description": "Pagamento de Titulo - Inter: HOME CONTABILIDADE LTDA",
       "debit_account": "4.02.01.01.07.0001",
@@ -1748,7 +1731,7 @@
       "category": "Honorários contábeis",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
@@ -1757,8 +1740,8 @@
       "attachments": []
     },
     {
-      "id": 9240,
-      "raw_transaction_id": 9240,
+      "id": 14327,
+      "raw_transaction_id": 14327,
       "entry_date": "2026-05-05",
       "description": "Pagamento efetuado: BANCO SOFISA S.A.",
       "debit_account": "9.9.9.99",
@@ -1767,7 +1750,7 @@
       "category": "Não classificado ⚠️",
       "status": "manual_review",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
@@ -1776,8 +1759,8 @@
       "attachments": []
     },
     {
-      "id": 9241,
-      "raw_transaction_id": 9241,
+      "id": 14328,
+      "raw_transaction_id": 14328,
       "entry_date": "2026-05-05",
       "description": "Pagamento efetuado: IMOVEIS VENEZA LTDA",
       "debit_account": "9.9.9.99",
@@ -1786,7 +1769,7 @@
       "category": "Não classificado ⚠️",
       "status": "manual_review",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
@@ -1795,8 +1778,8 @@
       "attachments": []
     },
     {
-      "id": 9242,
-      "raw_transaction_id": 9242,
+      "id": 14329,
+      "raw_transaction_id": 14329,
       "entry_date": "2026-05-05",
       "description": "Pix recebido: Cp :08561701-RONALDO MELO FRAZAO",
       "debit_account": "1.01.01.01.02.0004",
@@ -1805,7 +1788,7 @@
       "category": "Movimentação sócio Ronaldo Melo Frazão",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "RONALDO MELO FRAZAO",
       "counterparty_doc": null,
@@ -1814,8 +1797,8 @@
       "attachments": []
     },
     {
-      "id": 9243,
-      "raw_transaction_id": 9243,
+      "id": 14330,
+      "raw_transaction_id": 14330,
       "entry_date": "2026-05-05",
       "description": "Pix recebido: Cp :60701190-FALCAO & FRAZAO LTDA",
       "debit_account": "1.01.01.01.02.0004",
@@ -1824,7 +1807,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "FALCAO & FRAZAO LTDA",
       "counterparty_doc": null,
@@ -1833,8 +1816,8 @@
       "attachments": []
     },
     {
-      "id": 9150,
-      "raw_transaction_id": 9150,
+      "id": 14237,
+      "raw_transaction_id": 14237,
       "entry_date": "2026-05-06",
       "description": "Tarifa Pacote de Servi�os Cobran�a referente 06/05/2026",
       "debit_account": "4.02.02.01.03",
@@ -1843,7 +1826,7 @@
       "category": "Tarifa bancária",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "Cobran�a referente 06/05/2026",
       "counterparty_doc": null,
@@ -1852,8 +1835,8 @@
       "attachments": []
     },
     {
-      "id": 9244,
-      "raw_transaction_id": 9244,
+      "id": 14331,
+      "raw_transaction_id": 14331,
       "entry_date": "2026-05-06",
       "description": "Pix recebido: Cp :00360305-BARROSO ARTEFATOS P. M. LTDA",
       "debit_account": "1.01.01.01.02.0004",
@@ -1862,34 +1845,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "BARROSO ARTEFATOS P. M. LTDA",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 748,
-          "file_name": "DANFE — 22260510876822000194550010000601791854756970.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9244222605108768220001945500100006017918.pdf"
-        },
-        {
-          "id": 749,
-          "file_name": "XML NF-e — 22260510876822000194550010000601791854756970-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9244222605108768220001945500100006017918.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9245,
-      "raw_transaction_id": 9245,
+      "id": 14332,
+      "raw_transaction_id": 14332,
       "entry_date": "2026-05-06",
       "description": "Pix recebido: Cp :18236120-58.745.885 SARA EMILIA DA CONCEICAO",
       "debit_account": "1.01.01.01.02.0004",
@@ -1898,7 +1864,7 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
@@ -1907,8 +1873,8 @@
       "attachments": []
     },
     {
-      "id": 9246,
-      "raw_transaction_id": 9246,
+      "id": 14333,
+      "raw_transaction_id": 14333,
       "entry_date": "2026-05-07",
       "description": "Pix recebido: Cp :00360305-BARROSO ARTEFATOS P. M. LTDA",
       "debit_account": "1.01.01.01.02.0004",
@@ -1917,34 +1883,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "BARROSO ARTEFATOS P. M. LTDA",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 750,
-          "file_name": "DANFE — 22260510876822000194550010000601881045241801.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9246222605108768220001945500100006018810.pdf"
-        },
-        {
-          "id": 751,
-          "file_name": "XML NF-e — 22260510876822000194550010000601881045241801-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9246222605108768220001945500100006018810.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9247,
-      "raw_transaction_id": 9247,
+      "id": 14334,
+      "raw_transaction_id": 14334,
       "entry_date": "2026-05-07",
       "description": "Pix enviado: Cp :60701190-TIM S A",
       "debit_account": "4.02.01.01.04.0007",
@@ -1953,7 +1902,7 @@
       "category": "Despesa telefonia",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "TIM S A",
       "counterparty_doc": null,
@@ -1962,8 +1911,8 @@
       "attachments": []
     },
     {
-      "id": 9248,
-      "raw_transaction_id": 9248,
+      "id": 14335,
+      "raw_transaction_id": 14335,
       "entry_date": "2026-05-07",
       "description": "Pagamento efetuado: RNX FIDC MULTISSETORIAL LP",
       "debit_account": "9.9.9.99",
@@ -1972,7 +1921,7 @@
       "category": "Não classificado ⚠️",
       "status": "manual_review",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
@@ -1981,8 +1930,8 @@
       "attachments": []
     },
     {
-      "id": 9249,
-      "raw_transaction_id": 9249,
+      "id": 14336,
+      "raw_transaction_id": 14336,
       "entry_date": "2026-05-07",
       "description": "Pagamento efetuado: PLACAS DO BRASIL S.A.",
       "debit_account": "9.9.9.99",
@@ -1991,7 +1940,7 @@
       "category": "Não classificado ⚠️",
       "status": "manual_review",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
@@ -2000,8 +1949,8 @@
       "attachments": []
     },
     {
-      "id": 9250,
-      "raw_transaction_id": 9250,
+      "id": 14337,
+      "raw_transaction_id": 14337,
       "entry_date": "2026-05-07",
       "description": "Pix recebido: Cp :08561701-RONALDO MELO FRAZAO",
       "debit_account": "1.01.01.01.02.0004",
@@ -2010,7 +1959,7 @@
       "category": "Movimentação sócio Ronaldo Melo Frazão",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "RONALDO MELO FRAZAO",
       "counterparty_doc": null,
@@ -2019,8 +1968,8 @@
       "attachments": []
     },
     {
-      "id": 9251,
-      "raw_transaction_id": 9251,
+      "id": 14338,
+      "raw_transaction_id": 14338,
       "entry_date": "2026-05-07",
       "description": "Pix recebido: Cp :08561701-PIEROTE MOVELARIA LTDA",
       "debit_account": "1.01.01.01.02.0004",
@@ -2029,34 +1978,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "PIEROTE MOVELARIA LTDA",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 752,
-          "file_name": "DANFE — 22260510876822000194650010000577841832635210.pdf",
-          "file_type": "pdf",
-          "match_type": "fuzzy",
-          "match_score": 0.8,
-          "url": "/anexos/2026-05/9251222605108768220001946500100005778418.pdf"
-        },
-        {
-          "id": 753,
-          "file_name": "XML NF-e — 22260510876822000194650010000577841832635210-nfce-sign.xml",
-          "file_type": "xml",
-          "match_type": "fuzzy",
-          "match_score": 0.8,
-          "url": "/anexos/2026-05/9251222605108768220001946500100005778418.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9252,
-      "raw_transaction_id": 9252,
+      "id": 14339,
+      "raw_transaction_id": 14339,
       "entry_date": "2026-05-08",
       "description": "Pagamento efetuado: PLACAS DO BRASIL S A",
       "debit_account": "9.9.9.99",
@@ -2065,7 +1997,7 @@
       "category": "Não classificado ⚠️",
       "status": "manual_review",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
@@ -2074,8 +2006,8 @@
       "attachments": []
     },
     {
-      "id": 9253,
-      "raw_transaction_id": 9253,
+      "id": 14340,
+      "raw_transaction_id": 14340,
       "entry_date": "2026-05-08",
       "description": "Pix recebido: Cp :08561701-RONALDO MELO FRAZAO",
       "debit_account": "1.01.01.01.02.0004",
@@ -2084,7 +2016,7 @@
       "category": "Movimentação sócio Ronaldo Melo Frazão",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "RONALDO MELO FRAZAO",
       "counterparty_doc": null,
@@ -2093,8 +2025,8 @@
       "attachments": []
     },
     {
-      "id": 9254,
-      "raw_transaction_id": 9254,
+      "id": 14341,
+      "raw_transaction_id": 14341,
       "entry_date": "2026-05-08",
       "description": "Pagamento efetuado: TABONE INDUSTRIA E COMERCIO DE PLASTICOS",
       "debit_account": "9.9.9.99",
@@ -2103,7 +2035,7 @@
       "category": "Não classificado ⚠️",
       "status": "manual_review",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
@@ -2112,8 +2044,8 @@
       "attachments": []
     },
     {
-      "id": 9255,
-      "raw_transaction_id": 9255,
+      "id": 14342,
+      "raw_transaction_id": 14342,
       "entry_date": "2026-05-08",
       "description": "Pix recebido: Cp :60701190-FALCAO & FRAZAO LTDA",
       "debit_account": "1.01.01.01.02.0004",
@@ -2122,7 +2054,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "FALCAO & FRAZAO LTDA",
       "counterparty_doc": null,
@@ -2131,8 +2063,8 @@
       "attachments": []
     },
     {
-      "id": 9256,
-      "raw_transaction_id": 9256,
+      "id": 14343,
+      "raw_transaction_id": 14343,
       "entry_date": "2026-05-08",
       "description": "Pix recebido: Cp :00360305-C R MACHADO ME",
       "debit_account": "1.01.01.01.02.0004",
@@ -2141,7 +2073,7 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "C R MACHADO ME",
       "counterparty_doc": null,
@@ -2150,8 +2082,8 @@
       "attachments": []
     },
     {
-      "id": 9257,
-      "raw_transaction_id": 9257,
+      "id": 14344,
+      "raw_transaction_id": 14344,
       "entry_date": "2026-05-08",
       "description": "Pix recebido: Cp :00360305-FRANCISCO LEONILDO ALVES DA CUNHA",
       "debit_account": "1.01.01.01.02.0004",
@@ -2160,34 +2092,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "FRANCISCO LEONILDO ALVES DA CUNHA",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 754,
-          "file_name": "DANFE — 22260510876822000194550010000602041638481033.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9257222605108768220001945500100006020416.pdf"
-        },
-        {
-          "id": 755,
-          "file_name": "XML NF-e — 22260510876822000194550010000602041638481033-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9257222605108768220001945500100006020416.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9258,
-      "raw_transaction_id": 9258,
+      "id": 14345,
+      "raw_transaction_id": 14345,
       "entry_date": "2026-05-08",
       "description": "Pagamento Aguas de Teresina: AGUAS DE TERESINA",
       "debit_account": "4.02.01.01.04.0001",
@@ -2196,7 +2111,7 @@
       "category": "Despesa consumo (água)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
@@ -2205,8 +2120,8 @@
       "attachments": []
     },
     {
-      "id": 9259,
-      "raw_transaction_id": 9259,
+      "id": 14346,
+      "raw_transaction_id": 14346,
       "entry_date": "2026-05-08",
       "description": "Pagamento efetuado: LUIZ CARLOS FERREIRA DA CONCEICAO TRANSPORTES",
       "debit_account": "9.9.9.99",
@@ -2215,7 +2130,7 @@
       "category": "Não classificado ⚠️",
       "status": "manual_review",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
@@ -2224,8 +2139,8 @@
       "attachments": []
     },
     {
-      "id": 9260,
-      "raw_transaction_id": 9260,
+      "id": 14347,
+      "raw_transaction_id": 14347,
       "entry_date": "2026-05-08",
       "description": "Pagamento efetuado: STAM METALURGICA LTDA.",
       "debit_account": "9.9.9.99",
@@ -2234,7 +2149,7 @@
       "category": "Não classificado ⚠️",
       "status": "manual_review",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
@@ -2243,8 +2158,8 @@
       "attachments": []
     },
     {
-      "id": 9261,
-      "raw_transaction_id": 9261,
+      "id": 14348,
+      "raw_transaction_id": 14348,
       "entry_date": "2026-05-09",
       "description": "Pix recebido: Cp :90400888-MARCELO ALBUQUERQUE DE MEDEIROS",
       "debit_account": "1.01.01.01.02.0004",
@@ -2253,7 +2168,7 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "MARCELO ALBUQUERQUE DE MEDEIROS",
       "counterparty_doc": null,
@@ -2262,8 +2177,8 @@
       "attachments": []
     },
     {
-      "id": 9262,
-      "raw_transaction_id": 9262,
+      "id": 14349,
+      "raw_transaction_id": 14349,
       "entry_date": "2026-05-09",
       "description": "Pix recebido: Cp :18236120-AMBIENTARE MOVEIS PLANEJADOS LTDA",
       "debit_account": "1.01.01.01.02.0004",
@@ -2272,34 +2187,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "AMBIENTARE MOVEIS PLANEJADOS LTDA",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 756,
-          "file_name": "DANFE — 22260510876822000194550010000601901846403336.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9262222605108768220001945500100006019018.pdf"
-        },
-        {
-          "id": 757,
-          "file_name": "XML NF-e — 22260510876822000194550010000601901846403336-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9262222605108768220001945500100006019018.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9151,
-      "raw_transaction_id": 9151,
+      "id": 14238,
+      "raw_transaction_id": 14238,
       "entry_date": "2026-05-11",
       "description": "Pix - Recebido 11/05 09:44 62895230000113 CREDI SHOP",
       "debit_account": "1.01.01.01.02.0001",
@@ -2308,7 +2206,7 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "11/05 09:44 62895230000113 CREDI SHOP",
       "counterparty_doc": null,
@@ -2317,8 +2215,8 @@
       "attachments": []
     },
     {
-      "id": 9152,
-      "raw_transaction_id": 9152,
+      "id": 14239,
+      "raw_transaction_id": 14239,
       "entry_date": "2026-05-11",
       "description": "Pix - Recebido 11/05 09:48 10876822000194 FALCAO & FR",
       "debit_account": "1.01.01.01.02.0001",
@@ -2327,7 +2225,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "11/05 09:48 10876822000194 FALCAO & FR",
       "counterparty_doc": null,
@@ -2336,8 +2234,8 @@
       "attachments": []
     },
     {
-      "id": 9153,
-      "raw_transaction_id": 9153,
+      "id": 14240,
+      "raw_transaction_id": 14240,
       "entry_date": "2026-05-11",
       "description": "Pix - Recebido 11/05 11:52 00070886407320 RONALDO MEL",
       "debit_account": "1.01.01.01.02.0001",
@@ -2346,7 +2244,7 @@
       "category": "Movimentação sócio Ronaldo Melo Frazão",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "11/05 11:52 00070886407320 RONALDO MEL",
       "counterparty_doc": null,
@@ -2355,8 +2253,8 @@
       "attachments": []
     },
     {
-      "id": 9154,
-      "raw_transaction_id": 9154,
+      "id": 14241,
+      "raw_transaction_id": 14241,
       "entry_date": "2026-05-11",
       "description": "Pagamento de Boleto HD FERRAGENS PARA MOVEIS LTDA",
       "debit_account": "2.01.01.01.01",
@@ -2365,7 +2263,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "HD FERRAGENS PARA MOVEIS LTDA",
       "counterparty_doc": null,
@@ -2374,8 +2272,8 @@
       "attachments": []
     },
     {
-      "id": 9155,
-      "raw_transaction_id": 9155,
+      "id": 14242,
+      "raw_transaction_id": 14242,
       "entry_date": "2026-05-11",
       "description": "Pagamento de Boleto INDUST. PLAS. ACOS FARROUPILHA",
       "debit_account": "2.01.01.01.01",
@@ -2384,7 +2282,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "INDUST. PLAS. ACOS FARROUPILHA",
       "counterparty_doc": null,
@@ -2393,8 +2291,8 @@
       "attachments": []
     },
     {
-      "id": 9156,
-      "raw_transaction_id": 9156,
+      "id": 14243,
+      "raw_transaction_id": 14243,
       "entry_date": "2026-05-11",
       "description": "Pagamento de Boleto STARRETT INDUSTRIA E COMERCIO",
       "debit_account": "2.01.01.01.01",
@@ -2403,7 +2301,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "STARRETT INDUSTRIA E COMERCIO",
       "counterparty_doc": null,
@@ -2412,8 +2310,8 @@
       "attachments": []
     },
     {
-      "id": 9157,
-      "raw_transaction_id": 9157,
+      "id": 14244,
+      "raw_transaction_id": 14244,
       "entry_date": "2026-05-11",
       "description": "Pagamento de Boleto STARRETT INDUSTRIA E COMERCIO",
       "debit_account": "2.01.01.01.01",
@@ -2422,7 +2320,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "STARRETT INDUSTRIA E COMERCIO",
       "counterparty_doc": null,
@@ -2431,8 +2329,8 @@
       "attachments": []
     },
     {
-      "id": 9158,
-      "raw_transaction_id": 9158,
+      "id": 14245,
+      "raw_transaction_id": 14245,
       "entry_date": "2026-05-11",
       "description": "Pagamento de Boleto STARRETT INDUSTRIA E COMERCIO",
       "debit_account": "2.01.01.01.01",
@@ -2441,7 +2339,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "STARRETT INDUSTRIA E COMERCIO",
       "counterparty_doc": null,
@@ -2450,8 +2348,8 @@
       "attachments": []
     },
     {
-      "id": 9159,
-      "raw_transaction_id": 9159,
+      "id": 14246,
+      "raw_transaction_id": 14246,
       "entry_date": "2026-05-11",
       "description": "Pagamento de Boleto LAGE E RENZETTI LTDA",
       "debit_account": "2.01.01.01.01",
@@ -2460,7 +2358,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "LAGE E RENZETTI LTDA",
       "counterparty_doc": null,
@@ -2469,8 +2367,8 @@
       "attachments": []
     },
     {
-      "id": 9160,
-      "raw_transaction_id": 9160,
+      "id": 14247,
+      "raw_transaction_id": 14247,
       "entry_date": "2026-05-11",
       "description": "Pix - Enviado 11/05 12:27 Madepinus",
       "debit_account": "1.01.01.01.02.0002",
@@ -2479,7 +2377,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "11/05 12:27 Madepinus",
       "counterparty_doc": null,
@@ -2488,8 +2386,8 @@
       "attachments": []
     },
     {
-      "id": 9161,
-      "raw_transaction_id": 9161,
+      "id": 14248,
+      "raw_transaction_id": 14248,
       "entry_date": "2026-05-11",
       "description": "Pagamento de Boleto EQUATORIAL PIAUI DISTRIBUIDORA",
       "debit_account": "2.01.01.01.01",
@@ -2498,7 +2396,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "EQUATORIAL PIAUI DISTRIBUIDORA",
       "counterparty_doc": null,
@@ -2507,8 +2405,8 @@
       "attachments": []
     },
     {
-      "id": 9162,
-      "raw_transaction_id": 9162,
+      "id": 14249,
+      "raw_transaction_id": 14249,
       "entry_date": "2026-05-11",
       "description": "Pagamento de Boleto IBRAP INDUSTRIA BRASILEIRA DE",
       "debit_account": "2.01.01.01.01",
@@ -2517,7 +2415,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "IBRAP INDUSTRIA BRASILEIRA DE",
       "counterparty_doc": null,
@@ -2526,8 +2424,8 @@
       "attachments": []
     },
     {
-      "id": 9163,
-      "raw_transaction_id": 9163,
+      "id": 14250,
+      "raw_transaction_id": 14250,
       "entry_date": "2026-05-11",
       "description": "Pagamento de Boleto KITSUL  COMPONENTES PARA MOVEI",
       "debit_account": "2.01.01.01.01",
@@ -2536,7 +2434,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "KITSUL  COMPONENTES PARA MOVEI",
       "counterparty_doc": null,
@@ -2545,8 +2443,8 @@
       "attachments": []
     },
     {
-      "id": 9164,
-      "raw_transaction_id": 9164,
+      "id": 14251,
+      "raw_transaction_id": 14251,
       "entry_date": "2026-05-11",
       "description": "Pix - Enviado 11/05 18:01 Madepinus",
       "debit_account": "1.01.01.01.02.0002",
@@ -2555,7 +2453,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "11/05 18:01 Madepinus",
       "counterparty_doc": null,
@@ -2564,8 +2462,8 @@
       "attachments": []
     },
     {
-      "id": 9263,
-      "raw_transaction_id": 9263,
+      "id": 14350,
+      "raw_transaction_id": 14350,
       "entry_date": "2026-05-11",
       "description": "Pix recebido: Cp :60701190-L. M. DA SILVA VIDRACARIA",
       "debit_account": "1.01.01.01.02.0004",
@@ -2574,7 +2472,7 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "L. M. DA SILVA VIDRACARIA",
       "counterparty_doc": null,
@@ -2583,8 +2481,8 @@
       "attachments": []
     },
     {
-      "id": 9264,
-      "raw_transaction_id": 9264,
+      "id": 14351,
+      "raw_transaction_id": 14351,
       "entry_date": "2026-05-11",
       "description": "Pagamento efetuado: Pagamento fatura cartao Inter",
       "debit_account": "2.01.01.15.02.0001",
@@ -2593,7 +2491,7 @@
       "category": "Pagamento fatura cartão",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
@@ -2602,8 +2500,8 @@
       "attachments": []
     },
     {
-      "id": 9265,
-      "raw_transaction_id": 9265,
+      "id": 14352,
+      "raw_transaction_id": 14352,
       "entry_date": "2026-05-11",
       "description": "Pix recebido: Cp :00000000-FALCAO & FRAZAO LTDA-ME",
       "debit_account": "1.01.01.01.02.0004",
@@ -2612,7 +2510,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "FALCAO & FRAZAO LTDA-ME",
       "counterparty_doc": null,
@@ -2621,8 +2519,8 @@
       "attachments": []
     },
     {
-      "id": 9266,
-      "raw_transaction_id": 9266,
+      "id": 14353,
+      "raw_transaction_id": 14353,
       "entry_date": "2026-05-11",
       "description": "Pix recebido: Cp :00000000-M C CONCEICAO FILHO",
       "debit_account": "1.01.01.01.02.0004",
@@ -2631,34 +2529,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "M C CONCEICAO FILHO",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 758,
-          "file_name": "DANFE — 22260510876822000194550010000601921314249485.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9266222605108768220001945500100006019213.pdf"
-        },
-        {
-          "id": 759,
-          "file_name": "XML NF-e — 22260510876822000194550010000601921314249485-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9266222605108768220001945500100006019213.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9267,
-      "raw_transaction_id": 9267,
+      "id": 14354,
+      "raw_transaction_id": 14354,
       "entry_date": "2026-05-11",
       "description": "Pix recebido: Cp :00000000-M C CONCEICAO FILHO",
       "debit_account": "1.01.01.01.02.0004",
@@ -2667,34 +2548,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "M C CONCEICAO FILHO",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 760,
-          "file_name": "DANFE — 22260510876822000194550010000601911153243513.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9267222605108768220001945500100006019111.pdf"
-        },
-        {
-          "id": 761,
-          "file_name": "XML NF-e — 22260510876822000194550010000601911153243513-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9267222605108768220001945500100006019111.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9165,
-      "raw_transaction_id": 9165,
+      "id": 14252,
+      "raw_transaction_id": 14252,
       "entry_date": "2026-05-12",
       "description": "Pix - Recebido 12/05 05:13 62895230000113 CREDI SHOP",
       "debit_account": "1.01.01.01.02.0001",
@@ -2703,7 +2567,7 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "12/05 05:13 62895230000113 CREDI SHOP",
       "counterparty_doc": null,
@@ -2712,8 +2576,8 @@
       "attachments": []
     },
     {
-      "id": 9166,
-      "raw_transaction_id": 9166,
+      "id": 14253,
+      "raw_transaction_id": 14253,
       "entry_date": "2026-05-12",
       "description": "Pix - Recebido 12/05 09:48 10876822000194 FALCAO   FR",
       "debit_account": "1.01.01.01.02.0001",
@@ -2722,7 +2586,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "12/05 09:48 10876822000194 FALCAO   FR",
       "counterparty_doc": null,
@@ -2731,8 +2595,8 @@
       "attachments": []
     },
     {
-      "id": 9167,
-      "raw_transaction_id": 9167,
+      "id": 14254,
+      "raw_transaction_id": 14254,
       "entry_date": "2026-05-12",
       "description": "Pix - Recebido 12/05 16:13 00070886407320 RONALDO MEL",
       "debit_account": "1.01.01.01.02.0001",
@@ -2741,7 +2605,7 @@
       "category": "Movimentação sócio Ronaldo Melo Frazão",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "12/05 16:13 00070886407320 RONALDO MEL",
       "counterparty_doc": null,
@@ -2750,8 +2614,8 @@
       "attachments": []
     },
     {
-      "id": 9168,
-      "raw_transaction_id": 9168,
+      "id": 14255,
+      "raw_transaction_id": 14255,
       "entry_date": "2026-05-12",
       "description": "Pix - Enviado 12/05 07:33 Madepinus",
       "debit_account": "1.01.01.01.02.0002",
@@ -2760,7 +2624,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "12/05 07:33 Madepinus",
       "counterparty_doc": null,
@@ -2769,8 +2633,8 @@
       "attachments": []
     },
     {
-      "id": 9169,
-      "raw_transaction_id": 9169,
+      "id": 14256,
+      "raw_transaction_id": 14256,
       "entry_date": "2026-05-12",
       "description": "Impostos GOV PI ARREC ICMS OUTROS",
       "debit_account": "2.01.01.03.01.0004",
@@ -2779,7 +2643,7 @@
       "category": "Pagamento ICMS",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "GOV PI ARREC ICMS OUTROS",
       "counterparty_doc": null,
@@ -2788,8 +2652,8 @@
       "attachments": []
     },
     {
-      "id": 9170,
-      "raw_transaction_id": 9170,
+      "id": 14257,
+      "raw_transaction_id": 14257,
       "entry_date": "2026-05-12",
       "description": "Impostos GOV PI ARREC ICMS OUTROS",
       "debit_account": "2.01.01.03.01.0004",
@@ -2798,7 +2662,7 @@
       "category": "Pagamento ICMS",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "GOV PI ARREC ICMS OUTROS",
       "counterparty_doc": null,
@@ -2807,8 +2671,8 @@
       "attachments": []
     },
     {
-      "id": 9171,
-      "raw_transaction_id": 9171,
+      "id": 14258,
+      "raw_transaction_id": 14258,
       "entry_date": "2026-05-12",
       "description": "Impostos GOV PI ARREC ICMS OUTROS",
       "debit_account": "2.01.01.03.01.0004",
@@ -2817,7 +2681,7 @@
       "category": "Pagamento ICMS",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "GOV PI ARREC ICMS OUTROS",
       "counterparty_doc": null,
@@ -2826,8 +2690,8 @@
       "attachments": []
     },
     {
-      "id": 9172,
-      "raw_transaction_id": 9172,
+      "id": 14259,
+      "raw_transaction_id": 14259,
       "entry_date": "2026-05-12",
       "description": "Impostos GOV PI ARREC ICMS OUTROS",
       "debit_account": "2.01.01.03.01.0004",
@@ -2836,7 +2700,7 @@
       "category": "Pagamento ICMS",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "GOV PI ARREC ICMS OUTROS",
       "counterparty_doc": null,
@@ -2845,8 +2709,8 @@
       "attachments": []
     },
     {
-      "id": 9173,
-      "raw_transaction_id": 9173,
+      "id": 14260,
+      "raw_transaction_id": 14260,
       "entry_date": "2026-05-12",
       "description": "Impostos GOV PI ARREC ICMS OUTROS",
       "debit_account": "2.01.01.03.01.0004",
@@ -2855,7 +2719,7 @@
       "category": "Pagamento ICMS",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "GOV PI ARREC ICMS OUTROS",
       "counterparty_doc": null,
@@ -2864,8 +2728,8 @@
       "attachments": []
     },
     {
-      "id": 9174,
-      "raw_transaction_id": 9174,
+      "id": 14261,
+      "raw_transaction_id": 14261,
       "entry_date": "2026-05-12",
       "description": "Impostos GOV PI ARREC ICMS OUTROS",
       "debit_account": "2.01.01.03.01.0004",
@@ -2874,7 +2738,7 @@
       "category": "Pagamento ICMS",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "GOV PI ARREC ICMS OUTROS",
       "counterparty_doc": null,
@@ -2883,8 +2747,8 @@
       "attachments": []
     },
     {
-      "id": 9175,
-      "raw_transaction_id": 9175,
+      "id": 14262,
+      "raw_transaction_id": 14262,
       "entry_date": "2026-05-12",
       "description": "Impostos GOV PI ARREC ICMS OUTROS",
       "debit_account": "2.01.01.03.01.0004",
@@ -2893,7 +2757,7 @@
       "category": "Pagamento ICMS",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "GOV PI ARREC ICMS OUTROS",
       "counterparty_doc": null,
@@ -2902,8 +2766,8 @@
       "attachments": []
     },
     {
-      "id": 9176,
-      "raw_transaction_id": 9176,
+      "id": 14263,
+      "raw_transaction_id": 14263,
       "entry_date": "2026-05-12",
       "description": "Impostos GOV PI ARREC ICMS OUTROS",
       "debit_account": "2.01.01.03.01.0004",
@@ -2912,7 +2776,7 @@
       "category": "Pagamento ICMS",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "GOV PI ARREC ICMS OUTROS",
       "counterparty_doc": null,
@@ -2921,8 +2785,8 @@
       "attachments": []
     },
     {
-      "id": 9268,
-      "raw_transaction_id": 9268,
+      "id": 14355,
+      "raw_transaction_id": 14355,
       "entry_date": "2026-05-12",
       "description": "Pix recebido: Cp :00000000-CASAMATER CASA SAUDE MATERNIDADE TE LTDA",
       "debit_account": "1.01.01.01.02.0004",
@@ -2931,7 +2795,7 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "CASAMATER CASA SAUDE MATERNIDADE TE LTDA",
       "counterparty_doc": null,
@@ -2940,8 +2804,8 @@
       "attachments": []
     },
     {
-      "id": 9269,
-      "raw_transaction_id": 9269,
+      "id": 14356,
+      "raw_transaction_id": 14356,
       "entry_date": "2026-05-12",
       "description": "Pix recebido: Cp :05477038-BARROSO ARTEFATOS PARA MADEIRA LTDA",
       "debit_account": "1.01.01.01.02.0004",
@@ -2950,34 +2814,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "BARROSO ARTEFATOS PARA MADEIRA LTDA",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 762,
-          "file_name": "DANFE — 22260510876822000194550010000602101374931029.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9269222605108768220001945500100006021013.pdf"
-        },
-        {
-          "id": 763,
-          "file_name": "XML NF-e — 22260510876822000194550010000602101374931029-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9269222605108768220001945500100006021013.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9270,
-      "raw_transaction_id": 9270,
+      "id": 14357,
+      "raw_transaction_id": 14357,
       "entry_date": "2026-05-12",
       "description": "Pix recebido: Cp :18236120-58.745.885 SARA EMILIA DA CONCEICAO",
       "debit_account": "1.01.01.01.02.0004",
@@ -2986,34 +2833,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 764,
-          "file_name": "DANFE — 22260510876822000194550010000602001566599743.pdf",
-          "file_type": "pdf",
-          "match_type": "fuzzy",
-          "match_score": 0.75,
-          "url": "/anexos/2026-05/9270222605108768220001945500100006020015.pdf"
-        },
-        {
-          "id": 765,
-          "file_name": "XML NF-e — 22260510876822000194550010000602001566599743-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "fuzzy",
-          "match_score": 0.75,
-          "url": "/anexos/2026-05/9270222605108768220001945500100006020015.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9271,
-      "raw_transaction_id": 9271,
+      "id": 14358,
+      "raw_transaction_id": 14358,
       "entry_date": "2026-05-12",
       "description": "Pix recebido: Cp :18236120-PROJETANDO MOVEIS LTDA",
       "debit_account": "1.01.01.01.02.0004",
@@ -3022,34 +2852,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "PROJETANDO MOVEIS LTDA",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 766,
-          "file_name": "DANFE — 22260510876822000194550010000601991801170362.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9271222605108768220001945500100006019918.pdf"
-        },
-        {
-          "id": 767,
-          "file_name": "XML NF-e — 22260510876822000194550010000601991801170362-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9271222605108768220001945500100006019918.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9177,
-      "raw_transaction_id": 9177,
+      "id": 14264,
+      "raw_transaction_id": 14264,
       "entry_date": "2026-05-13",
       "description": "Pix - Recebido 13/05 04:11 62895230000113 CREDI SHOP",
       "debit_account": "1.01.01.01.02.0001",
@@ -3058,7 +2871,7 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "13/05 04:11 62895230000113 CREDI SHOP",
       "counterparty_doc": null,
@@ -3067,8 +2880,8 @@
       "attachments": []
     },
     {
-      "id": 9178,
-      "raw_transaction_id": 9178,
+      "id": 14265,
+      "raw_transaction_id": 14265,
       "entry_date": "2026-05-13",
       "description": "Pix - Recebido 13/05 10:05 10876822000194 FALCAO E FR",
       "debit_account": "1.01.01.01.02.0001",
@@ -3077,7 +2890,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "13/05 10:05 10876822000194 FALCAO E FR",
       "counterparty_doc": null,
@@ -3086,8 +2899,8 @@
       "attachments": []
     },
     {
-      "id": 9179,
-      "raw_transaction_id": 9179,
+      "id": 14266,
+      "raw_transaction_id": 14266,
       "entry_date": "2026-05-13",
       "description": "Pix - Enviado 13/05 09:06 ESTADO DO PIAUI",
       "debit_account": "2.01.01.03.01.0004",
@@ -3096,7 +2909,7 @@
       "category": "Pagamento ICMS",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "13/05 09:06 ESTADO DO PIAUI",
       "counterparty_doc": null,
@@ -3105,8 +2918,8 @@
       "attachments": []
     },
     {
-      "id": 9180,
-      "raw_transaction_id": 9180,
+      "id": 14267,
+      "raw_transaction_id": 14267,
       "entry_date": "2026-05-13",
       "description": "Pix - Enviado 13/05 17:22 POSTOS AVALLON",
       "debit_account": "4.02.01.01.06.0001",
@@ -3115,7 +2928,7 @@
       "category": "Despesa combustível",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "13/05 17:22 POSTOS AVALLON",
       "counterparty_doc": null,
@@ -3124,8 +2937,8 @@
       "attachments": []
     },
     {
-      "id": 9272,
-      "raw_transaction_id": 9272,
+      "id": 14359,
+      "raw_transaction_id": 14359,
       "entry_date": "2026-05-13",
       "description": "Pix enviado: Cp :00000000-Falcao E Frazao LTDA",
       "debit_account": "9.9.9.99",
@@ -3134,7 +2947,7 @@
       "category": "Movimentação diversa via PIX ⚠️",
       "status": "manual_review",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "Falcao E Frazao LTDA",
       "counterparty_doc": null,
@@ -3143,8 +2956,8 @@
       "attachments": []
     },
     {
-      "id": 9181,
-      "raw_transaction_id": 9181,
+      "id": 14268,
+      "raw_transaction_id": 14268,
       "entry_date": "2026-05-14",
       "description": "Pix - Recebido 14/05 14:46 62895230000113 CREDI SHOP",
       "debit_account": "1.01.01.01.02.0001",
@@ -3153,7 +2966,7 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "14/05 14:46 62895230000113 CREDI SHOP",
       "counterparty_doc": null,
@@ -3162,8 +2975,8 @@
       "attachments": []
     },
     {
-      "id": 9182,
-      "raw_transaction_id": 9182,
+      "id": 14269,
+      "raw_transaction_id": 14269,
       "entry_date": "2026-05-14",
       "description": "Pix - Recebido 14/05 15:29 00070886407320 RONALDO MEL",
       "debit_account": "1.01.01.01.02.0001",
@@ -3172,7 +2985,7 @@
       "category": "Movimentação sócio Ronaldo Melo Frazão",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "14/05 15:29 00070886407320 RONALDO MEL",
       "counterparty_doc": null,
@@ -3181,8 +2994,8 @@
       "attachments": []
     },
     {
-      "id": 9183,
-      "raw_transaction_id": 9183,
+      "id": 14270,
+      "raw_transaction_id": 14270,
       "entry_date": "2026-05-14",
       "description": "Pagamento de Boleto METALFIXE  INDUSTRIA E COMERCI",
       "debit_account": "2.01.01.01.01",
@@ -3191,7 +3004,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "METALFIXE  INDUSTRIA E COMERCI",
       "counterparty_doc": null,
@@ -3200,8 +3013,8 @@
       "attachments": []
     },
     {
-      "id": 9184,
-      "raw_transaction_id": 9184,
+      "id": 14271,
+      "raw_transaction_id": 14271,
       "entry_date": "2026-05-14",
       "description": "Pagamento de Boleto ROMETAL COMP P MOVEIS LTDA",
       "debit_account": "2.01.01.01.01",
@@ -3210,7 +3023,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "ROMETAL COMP P MOVEIS LTDA",
       "counterparty_doc": null,
@@ -3219,8 +3032,8 @@
       "attachments": []
     },
     {
-      "id": 9185,
-      "raw_transaction_id": 9185,
+      "id": 14272,
+      "raw_transaction_id": 14272,
       "entry_date": "2026-05-14",
       "description": "Pagamento de Boleto VIRTEX TELECOM",
       "debit_account": "2.01.01.01.01",
@@ -3229,7 +3042,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "VIRTEX TELECOM",
       "counterparty_doc": null,
@@ -3238,8 +3051,8 @@
       "attachments": []
     },
     {
-      "id": 9186,
-      "raw_transaction_id": 9186,
+      "id": 14273,
+      "raw_transaction_id": 14273,
       "entry_date": "2026-05-14",
       "description": "Pagamento de Boleto LOTUS COMERCIAL DE FERRAGENS E",
       "debit_account": "2.01.01.01.01",
@@ -3248,7 +3061,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "LOTUS COMERCIAL DE FERRAGENS E",
       "counterparty_doc": null,
@@ -3257,8 +3070,8 @@
       "attachments": []
     },
     {
-      "id": 9187,
-      "raw_transaction_id": 9187,
+      "id": 14274,
+      "raw_transaction_id": 14274,
       "entry_date": "2026-05-14",
       "description": "Pagamento de Boleto PLACAS DO BRASIL S.A.",
       "debit_account": "2.01.01.01.01",
@@ -3267,7 +3080,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "PLACAS DO BRASIL S.A.",
       "counterparty_doc": null,
@@ -3276,8 +3089,8 @@
       "attachments": []
     },
     {
-      "id": 9188,
-      "raw_transaction_id": 9188,
+      "id": 14275,
+      "raw_transaction_id": 14275,
       "entry_date": "2026-05-15",
       "description": "Pix - Recebido 15/05 12:27 70886407320 RONALDO MELO F",
       "debit_account": "1.01.01.01.02.0001",
@@ -3286,7 +3099,7 @@
       "category": "Movimentação sócio Ronaldo Melo Frazão",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "15/05 12:27 70886407320 RONALDO MELO F",
       "counterparty_doc": null,
@@ -3295,8 +3108,8 @@
       "attachments": []
     },
     {
-      "id": 9189,
-      "raw_transaction_id": 9189,
+      "id": 14276,
+      "raw_transaction_id": 14276,
       "entry_date": "2026-05-15",
       "description": "Pix - Recebido 15/05 12:41 10876822000194 FALCAO   FR",
       "debit_account": "1.01.01.01.02.0001",
@@ -3305,7 +3118,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "15/05 12:41 10876822000194 FALCAO   FR",
       "counterparty_doc": null,
@@ -3314,8 +3127,8 @@
       "attachments": []
     },
     {
-      "id": 9190,
-      "raw_transaction_id": 9190,
+      "id": 14277,
+      "raw_transaction_id": 14277,
       "entry_date": "2026-05-15",
       "description": "Pix - Enviado 15/05 12:28 RONALDO MELO FRAZAO",
       "debit_account": "2.02.01.04.01.0002",
@@ -3324,7 +3137,7 @@
       "category": "Movimentação sócio Ronaldo Melo Frazão",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "15/05 12:28 RONALDO MELO FRAZAO",
       "counterparty_doc": null,
@@ -3333,8 +3146,8 @@
       "attachments": []
     },
     {
-      "id": 9273,
-      "raw_transaction_id": 9273,
+      "id": 14360,
+      "raw_transaction_id": 14360,
       "entry_date": "2026-05-15",
       "description": "Pix recebido: Cp :00000000-M C CONCEICAO FILHO",
       "debit_account": "1.01.01.01.02.0004",
@@ -3343,34 +3156,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "M C CONCEICAO FILHO",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 768,
-          "file_name": "DANFE — 22260510876822000194550010000602191651930540.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9273222605108768220001945500100006021916.pdf"
-        },
-        {
-          "id": 769,
-          "file_name": "XML NF-e — 22260510876822000194550010000602191651930540-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9273222605108768220001945500100006021916.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9191,
-      "raw_transaction_id": 9191,
+      "id": 14278,
+      "raw_transaction_id": 14278,
       "entry_date": "2026-05-18",
       "description": "Pix - Recebido 18/05 10:25 10876822000194 FALCAO   FR",
       "debit_account": "1.01.01.01.02.0001",
@@ -3379,7 +3175,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "18/05 10:25 10876822000194 FALCAO   FR",
       "counterparty_doc": null,
@@ -3388,8 +3184,8 @@
       "attachments": []
     },
     {
-      "id": 9192,
-      "raw_transaction_id": 9192,
+      "id": 14279,
+      "raw_transaction_id": 14279,
       "entry_date": "2026-05-18",
       "description": "Pix - Recebido 18/05 10:32 00070886407320 RONALDO MEL",
       "debit_account": "1.01.01.01.02.0001",
@@ -3398,7 +3194,7 @@
       "category": "Movimentação sócio Ronaldo Melo Frazão",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "18/05 10:32 00070886407320 RONALDO MEL",
       "counterparty_doc": null,
@@ -3407,8 +3203,8 @@
       "attachments": []
     },
     {
-      "id": 9193,
-      "raw_transaction_id": 9193,
+      "id": 14280,
+      "raw_transaction_id": 14280,
       "entry_date": "2026-05-18",
       "description": "Pagamento de Boleto PLACAS DO BRASIL S.A.",
       "debit_account": "2.01.01.01.01",
@@ -3417,7 +3213,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "PLACAS DO BRASIL S.A.",
       "counterparty_doc": null,
@@ -3426,8 +3222,8 @@
       "attachments": []
     },
     {
-      "id": 9194,
-      "raw_transaction_id": 9194,
+      "id": 14281,
+      "raw_transaction_id": 14281,
       "entry_date": "2026-05-19",
       "description": "Pagamento de Boleto PLACAS DO BRASIL S A",
       "debit_account": "2.01.01.01.01",
@@ -3436,7 +3232,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "PLACAS DO BRASIL S A",
       "counterparty_doc": null,
@@ -3445,8 +3241,8 @@
       "attachments": []
     },
     {
-      "id": 9195,
-      "raw_transaction_id": 9195,
+      "id": 14282,
+      "raw_transaction_id": 14282,
       "entry_date": "2026-05-19",
       "description": "Pagamento de Boleto PLACAS DO BRASIL S A",
       "debit_account": "2.01.01.01.01",
@@ -3455,7 +3251,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "PLACAS DO BRASIL S A",
       "counterparty_doc": null,
@@ -3464,8 +3260,8 @@
       "attachments": []
     },
     {
-      "id": 9196,
-      "raw_transaction_id": 9196,
+      "id": 14283,
+      "raw_transaction_id": 14283,
       "entry_date": "2026-05-19",
       "description": "Pagamento de Boleto JOMARCA INDL DE PARAFUSOS LTDA",
       "debit_account": "2.01.01.01.01",
@@ -3474,7 +3270,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "JOMARCA INDL DE PARAFUSOS LTDA",
       "counterparty_doc": null,
@@ -3483,8 +3279,8 @@
       "attachments": []
     },
     {
-      "id": 9274,
-      "raw_transaction_id": 9274,
+      "id": 14361,
+      "raw_transaction_id": 14361,
       "entry_date": "2026-05-19",
       "description": "Pix recebido: Cp :00360305-BARROSO ARTEFATOS P. M. LTDA",
       "debit_account": "1.01.01.01.02.0004",
@@ -3493,34 +3289,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "BARROSO ARTEFATOS P. M. LTDA",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 770,
-          "file_name": "DANFE — 22260510876822000194550010000602301648388060.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9274222605108768220001945500100006023016.pdf"
-        },
-        {
-          "id": 771,
-          "file_name": "XML NF-e — 22260510876822000194550010000602301648388060-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9274222605108768220001945500100006023016.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9275,
-      "raw_transaction_id": 9275,
+      "id": 14362,
+      "raw_transaction_id": 14362,
       "entry_date": "2026-05-19",
       "description": "Pix recebido: Cp :00360305-BARROSO ARTEFATOS P. M. LTDA",
       "debit_account": "1.01.01.01.02.0004",
@@ -3529,34 +3308,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "BARROSO ARTEFATOS P. M. LTDA",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 772,
-          "file_name": "DANFE — 22260510876822000194550010000602281818895628.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9275222605108768220001945500100006022818.pdf"
-        },
-        {
-          "id": 773,
-          "file_name": "XML NF-e — 22260510876822000194550010000602281818895628-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9275222605108768220001945500100006022818.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9276,
-      "raw_transaction_id": 9276,
+      "id": 14363,
+      "raw_transaction_id": 14363,
       "entry_date": "2026-05-19",
       "description": "Pix recebido: Cp :00000000-M C CONCEICAO FILHO",
       "debit_account": "1.01.01.01.02.0004",
@@ -3565,34 +3327,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "M C CONCEICAO FILHO",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 774,
-          "file_name": "DANFE — 22260510876822000194550010000602271610139483.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9276222605108768220001945500100006022716.pdf"
-        },
-        {
-          "id": 775,
-          "file_name": "XML NF-e — 22260510876822000194550010000602271610139483-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9276222605108768220001945500100006022716.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9197,
-      "raw_transaction_id": 9197,
+      "id": 14284,
+      "raw_transaction_id": 14284,
       "entry_date": "2026-05-20",
       "description": "Pix - Recebido 20/05 15:25 00070886407320 RONALDO MEL",
       "debit_account": "1.01.01.01.02.0001",
@@ -3601,7 +3346,7 @@
       "category": "Movimentação sócio Ronaldo Melo Frazão",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "20/05 15:25 00070886407320 RONALDO MEL",
       "counterparty_doc": null,
@@ -3610,8 +3355,8 @@
       "attachments": []
     },
     {
-      "id": 9198,
-      "raw_transaction_id": 9198,
+      "id": 14285,
+      "raw_transaction_id": 14285,
       "entry_date": "2026-05-20",
       "description": "Pix - Enviado 20/05 12:52 RECEITA FEDERAL",
       "debit_account": "9.9.9.99",
@@ -3620,7 +3365,7 @@
       "category": "Não classificado ⚠️",
       "status": "manual_review",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "20/05 12:52 RECEITA FEDERAL",
       "counterparty_doc": null,
@@ -3629,8 +3374,8 @@
       "attachments": []
     },
     {
-      "id": 9199,
-      "raw_transaction_id": 9199,
+      "id": 14286,
+      "raw_transaction_id": 14286,
       "entry_date": "2026-05-20",
       "description": "Pix - Enviado 20/05 12:53 CEF MATRIZ",
       "debit_account": "2.01.01.03.02.0003",
@@ -3639,7 +3384,7 @@
       "category": "Pagamento FGTS",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "20/05 12:53 CEF MATRIZ",
       "counterparty_doc": null,
@@ -3648,8 +3393,8 @@
       "attachments": []
     },
     {
-      "id": 9200,
-      "raw_transaction_id": 9200,
+      "id": 14287,
+      "raw_transaction_id": 14287,
       "entry_date": "2026-05-20",
       "description": "Pagamento de Boleto AFO MOVEIS E ARTEFATOS LTDA",
       "debit_account": "2.01.01.01.01",
@@ -3658,7 +3403,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "AFO MOVEIS E ARTEFATOS LTDA",
       "counterparty_doc": null,
@@ -3667,8 +3412,8 @@
       "attachments": []
     },
     {
-      "id": 9201,
-      "raw_transaction_id": 9201,
+      "id": 14288,
+      "raw_transaction_id": 14288,
       "entry_date": "2026-05-20",
       "description": "Pix - Enviado 20/05 15:29 Madepinus",
       "debit_account": "1.01.01.01.02.0002",
@@ -3677,7 +3422,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "20/05 15:29 Madepinus",
       "counterparty_doc": null,
@@ -3686,8 +3431,8 @@
       "attachments": []
     },
     {
-      "id": 9277,
-      "raw_transaction_id": 9277,
+      "id": 14364,
+      "raw_transaction_id": 14364,
       "entry_date": "2026-05-20",
       "description": "Pix recebido: Cp :00000000-CASAMATER CASA SAUDE MATERNIDADE TE LTDA",
       "debit_account": "1.01.01.01.02.0004",
@@ -3696,7 +3441,7 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "CASAMATER CASA SAUDE MATERNIDADE TE LTDA",
       "counterparty_doc": null,
@@ -3705,8 +3450,8 @@
       "attachments": []
     },
     {
-      "id": 9202,
-      "raw_transaction_id": 9202,
+      "id": 14289,
+      "raw_transaction_id": 14289,
       "entry_date": "2026-05-21",
       "description": "Pix - Recebido 21/05 10:17 10876822000194 FALCAO & FR",
       "debit_account": "1.01.01.01.02.0001",
@@ -3715,7 +3460,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "21/05 10:17 10876822000194 FALCAO & FR",
       "counterparty_doc": null,
@@ -3724,8 +3469,8 @@
       "attachments": []
     },
     {
-      "id": 9203,
-      "raw_transaction_id": 9203,
+      "id": 14290,
+      "raw_transaction_id": 14290,
       "entry_date": "2026-05-21",
       "description": "Pix - Recebido 21/05 12:14 10876822000194 FALCAO E FR",
       "debit_account": "1.01.01.01.02.0001",
@@ -3734,7 +3479,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "21/05 12:14 10876822000194 FALCAO E FR",
       "counterparty_doc": null,
@@ -3743,8 +3488,8 @@
       "attachments": []
     },
     {
-      "id": 9204,
-      "raw_transaction_id": 9204,
+      "id": 14291,
+      "raw_transaction_id": 14291,
       "entry_date": "2026-05-21",
       "description": "Pix - Recebido 21/05 16:34 00070886407320 RONALDO MEL",
       "debit_account": "1.01.01.01.02.0001",
@@ -3753,7 +3498,7 @@
       "category": "Movimentação sócio Ronaldo Melo Frazão",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "21/05 16:34 00070886407320 RONALDO MEL",
       "counterparty_doc": null,
@@ -3762,8 +3507,8 @@
       "attachments": []
     },
     {
-      "id": 9205,
-      "raw_transaction_id": 9205,
+      "id": 14292,
+      "raw_transaction_id": 14292,
       "entry_date": "2026-05-21",
       "description": "Pix - Recebido 21/05 19:11 00070886407320 RONALDO MEL",
       "debit_account": "1.01.01.01.02.0001",
@@ -3772,7 +3517,7 @@
       "category": "Movimentação sócio Ronaldo Melo Frazão",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "21/05 19:11 00070886407320 RONALDO MEL",
       "counterparty_doc": null,
@@ -3781,8 +3526,8 @@
       "attachments": []
     },
     {
-      "id": 9206,
-      "raw_transaction_id": 9206,
+      "id": 14293,
+      "raw_transaction_id": 14293,
       "entry_date": "2026-05-21",
       "description": "Impostos GOV PI ARREC ICMS OUTROS",
       "debit_account": "2.01.01.03.01.0004",
@@ -3791,7 +3536,7 @@
       "category": "Pagamento ICMS",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "GOV PI ARREC ICMS OUTROS",
       "counterparty_doc": null,
@@ -3800,8 +3545,8 @@
       "attachments": []
     },
     {
-      "id": 9207,
-      "raw_transaction_id": 9207,
+      "id": 14294,
+      "raw_transaction_id": 14294,
       "entry_date": "2026-05-21",
       "description": "Impostos GOV PI ARREC ICMS OUTROS",
       "debit_account": "2.01.01.03.01.0004",
@@ -3810,7 +3555,7 @@
       "category": "Pagamento ICMS",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "GOV PI ARREC ICMS OUTROS",
       "counterparty_doc": null,
@@ -3819,8 +3564,8 @@
       "attachments": []
     },
     {
-      "id": 9208,
-      "raw_transaction_id": 9208,
+      "id": 14295,
+      "raw_transaction_id": 14295,
       "entry_date": "2026-05-21",
       "description": "Impostos GOV PI ARREC ICMS OUTROS",
       "debit_account": "2.01.01.03.01.0004",
@@ -3829,7 +3574,7 @@
       "category": "Pagamento ICMS",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "GOV PI ARREC ICMS OUTROS",
       "counterparty_doc": null,
@@ -3838,8 +3583,8 @@
       "attachments": []
     },
     {
-      "id": 9209,
-      "raw_transaction_id": 9209,
+      "id": 14296,
+      "raw_transaction_id": 14296,
       "entry_date": "2026-05-21",
       "description": "Impostos GOV PI ARREC ICMS OUTROS",
       "debit_account": "2.01.01.03.01.0004",
@@ -3848,7 +3593,7 @@
       "category": "Pagamento ICMS",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "GOV PI ARREC ICMS OUTROS",
       "counterparty_doc": null,
@@ -3857,8 +3602,8 @@
       "attachments": []
     },
     {
-      "id": 9210,
-      "raw_transaction_id": 9210,
+      "id": 14297,
+      "raw_transaction_id": 14297,
       "entry_date": "2026-05-21",
       "description": "Impostos GOV PI ARREC ICMS OUTROS",
       "debit_account": "2.01.01.03.01.0004",
@@ -3867,7 +3612,7 @@
       "category": "Pagamento ICMS",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "GOV PI ARREC ICMS OUTROS",
       "counterparty_doc": null,
@@ -3876,8 +3621,8 @@
       "attachments": []
     },
     {
-      "id": 9278,
-      "raw_transaction_id": 9278,
+      "id": 14365,
+      "raw_transaction_id": 14365,
       "entry_date": "2026-05-21",
       "description": "Pix enviado: Cp :00000000-Falcao E Frazao LTDA",
       "debit_account": "9.9.9.99",
@@ -3886,7 +3631,7 @@
       "category": "Movimentação diversa via PIX ⚠️",
       "status": "manual_review",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "Falcao E Frazao LTDA",
       "counterparty_doc": null,
@@ -3895,8 +3640,8 @@
       "attachments": []
     },
     {
-      "id": 9211,
-      "raw_transaction_id": 9211,
+      "id": 14298,
+      "raw_transaction_id": 14298,
       "entry_date": "2026-05-22",
       "description": "Pix - Recebido 22/05 09:16 00070886407320 RONALDO MEL",
       "debit_account": "1.01.01.01.02.0001",
@@ -3905,7 +3650,7 @@
       "category": "Movimentação sócio Ronaldo Melo Frazão",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "22/05 09:16 00070886407320 RONALDO MEL",
       "counterparty_doc": null,
@@ -3914,8 +3659,8 @@
       "attachments": []
     },
     {
-      "id": 9212,
-      "raw_transaction_id": 9212,
+      "id": 14299,
+      "raw_transaction_id": 14299,
       "entry_date": "2026-05-22",
       "description": "Pagamento de Boleto ROMETAL COMP P MOVEIS LTDA",
       "debit_account": "2.01.01.01.01",
@@ -3924,7 +3669,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "ROMETAL COMP P MOVEIS LTDA",
       "counterparty_doc": null,
@@ -3933,8 +3678,8 @@
       "attachments": []
     },
     {
-      "id": 9213,
-      "raw_transaction_id": 9213,
+      "id": 14300,
+      "raw_transaction_id": 14300,
       "entry_date": "2026-05-22",
       "description": "Pagamento de Boleto HD FERRAGENS PARA MOVEIS LTDA",
       "debit_account": "2.01.01.01.01",
@@ -3943,7 +3688,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "HD FERRAGENS PARA MOVEIS LTDA",
       "counterparty_doc": null,
@@ -3952,8 +3697,8 @@
       "attachments": []
     },
     {
-      "id": 9214,
-      "raw_transaction_id": 9214,
+      "id": 14301,
+      "raw_transaction_id": 14301,
       "entry_date": "2026-05-22",
       "description": "Pagamento de Boleto STAM METALURGICA LTDA.",
       "debit_account": "2.01.01.01.01",
@@ -3962,7 +3707,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "STAM METALURGICA LTDA.",
       "counterparty_doc": null,
@@ -3971,8 +3716,8 @@
       "attachments": []
     },
     {
-      "id": 9215,
-      "raw_transaction_id": 9215,
+      "id": 14302,
+      "raw_transaction_id": 14302,
       "entry_date": "2026-05-22",
       "description": "Pix - Enviado 22/05 09:50 AGUAS DE TERESINA SANEAME",
       "debit_account": "4.02.01.01.04.0001",
@@ -3981,7 +3726,7 @@
       "category": "Despesa consumo (água)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "22/05 09:50 AGUAS DE TERESINA SANEAME",
       "counterparty_doc": null,
@@ -3990,8 +3735,8 @@
       "attachments": []
     },
     {
-      "id": 9216,
-      "raw_transaction_id": 9216,
+      "id": 14303,
+      "raw_transaction_id": 14303,
       "entry_date": "2026-05-22",
       "description": "Pagamento de Boleto ALLIANZ SEGUROS S A",
       "debit_account": "2.01.01.01.01",
@@ -4000,7 +3745,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "ALLIANZ SEGUROS S A",
       "counterparty_doc": null,
@@ -4009,8 +3754,8 @@
       "attachments": []
     },
     {
-      "id": 9279,
-      "raw_transaction_id": 9279,
+      "id": 14366,
+      "raw_transaction_id": 14366,
       "entry_date": "2026-05-22",
       "description": "Pix recebido: 00019 62930451 WILSON SILVA",
       "debit_account": "1.01.01.01.02.0004",
@@ -4019,34 +3764,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 776,
-          "file_name": "DANFE — 22260510876822000194650010000579911142676981.pdf",
-          "file_type": "pdf",
-          "match_type": "fuzzy",
-          "match_score": 0.75,
-          "url": "/anexos/2026-05/9279222605108768220001946500100005799111.pdf"
-        },
-        {
-          "id": 777,
-          "file_name": "XML NF-e — 22260510876822000194650010000579911142676981-nfce-sign.xml",
-          "file_type": "xml",
-          "match_type": "fuzzy",
-          "match_score": 0.75,
-          "url": "/anexos/2026-05/9279222605108768220001946500100005799111.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9280,
-      "raw_transaction_id": 9280,
+      "id": 14367,
+      "raw_transaction_id": 14367,
       "entry_date": "2026-05-22",
       "description": "Pix enviado: Cp :90400888-LAMINATO MADEIRAS",
       "debit_account": "9.9.9.99",
@@ -4055,7 +3783,7 @@
       "category": "Movimentação diversa via PIX ⚠️",
       "status": "manual_review",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "LAMINATO MADEIRAS",
       "counterparty_doc": null,
@@ -4064,8 +3792,8 @@
       "attachments": []
     },
     {
-      "id": 9281,
-      "raw_transaction_id": 9281,
+      "id": 14368,
+      "raw_transaction_id": 14368,
       "entry_date": "2026-05-22",
       "description": "Pix recebido: Cp :00000000-CONSTRUTORA TRELICA LTDA",
       "debit_account": "1.01.01.01.02.0004",
@@ -4074,34 +3802,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "CONSTRUTORA TRELICA LTDA",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 778,
-          "file_name": "DANFE — 22260510876822000194550010000602431702815802.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9281222605108768220001945500100006024317.pdf"
-        },
-        {
-          "id": 779,
-          "file_name": "XML NF-e — 22260510876822000194550010000602431702815802-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9281222605108768220001945500100006024317.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9282,
-      "raw_transaction_id": 9282,
+      "id": 14369,
+      "raw_transaction_id": 14369,
       "entry_date": "2026-05-25",
       "description": "Pix recebido: Cp :00000000-MANOEL COSME CONCEICAO FH",
       "debit_account": "1.01.01.01.02.0004",
@@ -4110,7 +3821,7 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "MANOEL COSME CONCEICAO FH",
       "counterparty_doc": null,
@@ -4119,8 +3830,8 @@
       "attachments": []
     },
     {
-      "id": 9283,
-      "raw_transaction_id": 9283,
+      "id": 14370,
+      "raw_transaction_id": 14370,
       "entry_date": "2026-05-26",
       "description": "Pagamento efetuado: ALTERDATA TEC.EM INFORMATICA",
       "debit_account": "4.02.01.01.04",
@@ -4129,7 +3840,7 @@
       "category": "Despesa sistema ERP",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
@@ -4138,8 +3849,8 @@
       "attachments": []
     },
     {
-      "id": 9284,
-      "raw_transaction_id": 9284,
+      "id": 14371,
+      "raw_transaction_id": 14371,
       "entry_date": "2026-05-26",
       "description": "Pix recebido: Cp :00360305-BARROSO ARTEFATOS P. M. LTDA",
       "debit_account": "1.01.01.01.02.0004",
@@ -4148,34 +3859,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "BARROSO ARTEFATOS P. M. LTDA",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 780,
-          "file_name": "DANFE — 22260510876822000194550010000602671584294044.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9284222605108768220001945500100006026715.pdf"
-        },
-        {
-          "id": 781,
-          "file_name": "XML NF-e — 22260510876822000194550010000602671584294044-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9284222605108768220001945500100006026715.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9217,
-      "raw_transaction_id": 9217,
+      "id": 14304,
+      "raw_transaction_id": 14304,
       "entry_date": "2026-05-27",
       "description": "Pix - Recebido 27/05 12:10 10876822000194 FALCAO   FR",
       "debit_account": "1.01.01.01.02.0001",
@@ -4184,7 +3878,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "27/05 12:10 10876822000194 FALCAO   FR",
       "counterparty_doc": null,
@@ -4193,8 +3887,8 @@
       "attachments": []
     },
     {
-      "id": 9218,
-      "raw_transaction_id": 9218,
+      "id": 14305,
+      "raw_transaction_id": 14305,
       "entry_date": "2026-05-27",
       "description": "Pagamento de Boleto PLACAS DO BRASIL S A",
       "debit_account": "2.01.01.01.01",
@@ -4203,7 +3897,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "PLACAS DO BRASIL S A",
       "counterparty_doc": null,
@@ -4212,8 +3906,8 @@
       "attachments": []
     },
     {
-      "id": 9219,
-      "raw_transaction_id": 9219,
+      "id": 14306,
+      "raw_transaction_id": 14306,
       "entry_date": "2026-05-27",
       "description": "Pagamento de Boleto PLACAS DO BRASIL S A",
       "debit_account": "2.01.01.01.01",
@@ -4222,7 +3916,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "PLACAS DO BRASIL S A",
       "counterparty_doc": null,
@@ -4231,8 +3925,8 @@
       "attachments": []
     },
     {
-      "id": 9220,
-      "raw_transaction_id": 9220,
+      "id": 14307,
+      "raw_transaction_id": 14307,
       "entry_date": "2026-05-27",
       "description": "Pagamento de Boleto EQUATORIAL PIAUI DISTRIBUIDORA",
       "debit_account": "2.01.01.01.01",
@@ -4241,7 +3935,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "EQUATORIAL PIAUI DISTRIBUIDORA",
       "counterparty_doc": null,
@@ -4250,8 +3944,8 @@
       "attachments": []
     },
     {
-      "id": 9221,
-      "raw_transaction_id": 9221,
+      "id": 14308,
+      "raw_transaction_id": 14308,
       "entry_date": "2026-05-27",
       "description": "Pagamento de Boleto HD FERRAGENS PARA MOVEIS LTDA",
       "debit_account": "2.01.01.01.01",
@@ -4260,7 +3954,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "HD FERRAGENS PARA MOVEIS LTDA",
       "counterparty_doc": null,
@@ -4269,8 +3963,8 @@
       "attachments": []
     },
     {
-      "id": 9285,
-      "raw_transaction_id": 9285,
+      "id": 14372,
+      "raw_transaction_id": 14372,
       "entry_date": "2026-05-27",
       "description": "Pix recebido: Cp :60746948-BRITO & CIA LTDA",
       "debit_account": "1.01.01.01.02.0004",
@@ -4279,34 +3973,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "BRITO & CIA LTDA",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 782,
-          "file_name": "DANFE — 22260510876822000194550010000602751404308000.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9285222605108768220001945500100006027514.pdf"
-        },
-        {
-          "id": 783,
-          "file_name": "XML NF-e — 22260510876822000194550010000602751404308000-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9285222605108768220001945500100006027514.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9286,
-      "raw_transaction_id": 9286,
+      "id": 14373,
+      "raw_transaction_id": 14373,
       "entry_date": "2026-05-27",
       "description": "Pix enviado: Cp :35571249-CLIMET",
       "debit_account": "9.9.9.99",
@@ -4315,7 +3992,7 @@
       "category": "Movimentação diversa via PIX ⚠️",
       "status": "manual_review",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "CLIMET",
       "counterparty_doc": null,
@@ -4324,8 +4001,8 @@
       "attachments": []
     },
     {
-      "id": 9287,
-      "raw_transaction_id": 9287,
+      "id": 14374,
+      "raw_transaction_id": 14374,
       "entry_date": "2026-05-27",
       "description": "Pix recebido: Cp :00360305-C R MACHADO ME",
       "debit_account": "1.01.01.01.02.0004",
@@ -4334,7 +4011,7 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "C R MACHADO ME",
       "counterparty_doc": null,
@@ -4343,8 +4020,8 @@
       "attachments": []
     },
     {
-      "id": 9222,
-      "raw_transaction_id": 9222,
+      "id": 14309,
+      "raw_transaction_id": 14309,
       "entry_date": "2026-05-28",
       "description": "Pix - Recebido 28/05 11:51 10876822000194 FALCAO & FR",
       "debit_account": "1.01.01.01.02.0001",
@@ -4353,7 +4030,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "28/05 11:51 10876822000194 FALCAO & FR",
       "counterparty_doc": null,
@@ -4362,8 +4039,8 @@
       "attachments": []
     },
     {
-      "id": 9288,
-      "raw_transaction_id": 9288,
+      "id": 14375,
+      "raw_transaction_id": 14375,
       "entry_date": "2026-05-28",
       "description": "Pix recebido: 00019 62930451 WILSON SILVA",
       "debit_account": "1.01.01.01.02.0004",
@@ -4372,34 +4049,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 784,
-          "file_name": "DANFE — 22260510876822000194550010000603001471592429.pdf",
-          "file_type": "pdf",
-          "match_type": "fuzzy",
-          "match_score": 0.75,
-          "url": "/anexos/2026-05/9288222605108768220001945500100006030014.pdf"
-        },
-        {
-          "id": 785,
-          "file_name": "XML NF-e — 22260510876822000194550010000603001471592429-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "fuzzy",
-          "match_score": 0.75,
-          "url": "/anexos/2026-05/9288222605108768220001945500100006030014.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9289,
-      "raw_transaction_id": 9289,
+      "id": 14376,
+      "raw_transaction_id": 14376,
       "entry_date": "2026-05-28",
       "description": "Pix recebido: 00019 195892593 JHONNAS DE SOUSA GOVEIA 05965769350",
       "debit_account": "1.01.01.01.02.0004",
@@ -4408,34 +4068,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 786,
-          "file_name": "DANFE — 22260510876822000194550010000602951918936205.pdf",
-          "file_type": "pdf",
-          "match_type": "fuzzy",
-          "match_score": 0.75,
-          "url": "/anexos/2026-05/9289222605108768220001945500100006029519.pdf"
-        },
-        {
-          "id": 787,
-          "file_name": "XML NF-e — 22260510876822000194550010000602951918936205-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "fuzzy",
-          "match_score": 0.75,
-          "url": "/anexos/2026-05/9289222605108768220001945500100006029519.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9290,
-      "raw_transaction_id": 9290,
+      "id": 14377,
+      "raw_transaction_id": 14377,
       "entry_date": "2026-05-28",
       "description": "Pix recebido: 00019 195892593 JHONNAS DE SOUSA GOVEIA 05965769350",
       "debit_account": "1.01.01.01.02.0004",
@@ -4444,34 +4087,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 788,
-          "file_name": "DANFE — 22260510876822000194550010000602941970685288.pdf",
-          "file_type": "pdf",
-          "match_type": "fuzzy",
-          "match_score": 0.75,
-          "url": "/anexos/2026-05/9290222605108768220001945500100006029419.pdf"
-        },
-        {
-          "id": 789,
-          "file_name": "XML NF-e — 22260510876822000194550010000602941970685288-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "fuzzy",
-          "match_score": 0.75,
-          "url": "/anexos/2026-05/9290222605108768220001945500100006029419.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9291,
-      "raw_transaction_id": 9291,
+      "id": 14378,
+      "raw_transaction_id": 14378,
       "entry_date": "2026-05-28",
       "description": "Pix recebido: Cp :00000000-M C CONCEICAO FILHO",
       "debit_account": "1.01.01.01.02.0004",
@@ -4480,34 +4106,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "M C CONCEICAO FILHO",
       "counterparty_doc": null,
       "debit_name": "Banco Inter - Ag: 0001-9 Cc: 9908006-0",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 790,
-          "file_name": "DANFE — 22260510876822000194550010000602881656048613.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9291222605108768220001945500100006028816.pdf"
-        },
-        {
-          "id": 791,
-          "file_name": "XML NF-e — 22260510876822000194550010000602881656048613-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9291222605108768220001945500100006028816.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9223,
-      "raw_transaction_id": 9223,
+      "id": 14310,
+      "raw_transaction_id": 14310,
       "entry_date": "2026-05-29",
       "description": "Pix - Recebido 29/05 09:30 10876822000194 FALCAO   FR",
       "debit_account": "1.01.01.01.02.0001",
@@ -4516,7 +4125,7 @@
       "category": "Transferência entre contas próprias",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "29/05 09:30 10876822000194 FALCAO   FR",
       "counterparty_doc": null,
@@ -4525,8 +4134,8 @@
       "attachments": []
     },
     {
-      "id": 9224,
-      "raw_transaction_id": 9224,
+      "id": 14311,
+      "raw_transaction_id": 14311,
       "entry_date": "2026-05-29",
       "description": "Pix - Recebido 29/05 16:35 31430596000193 AMBIENTARE",
       "debit_account": "1.01.01.01.02.0001",
@@ -4535,34 +4144,17 @@
       "category": "Recebimento cliente diverso",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "29/05 16:35 31430596000193 AMBIENTARE",
       "counterparty_doc": null,
       "debit_name": "Banco do Brasil - Ag: 3219-0 Cc: 847-8",
       "credit_name": "Clientes Diversos",
-      "attachments": [
-        {
-          "id": 744,
-          "file_name": "DANFE — 22260510876822000194550010000603071293661536.pdf",
-          "file_type": "pdf",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9224222605108768220001945500100006030712.pdf"
-        },
-        {
-          "id": 745,
-          "file_name": "XML NF-e — 22260510876822000194550010000603071293661536-nfe-sign.xml",
-          "file_type": "xml",
-          "match_type": "exact",
-          "match_score": 1,
-          "url": "/anexos/2026-05/9224222605108768220001945500100006030712.xml"
-        }
-      ]
+      "attachments": []
     },
     {
-      "id": 9225,
-      "raw_transaction_id": 9225,
+      "id": 14312,
+      "raw_transaction_id": 14312,
       "entry_date": "2026-05-29",
       "description": "Pagamento de Boleto PLACAS DO BRASIL S A",
       "debit_account": "2.01.01.01.01",
@@ -4571,7 +4163,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "PLACAS DO BRASIL S A",
       "counterparty_doc": null,
@@ -4580,8 +4172,8 @@
       "attachments": []
     },
     {
-      "id": 9226,
-      "raw_transaction_id": 9226,
+      "id": 14313,
+      "raw_transaction_id": 14313,
       "entry_date": "2026-05-29",
       "description": "Pagamento de Boleto ALELO S.A.",
       "debit_account": "2.01.01.01.01",
@@ -4590,7 +4182,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "ALELO S.A.",
       "counterparty_doc": null,
@@ -4599,8 +4191,8 @@
       "attachments": []
     },
     {
-      "id": 9227,
-      "raw_transaction_id": 9227,
+      "id": 14314,
+      "raw_transaction_id": 14314,
       "entry_date": "2026-05-29",
       "description": "Pagamento de Boleto LOTUS COMERCIAL DE FERRAGENS E",
       "debit_account": "2.01.01.01.01",
@@ -4609,7 +4201,7 @@
       "category": "Pagamento a fornecedor (boleto)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "bb-847-8",
       "counterparty": "LOTUS COMERCIAL DE FERRAGENS E",
       "counterparty_doc": null,
@@ -4618,8 +4210,8 @@
       "attachments": []
     },
     {
-      "id": 9292,
-      "raw_transaction_id": 9292,
+      "id": 14379,
+      "raw_transaction_id": 14379,
       "entry_date": "2026-05-29",
       "description": "Pagamento Aguas de Teresina: AGUAS DE TERESINA",
       "debit_account": "4.02.01.01.04.0001",
@@ -4628,7 +4220,7 @@
       "category": "Despesa consumo (água)",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": null,
       "counterparty_doc": null,
@@ -4637,8 +4229,8 @@
       "attachments": []
     },
     {
-      "id": 9293,
-      "raw_transaction_id": 9293,
+      "id": 14380,
+      "raw_transaction_id": 14380,
       "entry_date": "2026-05-29",
       "description": "Pix enviado: Cp :35571249-POSTOS AVALLON",
       "debit_account": "4.02.01.01.06.0001",
@@ -4647,7 +4239,7 @@
       "category": "Despesa combustível",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "POSTOS AVALLON",
       "counterparty_doc": null,
@@ -4656,8 +4248,8 @@
       "attachments": []
     },
     {
-      "id": 9294,
-      "raw_transaction_id": 9294,
+      "id": 14381,
+      "raw_transaction_id": 14381,
       "entry_date": "2026-05-31",
       "description": "Pix enviado: Cp :01027058-POSTO HOMERO CASTELO BRANCO LTDA",
       "debit_account": "4.02.01.01.06.0001",
@@ -4666,7 +4258,7 @@
       "category": "Despesa combustível",
       "status": "matched",
       "match_confidence": null,
-      "created_at": "2026-09-11 14:40:17",
+      "created_at": "2026-11-05 17:23:01",
       "bank_account_id": "inter-9908006-0",
       "counterparty": "POSTO HOMERO CASTELO BRANCO LTDA",
       "counterparty_doc": null,

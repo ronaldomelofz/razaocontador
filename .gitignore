@@ -7,7 +7,15 @@ server/data/attachments/
 client/dist/
 client/public/anexos/
 madepinus-ledger-cursor.zip
+
+# Segredos / ambiente
 .env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+*secret*
 
 # Local Netlify folder
 .netlify
@@ -16,3 +24,5 @@ madepinus-ledger-cursor.zip
 APURAÇÃO/
 tmp_apuracao_img/
 tmp_ocr_work/
+tmp_pipeline_*.log
+tmp_ocr_*.log

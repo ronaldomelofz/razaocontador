@@ -42,6 +42,20 @@ async function fetchStaticLedger(month, baseUrl) {
   return res.json();
 }
 
+/** Lista competências publicadas via /data/months.json (gerado no pipeline). */
+export async function listPublishedMonths(baseUrl) {
+  const res = await fetch(`${baseUrl}/data/months.json`, {
+    cache: 'no-store',
+    headers: selfAuthHeaders(),
+  });
+  if (!res.ok) throw new Error(`months.json não encontrado (HTTP ${res.status})`);
+  const data = await res.json();
+  const months = (data.months || [])
+    .map((m) => (typeof m === 'string' ? m : m.month))
+    .filter((m) => /^\d{4}-\d{2}$/.test(m));
+  return [...new Set(months)].sort();
+}
+
 async function fetchGithubLedger(month) {
   const token = process.env.GITHUB_TOKEN;
   if (!token) return null;

@@ -11,6 +11,7 @@ import { spawnSync } from 'node:child_process';
 import Database from 'better-sqlite3';
 import { fileURLToPath } from 'node:url';
 import { dbPath, netlifyDataRoot } from '../config.js';
+import { writeMonthsIndex } from './writeMonthsIndex.js';
 import { scanMonthFolder, collectXmlFilesForMonth, listNetworkMonths } from './networkScanner.js';
 import { parseStatement } from '../parsers/bankStatement.js';
 import { parseNFeXML } from '../parsers/xmlFiscal.js';
@@ -20,6 +21,7 @@ import { linkAttachments } from './linkAttachments.js';
 import { linkFuelFolder } from './linkFuelFolder.js';
 import { ingestApuracaoFromNetwork } from './ingestApuracao.js';
 import { parseSiatEntrada, findSiatFile, filterNotesByDataEntrada } from '../parsers/siatEntrada.js';
+import { buildFiscalPagamentos } from './buildFiscalPagamentos.js';
 
 /**
  * Processa um mês completo a partir da pasta de rede da contadora.
@@ -353,6 +355,12 @@ export function runFullPipeline(month) {
   const outFile = path.join(netlifyDataRoot, `ledger-${month}.json`);
   fs.writeFileSync(outFile, JSON.stringify(exportData, null, 2));
   console.log(`\n📦 Exportado para ${outFile}`);
+  try {
+    const idx = writeMonthsIndex();
+    console.log(`📅 Índice de meses: ${idx.months.join(', ') || '(vazio)'}`);
+  } catch (err) {
+    console.warn('⚠️  months.json:', err.message);
+  }
 
   // Gera aba "Boleto e pagamento diversos" a partir do ledger
   let boletos = null;
@@ -361,6 +369,15 @@ export function runFullPipeline(month) {
     if (boletos) console.log(`✔ Boletos/pagamentos: ${boletos.items?.length ?? 0} itens`);
   } catch (err) {
     console.warn('⚠️  Boletos/pagamentos:', err.message);
+  }
+
+  // Gera aba "NF-e / NFC-e × Pagamento" (XML + Cielo/Credishop + extratos)
+  let fiscalPay = null;
+  try {
+    fiscalPay = buildFiscalPagamentos(month);
+    console.log(`✔ Fiscal×pagamento: ${fiscalPay.summary?.qtd_total ?? 0} docs (${fiscalPay.summary?.qtd_conciliados ?? 0} conciliados)`);
+  } catch (err) {
+    console.warn('⚠️  Fiscal×pagamento:', err.message);
   }
 
   console.log(`\n✅ Pipeline concluído: ${totalImported} lançamentos, ${totalPending} pendentes, ${attachResult.linked} anexos.`);
@@ -386,6 +403,8 @@ export function runFullPipeline(month) {
       fuelDocuments: fuelResult.files,
       fuelLinked: fuelResult.linked,
       boletos: boletos?.items?.length ?? null,
+      fiscalPagamentos: fiscalPay?.summary?.qtd_total ?? null,
+      fiscalPagamentosConciliados: fiscalPay?.summary?.qtd_conciliados ?? null,
     },
     exportFile: outFile,
   };
@@ -418,6 +437,7 @@ export function runFullPipelineAll(months = null) {
     console.log(`\n========== PROCESSANDO ${m} ==========`);
     results.push(runFullPipeline(m));
   }
+  try { writeMonthsIndex(); } catch { /* já logado no mês */ }
   return { action: 'process_all', months: list, results };
 }
 

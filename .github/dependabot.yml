@@ -1,0 +1,27 @@
+# Dependabot — fechar janela de exploração de CVEs recém-publicados
+# (ameaças automatizadas por LLM monitoram advisories e geram exploits rápido)
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    labels: ["security", "dependencies"]
+
+  - package-ecosystem: npm
+    directory: "/client"
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 8
+    labels: ["security", "dependencies"]
+
+  - package-ecosystem: npm
+    directory: "/server"
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 8
+    labels: ["security", "dependencies"]

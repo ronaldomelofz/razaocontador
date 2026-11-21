@@ -1,18 +1,34 @@
 import { useEffect, useState, useCallback, Fragment } from 'react';
-import { exportExcel, exportPdf } from './utils/exportClient';
+import { exportExcel, exportPdf, exportFuelExcel, exportFuelPdf } from './utils/exportClient';
 import { fmtDate, fmt, isUnclassified, postingAccount } from './utils/format';
 import { isFuelEntry } from './utils/fuel';
 import ReclassifyPanel from './components/ReclassifyPanel';
 import TaxAssessment from './components/TaxAssessment';
 import SupplierBoletos from './components/SupplierBoletos';
+import FiscalPagamentos from './components/FiscalPagamentos';
 
-const MONTHS_FALLBACK = ['2026-05', '2026-06', '2026-07'];
+/** Último recurso se months.json e APIs falharem — nunca é a lista “oficial”. */
+const MONTHS_FALLBACK = ['2026-05', '2026-06', '2026-07', '2026-08'];
 /** Processamento de novos meses: só no Vite local. Netlify permanece consulta. */
 const CAN_PROCESS_MONTHS = import.meta.env.DEV;
+
+async function loadPublishedMonths() {
+  try {
+    const res = await fetch('/data/months.json', { cache: 'no-store' });
+    if (!res.ok) return [];
+    const data = await res.json();
+    return (data.months || [])
+      .map((m) => (typeof m === 'string' ? m : m.month))
+      .filter((m) => /^\d{4}-\d{2}$/.test(m));
+  } catch {
+    return [];
+  }
+}
 const VIEWS = [
   { id: 'ledger', label: 'Livro Razão' },
   { id: 'fuel', label: 'Combustível' },
   { id: 'boletos', label: 'Boleto e pagamento diversos' },
+  { id: 'fiscalPay', label: 'NF-e / NFC-e × Pagamento' },
   // Apuração: só em vite dev (não vai para o build Netlify).
   ...(import.meta.env.DEV ? [{ id: 'taxes', label: 'Apuração de Impostos' }] : []),
 ];
@@ -92,7 +108,8 @@ export default function App() {
   const [processError, setProcessError] = useState(null);
 
   const refreshMonths = useCallback(async () => {
-    const found = new Set(MONTHS_FALLBACK);
+    // 1) Fonte estático (Netlify + local): months.json gerado no pipeline
+    const found = new Set(await loadPublishedMonths());
     let network = [];
     let pending = [];
     const urls = CAN_PROCESS_MONTHS
@@ -112,6 +129,8 @@ export default function App() {
         }
       } catch { /* API local opcional */ }
     }
+    // 2) Só usa fallback se nada foi descoberto (evita esconder meses novos)
+    if (!found.size) MONTHS_FALLBACK.forEach((m) => found.add(m));
     const list = [...found].sort();
     setMonths(list);
     return { list, network, pending };
@@ -279,6 +298,23 @@ export default function App() {
   const pending = entries.filter((e) => e.status === 'manual_review').length;
   const withAttach = entries.filter((e) => e.attachments?.length > 0).length;
   const colSpan = 10;
+  const fuelByBankList = Object.values(fuelByBank);
+
+  const handleExportExcel = () => {
+    if (view === 'fuel') {
+      exportFuelExcel(fuelDocs, month, { byBank: fuelByBankList });
+      return;
+    }
+    exportExcel(filtered, month);
+  };
+
+  const handleExportPdf = () => {
+    if (view === 'fuel') {
+      exportFuelPdf(fuelDocs, month, { byBank: fuelByBankList });
+      return;
+    }
+    exportPdf(filtered, summary, month);
+  };
 
   return (
     <div className="app">
@@ -287,8 +323,16 @@ export default function App() {
           <h1>MADEPINUS - RAZÃO - CONCILIAÇÃO</h1>
         </div>
         <div className="header-actions">
-          <button type="button" onClick={() => exportExcel(filtered, month)} className="btn">⬇ Excel</button>
-          <button type="button" onClick={() => exportPdf(filtered, summary, month)} className="btn">⬇ PDF</button>
+          {view !== 'boletos' && view !== 'fiscalPay' && view !== 'taxes' && (
+            <>
+              <button type="button" onClick={handleExportExcel} className="btn" disabled={view === 'fuel' && !fuelDocs.length && !fuelEntries.length}>
+                ⬇ Excel{view === 'fuel' ? ' combustível' : ''}
+              </button>
+              <button type="button" onClick={handleExportPdf} className="btn" disabled={view === 'fuel' && !fuelDocs.length && !fuelEntries.length}>
+                ⬇ PDF{view === 'fuel' ? ' combustível' : ''}
+              </button>
+            </>
+          )}
         </div>
       </header>
 
@@ -422,12 +466,12 @@ export default function App() {
             </button>
           ))}
         </div>
-        {view !== 'taxes' && view !== 'boletos' && accountFilter && (
+        {view !== 'taxes' && view !== 'boletos' && view !== 'fiscalPay' && accountFilter && (
           <button type="button" className="chip" onClick={() => setAccountFilter('')}>
             Conta: {accountFilter} ✕
           </button>
         )}
-        {view !== 'taxes' && view !== 'boletos' && (
+        {view !== 'taxes' && view !== 'boletos' && view !== 'fiscalPay' && (
           <input
             type="search"
             placeholder="Buscar histórico, conta, categoria..."
@@ -442,6 +486,8 @@ export default function App() {
         <TaxAssessment />
       ) : view === 'boletos' ? (
         <SupplierBoletos month={month} />
+      ) : view === 'fiscalPay' ? (
+        <FiscalPagamentos month={month} />
       ) : (
         <>
       {meta && (
@@ -478,7 +524,27 @@ export default function App() {
           {view === 'fuel' ? (
             <>
               <section className="section">
-                <h2>Cupons e notas — pasta COMBUSTÍVEL ({fuelDocs.length})</h2>
+                <div className="section-toolbar">
+                  <h2>Cupons e notas — pasta COMBUSTÍVEL ({fuelDocs.length})</h2>
+                  <div className="header-actions">
+                    <button
+                      type="button"
+                      className="btn btn-sm"
+                      disabled={!fuelDocs.length}
+                      onClick={() => exportFuelExcel(fuelDocs, month, { byBank: fuelByBankList })}
+                    >
+                      ⬇ Excel
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-sm"
+                      disabled={!fuelDocs.length}
+                      onClick={() => exportFuelPdf(fuelDocs, month, { byBank: fuelByBankList })}
+                    >
+                      ⬇ PDF / Imprimir
+                    </button>
+                  </div>
+                </div>
                 <table className="table">
                   <thead>
                     <tr>

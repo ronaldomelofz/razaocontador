@@ -1,0 +1,17 @@
+# Pacotes com advisory conhecido e sem patch seguro no npm público (revisar trimestralmente)
+# O CI falha se aparecer CVE nova FORA desta lista.
+#
+# Formato: "diretório|nome-do-pacote|severity-máxima-aceita"
+# severity: low | moderate | high | critical
+allowlist:
+  # SheetJS no npm parou em 0.18.5; advisories pedem >=0.20.2 (não publicado no registry público)
+  - "server|xlsx|high"
+  # exceljs puxa uuid vulnerável; downgrade exceljs é breaking
+  - "server|uuid|moderate"
+  - "server|exceljs|moderate"
+  # qs via express@4 — upgrade express@5 é major; risco DoS limitado (API só localhost)
+  - "server|qs|moderate"
+  - "server|express|moderate"
+  # Dev-only (Vite); não vai para Netlify production bundle da mesma forma
+  - "client|esbuild|moderate"
+  - "client|vite|high"

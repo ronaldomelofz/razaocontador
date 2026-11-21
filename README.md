@@ -4,6 +4,8 @@ Sistema de conciliação contábil automática (partidas dobradas) para **Falcã
 Cruza extratos bancários, XML fiscal (NF-e/NFC-e), comprovantes e boletos do servidor de rede,
 gera o Livro Razão com anexos e publica em [razaocontador.netlify.app](https://razaocontador.netlify.app/) para a contadora.
 
+**Memória do projeto (estilo Obsidian):** [`memory/00-INDICE.md`](memory/00-INDICE.md) — consultar antes de reexplorar pastas.
+
 ## Funcionalidades
 
 - **Livro Razão** com partidas dobradas (débito/crédito) conforme plano de contas Alterdata (balancete Madepinus)

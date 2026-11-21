@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-11-06T10:21:50.850Z",
+  "months": [
+    {
+      "month": "2026-05",
+      "entries": 146,
+      "generatedAt": "2026-11-05T17:25:57.768Z"
+    },
+    {
+      "month": "2026-06",
+      "entries": 586,
+      "generatedAt": "2026-11-05T17:25:57.885Z"
+    },
+    {
+      "month": "2026-07",
+      "entries": 574,
+      "generatedAt": "2026-11-05T17:25:58.005Z"
+    },
+    {
+      "month": "2026-08",
+      "entries": 696,
+      "generatedAt": "2026-11-05T17:25:58.123Z"
+    },
+    {
+      "month": "2026-09",
+      "entries": 465,
+      "generatedAt": "2026-11-05T17:25:58.240Z"
+    },
+    {
+      "month": "2026-10",
+      "entries": 610,
+      "generatedAt": "2026-11-06T10:21:50.830Z"
+    }
+  ]
+}

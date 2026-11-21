@@ -13,12 +13,25 @@
   to = "/.netlify/functions/api"
   status = 200
 
+# Dados financeiros: não cachear em CDN/proxy compartilhado
 [[headers]]
   for = "/data/*"
   [headers.values]
-    Cache-Control = "public, max-age=300"
+    Cache-Control = "private, no-store"
 
 [[headers]]
   for = "/anexos/*"
   [headers.values]
-    Cache-Control = "public, max-age=3600"
+    Cache-Control = "private, no-store"
+    X-Content-Type-Options = "nosniff"
+
+# Cabeçalhos defensivos globais (anti-clickjacking / XSS / MIME sniff)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; font-src 'self' data:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'"
