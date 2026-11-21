@@ -1,12 +1,30 @@
 // server/src/routes/ledger.js
 import { Router } from 'express';
 import Database from 'better-sqlite3';
+import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { netlifyDataRoot } from '../config.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const db = new Database(path.join(__dirname, '../../data/madepinus.db'));
 const router = Router();
+
+function listStaticMonths() {
+  if (!fs.existsSync(netlifyDataRoot)) return [];
+  return fs.readdirSync(netlifyDataRoot)
+    .filter((f) => /^ledger-\d{4}-\d{2}\.json$/.test(f))
+    .map((f) => f.slice('ledger-'.length, -'.json'.length))
+    .filter((month) => {
+      try {
+        const data = JSON.parse(fs.readFileSync(path.join(netlifyDataRoot, `ledger-${month}.json`), 'utf8'));
+        return (data.entries || []).length > 0;
+      } catch {
+        return false;
+      }
+    })
+    .sort();
+}
 
 // GET /api/ledger?month=2026-06&status=manual_review&account=itau-29660-2
 router.get('/', (req, res) => {
@@ -92,7 +110,8 @@ router.get('/months', (_req, res) => {
     WHERE entry_date IS NOT NULL
     ORDER BY month
   `).all().map((r) => r.month);
-  res.json({ months: fromDb });
+  const months = [...new Set([...fromDb, ...listStaticMonths()])].sort();
+  res.json({ months });
 });
 
 // PATCH /api/ledger/:id — correção manual (contador ou Ronaldo)

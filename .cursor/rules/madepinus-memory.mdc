@@ -1,0 +1,27 @@
+---
+description: Memória permanente MADEPINUS — ler memory/ antes de reexplorar o repo
+alwaysApply: true
+---
+
+# Memória do projeto (obrigatório)
+
+Antes de varrer pastas ou redescobrir arquitetura, abra e use:
+
+1. `memory/00-INDICE.md` — hub
+2. A nota do tema (`PIPELINE`, `MESES`, `APURACAO-DAR`, `DECISOES`, etc.)
+
+## Quatro regras estáveis (não misturar)
+
+| Tema | Regra |
+|------|--------|
+| Processar | só **local DEV** — Netlify = consulta |
+| Deploy | **não** publicar no Netlify sem pedido explícito do usuário |
+| UNC | `\\192.168.1.190\f\ALAINE - CONTADORA` (`server/src/config.js`) |
+| UI meses | `/data/months.json` — não inventar lista hardcoded |
+
+## Anti-token
+
+- Não relistar `server/src/engine/` nem árvore UNC se a nota já responde.
+- Um mês → só `ledger-YYYY-MM.json` (+ boletos/combustível/APURAÇÃO desse mês).
+- `client/public/anexos/` é gitignore — deployáveis: `/data/comprovantes`, `/data/combustivel`.
+- Atualizar a nota quando um fato permanente mudar.

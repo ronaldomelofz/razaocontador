@@ -62,37 +62,83 @@ export function parseSiatEntrada(filePath) {
   let headerIdx = rows.findIndex((r) => r && String(r[0] || '').toUpperCase().includes('NÚM') && String(r[0] || '').toUpperCase().includes('NOTA'));
   if (headerIdx < 0) headerIdx = 13;
 
+  const header = (rows[headerIdx] || []).map((c) => String(c || '').toUpperCase().normalize('NFD').replace(/\p{M}/gu, ''));
+  const col = (...labels) => {
+    for (const label of labels) {
+      const i = header.findIndex((h) => h.includes(label));
+      if (i >= 0) return i;
+    }
+    return -1;
+  };
+
+  // Layouts SIAT observados:
+  // - legado (c/ MODELO + DESTINATÁRIO + UND/QTD/VLR UNIT)
+  // - compacto set/out (sem destinatário; CFOP + VLR PROD + DATA ENTRADA)
+  const iNf = col('NUM. NOTA', 'NUM NOTA') >= 0 ? col('NUM. NOTA', 'NUM NOTA') : 0;
+  const iEmissao = col('DT. EMISSAO', 'DT EMISSAO', 'DATA DE EMISSAO');
+  const iModelo = col('MODELO');
+  const iEmitCnpj = col('EMITENTE');
+  const iEmitName = (() => {
+    // 1ª "RAZAO SOCIAL" após emitente
+    const start = iEmitCnpj >= 0 ? iEmitCnpj + 1 : 0;
+    for (let i = start; i < header.length; i++) {
+      if (header[i].includes('RAZAO SOCIAL')) return i;
+    }
+    return -1;
+  })();
+  const iEmitUf = (() => {
+    const start = iEmitName >= 0 ? iEmitName + 1 : 0;
+    for (let i = start; i < header.length; i++) {
+      if (header[i] === 'UF') return i;
+    }
+    return -1;
+  })();
+  const iDestCnpj = col('DESTINATARIO');
+  const iItem = col('ITEM');
+  const iProdCode = col('COD. PROD', 'COD PROD');
+  const iProdDesc = col('DESCRICAO PROD', 'DESCRICAO');
+  const iNcm = col('NCM');
+  const iCfop = col('CFOP');
+  const iUnd = col('UND');
+  const iQty = col('QTD');
+  const iUnit = col('VLR UNIT');
+  const iProdVal = col('VLR PROD');
+  const iCst = col('CST');
+  const iDestinacao = col('DESTINACAO');
+  const iDataEntrada = col('DATA ENTRADA', 'DATA DE ENTRADA');
+
   const items = [];
   for (let i = headerIdx + 1; i < rows.length; i++) {
     const r = rows[i];
-    if (!r || r[0] == null) continue;
-    const nfRaw = r[0];
+    if (!r || r[iNf] == null) continue;
+    const nfRaw = r[iNf];
     if (typeof nfRaw !== 'number' && !/^\d+$/.test(String(nfRaw))) continue;
 
-    const supplierCfop = r[13] != null ? String(r[13]).replace(/\D/g, '') : null;
+    const supplierCfop = iCfop >= 0 && r[iCfop] != null ? String(r[iCfop]).replace(/\D/g, '') : null;
+    const emitCnpjRaw = iEmitCnpj >= 0 ? r[iEmitCnpj] : null;
     items.push({
       doc_number: String(parseInt(String(nfRaw), 10)),
-      issue_date: excelSerialToISOLoose(r[1]),
-      doc_model: r[2] != null ? String(r[2]) : '55',
-      emit_cnpj: r[3] ? String(r[3]).replace(/\D/g, '') : null,
-      emit_name: r[4] ? String(r[4]).trim() : null,
-      emit_uf: r[5] ? String(r[5]).trim() : null,
-      dest_cnpj: r[6] ? String(r[6]).replace(/\D/g, '') : null,
-      dest_name: r[7] ? String(r[7]).trim() : null,
-      dest_uf: r[8] ? String(r[8]).trim() : null,
-      item: r[9],
-      prod_code: r[10] != null ? String(r[10]) : null,
-      prod_desc: r[11] ? String(r[11]).trim() : null,
-      ncm: r[12] != null ? String(r[12]) : null,
+      issue_date: excelSerialToISOLoose(iEmissao >= 0 ? r[iEmissao] : null),
+      doc_model: iModelo >= 0 && r[iModelo] != null ? String(r[iModelo]) : '55',
+      emit_cnpj: emitCnpjRaw ? String(emitCnpjRaw).replace(/\D/g, '') : null,
+      emit_name: iEmitName >= 0 && r[iEmitName] ? String(r[iEmitName]).trim() : null,
+      emit_uf: iEmitUf >= 0 && r[iEmitUf] ? String(r[iEmitUf]).trim() : null,
+      dest_cnpj: iDestCnpj >= 0 && r[iDestCnpj] ? String(r[iDestCnpj]).replace(/\D/g, '') : null,
+      dest_name: null,
+      dest_uf: null,
+      item: iItem >= 0 ? r[iItem] : null,
+      prod_code: iProdCode >= 0 && r[iProdCode] != null ? String(r[iProdCode]) : null,
+      prod_desc: iProdDesc >= 0 && r[iProdDesc] ? String(r[iProdDesc]).trim() : null,
+      ncm: iNcm >= 0 && r[iNcm] != null ? String(r[iNcm]) : null,
       cfop_supplier: supplierCfop,
       cfop_entrada: toEntradaCfop(supplierCfop),
-      und: r[14],
-      qty: Number(r[15]) || 0,
-      unit_value: Number(r[16]) || 0,
-      prod_value: Number(r[17]) || 0,
-      cst: r[18] != null ? String(r[18]) : null,
-      destinacao: r[19] ? String(r[19]).trim() : null,
-      data_entrada: excelSerialToISOLoose(r[20]),
+      und: iUnd >= 0 ? r[iUnd] : null,
+      qty: iQty >= 0 ? Number(r[iQty]) || 0 : 0,
+      unit_value: iUnit >= 0 ? Number(r[iUnit]) || 0 : 0,
+      prod_value: iProdVal >= 0 ? Number(r[iProdVal]) || 0 : 0,
+      cst: iCst >= 0 && r[iCst] != null ? String(r[iCst]) : null,
+      destinacao: iDestinacao >= 0 && r[iDestinacao] ? String(r[iDestinacao]).trim() : null,
+      data_entrada: excelSerialToISOLoose(iDataEntrada >= 0 ? r[iDataEntrada] : null),
     });
   }
 
@@ -184,7 +230,7 @@ export function findSiatFile(monthRootOrFiles) {
 
   if (Array.isArray(monthRootOrFiles)) {
     const inEntrada = monthRootOrFiles.find((f) =>
-      isSiatName(f.name || f.path || '') && /NOTAS FISCAL DE ENTRADA/i.test(f.path || ''),
+      isSiatName(f.name || f.path || '') && /NOTAS FISCAL(?:IS)? DE ENTRADA/i.test(f.path || ''),
     );
     if (inEntrada) return inEntrada;
     return monthRootOrFiles.find((f) => isSiatName(f.name || f.path || '')) || null;
@@ -193,7 +239,8 @@ export function findSiatFile(monthRootOrFiles) {
   const root = monthRootOrFiles;
   if (!fs.existsSync(root)) return null;
 
-  const entrada = fs.readdirSync(root).find((d) => /NOTAS FISCAIS? DE ENTRADA/i.test(d));
+  // Pastas reais: "NOTAS FISCAL DE ENTRADA" (sing.) e "NOTAS FISCAIS DE ENTRADA"
+  const entrada = fs.readdirSync(root).find((d) => /NOTAS FISCAL(?:IS)? DE ENTRADA/i.test(d));
   if (entrada) {
     const dir = path.join(root, entrada);
     const file = fs.readdirSync(dir).find((f) => isSiatName(f));

@@ -1,0 +1,345 @@
+{
+  "generatedAt": "2026-11-06T10:21:47.899Z",
+  "month": "2026-10",
+  "source": "RELATÓRIO SIAT 102026 - FALCÃO.xls",
+  "summary": {
+    "notes": 10,
+    "totalProdutos": 110137.65,
+    "byCfopEntrada": {
+      "1102": {
+        "n": 2,
+        "total": 2795.01
+      },
+      "1405": {
+        "n": 1,
+        "total": 1835.25
+      },
+      "1656": {
+        "n": 1,
+        "total": 260
+      },
+      "2101": {
+        "n": 4,
+        "total": 98177.48999999999
+      },
+      "2102": {
+        "n": 2,
+        "total": 8872.06
+      },
+      "2949": {
+        "n": 1,
+        "total": 33.09
+      }
+    },
+    "byUf": {
+      "ES": {
+        "n": 3,
+        "total": 77702.20999999999
+      },
+      "SP": {
+        "n": 2,
+        "total": 20508.37
+      },
+      "RS": {
+        "n": 1,
+        "total": 784.36
+      },
+      "PI": {
+        "n": 3,
+        "total": 3055.01
+      },
+      "CE": {
+        "n": 1,
+        "total": 8087.7
+      }
+    },
+    "byDestinacao": {
+      "REVENDA": {
+        "n": 6,
+        "total": 107049.54999999999
+      },
+      "USO / CONSUMO": {
+        "n": 3,
+        "total": 3055.01
+      },
+      "MOSTRUÁRIO": {
+        "n": 1,
+        "total": 33.09
+      }
+    }
+  },
+  "notes": [
+    {
+      "doc_number": "199281",
+      "doc_model": "55",
+      "issue_date": "2026-08-16",
+      "counterparty_name": "Placas do Brasil S/A",
+      "counterparty_doc": "14792934000118",
+      "emit_uf": "ES",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 34354.52,
+      "item_count": 4,
+      "data_entrada": "2026-10-02",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "199283",
+      "doc_model": "55",
+      "issue_date": "2026-08-16",
+      "counterparty_name": "Placas do Brasil S/A",
+      "counterparty_doc": "14792934000118",
+      "emit_uf": "ES",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 43314.6,
+      "item_count": 1,
+      "data_entrada": "2026-10-02",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "467255",
+      "doc_model": "55",
+      "issue_date": "2026-09-22",
+      "counterparty_name": "EUCATEX INDUSTRIA E COMERCIO LTDA",
+      "counterparty_doc": "14675270000450",
+      "emit_uf": "SP",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 15231.73,
+      "item_count": 1,
+      "data_entrada": "2026-10-13",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "10105",
+      "doc_model": "55",
+      "issue_date": "2026-09-28",
+      "counterparty_name": "KitSul Componentes para Moveis LTDA",
+      "counterparty_doc": "06176367000147",
+      "emit_uf": "RS",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2102",
+      "cfops_entrada": [
+        "2102"
+      ],
+      "cfops_supplier": [
+        "6102"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 784.36,
+      "item_count": 11,
+      "data_entrada": "2026-10-12",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "195834",
+      "doc_model": "55",
+      "issue_date": "2026-09-29",
+      "counterparty_name": "INDUSTRIA QUIMICA UNA LTDA",
+      "counterparty_doc": "60600152000238",
+      "emit_uf": "SP",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 5276.64,
+      "item_count": 2,
+      "data_entrada": "2026-10-20",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "130791",
+      "doc_model": "55",
+      "issue_date": "2026-10-03",
+      "counterparty_name": "HOT SAT TELECOMUNICACOES LTDA",
+      "counterparty_doc": "74052085001402",
+      "emit_uf": "PI",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "1102",
+      "cfops_entrada": [
+        "1102"
+      ],
+      "cfops_supplier": [
+        "5102"
+      ],
+      "destinacao": "USO / CONSUMO",
+      "destinacoes": [
+        "USO / CONSUMO"
+      ],
+      "total_value": 959.76,
+      "item_count": 1,
+      "data_entrada": "2026-10-03",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "3376",
+      "doc_model": "55",
+      "issue_date": "2026-10-06",
+      "counterparty_name": "JJI COMERCIO ATACADISTA LTDA",
+      "counterparty_doc": "31765157000212",
+      "emit_uf": "CE",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2102",
+      "cfops_entrada": [
+        "2102"
+      ],
+      "cfops_supplier": [
+        "6102"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 8087.7,
+      "item_count": 11,
+      "data_entrada": "2026-10-20",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "202302",
+      "doc_model": "55",
+      "issue_date": "2026-10-09",
+      "counterparty_name": "Placas do Brasil S/A",
+      "counterparty_doc": "14792934000118",
+      "emit_uf": "ES",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2949",
+      "cfops_entrada": [
+        "2949"
+      ],
+      "cfops_supplier": [
+        "6949"
+      ],
+      "destinacao": "MOSTRUÁRIO",
+      "destinacoes": [
+        "MOSTRUÁRIO"
+      ],
+      "total_value": 33.09,
+      "item_count": 1,
+      "data_entrada": "2026-10-28",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "424447",
+      "doc_model": "55",
+      "issue_date": "2026-10-20",
+      "counterparty_name": "NEWLAND VEICULOS LTDA",
+      "counterparty_doc": "41597303000463",
+      "emit_uf": "PI",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "1405",
+      "cfops_entrada": [
+        "1405",
+        "1102"
+      ],
+      "cfops_supplier": [
+        "5405",
+        "5102"
+      ],
+      "destinacao": "USO / CONSUMO",
+      "destinacoes": [
+        "USO / CONSUMO"
+      ],
+      "total_value": 1835.25,
+      "item_count": 8,
+      "data_entrada": "2026-10-20",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "13351",
+      "doc_model": "55",
+      "issue_date": "2026-10-28",
+      "counterparty_name": "E CRISTINA DA SILVA EIRELI",
+      "counterparty_doc": "03590095000139",
+      "emit_uf": "PI",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "1656",
+      "cfops_entrada": [
+        "1656"
+      ],
+      "cfops_supplier": [
+        "5656"
+      ],
+      "destinacao": "USO / CONSUMO",
+      "destinacoes": [
+        "USO / CONSUMO"
+      ],
+      "total_value": 260,
+      "item_count": 1,
+      "data_entrada": "2026-10-28",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    }
+  ]
+}

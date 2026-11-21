@@ -24,13 +24,22 @@ router.get('/', (req, res) => {
   res.json(db.prepare(sql).all(...params));
 });
 
-// GET /api/attachments/file/:id — serve arquivo copiado
+// GET /api/attachments/file/:id — serve arquivo copiado (somente sob data/)
 router.get('/file/:id', (req, res) => {
+  if (!/^\d+$/.test(String(req.params.id || ''))) {
+    return res.status(400).json({ error: 'id inválido' });
+  }
   const row = db.prepare(`SELECT * FROM attachments WHERE id = ?`).get(req.params.id);
   if (!row) return res.status(404).json({ error: 'Anexo não encontrado' });
   const filePath = row.copied_path || row.file_path;
-  if (!fs.existsSync(filePath)) return res.status(404).json({ error: 'Arquivo não disponível' });
-  res.sendFile(path.resolve(filePath));
+  if (!filePath) return res.status(404).json({ error: 'Arquivo não disponível' });
+  const resolved = path.resolve(filePath);
+  const dataRoot = path.resolve(path.dirname(dbPath));
+  if (!resolved.startsWith(dataRoot + path.sep)) {
+    return res.status(403).json({ error: 'Caminho fora da área permitida' });
+  }
+  if (!fs.existsSync(resolved)) return res.status(404).json({ error: 'Arquivo não disponível' });
+  res.sendFile(resolved);
 });
 
 export default router;

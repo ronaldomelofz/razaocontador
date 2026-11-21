@@ -11,9 +11,12 @@ export const RULES = [
   // --- Transferências entre contas próprias (CNPJ da empresa) ---
   [/10876822000194|PIX.*(RECEBIDO|ENVIADO).*FALCAO\s*&?\s*FR|PIX.*MADEPINUS/i, 'Transferência entre contas próprias', '1.01.01.01.02.0002', 'interna'],
   // --- Aplicação automática BB (varredura diária de saldo) ---
-  [/REND\s*F[ÁA]CIL/i, 'Aplicação financeira — BB Rende Fácil (transferência automática)', '1.01.01.01.03.0002', 'interna'],
-  [/TRANSFER[ÊE]NCIA AUTOM\.?\s*RECEBIDA\s*8840/i, 'Recebimento cartão (concentrador Itaú)', '1.01.03.01.02.0003', 'operacional'],
-  [/TRANSFER[ÊE]NCIA AUTOM\.?\s*RECEBIDA\s*H\s*II/i, 'Recebimento cartão (concentrador)', '1.01.03.01.02.0003', 'operacional'],
+  // Extrato traz "Rende Fácil" / "Rende Facil" (não "Rend Fácil")
+  [/REND[EI]?\s*F[ÁA]CIL/i, 'Aplicação financeira — BB Rende Fácil (transferência automática)', '1.01.01.01.03.0002', 'interna'],
+  // Concentrador cartão Itaú 57563 → conta corrente (com ou sem "AUTOM.")
+  [/TRANSFER[ÊE]NCIA\s+(AUTOM\.?\s*)?RECEBIDA\s*8840/i, 'Recebimento cartão (concentrador Itaú)', '1.01.03.01.02.0003', 'operacional'],
+  [/TRANSFER[ÊE]NCIA\s+(AUTOM\.?\s*)?RECEBIDA\s*H\s*II/i, 'Recebimento cartão (concentrador)', '1.01.03.01.02.0003', 'operacional'],
+  [/PAGAMENTOS?\s+REDECARD/i, 'Repasse / liquidação REDECARD', '1.01.03.01.02.0003', 'operacional'],
   [/TEG EX GAR/i, 'Repasse garantia cartão (TEG)', '1.01.03.01.02.0003', 'operacional'],
   [/PIX - RECEBIDO CREDI ?SHOP/i, 'Recebimento cartão (CrediShop)', '1.01.03.01.02.0001', 'operacional'],
   [/JUROS (SALDO DEVEDOR|EXCESSO|ATRASO|MORA)/i, 'Juros bancários / mora', '4.02.02.01.03', 'financeira'],

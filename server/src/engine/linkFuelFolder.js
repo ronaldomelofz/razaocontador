@@ -9,12 +9,16 @@ import { parseFuelFilename, FUEL_DOC_EXTENSIONS } from '../parsers/fuelDocument.
 import { enrichFuelRecord as enrichFuelRecord202606 } from '../data/fuelOcr2026-06.js';
 import { enrichFuelRecord as enrichFuelRecord202607 } from '../data/fuelOcr2026-07.js';
 import { enrichFuelRecord as enrichFuelRecord202608 } from '../data/fuelOcr2026-08.js';
+import { enrichFuelRecord as enrichFuelRecord202609 } from '../data/fuelOcr2026-09.js';
+import { enrichFuelRecord as enrichFuelRecord202610 } from '../data/fuelOcr2026-10.js';
 
 // Registro de leitura documental (OCR/manual) por mês de competência.
 const FUEL_ENRICHERS_BY_MONTH = {
   '2026-06': enrichFuelRecord202606,
   '2026-07': enrichFuelRecord202607,
   '2026-08': enrichFuelRecord202608,
+  '2026-09': enrichFuelRecord202609,
+  '2026-10': enrichFuelRecord202610,
 };
 
 function enrichFuelRecord(record, month) {

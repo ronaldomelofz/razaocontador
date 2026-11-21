@@ -26,3 +26,6 @@ tmp_apuracao_img/
 tmp_ocr_work/
 tmp_pipeline_*.log
 tmp_ocr_*.log
+tmp_ocr_*.png
+**/__pycache__/
+*.pyc

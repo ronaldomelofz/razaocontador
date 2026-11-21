@@ -1,10 +1,20 @@
 {
-  "generatedAt": "2026-09-11T14:42:15.371Z",
+  "generatedAt": "2026-11-05T17:25:56.921Z",
   "month": "2026-07",
   "source": "RELATÓRIO SIAT 072026 - FALCÃO.xls",
+  "filter": "data_entrada",
+  "meta": {
+    "source": "RELATÓRIO SIAT 072026 - FALCÃO.xls",
+    "sheet": "Consulta NF-e",
+    "tipoConsulta": "01 - Notas Fiscais de Entrada para o Contribuinte",
+    "cnpj": "10876822000194",
+    "periodoEmissao": "15/05/2026 a 31/07/2026"
+  },
   "summary": {
     "notes": 23,
     "totalProdutos": 194508.5,
+    "excluidasSemDataEntrada": 11,
+    "excluidasOutroMesEntrada": 0,
     "byCfopEntrada": {
       "1102": {
         "n": 5,
@@ -20,7 +30,7 @@
       },
       "2102": {
         "n": 3,
-        "total": 12863.619999999999
+        "total": 12863.62
       },
       "2910": {
         "n": 2,
@@ -30,7 +40,7 @@
     "byUf": {
       "SP": {
         "n": 3,
-        "total": 21597.629999999997
+        "total": 21597.63
       },
       "PE": {
         "n": 2,
@@ -84,7 +94,7 @@
       "counterparty_name": "EUCATEX INDUSTRIA E COMERCIO LTDA",
       "counterparty_doc": "14675270000450",
       "emit_uf": "SP",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "2101",
       "cfops_entrada": [
@@ -111,7 +121,7 @@
       "counterparty_name": "AFO MOVEIS E ARTEFATOS LTDA",
       "counterparty_doc": "12041023000123",
       "emit_uf": "PE",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "2101",
       "cfops_entrada": [
@@ -138,7 +148,7 @@
       "counterparty_name": "METALURGICA FERRONORTE LTDA F10",
       "counterparty_doc": "07103898000172",
       "emit_uf": "PI",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "1102",
       "cfops_entrada": [
@@ -165,7 +175,7 @@
       "counterparty_name": "J G DAMASCENO E CIA LTDA",
       "counterparty_doc": "09584467000109",
       "emit_uf": "PI",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "1102",
       "cfops_entrada": [
@@ -192,7 +202,7 @@
       "counterparty_name": "INDUSTRIA QUIMICA UNA LTDA",
       "counterparty_doc": "60600152000238",
       "emit_uf": "SP",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "2101",
       "cfops_entrada": [
@@ -221,7 +231,7 @@
       "counterparty_name": "TABONE INDÚSTRIA E COMÉRCIO DE PLÁSTICOS LTDA-MATRIZ",
       "counterparty_doc": "90102609000164",
       "emit_uf": "RS",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "2101",
       "cfops_entrada": [
@@ -248,7 +258,7 @@
       "counterparty_name": "TABONE INDÚSTRIA E COMÉRCIO DE PLÁSTICOS LTDA-MATRIZ",
       "counterparty_doc": "90102609000164",
       "emit_uf": "RS",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "2910",
       "cfops_entrada": [
@@ -275,7 +285,7 @@
       "counterparty_name": "LAGE RENZETTI LTDA",
       "counterparty_doc": "04932792000193",
       "emit_uf": "PR",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "2101",
       "cfops_entrada": [
@@ -302,7 +312,7 @@
       "counterparty_name": "J G DAMASCENO E CIA LTDA",
       "counterparty_doc": "09584467000109",
       "emit_uf": "PI",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "1102",
       "cfops_entrada": [
@@ -329,7 +339,7 @@
       "counterparty_name": "E CRISTINA DA SILVA EIRELI",
       "counterparty_doc": "03590095000139",
       "emit_uf": "PI",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "1656",
       "cfops_entrada": [
@@ -356,7 +366,7 @@
       "counterparty_name": "HD FERRAGENS PARA MOVEIS LTDA.",
       "counterparty_doc": "05509961000140",
       "emit_uf": "PR",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "2102",
       "cfops_entrada": [
@@ -383,7 +393,7 @@
       "counterparty_name": "DINO & FREITAS LTDA-ME",
       "counterparty_doc": "20422108000180",
       "emit_uf": "PI",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "1102",
       "cfops_entrada": [
@@ -410,7 +420,7 @@
       "counterparty_name": "AFO MOVEIS E ARTEFATOS LTDA",
       "counterparty_doc": "12041023000123",
       "emit_uf": "PE",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "2101",
       "cfops_entrada": [
@@ -437,7 +447,7 @@
       "counterparty_name": "Placas do Brasil S/A",
       "counterparty_doc": "14792934000118",
       "emit_uf": "ES",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "2101",
       "cfops_entrada": [
@@ -464,7 +474,7 @@
       "counterparty_name": "Placas do Brasil S/A",
       "counterparty_doc": "14792934000118",
       "emit_uf": "ES",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "2101",
       "cfops_entrada": [
@@ -491,7 +501,7 @@
       "counterparty_name": "Placas do Brasil S/A",
       "counterparty_doc": "14792934000118",
       "emit_uf": "ES",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "2101",
       "cfops_entrada": [
@@ -518,7 +528,7 @@
       "counterparty_name": "ROMETAL COMPONENTES PARA MOVEIS LTDA",
       "counterparty_doc": "06925691000110",
       "emit_uf": "RS",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "2101",
       "cfops_entrada": [
@@ -545,7 +555,7 @@
       "counterparty_name": "STARRETT INDUSTRIA E COMERCIO LTDA - FILIAL",
       "counterparty_doc": "56994700000365",
       "emit_uf": "MG",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "2102",
       "cfops_entrada": [
@@ -572,7 +582,7 @@
       "counterparty_name": "PLANALTO PETROLEO BOLA LTDA",
       "counterparty_doc": "04787075000549",
       "emit_uf": "PI",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "1656",
       "cfops_entrada": [
@@ -599,7 +609,7 @@
       "counterparty_name": "J G DAMASCENO E CIA LTDA",
       "counterparty_doc": "09584467000109",
       "emit_uf": "PI",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "1102",
       "cfops_entrada": [
@@ -626,7 +636,7 @@
       "counterparty_name": "CRUZEIRO PAPEIS INDUSTRIAIS LTDA",
       "counterparty_doc": "48410211000552",
       "emit_uf": "SP",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "2910",
       "cfops_entrada": [
@@ -653,7 +663,7 @@
       "counterparty_name": "E CRISTINA DA SILVA EIRELI",
       "counterparty_doc": "03590095000139",
       "emit_uf": "PI",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "1656",
       "cfops_entrada": [
@@ -680,7 +690,7 @@
       "counterparty_name": "PLANALTO PETROLEO BOLA LTDA",
       "counterparty_doc": "04787075000549",
       "emit_uf": "PI",
-      "dest_uf": "PI",
+      "dest_uf": null,
       "doc_direction": "entrada",
       "cfop": "1656",
       "cfops_entrada": [
@@ -700,5 +710,87 @@
       "pis_value": null,
       "cofins_value": null
     }
-  ]
+  ],
+  "excluded": {
+    "semDataEntrada": [
+      {
+        "doc_number": "193441",
+        "issue_date": "2026-05-15",
+        "counterparty_name": "Placas do Brasil S/A",
+        "total_value": 125809.71,
+        "emit_uf": "ES"
+      },
+      {
+        "doc_number": "193442",
+        "issue_date": "2026-05-15",
+        "counterparty_name": "Placas do Brasil S/A",
+        "total_value": 6790.49,
+        "emit_uf": "ES"
+      },
+      {
+        "doc_number": "332773",
+        "issue_date": "2026-07-21",
+        "counterparty_name": "FARBEN S/A INDUSTRIA QUIMICA",
+        "total_value": 4592.7,
+        "emit_uf": "SP"
+      },
+      {
+        "doc_number": "99627",
+        "issue_date": "2026-07-23",
+        "counterparty_name": "HD FERRAGENS PARA MOVEIS LTDA.",
+        "total_value": 6670.04,
+        "emit_uf": "PR"
+      },
+      {
+        "doc_number": "9761",
+        "issue_date": "2026-07-24",
+        "counterparty_name": "KitSul Componentes para Moveis LTDA",
+        "total_value": 2182.05,
+        "emit_uf": "RS"
+      },
+      {
+        "doc_number": "198010",
+        "issue_date": "2026-07-25",
+        "counterparty_name": "Placas do Brasil S/A",
+        "total_value": 48088.38,
+        "emit_uf": "ES"
+      },
+      {
+        "doc_number": "198011",
+        "issue_date": "2026-07-25",
+        "counterparty_name": "Placas do Brasil S/A",
+        "total_value": 14958.72,
+        "emit_uf": "ES"
+      },
+      {
+        "doc_number": "198281",
+        "issue_date": "2026-07-29",
+        "counterparty_name": "Placas do Brasil S/A",
+        "total_value": 11280.78,
+        "emit_uf": "ES"
+      },
+      {
+        "doc_number": "198282",
+        "issue_date": "2026-07-29",
+        "counterparty_name": "Placas do Brasil S/A",
+        "total_value": 7479.36,
+        "emit_uf": "ES"
+      },
+      {
+        "doc_number": "198283",
+        "issue_date": "2026-07-29",
+        "counterparty_name": "Placas do Brasil S/A",
+        "total_value": 77966.28,
+        "emit_uf": "ES"
+      },
+      {
+        "doc_number": "3099",
+        "issue_date": "2026-07-30",
+        "counterparty_name": "JJI COMERCIO ATACADISTA LTDA",
+        "total_value": 10063.35,
+        "emit_uf": "CE"
+      }
+    ],
+    "outraDataEntrada": []
+  }
 }

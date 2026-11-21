@@ -1,0 +1,18 @@
+---
+description: Segurança MADEPINUS — fail-closed, sem vazar segredos, patch rápido
+alwaysApply: true
+---
+
+# Segurança (sempre)
+
+Antes de mudar auth, CORS, upload, functions ou deps: abrir `memory/SEGURANCA.md`.
+
+## Regras estáveis
+
+- Netlify **fail-closed**: sem Basic Auth configurada → não publicar dados.
+- **Não** sugerir `ALLOW_PUBLIC=1` em produção.
+- **Não** fazer deploy Netlify sem pedido explícito do usuário.
+- API local permanece em `127.0.0.1`; pipeline/scan não vão para a function Netlify.
+- Não commitar `.env`, tokens, DB SQLite, `APURAÇÃO/`.
+- Após CVE/advisory: `node scripts/ci-npm-audit.mjs` — se falhar, patchar ou documentar em `.github/npm-audit-allowlist.yml` (com justificativa).
+- Não remover a workflow `npm-audit` sem substituir por controle equivalente.

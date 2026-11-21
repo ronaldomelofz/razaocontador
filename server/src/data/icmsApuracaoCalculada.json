@@ -391,17 +391,17 @@
         {
           "cfop": "5.102",
           "desc": "VENDAS DE MERCADORIA",
-          "n": 0,
-          "vContabil": 0,
-          "baseCalculo": 0,
+          "n": 607,
+          "vContabil": 169184.21,
+          "baseCalculo": 169184.21,
           "aliquota": 22.5,
-          "debito": 0
+          "debito": 37945.31
         },
         {
           "cfop": "5.405",
           "desc": "VENDAS DE MERCADORIA (ST)",
-          "n": 0,
-          "vContabil": 0,
+          "n": 5,
+          "vContabil": 122.09,
           "baseCalculo": null,
           "aliquota": null,
           "debito": 0
@@ -416,9 +416,126 @@
           "debito": 0
         }
       ],
-      "debitoSaidas": 0,
-      "receitaBruta": 0,
-      "allCfops": []
+      "debitoSaidas": 37945.31,
+      "receitaBruta": 169306.3,
+      "allCfops": [
+        {
+          "cfop": "5102",
+          "n": 607,
+          "total": 169184.21,
+          "icms": 37945.31
+        },
+        {
+          "cfop": "6101",
+          "n": 7,
+          "total": 103933.48,
+          "icms": 10792.27
+        },
+        {
+          "cfop": "1202",
+          "n": 7,
+          "total": 1001.05,
+          "icms": 225.24
+        },
+        {
+          "cfop": "5929",
+          "n": 1,
+          "total": 927.13,
+          "icms": 0
+        },
+        {
+          "cfop": "5405",
+          "n": 5,
+          "total": 122.09,
+          "icms": 5.55
+        }
+      ]
+    },
+    "antecipacao": {
+      "total": 0,
+      "totalComOcrPreferencial": 0,
+      "notas": [],
+      "observacao": "Só NF com data_entrada no mês da pasta NOTAS FISCAL DE ENTRADA. Alíquota: OCR > histórico fornecedor > heurística UF. Conferir com Memória ICMS / DAR."
+    }
+  },
+  "2026-10": {
+    "period": "2026-10",
+    "aliqInternaPI": 22.5,
+    "baseLegal": "Decreto 21.866/2023 (RICMS-PI) arts. 78–82 — antecipação parcial em compras interestaduais para comercialização; alíquota interna geral 22,5% (art. 21, I, c).",
+    "formulaAntecipacao": "ICMS antecipação = (base × 22,5%) − ICMS destacado na NF de entrada = base × (22,5% − alíq. interestadual de origem)",
+    "filtroSiat": "data_entrada no mês da pasta NOTAS FISCAL DE ENTRADA",
+    "siatNotasNoMes": 0,
+    "icmsNormal": {
+      "fonte": "fiscal_documents (XMLs de saída)",
+      "saidas": [
+        {
+          "cfop": "5.102",
+          "desc": "VENDAS DE MERCADORIA",
+          "n": 542,
+          "vContabil": 158791.51,
+          "baseCalculo": 158791.51,
+          "aliquota": 22.5,
+          "debito": 35521.3
+        },
+        {
+          "cfop": "5.405",
+          "desc": "VENDAS DE MERCADORIA (ST)",
+          "n": 9,
+          "vContabil": 342.91,
+          "baseCalculo": null,
+          "aliquota": null,
+          "debito": 0
+        },
+        {
+          "cfop": "6.108",
+          "desc": "VENDAS INTERESTADUAIS",
+          "n": 0,
+          "vContabil": 0,
+          "baseCalculo": null,
+          "aliquota": null,
+          "debito": 0
+        }
+      ],
+      "debitoSaidas": 35521.3,
+      "receitaBruta": 159134.42,
+      "allCfops": [
+        {
+          "cfop": "5102",
+          "n": 542,
+          "total": 158791.51,
+          "icms": 35521.3
+        },
+        {
+          "cfop": "6101",
+          "n": 2,
+          "total": 129949.2,
+          "icms": 14902.34
+        },
+        {
+          "cfop": "6102",
+          "n": 6,
+          "total": 18686.86,
+          "icms": 1069.98
+        },
+        {
+          "cfop": "5405",
+          "n": 9,
+          "total": 342.91,
+          "icms": 15.3
+        },
+        {
+          "cfop": "1202",
+          "n": 4,
+          "total": 248.67,
+          "icms": 55.96
+        },
+        {
+          "cfop": "5929",
+          "n": 1,
+          "total": 198.41,
+          "icms": 0
+        }
+      ]
     },
     "antecipacao": {
       "total": 0,

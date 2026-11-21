@@ -1,0 +1,642 @@
+{
+  "generatedAt": "2026-11-05T17:25:56.540Z",
+  "month": "2026-09",
+  "source": "Cópia de RELATÓRIO SIAT 092026 FALCÃO.xls",
+  "filter": "data_entrada",
+  "meta": {
+    "source": "Cópia de RELATÓRIO SIAT 092026 FALCÃO.xls",
+    "sheet": "Consulta NF-e",
+    "tipoConsulta": null,
+    "cnpj": "",
+    "periodoEmissao": null
+  },
+  "summary": {
+    "notes": 19,
+    "totalProdutos": 193629.78,
+    "excluidasSemDataEntrada": 5,
+    "excluidasOutroMesEntrada": 0,
+    "byCfopEntrada": {
+      "1102": {
+        "n": 3,
+        "total": 291.15
+      },
+      "1656": {
+        "n": 3,
+        "total": 1050
+      },
+      "2101": {
+        "n": 11,
+        "total": 184539.33
+      },
+      "2102": {
+        "n": 2,
+        "total": 7749.3
+      }
+    },
+    "byUf": {
+      "ES": {
+        "n": 5,
+        "total": 159773.52
+      },
+      "RS": {
+        "n": 3,
+        "total": 11435.44
+      },
+      "GO": {
+        "n": 1,
+        "total": 1003
+      },
+      "SP": {
+        "n": 1,
+        "total": 2069.12
+      },
+      "PR": {
+        "n": 2,
+        "total": 13716.65
+      },
+      "PI": {
+        "n": 6,
+        "total": 1341.15
+      },
+      "SC": {
+        "n": 1,
+        "total": 4290.9
+      }
+    },
+    "byDestinacao": {
+      "REVENDA": {
+        "n": 14,
+        "total": 192408.03
+      },
+      "CONSUMO": {
+        "n": 3,
+        "total": 1050
+      },
+      "REVENDA | CONSUMO": {
+        "n": 1,
+        "total": 82.75
+      },
+      "CONSUMO | REVENDA": {
+        "n": 1,
+        "total": 89
+      }
+    }
+  },
+  "notes": [
+    {
+      "doc_number": "198010",
+      "doc_model": "55",
+      "issue_date": "2026-07-25",
+      "counterparty_name": "Placas do Brasil S/A",
+      "counterparty_doc": "14792934000118",
+      "emit_uf": "ES",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 48088.38,
+      "item_count": 6,
+      "data_entrada": "2026-09-02",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "198011",
+      "doc_model": "55",
+      "issue_date": "2026-07-25",
+      "counterparty_name": "Placas do Brasil S/A",
+      "counterparty_doc": "14792934000118",
+      "emit_uf": "ES",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 14958.72,
+      "item_count": 1,
+      "data_entrada": "2026-09-02",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "198281",
+      "doc_model": "55",
+      "issue_date": "2026-07-29",
+      "counterparty_name": "Placas do Brasil S/A",
+      "counterparty_doc": "14792934000118",
+      "emit_uf": "ES",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 11280.78,
+      "item_count": 1,
+      "data_entrada": "2026-09-02",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "198282",
+      "doc_model": "55",
+      "issue_date": "2026-07-29",
+      "counterparty_name": "Placas do Brasil S/A",
+      "counterparty_doc": "14792934000118",
+      "emit_uf": "ES",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 7479.36,
+      "item_count": 1,
+      "data_entrada": "2026-09-02",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "198283",
+      "doc_model": "55",
+      "issue_date": "2026-07-29",
+      "counterparty_name": "Placas do Brasil S/A",
+      "counterparty_doc": "14792934000118",
+      "emit_uf": "ES",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 77966.28,
+      "item_count": 1,
+      "data_entrada": "2026-09-02",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "363265",
+      "doc_model": "55",
+      "issue_date": "2026-08-18",
+      "counterparty_name": "TABONE INDÚSTRIA E COMÉRCIO DE PLÁSTICOS LTDA-MATRIZ",
+      "counterparty_doc": "90102609000164",
+      "emit_uf": "RS",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 7083.44,
+      "item_count": 11,
+      "data_entrada": "2026-09-02",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "8480",
+      "doc_model": "55",
+      "issue_date": "2026-08-19",
+      "counterparty_name": "Marfim Tapa Furos Ltda",
+      "counterparty_doc": "28053357000157",
+      "emit_uf": "GO",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 1003,
+      "item_count": 1,
+      "data_entrada": "2026-09-03",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "46884",
+      "doc_model": "55",
+      "issue_date": "2026-08-21",
+      "counterparty_name": "MANUFATURA DE ACO 3D LTDA",
+      "counterparty_doc": "01710694000113",
+      "emit_uf": "RS",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 3182,
+      "item_count": 2,
+      "data_entrada": "2026-09-04",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "277596",
+      "doc_model": "55",
+      "issue_date": "2026-08-24",
+      "counterparty_name": "METALURGICA ALBRAS LTDA",
+      "counterparty_doc": "43730415000123",
+      "emit_uf": "SP",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 2069.12,
+      "item_count": 2,
+      "data_entrada": "2026-09-02",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "61894",
+      "doc_model": "55",
+      "issue_date": "2026-08-28",
+      "counterparty_name": "LAGE RENZETTI LTDA",
+      "counterparty_doc": "04932792000193",
+      "emit_uf": "PR",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 7137.35,
+      "item_count": 6,
+      "data_entrada": "2026-09-17",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "770911",
+      "doc_model": "55",
+      "issue_date": "2026-09-01",
+      "counterparty_name": "ENGECOPI COM MATS CONST LTDA(MF)",
+      "counterparty_doc": "07483654000405",
+      "emit_uf": "PI",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "1102",
+      "cfops_entrada": [
+        "1102"
+      ],
+      "cfops_supplier": [
+        "5102"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 119.4,
+      "item_count": 2,
+      "data_entrada": "2026-09-01",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "101868",
+      "doc_model": "55",
+      "issue_date": "2026-09-03",
+      "counterparty_name": "HD FERRAGENS PARA MOVEIS LTDA.",
+      "counterparty_doc": "05509961000140",
+      "emit_uf": "PR",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2102",
+      "cfops_entrada": [
+        "2102"
+      ],
+      "cfops_supplier": [
+        "6102"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 6579.3,
+      "item_count": 9,
+      "data_entrada": "2026-09-15",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "9968",
+      "doc_model": "55",
+      "issue_date": "2026-09-03",
+      "counterparty_name": "KitSul Componentes para Moveis LTDA",
+      "counterparty_doc": "06176367000147",
+      "emit_uf": "RS",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2102",
+      "cfops_entrada": [
+        "2102"
+      ],
+      "cfops_supplier": [
+        "6102"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 1170,
+      "item_count": 16,
+      "data_entrada": "2026-09-22",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "1030",
+      "doc_model": "55",
+      "issue_date": "2026-09-04",
+      "counterparty_name": "PLANALTO PETROLEO BOLA LTDA",
+      "counterparty_doc": "04787075000549",
+      "emit_uf": "PI",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "1656",
+      "cfops_entrada": [
+        "1656"
+      ],
+      "cfops_supplier": [
+        "5656"
+      ],
+      "destinacao": "CONSUMO",
+      "destinacoes": [
+        "CONSUMO"
+      ],
+      "total_value": 400,
+      "item_count": 1,
+      "data_entrada": "2026-09-04",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "719804",
+      "doc_model": "55",
+      "issue_date": "2026-09-04",
+      "counterparty_name": "IBRAP INDUSTRIA BRASILEIRA DE ALUMINIO E PLASTICOS S/A",
+      "counterparty_doc": "00130132000138",
+      "emit_uf": "SC",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "2101",
+      "cfops_entrada": [
+        "2101"
+      ],
+      "cfops_supplier": [
+        "6101"
+      ],
+      "destinacao": "REVENDA",
+      "destinacoes": [
+        "REVENDA"
+      ],
+      "total_value": 4290.9,
+      "item_count": 2,
+      "data_entrada": "2026-09-21",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "13284",
+      "doc_model": "55",
+      "issue_date": "2026-09-10",
+      "counterparty_name": "E CRISTINA DA SILVA EIRELI",
+      "counterparty_doc": "03590095000139",
+      "emit_uf": "PI",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "1656",
+      "cfops_entrada": [
+        "1656"
+      ],
+      "cfops_supplier": [
+        "5656"
+      ],
+      "destinacao": "CONSUMO",
+      "destinacoes": [
+        "CONSUMO"
+      ],
+      "total_value": 250,
+      "item_count": 1,
+      "data_entrada": "2026-09-10",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "12586011",
+      "doc_model": "55",
+      "issue_date": "2026-09-11",
+      "counterparty_name": "DINO & FREITAS LTDA-ME",
+      "counterparty_doc": "20422108000180",
+      "emit_uf": "PI",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "1102",
+      "cfops_entrada": [
+        "1102"
+      ],
+      "cfops_supplier": [
+        "5102"
+      ],
+      "destinacao": "REVENDA | CONSUMO",
+      "destinacoes": [
+        "REVENDA",
+        "CONSUMO"
+      ],
+      "total_value": 82.75,
+      "item_count": 3,
+      "data_entrada": "2026-09-11",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "12586239",
+      "doc_model": "55",
+      "issue_date": "2026-09-19",
+      "counterparty_name": "DINO & FREITAS LTDA-ME",
+      "counterparty_doc": "20422108000180",
+      "emit_uf": "PI",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "1102",
+      "cfops_entrada": [
+        "1102"
+      ],
+      "cfops_supplier": [
+        "5102"
+      ],
+      "destinacao": "CONSUMO | REVENDA",
+      "destinacoes": [
+        "CONSUMO",
+        "REVENDA"
+      ],
+      "total_value": 89,
+      "item_count": 2,
+      "data_entrada": "2026-09-19",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    },
+    {
+      "doc_number": "1056",
+      "doc_model": "55",
+      "issue_date": "2026-09-21",
+      "counterparty_name": "PLANALTO PETROLEO BOLA LTDA",
+      "counterparty_doc": "04787075000549",
+      "emit_uf": "PI",
+      "dest_uf": null,
+      "doc_direction": "entrada",
+      "cfop": "1656",
+      "cfops_entrada": [
+        "1656"
+      ],
+      "cfops_supplier": [
+        "5656"
+      ],
+      "destinacao": "CONSUMO",
+      "destinacoes": [
+        "CONSUMO"
+      ],
+      "total_value": 400,
+      "item_count": 1,
+      "data_entrada": "2026-09-21",
+      "icms_value": null,
+      "pis_value": null,
+      "cofins_value": null
+    }
+  ],
+  "excluded": {
+    "semDataEntrada": [
+      {
+        "doc_number": "199281",
+        "issue_date": "2026-08-16",
+        "counterparty_name": "Placas do Brasil S/A",
+        "total_value": 34354.52,
+        "emit_uf": "ES"
+      },
+      {
+        "doc_number": "199283",
+        "issue_date": "2026-08-16",
+        "counterparty_name": "Placas do Brasil S/A",
+        "total_value": 43314.6,
+        "emit_uf": "ES"
+      },
+      {
+        "doc_number": "467255",
+        "issue_date": "2026-09-22",
+        "counterparty_name": "EUCATEX INDUSTRIA E COMERCIO LTDA",
+        "total_value": 15231.73,
+        "emit_uf": "SP"
+      },
+      {
+        "doc_number": "10105",
+        "issue_date": "2026-09-28",
+        "counterparty_name": "KitSul Componentes para Moveis LTDA",
+        "total_value": 784.36,
+        "emit_uf": "RS"
+      },
+      {
+        "doc_number": "195834",
+        "issue_date": "2026-09-29",
+        "counterparty_name": "INDUSTRIA QUIMICA UNA LTDA",
+        "total_value": 5276.64,
+        "emit_uf": "SP"
+      }
+    ],
+    "outraDataEntrada": []
+  }
+}
